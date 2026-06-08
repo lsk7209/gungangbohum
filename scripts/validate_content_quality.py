@@ -208,6 +208,8 @@ def validate(require_site_origin=False):
     readiness_script_path = ROOT / "scripts" / "production_readiness_audit.py"
     launch_script_path = ROOT / "scripts" / "launch_prepare.py"
     contact_script_path = ROOT / "scripts" / "apply_contact_channel.py"
+    seo_audit_script_path = ROOT / "scripts" / "audit_seo_adsense.py"
+    seo_audit_report_path = ROOT / "reports" / "seo-adsense-audit-report.json"
     for path, label in [
         (package_path, "package_json"),
         (vercel_path, "vercel_json"),
@@ -218,6 +220,7 @@ def validate(require_site_origin=False):
         (readiness_script_path, "production_readiness_audit"),
         (launch_script_path, "launch_prepare"),
         (contact_script_path, "apply_contact_channel"),
+        (seo_audit_script_path, "seo_adsense_audit"),
     ]:
         if not path.exists():
             errors.append({"type": f"missing_{label}", "file": str(path.relative_to(ROOT))})
@@ -227,7 +230,7 @@ def validate(require_site_origin=False):
         for script in ("generate", "validate", "check"):
             if script not in scripts:
                 errors.append({"type": "missing_package_script", "script": script})
-        for script in ("contact:apply", "check:production", "launch:prepare", "ready", "ready:production", "gsc:check", "gsc:submit"):
+        for script in ("audit:seo", "contact:apply", "check:production", "launch:prepare", "ready", "ready:production", "gsc:check", "gsc:submit"):
             if script not in scripts:
                 errors.append({"type": "missing_operations_package_script", "script": script})
     if vercel_path.exists():
@@ -238,6 +241,12 @@ def validate(require_site_origin=False):
         workflow = quality_workflow_path.read_text(encoding="utf-8")
         if "generate_aca_articles.py" not in workflow or "validate_content_quality.py" not in workflow:
             errors.append({"type": "content_quality_workflow_missing_commands"})
+        if "audit_seo_adsense.py" not in workflow:
+            errors.append({"type": "content_quality_workflow_missing_seo_adsense_audit"})
+    if seo_audit_report_path.exists():
+        seo_audit_report = load_json(seo_audit_report_path)
+        if seo_audit_report.get("error_count") != 0 or not seo_audit_report.get("passed"):
+            errors.append({"type": "seo_adsense_audit_report_failed"})
     if gsc_workflow_path.exists():
         workflow = gsc_workflow_path.read_text(encoding="utf-8")
         for needle, label in [

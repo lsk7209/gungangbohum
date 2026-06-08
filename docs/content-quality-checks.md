@@ -14,6 +14,12 @@ Run the quality validator and write the report:
 python scripts\validate_content_quality.py --write-report
 ```
 
+Run the SEO and AdSense checklist audit:
+
+```powershell
+python scripts\audit_seo_adsense.py --write-report
+```
+
 The validator checks:
 
 - project operation files: `package.json`, `vercel.json`, `README.md`, and the GitHub content-quality workflow
@@ -21,7 +27,7 @@ The validator checks:
 - optional production gate: `--require-site-origin` fails if `{SITE_ORIGIN}` remains in public artifacts
 - 200 queued articles and 200 article HTML files
 - 5 guide hub pages
-- 200 RSS feed items
+- RSS feed items match currently published articles
 - sitemap URL counts
 - `404.html` exists, is `noindex,follow`, links to recovery paths, and is excluded from sitemap
 - `opensearch.xml` exists, points site search to `/blog.html`, is linked from every HTML page, and is excluded from sitemap
@@ -54,6 +60,17 @@ The validator checks:
 - `llms.txt` and `content/search-index.json`
 - public `content/article-queue.json` excludes internal generation flags, quality scores, and production-only labels
 - stale domains, manual ad slot markers, and mojibake markers
+
+The SEO and AdSense audit writes `reports/seo-adsense-audit-report.json` and summarizes:
+
+- per-page meta title, meta description, and canonical URL presence
+- target keyword front-signal checks in title and description text
+- `sitemap.xml` and `robots.txt` presence
+- H1/H2/H3 hierarchy checks
+- image alt text coverage
+- article CTA, two-or-more internal links, and one-or-more external links
+- readable URL slugs
+- AdSense auto-ads-only policy by checking for manual ad slot markers
 
 The latest generated report is written to `reports/content-quality-report.json`.
 

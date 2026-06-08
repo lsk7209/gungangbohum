@@ -1,0 +1,22 @@
+{
+  "pages_checked": 215,
+  "article_pages_checked": 201,
+  "checklist": {
+    "meta_title_per_page": true,
+    "meta_description_per_page": true,
+    "keyword_front_signal": true,
+    "canonical_per_page": true,
+    "sitemap_xml_present": true,
+    "robots_txt_present": true,
+    "h_tags_per_page": true,
+    "image_alt_text": true,
+    "blog_cta_inlink_outlink": true,
+    "readable_urls": true,
+    "adsense_auto_ads_only": true
+  },
+  "passed": true,
+  "warning_count": 0,
+  "error_count": 0,
+  "errors": [],
+  "warnings": []
+}
