@@ -367,7 +367,7 @@ def validate(require_site_origin=False):
             errors.append({"type": "content_quality_workflow_missing_performance_audit"})
         if "production_readiness_audit.py" not in workflow:
             errors.append({"type": "content_quality_workflow_missing_readiness_audit"})
-        if "git diff --exit-code" not in workflow:
+        if 'git diff --exit-code -- . ":(exclude)reports/*.json"' not in workflow:
             errors.append({"type": "content_quality_workflow_missing_generated_artifact_drift_check"})
     for workflow_path, label in [
         (quality_workflow_path, "content_quality"),

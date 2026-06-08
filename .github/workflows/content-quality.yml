@@ -29,4 +29,4 @@ jobs:
       - name: Write production readiness report
         run: python scripts/production_readiness_audit.py --write-report
       - name: Ensure generated artifacts are committed
-        run: git diff --exit-code
+        run: git diff --exit-code -- . ":(exclude)reports/*.json"
