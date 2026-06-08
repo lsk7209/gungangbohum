@@ -109,14 +109,16 @@ Production-only gate:
 ```powershell
 $env:SITE_ORIGIN = "https://your-production-domain.example"
 $env:PUBLIC_CONTACT_EMAIL = "contact@your-production-domain.example"
+$env:GA4_MEASUREMENT_ID = "G-XXXXXXXXXX"
 npm run contact:apply
+npm run analytics:apply
 npm run check:production
 ```
 
 Launch wrapper:
 
 ```powershell
-npm run launch:prepare -- --origin https://your-production-domain.example --contact-email contact@your-production-domain.example
+npm run launch:prepare -- --origin https://your-production-domain.example --contact-email contact@your-production-domain.example --ga4-measurement-id G-XXXXXXXXXX
 ```
 
 Expected:
@@ -124,6 +126,7 @@ Expected:
 - No `{SITE_ORIGIN}` placeholder in public artifacts.
 - `sitemap.xml`, `robots.txt`, canonical URLs, feed, OpenSearch, and JSON search index all use the production origin.
 - `contact.html` exposes a public email or HTTPS contact form instead of the prelaunch notice.
+- GA4 is applied only when a production `GA4_MEASUREMENT_ID` is available.
 - Local GSC credential and URL validation passes when `D:\env\adsense_oauth_client.json` and `D:\env\gsc_token.json` are available.
 
 Search Console gate:

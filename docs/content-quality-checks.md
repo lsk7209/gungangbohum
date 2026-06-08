@@ -26,6 +26,12 @@ Run the static performance budget audit:
 python scripts\audit_performance_budget.py --write-report
 ```
 
+Preview optional GA4 injection before launch:
+
+```powershell
+python scripts\apply_ga4_measurement.py --measurement-id G-XXXXXXXXXX --dry-run
+```
+
 The validator checks:
 
 - project operation files: `package.json`, `vercel.json`, `README.md`, and the GitHub content-quality workflow
@@ -85,6 +91,8 @@ The performance budget audit writes `reports/performance-budget-report.json` and
 - inline style and script byte budgets
 - public JSON size budgets for the article queue and search index
 - required static cache and content-type headers in `vercel.json`
+
+Optional GA4 injection uses `scripts/apply_ga4_measurement.py` and only runs when a production `GA4_MEASUREMENT_ID` is supplied.
 
 The latest generated report is written to `reports/content-quality-report.json`.
 

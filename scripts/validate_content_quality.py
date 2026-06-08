@@ -208,6 +208,7 @@ def validate(require_site_origin=False):
     readiness_script_path = ROOT / "scripts" / "production_readiness_audit.py"
     launch_script_path = ROOT / "scripts" / "launch_prepare.py"
     contact_script_path = ROOT / "scripts" / "apply_contact_channel.py"
+    ga4_script_path = ROOT / "scripts" / "apply_ga4_measurement.py"
     seo_audit_script_path = ROOT / "scripts" / "audit_seo_adsense.py"
     seo_audit_report_path = ROOT / "reports" / "seo-adsense-audit-report.json"
     performance_audit_script_path = ROOT / "scripts" / "audit_performance_budget.py"
@@ -222,6 +223,7 @@ def validate(require_site_origin=False):
         (readiness_script_path, "production_readiness_audit"),
         (launch_script_path, "launch_prepare"),
         (contact_script_path, "apply_contact_channel"),
+        (ga4_script_path, "apply_ga4_measurement"),
         (seo_audit_script_path, "seo_adsense_audit"),
         (performance_audit_script_path, "performance_budget_audit"),
     ]:
@@ -233,7 +235,7 @@ def validate(require_site_origin=False):
         for script in ("generate", "validate", "check"):
             if script not in scripts:
                 errors.append({"type": "missing_package_script", "script": script})
-        for script in ("audit:performance", "audit:seo", "contact:apply", "check:production", "launch:prepare", "ready", "ready:production", "gsc:check", "gsc:submit"):
+        for script in ("analytics:apply", "audit:performance", "audit:seo", "contact:apply", "check:production", "launch:prepare", "ready", "ready:production", "gsc:check", "gsc:submit"):
             if script not in scripts:
                 errors.append({"type": "missing_operations_package_script", "script": script})
     if vercel_path.exists():
@@ -280,6 +282,8 @@ def validate(require_site_origin=False):
             ("Production domain is not assigned", "domain_blocker"),
             ("PUBLIC_CONTACT_EMAIL", "public_contact_email"),
             ("npm run contact:apply", "contact_apply_gate"),
+            ("GA4_MEASUREMENT_ID", "ga4_measurement_id"),
+            ("npm run analytics:apply", "analytics_apply_gate"),
             ("npm run check:production", "production_gate"),
             ("npm run launch:prepare", "launch_prepare_gate"),
             ("npm run gsc:submit", "gsc_submit_gate"),
