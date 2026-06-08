@@ -22,42 +22,42 @@
       },
       {
         "file": "aca/when-moving-to-florida-from-another-state-changes-a-florida-aca-subsidy-estimate.html",
-        "bytes": 32403
+        "bytes": 32278
       },
       {
         "file": "aca/how-to-update-a-florida-aca-subsidy-estimate-after-dependent-returning-home.html",
-        "bytes": 32129
+        "bytes": 32005
       },
       {
         "file": "aca/how-to-update-a-florida-aca-subsidy-estimate-after-starting-a-small-business.html",
-        "bytes": 32084
+        "bytes": 31959
       },
       {
         "file": "aca/florida-aca-subsidy-estimate-after-retiring-before-medicare-what-to-check-first.html",
-        "bytes": 32028
+        "bytes": 31902
       },
       {
         "file": "aca/florida-aca-subsidy-calculator-walkthrough-a-florida-reader-s-guide-to-aca-premium-estimate.html",
-        "bytes": 31609
+        "bytes": 31484
       },
       {
         "file": "aca/losing-medicaid-eligibility-and-the-florida-aca-subsidy-estimate-for-2026.html",
-        "bytes": 31524
+        "bytes": 31398
       },
       {
         "file": "aca/broward-county-aca-subsidy-estimate-south-florida-rating-area-check-for-2026-coverage.html",
-        "bytes": 31407
+        "bytes": 31282
       },
       {
         "file": "aca/florida-aca-open-enrollment-planning-without-the-jargon-marketplace-deadline-preparation-and-next-steps.html",
-        "bytes": 31297
+        "bytes": 31172
       },
       {
         "file": "aca/when-aca-metal-tiers-and-subsidy-estimates-matter-most-for-florida-marketplace-shoppers.html",
-        "bytes": 31289
+        "bytes": 31164
       }
     ],
-    "article_average_bytes": 24422,
+    "article_average_bytes": 24311,
     "largest_inline_style": [
       {
         "file": "index.html",
@@ -102,8 +102,8 @@
         "bytes": 4878
       }
     ],
-    "article_queue_bytes": 360419,
-    "search_index_bytes": 7615
+    "article_queue_bytes": 354218,
+    "search_index_bytes": 7470
   },
   "errors": [],
   "warnings": []
