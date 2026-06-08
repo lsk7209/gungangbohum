@@ -263,6 +263,9 @@ def validate(require_site_origin=False):
             ("PERFORMANCE_REPORT", "performance_report"),
             ("GSC_WORKFLOW", "gsc_workflow_path"),
             ("gsc_workflow_automation", "gsc_workflow_automation_check"),
+            ("normalize_site_url", "gsc_site_url_validation"),
+            ("normalize_sitemap_url", "gsc_sitemap_url_validation"),
+            ("_json_from_env_or_file", "gsc_credential_json_validation"),
             ("seo_adsense_snapshot", "seo_adsense_snapshot"),
             ("performance_snapshot", "performance_snapshot"),
         ]:

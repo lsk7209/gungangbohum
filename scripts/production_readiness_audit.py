@@ -5,6 +5,8 @@ import re
 import subprocess
 from pathlib import Path
 
+from gsc_submit_sitemap import _json_from_env_or_file, normalize_site_url, normalize_sitemap_url
+
 
 ROOT = Path(__file__).resolve().parents[1]
 REPORT_DIR = ROOT / "reports"
@@ -129,6 +131,39 @@ def gsc_workflow_status():
     return all(markers.values()), markers
 
 
+def gsc_configuration_status():
+    detail = {
+        "GSC_SITE_URL": False,
+        "GSC_SITEMAP_URL": False,
+        "GSC_CLIENT_JSON": False,
+        "GSC_TOKEN_JSON": False,
+        "errors": [],
+    }
+    try:
+        normalize_site_url(os.getenv("GSC_SITE_URL", ""))
+        detail["GSC_SITE_URL"] = True
+    except ValueError as exc:
+        detail["errors"].append({"name": "GSC_SITE_URL", "error": str(exc)})
+    try:
+        normalize_sitemap_url(os.getenv("GSC_SITEMAP_URL", ""))
+        detail["GSC_SITEMAP_URL"] = True
+    except ValueError as exc:
+        detail["errors"].append({"name": "GSC_SITEMAP_URL", "error": str(exc)})
+    for name, fallback in [
+        ("GSC_CLIENT_JSON", r"D:\env\adsense_oauth_client.json"),
+        ("GSC_TOKEN_JSON", r"D:\env\gsc_token.json"),
+    ]:
+        try:
+            _json_from_env_or_file(name, fallback)
+            detail[name] = True
+        except (FileNotFoundError, json.JSONDecodeError, KeyError) as exc:
+            detail["errors"].append({"name": name, "error": str(exc)})
+    ok = all(detail[name] for name in ("GSC_SITE_URL", "GSC_SITEMAP_URL", "GSC_CLIENT_JSON", "GSC_TOKEN_JSON"))
+    if ok:
+        detail.pop("errors")
+    return ok, detail
+
+
 def audit():
     quality = load_quality_report()
     seo_adsense_ok, seo_adsense_detail, seo_adsense = report_pass_status(SEO_ADSENSE_REPORT, "SEO and AdSense audit")
@@ -154,12 +189,7 @@ def audit():
         if repo_view and repo_view.returncode == 0:
             remote_repo = repo_view.stdout.strip()
 
-    gsc_env = {
-        "GSC_SITE_URL": bool(os.getenv("GSC_SITE_URL")),
-        "GSC_SITEMAP_URL": bool(os.getenv("GSC_SITEMAP_URL")),
-        "GSC_CLIENT_JSON": bool(os.getenv("GSC_CLIENT_JSON") or (Path(r"D:\env\adsense_oauth_client.json").exists())),
-        "GSC_TOKEN_JSON": bool(os.getenv("GSC_TOKEN_JSON") or (Path(r"D:\env\gsc_token.json").exists())),
-    }
+    gsc_config_ok, gsc_config_detail = gsc_configuration_status()
     github_gsc = {
         "repo": remote_repo,
         "GSC_CLIENT_JSON_secret": False,
@@ -235,8 +265,8 @@ def audit():
         },
         {
             "name": "gsc_configuration",
-            "ok": all(gsc_env.values()),
-            "detail": gsc_env,
+            "ok": gsc_config_ok,
+            "detail": gsc_config_detail,
         },
         {
             "name": "github_gsc_configuration",
@@ -267,7 +297,7 @@ def audit():
         next_required_actions.append("Replace the prelaunch contact notice with a production public contact channel.")
     if not gsc_workflow_ok:
         next_required_actions.append("Repair .github/workflows/gsc-sitemap-submit.yml before relying on automatic sitemap submission.")
-    if not all(gsc_env.values()):
+    if not gsc_config_ok:
         next_required_actions.append("Set GSC_SITE_URL and GSC_SITEMAP_URL, then run npm run gsc:submit after the domain is verified in Search Console.")
     if remote_repo and not github_gsc["GSC_SITE_URL_variable"]:
         next_required_actions.append("Set GitHub repository variable GSC_SITE_URL after the production domain is assigned.")
