@@ -237,7 +237,7 @@ def validate(require_site_origin=False):
         for script in ("generate", "validate", "check"):
             if script not in scripts:
                 errors.append({"type": "missing_package_script", "script": script})
-        for script in ("adsense:apply", "analytics:apply", "audit:performance", "audit:seo", "contact:apply", "check:production", "launch:prepare", "ready", "ready:production", "gsc:check", "gsc:submit"):
+        for script in ("adsense:apply", "analytics:apply", "audit:performance", "audit:seo", "contact:apply", "check:production", "launch:preflight", "launch:prepare", "ready", "ready:production", "gsc:check", "gsc:submit"):
             if script not in scripts:
                 errors.append({"type": "missing_operations_package_script", "script": script})
     if vercel_path.exists():
@@ -271,6 +271,7 @@ def validate(require_site_origin=False):
         for needle, label in [
             ("--require-ready", "require_ready_gate"),
             ("--allow-incomplete-readiness", "allow_incomplete_readiness_flag"),
+            ("--preflight", "preflight_flag"),
         ]:
             if needle not in launch_script:
                 errors.append({"type": f"launch_prepare_missing_{label}"})

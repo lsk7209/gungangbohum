@@ -120,10 +120,11 @@ npm run check:production
 Launch wrapper:
 
 ```powershell
+npm run launch:preflight -- --origin https://your-production-domain.example --contact-email contact@your-production-domain.example --ga4-measurement-id G-XXXXXXXXXX --adsense-publisher-id pub-3050601904412736
 npm run launch:prepare -- --origin https://your-production-domain.example --contact-email contact@your-production-domain.example --ga4-measurement-id G-XXXXXXXXXX --adsense-publisher-id pub-3050601904412736
 ```
 
-`launch:prepare` exits successfully only when the production readiness audit passes. Use `--allow-incomplete-readiness` only for a non-submission preview with known blockers.
+`launch:preflight` validates launch inputs and local GSC configuration without changing files or GitHub variables. `launch:prepare` exits successfully only when the production readiness audit passes. Use `--allow-incomplete-readiness` only for a non-submission preview with known blockers.
 
 Expected:
 

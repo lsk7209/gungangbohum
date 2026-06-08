@@ -5,6 +5,9 @@ import sys
 from pathlib import Path
 from urllib.parse import urlsplit
 
+from apply_ads_txt import normalize_publisher_id
+from apply_contact_channel import contact_block, normalize_email, normalize_url
+from apply_ga4_measurement import normalize_measurement_id
 from apply_site_origin import normalize_origin
 
 
@@ -47,6 +50,54 @@ def set_github_variable(repo, name, value, env):
         raise SystemExit(result.returncode)
 
 
+def preflight(args, origin, site_url, sitemap_url, env):
+    print("Launch preflight")
+    print(f"SITE_ORIGIN={origin}")
+    print(f"GSC_SITE_URL={site_url}")
+    print(f"GSC_SITEMAP_URL={sitemap_url}")
+
+    email = normalize_email(args.contact_email)
+    contact_url = normalize_url(args.contact_url)
+    contact_block(email, contact_url)
+    print("Public contact channel: ok")
+
+    if args.ga4_measurement_id:
+        normalize_measurement_id(args.ga4_measurement_id)
+        print("GA4 measurement ID: ok")
+    else:
+        print("GA4 measurement ID: not provided")
+
+    if args.adsense_publisher_id:
+        publisher_id = normalize_publisher_id(args.adsense_publisher_id)
+        print(f"AdSense publisher ID: {publisher_id}")
+    else:
+        print("AdSense publisher ID: not provided")
+
+    if args.set_github_vars:
+        repo = github_repo(env)
+        print(f"GitHub repository access: {repo}")
+        print("GitHub variables: not changed during preflight")
+
+    if not args.skip_gsc_check:
+        run_step(
+            "Validate GSC sitemap configuration",
+            [
+                sys.executable,
+                "scripts/gsc_submit_sitemap.py",
+                "--check-config",
+                "--site-url",
+                site_url,
+                "--sitemap-url",
+                sitemap_url,
+            ],
+            env,
+        )
+    else:
+        print("GSC configuration check: skipped")
+
+    print("Launch preflight completed without file changes.")
+
+
 def main():
     parser = argparse.ArgumentParser(description="Prepare the static site for production after a domain is assigned.")
     parser.add_argument("--origin", default=os.getenv("SITE_ORIGIN", ""), help="Production origin, for example https://example.com")
@@ -59,6 +110,7 @@ def main():
     parser.add_argument("--skip-gsc-check", action="store_true", help="Skip local GSC credential and URL validation.")
     parser.add_argument("--set-github-vars", action="store_true", help="Set GitHub repo variables GSC_SITE_URL and GSC_SITEMAP_URL.")
     parser.add_argument("--allow-incomplete-readiness", action="store_true", help="Write the readiness report without failing when launch blockers remain.")
+    parser.add_argument("--preflight", action="store_true", help="Validate launch inputs and GSC configuration without changing files or GitHub variables.")
     args = parser.parse_args()
 
     origin = normalize_origin(args.origin)
@@ -77,6 +129,10 @@ def main():
         env["GA4_MEASUREMENT_ID"] = args.ga4_measurement_id
     if args.adsense_publisher_id:
         env["ADSENSE_PUBLISHER_ID"] = args.adsense_publisher_id
+
+    if args.preflight:
+        preflight(args, origin, site_url, sitemap_url, env)
+        return 0
 
     if args.set_github_vars:
         repo = github_repo(env)

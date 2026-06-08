@@ -15,6 +15,7 @@
     "audit:performance": "python scripts/audit_performance_budget.py --write-report",
     "check": "python scripts/generate_aca_articles.py && python scripts/audit_seo_adsense.py --write-report && python scripts/audit_performance_budget.py --write-report && python scripts/validate_content_quality.py --write-report",
     "check:production": "python scripts/generate_aca_articles.py && python scripts/apply_site_origin.py && python scripts/audit_seo_adsense.py --write-report && python scripts/audit_performance_budget.py --write-report && python scripts/validate_content_quality.py --write-report --require-site-origin",
+    "launch:preflight": "python scripts/launch_prepare.py --preflight",
     "launch:prepare": "python scripts/launch_prepare.py",
     "ready": "python scripts/production_readiness_audit.py --write-report",
     "ready:production": "python scripts/production_readiness_audit.py --write-report --require-ready",
