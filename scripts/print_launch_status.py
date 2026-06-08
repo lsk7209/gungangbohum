@@ -5,10 +5,27 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 READINESS_REPORT = ROOT / "reports" / "production-readiness-report.json"
+READINESS_INPUTS = [
+    ROOT / "reports" / "article-generation-report.json",
+    ROOT / "reports" / "content-quality-report.json",
+    ROOT / "reports" / "performance-budget-report.json",
+    ROOT / "reports" / "seo-adsense-audit-report.json",
+]
 
 
 def names(items):
     return [item.get("name", "") for item in items if item.get("name")]
+
+
+def newer_inputs():
+    if not READINESS_REPORT.exists():
+        return []
+    readiness_mtime = READINESS_REPORT.stat().st_mtime
+    return [
+        str(path.relative_to(ROOT)).replace("\\", "/")
+        for path in READINESS_INPUTS
+        if path.exists() and path.stat().st_mtime > readiness_mtime
+    ]
 
 
 def main():
@@ -20,6 +37,7 @@ def main():
         raise SystemExit("reports/production-readiness-report.json is missing. Run npm run ready first.")
 
     report = json.loads(READINESS_REPORT.read_text(encoding="utf-8"))
+    stale_inputs = newer_inputs()
     summary = report.get("blocker_summary", {})
     quality = report.get("quality_snapshot", {})
     article_generation = report.get("article_generation_snapshot", {})
@@ -28,6 +46,8 @@ def main():
     missing_inputs = report.get("missing_external_inputs", [])
 
     print("Launch status")
+    if stale_inputs:
+        print(f"Warning: readiness report may be stale. Run npm run ready. Newer inputs: {', '.join(stale_inputs)}")
     print(f"Ready for production submission: {str(bool(report.get('ready_for_production_submission'))).lower()}")
     print(f"Code or repository blockers: {', '.join(summary.get('code_or_repository_blockers', [])) or 'none'}")
     print(f"External input blockers: {', '.join(summary.get('external_input_blockers', [])) or 'none'}")

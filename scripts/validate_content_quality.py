@@ -531,6 +531,8 @@ def validate(require_site_origin=False):
             ("site_origin_placeholder_count", "site_origin_placeholder_count"),
             ("ready_for_production_submission", "ready_for_production_submission"),
             ("--require-ready", "require_ready_flag"),
+            ("READINESS_INPUTS", "readiness_inputs"),
+            ("newer_inputs", "stale_report_warning"),
         ]:
             if needle not in launch_status_script:
                 errors.append({"type": f"launch_status_missing_{label}"})
