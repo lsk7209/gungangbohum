@@ -490,6 +490,10 @@ def validate(require_site_origin=False):
     document_urls = {doc.get("url") for doc in documents}
     if "contact.html" not in document_urls:
         errors.append({"type": "search_index_missing_contact"})
+    if "privacy.html" not in document_urls:
+        errors.append({"type": "search_index_missing_privacy"})
+    if "/privacy.html" not in llms:
+        errors.append({"type": "llms_missing_privacy"})
     if feed_items != len(published_items):
         errors.append({"type": "feed_published_count_mismatch", "feed_items": feed_items, "published_items": len(published_items)})
     if len(article_documents) != len(published_items) + legacy_article_count:
@@ -591,6 +595,17 @@ def validate(require_site_origin=False):
             errors.append({"type": "bad_pattern_static", "file": file_name})
         if file_name in {"about.html", "privacy.html", "editorial-policy.html", "sources-corrections.html"} and "contact.html" not in html:
             errors.append({"type": "static_missing_contact_link", "file": file_name})
+        if file_name == "privacy.html":
+            for needle, label in [
+                ("Google AdSense", "adsense"),
+                ("cookies", "cookies"),
+                ("personalize ads", "personalized_ads"),
+                ("browser", "browser_processing"),
+                ("quote leads", "lead_sale"),
+                ("policies.google.com", "google_policy_links"),
+            ]:
+                if needle not in html:
+                    errors.append({"type": f"privacy_missing_{label}"})
         if file_name == "index.html":
             errors.extend(validate_home_calculator(html))
             schemas = schemas_from_html(html)

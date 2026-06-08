@@ -54,6 +54,14 @@
       "description": "Official source hierarchy, correction standards, and update practices for ACA subsidy guide content."
     },
     {
+      "id": "privacy",
+      "type": "trust_page",
+      "title": "Privacy Policy",
+      "url": "privacy.html",
+      "canonical": "{SITE_ORIGIN}/privacy.html",
+      "description": "Privacy policy for CoverClarity's browser-based ACA subsidy calculator, cookies, analytics, and Google AdSense auto ads."
+    },
+    {
       "id": "county-and-rating-area-guides",
       "type": "guide_hub",
       "title": "County and rating-area guides",

@@ -2007,6 +2007,14 @@ def render_search_index(topics):
             "canonical": f"{SITE_ORIGIN}/sources-corrections.html",
             "description": "Official source hierarchy, correction standards, and update practices for ACA subsidy guide content.",
         },
+        {
+            "id": "privacy",
+            "type": "trust_page",
+            "title": "Privacy Policy",
+            "url": "privacy.html",
+            "canonical": f"{SITE_ORIGIN}/privacy.html",
+            "description": "Privacy policy for CoverClarity's browser-based ACA subsidy calculator, cookies, analytics, and Google AdSense auto ads.",
+        },
     ]
     return json.dumps({
         "generatedAt": "2026-06-08T00:00:00+09:00",
@@ -2060,6 +2068,7 @@ CoverClarity is an independent Florida ACA subsidy estimate and Marketplace veri
 - Contact: {SITE_ORIGIN}/contact.html
 - Editorial policy: {SITE_ORIGIN}/editorial-policy.html
 - Sources and corrections: {SITE_ORIGIN}/sources-corrections.html
+- Privacy policy: {SITE_ORIGIN}/privacy.html
 - Sitemap: {SITE_ORIGIN}/sitemap.xml
 - RSS feed: {SITE_ORIGIN}/feed.xml
 - Search index JSON: {SITE_ORIGIN}/content/search-index.json
