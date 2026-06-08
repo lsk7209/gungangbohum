@@ -1,11 +1,18 @@
 {
-  "generatedAt": "2026-06-08T18:09:29.376331+00:00",
+  "generatedAt": "2026-06-08T20:36:46.837524+00:00",
   "git_snapshot": {
-    "head": "c6021ffa7b28e670d0c41be95eaf142a472cb66a",
+    "head": "84c550c97f25b90e59e7549a059365c2f9365481",
     "worktree_clean": false,
     "changed_paths": [
+      "aca/reading-the-miami-marketplace-estimate-for-a-couple-near-300-percent-fpl.html",
+      "blog.html",
+      "content/article-queue.json",
+      "content/search-index.json",
+      "feed.xml",
+      "reports/article-generation-report.json",
       "reports/content-quality-report.json",
-      "reports/performance-budget-report.json"
+      "reports/performance-budget-report.json",
+      "sitemap.xml"
     ]
   },
   "ready_for_production_submission": false,
@@ -208,7 +215,7 @@
   "quality_snapshot": {
     "article_files": 200,
     "guide_files": 5,
-    "sitemap_urls": 12,
+    "sitemap_urls": 13,
     "site_origin_placeholder_count": 222,
     "site_origin_placeholder_sample": [
       "contact.html",
@@ -227,8 +234,8 @@
   },
   "article_generation_snapshot": {
     "articles": 200,
-    "publishedArticles": 3,
-    "scheduledArticles": 197,
+    "publishedArticles": 4,
+    "scheduledArticles": 196,
     "minQualityScore": 94,
     "maxQualityScore": 99,
     "codexOnlyGenerationArticles": 200,
