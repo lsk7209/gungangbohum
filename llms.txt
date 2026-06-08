@@ -17,11 +17,7 @@ CoverClarity is an independent Florida ACA subsidy estimate and Marketplace veri
 
 ## Guide Hubs
 
-- [County and rating-area guides]({SITE_ORIGIN}/guides/county-and-rating-area-guides.html): Florida county and rating-area ACA subsidy estimates; 0 articles.
-- [Life event and income-change guides]({SITE_ORIGIN}/guides/life-event-and-income-change-guides.html): ACA subsidy estimates after Florida life and income changes; 0 articles.
-- [Plan selection and out-of-pocket guides]({SITE_ORIGIN}/guides/plan-selection-and-out-of-pocket-guides.html): ACA plan selection, CSR, deductibles, and out-of-pocket planning; 0 articles.
-- [Tax, MAGI, and reconciliation guides]({SITE_ORIGIN}/guides/tax-magi-and-reconciliation-guides.html): Florida ACA subsidy estimates with MAGI and tax reconciliation questions; 0 articles.
-- [Official verification and troubleshooting guides]({SITE_ORIGIN}/guides/official-verification-and-troubleshooting-guides.html): Florida ACA estimate troubleshooting and official Marketplace verification; 0 articles.
+
 
 ## Priority Hub Articles
 
@@ -32,5 +28,5 @@ CoverClarity is an independent Florida ACA subsidy estimate and Marketplace veri
 - Sitemap, RSS, and search index include currently published article URLs only.
 - Future queued articles are generated with noindex,follow until their scheduled publish time.
 - Priority hub articles include expanded summaries, five-question FAQ sections, and guide-path links as they publish.
-- 5 guide hub pages group the long-tail articles by county/rating area, life event, plan selection, tax/MAGI, and official verification needs.
+- Guide hub pages are noindex until at least one article in that cluster is published.
 - Canonical URLs use the {SITE_ORIGIN} placeholder until the production domain is assigned.

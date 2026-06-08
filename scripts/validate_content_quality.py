@@ -689,6 +689,10 @@ def validate(require_site_origin=False):
             errors.append({"type": "bad_pattern_guide", "file": p.name})
         if "Quality score" in html or "Score " in html:
             errors.append({"type": "guide_internal_quality_score_visible", "file": p.name})
+        if guide_counts[p.name] == 0 and '<meta name="robots" content="noindex,follow"' not in html:
+            errors.append({"type": "empty_guide_not_noindex", "file": p.name})
+        if guide_counts[p.name] > 0 and '<meta name="robots" content="index,follow,max-image-preview:large"' not in html:
+            errors.append({"type": "populated_guide_not_indexable", "file": p.name})
 
     feed_root = ET.parse(ROOT / "feed.xml").getroot()
     feed_nodes = feed_root.findall("./channel/item")
@@ -716,10 +720,14 @@ def validate(require_site_origin=False):
     search_index = load_json(CONTENT_DIR / "search-index.json")
     documents = search_index["documents"]
     article_documents = [doc for doc in documents if doc.get("type") == "article"]
+    guide_documents = [doc for doc in documents if doc.get("type") == "guide_hub"]
     legacy_article_urls = {"aca-enhanced-subsidies-2026-florida.html"}
     legacy_article_count = sum(1 for doc in article_documents if doc.get("url") in legacy_article_urls)
     indexed_article_urls = {doc.get("url") for doc in article_documents}
+    indexed_guide_urls = {doc.get("url") for doc in guide_documents}
     document_urls = {doc.get("url") for doc in documents}
+    indexable_guide_urls = {f"guides/{name}" for name, count in guide_counts.items() if count > 0}
+    empty_guide_urls = {f"guides/{name}" for name, count in guide_counts.items() if count == 0}
     if "contact.html" not in document_urls:
         errors.append({"type": "search_index_missing_contact"})
     if "privacy.html" not in document_urls:
@@ -730,6 +738,12 @@ def validate(require_site_origin=False):
         errors.append({"type": "feed_published_count_mismatch", "feed_items": feed_items, "published_items": len(published_items)})
     if len(article_documents) != len(published_items) + legacy_article_count:
         errors.append({"type": "search_index_published_count_mismatch", "search_index_articles": len(article_documents), "published_items": len(published_items), "legacy_article_count": legacy_article_count})
+    if indexed_guide_urls != indexable_guide_urls:
+        errors.append({
+            "type": "search_index_guide_set_mismatch",
+            "indexed_guide_urls": sorted(indexed_guide_urls),
+            "indexable_guide_urls": sorted(indexable_guide_urls),
+        })
     if "aca-enhanced-subsidies-2026-florida.html" not in indexed_article_urls:
         errors.append({"type": "legacy_article_missing_search_index"})
     for item in published_items:
@@ -750,6 +764,12 @@ def validate(require_site_origin=False):
             errors.append({"type": "scheduled_article_in_feed", "slug": item["slug"]})
         if relative_url in indexed_article_urls:
             errors.append({"type": "scheduled_article_in_search_index", "slug": item["slug"]})
+    for guide_url in indexable_guide_urls:
+        if f"{site_origin}/{guide_url}" not in sitemap:
+            errors.append({"type": "indexable_guide_missing_sitemap", "url": guide_url})
+    for guide_url in empty_guide_urls:
+        if f"{site_origin}/{guide_url}" in sitemap:
+            errors.append({"type": "empty_guide_in_sitemap", "url": guide_url})
     blog_html = (ROOT / "blog.html").read_text(encoding="utf-8")
     blog_size_bytes = (ROOT / "blog.html").stat().st_size
     blog_schema_posts = blog_html.count('"@type":"BlogPosting"')

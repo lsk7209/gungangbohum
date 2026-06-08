@@ -62,56 +62,6 @@
       "description": "Privacy policy for CoverClarity's browser-based ACA subsidy calculator, cookies, analytics, and Google AdSense auto ads."
     },
     {
-      "id": "county-and-rating-area-guides",
-      "type": "guide_hub",
-      "title": "County and rating-area guides",
-      "url": "guides/county-and-rating-area-guides.html",
-      "canonical": "{SITE_ORIGIN}/guides/county-and-rating-area-guides.html",
-      "cluster": "County and rating area",
-      "description": "Florida county and rating-area ACA subsidy estimates",
-      "article_count": 0
-    },
-    {
-      "id": "life-event-and-income-change-guides",
-      "type": "guide_hub",
-      "title": "Life event and income-change guides",
-      "url": "guides/life-event-and-income-change-guides.html",
-      "canonical": "{SITE_ORIGIN}/guides/life-event-and-income-change-guides.html",
-      "cluster": "Life event and income change",
-      "description": "ACA subsidy estimates after Florida life and income changes",
-      "article_count": 0
-    },
-    {
-      "id": "plan-selection-and-out-of-pocket-guides",
-      "type": "guide_hub",
-      "title": "Plan selection and out-of-pocket guides",
-      "url": "guides/plan-selection-and-out-of-pocket-guides.html",
-      "canonical": "{SITE_ORIGIN}/guides/plan-selection-and-out-of-pocket-guides.html",
-      "cluster": "Plan selection and out-of-pocket costs",
-      "description": "ACA plan selection, CSR, deductibles, and out-of-pocket planning",
-      "article_count": 0
-    },
-    {
-      "id": "tax-magi-and-reconciliation-guides",
-      "type": "guide_hub",
-      "title": "Tax, MAGI, and reconciliation guides",
-      "url": "guides/tax-magi-and-reconciliation-guides.html",
-      "canonical": "{SITE_ORIGIN}/guides/tax-magi-and-reconciliation-guides.html",
-      "cluster": "Tax, MAGI, and reconciliation",
-      "description": "Florida ACA subsidy estimates with MAGI and tax reconciliation questions",
-      "article_count": 0
-    },
-    {
-      "id": "official-verification-and-troubleshooting-guides",
-      "type": "guide_hub",
-      "title": "Official verification and troubleshooting guides",
-      "url": "guides/official-verification-and-troubleshooting-guides.html",
-      "canonical": "{SITE_ORIGIN}/guides/official-verification-and-troubleshooting-guides.html",
-      "cluster": "Official verification and troubleshooting",
-      "description": "Florida ACA estimate troubleshooting and official Marketplace verification",
-      "article_count": 0
-    },
-    {
       "id": "miami-single-adult-aca-subsidy-estimate-at-100-percent-fpl-what-the-2026-premium-gap-can-mean",
       "type": "article",
       "title": "Miami single adult ACA subsidy estimate at 100 percent FPL: what the 2026 premium gap can mean",

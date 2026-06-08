@@ -1801,6 +1801,7 @@ def render_blog(topics):
 
 def render_guide_page(heading, cluster, guide_slug, meta_title, topics):
     items = [topic for topic in topics if topic["cluster"] == cluster]
+    has_items = bool(items)
     cards = []
     for topic in items:
         cards.append(f"""
@@ -1810,11 +1811,14 @@ def render_guide_page(heading, cluster, guide_slug, meta_title, topics):
         <p class="meta">{esc(publish_status(topic))} {esc(publish_label(topic))}</p>
         <p>{esc(topic['subtitle'])}</p>
       </a>""")
-    cards_html = ''.join(cards) if cards else '<div class="empty-state">No guides in this hub are published yet. Queued articles appear here when their scheduled publish time arrives.</div>'
+    cards_html = ''.join(cards) if cards else '<div class="empty-state">This hub is not open for indexing yet. Queued articles appear here when their scheduled publish time arrives.</div>'
     lead = (
         f"{heading} collect {len(items)} focused Florida ACA subsidy articles so readers can move from a broad premium estimate "
         "to a specific county, life event, plan-selection, MAGI, or verification question."
+        if has_items
+        else f"{heading} will collect focused Florida ACA subsidy articles once scheduled guides in this cluster reach their publish time."
     )
+    robots = "index,follow,max-image-preview:large" if has_items else "noindex,follow"
     schemas = [
         organization_schema(),
         website_schema(),
@@ -1849,7 +1853,7 @@ def render_guide_page(heading, cluster, guide_slug, meta_title, topics):
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{esc(meta_title)} | CoverClarity</title>
   <meta name="description" content="{esc(lead)}">
-  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="robots" content="{robots}">
   <link rel="canonical" href="{SITE_ORIGIN}/guides/{guide_slug}.html">
   <link rel="alternate" type="application/rss+xml" title="CoverClarity Florida ACA Subsidy Guides" href="{SITE_ORIGIN}/feed.xml">
   <link rel="search" type="application/opensearchdescription+xml" title="CoverClarity" href="{SITE_ORIGIN}/opensearch.xml">
@@ -1900,7 +1904,11 @@ def render_sitemap(topics):
         (f"{SITE_ORIGIN}/privacy.html", "0.4"),
         (f"{SITE_ORIGIN}/aca-enhanced-subsidies-2026-florida.html", "0.75"),
     ]
-    urls.extend((f"{SITE_ORIGIN}/guides/{guide_slug}.html", "0.85") for _, _, guide_slug, _ in GUIDE_CLUSTERS)
+    urls.extend(
+        (f"{SITE_ORIGIN}/guides/{guide_slug}.html", "0.85")
+        for _, cluster, guide_slug, _ in GUIDE_CLUSTERS
+        if any(topic["cluster"] == cluster for topic in topics)
+    )
     urls.extend((f"{SITE_ORIGIN}/aca/{t['slug']}.html", "0.8") for t in topics)
     body = "\n".join(
         f"  <url><loc>{loc}</loc><lastmod>2026-06-08</lastmod><changefreq>weekly</changefreq><priority>{priority}</priority></url>"
@@ -1967,6 +1975,7 @@ def render_search_index(topics):
             "article_count": sum(1 for topic in topics if topic["cluster"] == cluster),
         }
         for heading, cluster, guide_slug, meta_title in GUIDE_CLUSTERS
+        if any(topic["cluster"] == cluster for topic in topics)
     ]
     trust_pages = [
         {
@@ -2053,6 +2062,7 @@ def render_llms_txt(topics):
     guide_lines = [
         f"- [{heading}]({SITE_ORIGIN}/guides/{guide_slug}.html): {meta_title}; {sum(1 for topic in topics if topic['cluster'] == cluster)} articles."
         for heading, cluster, guide_slug, meta_title in GUIDE_CLUSTERS
+        if any(topic["cluster"] == cluster for topic in topics)
     ]
     hub_lines = [
         f"- [{topic['title']}]({SITE_ORIGIN}/aca/{topic['slug']}.html): {topic.get('excerpt', topic['meta_description'])}"
@@ -2088,7 +2098,7 @@ CoverClarity is an independent Florida ACA subsidy estimate and Marketplace veri
 - Sitemap, RSS, and search index include currently published article URLs only.
 - Future queued articles are generated with noindex,follow until their scheduled publish time.
 - Priority hub articles include expanded summaries, five-question FAQ sections, and guide-path links as they publish.
-- 5 guide hub pages group the long-tail articles by county/rating area, life event, plan selection, tax/MAGI, and official verification needs.
+- Guide hub pages are noindex until at least one article in that cluster is published.
 - Canonical URLs use the {SITE_ORIGIN} placeholder until the production domain is assigned.
 """
 
