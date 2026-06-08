@@ -123,6 +123,8 @@ Launch wrapper:
 npm run launch:prepare -- --origin https://your-production-domain.example --contact-email contact@your-production-domain.example --ga4-measurement-id G-XXXXXXXXXX --adsense-publisher-id pub-3050601904412736
 ```
 
+`launch:prepare` exits successfully only when the production readiness audit passes. Use `--allow-incomplete-readiness` only for a non-submission preview with known blockers.
+
 Expected:
 
 - No `{SITE_ORIGIN}` placeholder in public artifacts.

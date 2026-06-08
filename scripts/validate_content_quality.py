@@ -266,6 +266,14 @@ def validate(require_site_origin=False):
         ]:
             if needle not in readiness_script:
                 errors.append({"type": f"readiness_missing_{label}"})
+    if launch_script_path.exists():
+        launch_script = launch_script_path.read_text(encoding="utf-8")
+        for needle, label in [
+            ("--require-ready", "require_ready_gate"),
+            ("--allow-incomplete-readiness", "allow_incomplete_readiness_flag"),
+        ]:
+            if needle not in launch_script:
+                errors.append({"type": f"launch_prepare_missing_{label}"})
     if seo_audit_report_path.exists():
         seo_audit_report = load_json(seo_audit_report_path)
         if seo_audit_report.get("error_count") != 0 or not seo_audit_report.get("passed"):

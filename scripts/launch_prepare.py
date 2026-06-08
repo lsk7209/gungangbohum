@@ -58,6 +58,7 @@ def main():
     parser.add_argument("--adsense-publisher-id", default=os.getenv("ADSENSE_PUBLISHER_ID", ""), help="Optional AdSense publisher ID, for example pub-0000000000000000.")
     parser.add_argument("--skip-gsc-check", action="store_true", help="Skip local GSC credential and URL validation.")
     parser.add_argument("--set-github-vars", action="store_true", help="Set GitHub repo variables GSC_SITE_URL and GSC_SITEMAP_URL.")
+    parser.add_argument("--allow-incomplete-readiness", action="store_true", help="Write the readiness report without failing when launch blockers remain.")
     args = parser.parse_args()
 
     origin = normalize_origin(args.origin)
@@ -108,8 +109,14 @@ def main():
             env,
         )
 
-    run_step("Write production readiness report", [sys.executable, "scripts/production_readiness_audit.py", "--write-report"], env)
-    print("\nLaunch preparation checks completed.")
+    readiness_args = [sys.executable, "scripts/production_readiness_audit.py", "--write-report"]
+    if not args.allow_incomplete_readiness:
+        readiness_args.append("--require-ready")
+    run_step("Write production readiness report", readiness_args, env)
+    if args.allow_incomplete_readiness:
+        print("\nLaunch preparation report written with incomplete readiness allowed.")
+    else:
+        print("\nLaunch preparation checks completed.")
     print(f"SITE_ORIGIN={origin}")
     print(f"GSC_SITE_URL={site_url}")
     print(f"GSC_SITEMAP_URL={sitemap_url}")
