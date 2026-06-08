@@ -27,6 +27,7 @@ gh variable set GSC_SITEMAP_URL --repo lsk7209/gungangbohum --body $env:GSC_SITE
 npm run launch:commands -- --origin $env:SITE_ORIGIN --site-url $env:GSC_SITE_URL --sitemap-url $env:GSC_SITEMAP_URL --contact-email $env:PUBLIC_CONTACT_EMAIL --contact-url $env:PUBLIC_CONTACT_URL --ga4-measurement-id $env:GA4_MEASUREMENT_ID --adsense-publisher-id $env:ADSENSE_PUBLISHER_ID
 
 npm run launch:check-env
+npm run launch:check-ci
 npm run launch:preflight -- --origin $env:SITE_ORIGIN --site-url $env:GSC_SITE_URL --sitemap-url $env:GSC_SITEMAP_URL --contact-email $env:PUBLIC_CONTACT_EMAIL --contact-url $env:PUBLIC_CONTACT_URL --ga4-measurement-id $env:GA4_MEASUREMENT_ID --adsense-publisher-id $env:ADSENSE_PUBLISHER_ID
 npm run launch:prepare -- --origin $env:SITE_ORIGIN --site-url $env:GSC_SITE_URL --sitemap-url $env:GSC_SITEMAP_URL --contact-email $env:PUBLIC_CONTACT_EMAIL --contact-url $env:PUBLIC_CONTACT_URL --ga4-measurement-id $env:GA4_MEASUREMENT_ID --adsense-publisher-id $env:ADSENSE_PUBLISHER_ID --set-github-vars
 npm run ready:production

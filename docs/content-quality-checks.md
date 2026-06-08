@@ -40,7 +40,7 @@ python scripts\apply_ads_txt.py --publisher-id pub-3050601904412736 --dry-run
 
 The validator checks:
 
-- project operation files: `package.json`, `vercel.json`, `README.md`, and the GitHub content-quality workflow
+- project operation files: `package.json`, `vercel.json`, `README.md`, the GitHub content-quality workflow, and launch CI status check
 - Phase 0 launch-assumption report at `docs/phase0-verification-report.md`
 - optional production gate: `--require-site-origin` fails if `{SITE_ORIGIN}` remains in public artifacts
 - 200 queued articles and 200 article HTML files

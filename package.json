@@ -17,6 +17,7 @@
     "check:production": "python scripts/generate_aca_articles.py && python scripts/apply_site_origin.py && python scripts/audit_seo_adsense.py --write-report && python scripts/audit_performance_budget.py --write-report && python scripts/validate_content_quality.py --write-report --require-site-origin",
     "launch:check-env": "python scripts/check_launch_env.py",
     "launch:commands": "python scripts/print_launch_commands.py",
+    "launch:check-ci": "python scripts/check_github_actions_status.py",
     "launch:status": "python scripts/print_launch_status.py",
     "launch:preflight": "python scripts/launch_prepare.py --preflight",
     "launch:prepare": "python scripts/launch_prepare.py",

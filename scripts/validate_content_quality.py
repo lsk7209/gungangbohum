@@ -315,6 +315,7 @@ def validate(require_site_origin=False):
     readiness_script_path = ROOT / "scripts" / "production_readiness_audit.py"
     launch_script_path = ROOT / "scripts" / "launch_prepare.py"
     launch_commands_script_path = ROOT / "scripts" / "print_launch_commands.py"
+    launch_ci_script_path = ROOT / "scripts" / "check_github_actions_status.py"
     launch_status_script_path = ROOT / "scripts" / "print_launch_status.py"
     contact_script_path = ROOT / "scripts" / "apply_contact_channel.py"
     launch_env_check_script_path = ROOT / "scripts" / "check_launch_env.py"
@@ -336,6 +337,7 @@ def validate(require_site_origin=False):
         (readiness_script_path, "production_readiness_audit"),
         (launch_script_path, "launch_prepare"),
         (launch_commands_script_path, "print_launch_commands"),
+        (launch_ci_script_path, "check_github_actions_status"),
         (launch_status_script_path, "print_launch_status"),
         (contact_script_path, "apply_contact_channel"),
         (launch_env_check_script_path, "check_launch_env"),
@@ -352,7 +354,7 @@ def validate(require_site_origin=False):
         for script in ("generate", "validate", "check"):
             if script not in scripts:
                 errors.append({"type": "missing_package_script", "script": script})
-        for script in ("adsense:apply", "analytics:apply", "audit:performance", "audit:seo", "contact:apply", "check:production", "launch:check-env", "launch:commands", "launch:status", "launch:preflight", "launch:prepare", "ready", "ready:production", "gsc:check", "gsc:submit"):
+        for script in ("adsense:apply", "analytics:apply", "audit:performance", "audit:seo", "contact:apply", "check:production", "launch:check-env", "launch:commands", "launch:check-ci", "launch:status", "launch:preflight", "launch:prepare", "ready", "ready:production", "gsc:check", "gsc:submit"):
             if script not in scripts:
                 errors.append({"type": "missing_operations_package_script", "script": script})
     if vercel_path.exists():
@@ -520,6 +522,7 @@ def validate(require_site_origin=False):
             ("GSC_SITEMAP_URL", "gsc_sitemap_url"),
             ("npm run check:production", "production_gate"),
             ("npm run launch:prepare", "launch_prepare_gate"),
+            ("npm run launch:check-ci", "launch_check_ci"),
             ("--site-url https://your-production-domain.example/", "launch_site_url"),
             ("--sitemap-url https://your-production-domain.example/sitemap.xml", "launch_sitemap_url"),
             ("npm run gsc:submit", "gsc_submit_gate"),
@@ -540,6 +543,7 @@ def validate(require_site_origin=False):
             ("GSC_TOKEN_JSON", "gsc_token_json"),
             ("npm run launch:commands", "launch_commands"),
             ("npm run launch:check-env", "launch_check_env"),
+            ("npm run launch:check-ci", "launch_check_ci"),
             ("npm run launch:preflight", "launch_preflight"),
             ("npm run launch:prepare", "launch_prepare"),
             ("--site-url $env:GSC_SITE_URL", "launch_commands_site_url"),
@@ -556,10 +560,21 @@ def validate(require_site_origin=False):
             ("npm run launch:prepare -- --origin", "launch_prepare"),
             ("--site-url https://your-domain.example/", "launch_site_url"),
             ("--sitemap-url https://your-domain.example/sitemap.xml", "launch_sitemap_url"),
+            ("npm run launch:check-ci", "launch_check_ci"),
             ("npm run launch:status", "launch_status"),
         ]:
             if needle not in readme:
                 errors.append({"type": f"readme_missing_{label}"})
+    if launch_ci_script_path.exists():
+        launch_ci_script = launch_ci_script_path.read_text(encoding="utf-8")
+        for needle, label in [
+            ("Content quality", "content_quality_workflow"),
+            ("Submit sitemap to Google Search Console", "gsc_workflow"),
+            ("--require-gsc-success", "require_gsc_success"),
+            ("headSha", "head_sha_match"),
+        ]:
+            if needle not in launch_ci_script:
+                errors.append({"type": f"launch_ci_missing_{label}"})
     if launch_env_check_script_path.exists():
         launch_env_check_script = launch_env_check_script_path.read_text(encoding="utf-8")
         for needle, label in [
