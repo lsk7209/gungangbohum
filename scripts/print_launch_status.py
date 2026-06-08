@@ -126,6 +126,7 @@ def main():
         f"warnings={performance.get('warning_count', 'unknown')}, "
         f"largest_html_bytes={performance.get('largest_html_bytes', 'unknown')}"
     )
+    print("Remote CI gate: run npm run launch:check-ci before launch preparation")
 
     actions = display_actions(report.get("next_required_actions", []), current_changed_paths, stale_git_status)
     if actions:

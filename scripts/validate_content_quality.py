@@ -615,6 +615,8 @@ def validate(require_site_origin=False):
             ("display_code_blockers", "current_code_blockers"),
             ("display_actions", "current_required_actions"),
             ("Current worktree", "current_worktree_status"),
+            ("Remote CI gate", "remote_ci_gate_status"),
+            ("npm run launch:check-ci", "remote_ci_gate_command"),
             ("git_snapshot", "git_snapshot"),
         ]:
             if needle not in launch_status_script:
