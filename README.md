@@ -48,7 +48,7 @@ Run the same input checks without changing files first:
 npm run launch:preflight -- --origin https://your-domain.example --contact-email contact@your-domain.example --ga4-measurement-id G-XXXXXXXXXX --adsense-publisher-id pub-3050601904412736
 ```
 
-`launch:prepare` exits successfully only when production readiness passes. For a non-submission preview with known blockers, add `--allow-incomplete-readiness`.
+`launch:prepare` requires a clean git worktree before it changes files or repository variables. Commit or stash local edits first; use `--allow-dirty-worktree` only for an intentional local preview. It exits successfully only when production readiness passes. For a non-submission preview with known blockers, add `--allow-incomplete-readiness`.
 
 To also set the GitHub repository variables used by the sitemap workflow:
 

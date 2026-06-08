@@ -130,7 +130,7 @@ npm run launch:preflight -- --origin https://your-production-domain.example --co
 npm run launch:prepare -- --origin https://your-production-domain.example --contact-email contact@your-production-domain.example --ga4-measurement-id G-XXXXXXXXXX --adsense-publisher-id pub-3050601904412736
 ```
 
-`launch:preflight` validates launch inputs and local GSC configuration without changing files or GitHub variables. `launch:prepare` exits successfully only when the production readiness audit passes. Use `--allow-incomplete-readiness` only for a non-submission preview with known blockers.
+`launch:preflight` validates launch inputs and local GSC configuration without changing files or GitHub variables. `launch:prepare` requires a clean git worktree before it changes files or repository variables, then exits successfully only when the production readiness audit passes. Use `--allow-dirty-worktree` only for an intentional local preview, and use `--allow-incomplete-readiness` only for a non-submission preview with known blockers.
 
 Expected:
 

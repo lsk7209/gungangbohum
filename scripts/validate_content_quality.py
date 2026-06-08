@@ -439,6 +439,8 @@ def validate(require_site_origin=False):
             ("--preflight", "preflight_flag"),
             ("validate_launch_urls", "launch_url_alignment"),
             ("validate_sitemap_belongs_to_site", "launch_gsc_sitemap_alignment"),
+            ("ensure_clean_worktree", "clean_worktree_guard"),
+            ("--allow-dirty-worktree", "dirty_worktree_override"),
         ]:
             if needle not in launch_script:
                 errors.append({"type": f"launch_prepare_missing_{label}"})

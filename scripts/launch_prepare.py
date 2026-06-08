@@ -38,6 +38,16 @@ def github_repo(env):
     return result.stdout.strip()
 
 
+def ensure_clean_worktree(env, allow_dirty):
+    if allow_dirty:
+        return
+    result = run_capture(["git", "status", "--porcelain"], env)
+    if result.returncode != 0:
+        raise SystemExit("Could not verify git worktree status before launch preparation.")
+    if result.stdout.strip():
+        raise SystemExit("launch:prepare requires a clean git worktree. Commit or stash local changes, or pass --allow-dirty-worktree.")
+
+
 def ensure_sitemap_url(origin):
     parsed = urlsplit(origin)
     if parsed.scheme != "https" or not parsed.netloc:
@@ -137,6 +147,7 @@ def main():
     parser.add_argument("--skip-gsc-check", action="store_true", help="Skip local GSC credential and URL validation.")
     parser.add_argument("--set-github-vars", action="store_true", help="Set GitHub repo variables GSC_SITE_URL and GSC_SITEMAP_URL.")
     parser.add_argument("--allow-incomplete-readiness", action="store_true", help="Write the readiness report without failing when launch blockers remain.")
+    parser.add_argument("--allow-dirty-worktree", action="store_true", help="Allow launch preparation to run with uncommitted local changes.")
     parser.add_argument("--preflight", action="store_true", help="Validate launch inputs and GSC configuration without changing files or GitHub variables.")
     args = parser.parse_args()
 
@@ -161,6 +172,8 @@ def main():
     if args.preflight:
         preflight(args, origin, site_url, sitemap_url, env)
         return 0
+
+    ensure_clean_worktree(env, args.allow_dirty_worktree)
 
     if args.set_github_vars:
         repo = github_repo(env)
