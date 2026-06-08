@@ -575,6 +575,9 @@ def validate(require_site_origin=False):
             ("READINESS_INPUTS", "readiness_inputs"),
             ("newer_inputs", "stale_report_warning"),
             ("current_git_changed_paths", "git_status_stale_warning"),
+            ("display_code_blockers", "current_code_blockers"),
+            ("display_actions", "current_required_actions"),
+            ("Current worktree", "current_worktree_status"),
             ("git_snapshot", "git_snapshot"),
         ]:
             if needle not in launch_status_script:

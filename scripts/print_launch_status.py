@@ -53,6 +53,26 @@ def current_git_changed_paths():
     return changed
 
 
+def display_code_blockers(summary, current_changed_paths, stale_git_status):
+    blockers = list(summary.get("code_or_repository_blockers", []))
+    if stale_git_status and not current_changed_paths:
+        blockers = [name for name in blockers if name != "git_worktree_clean"]
+    if current_changed_paths and "git_worktree_clean" not in blockers:
+        blockers.append("git_worktree_clean")
+    return blockers
+
+
+def display_actions(actions, current_changed_paths, stale_git_status):
+    filtered = []
+    for action in actions:
+        if stale_git_status and not current_changed_paths and action == "Commit the local work before git push.":
+            continue
+        filtered.append(action)
+    if current_changed_paths and "Commit the local work before git push." not in filtered:
+        filtered.append("Commit the local work before git push.")
+    return filtered
+
+
 def main():
     parser = argparse.ArgumentParser(description="Print the latest production readiness summary.")
     parser.add_argument("--require-ready", action="store_true", help="Exit non-zero when production readiness is incomplete.")
@@ -66,6 +86,7 @@ def main():
     report_git = report.get("git_snapshot", {})
     current_changed_paths = current_git_changed_paths()
     stale_git_status = bool(report_git.get("changed_paths") and not current_changed_paths)
+    current_dirty_after_clean_report = bool(report_git.get("worktree_clean") and current_changed_paths)
     summary = report.get("blocker_summary", {})
     quality = report.get("quality_snapshot", {})
     article_generation = report.get("article_generation_snapshot", {})
@@ -78,8 +99,11 @@ def main():
         print(f"Warning: readiness report may be stale. Run npm run ready. Newer inputs: {', '.join(stale_inputs)}")
     if stale_git_status:
         print("Warning: readiness report captured uncommitted files, but the current worktree is clean. Run npm run ready.")
+    if current_dirty_after_clean_report:
+        print("Warning: readiness report captured a clean worktree, but the current worktree now has uncommitted files. Run npm run ready.")
     print(f"Ready for production submission: {str(bool(report.get('ready_for_production_submission'))).lower()}")
-    print(f"Code or repository blockers: {', '.join(summary.get('code_or_repository_blockers', [])) or 'none'}")
+    print(f"Current worktree: {'dirty' if current_changed_paths else 'clean'}")
+    print(f"Code or repository blockers: {', '.join(display_code_blockers(summary, current_changed_paths, stale_git_status)) or 'none'}")
     print(f"External input blockers: {', '.join(summary.get('external_input_blockers', [])) or 'none'}")
     print(f"Missing external inputs: {', '.join(names(missing_inputs)) or 'none'}")
     print(f"SITE_ORIGIN placeholders remaining: {quality.get('site_origin_placeholder_count', 'unknown')}")
@@ -103,7 +127,7 @@ def main():
         f"largest_html_bytes={performance.get('largest_html_bytes', 'unknown')}"
     )
 
-    actions = report.get("next_required_actions", [])
+    actions = display_actions(report.get("next_required_actions", []), current_changed_paths, stale_git_status)
     if actions:
         print("Next required actions:")
         for action in actions:

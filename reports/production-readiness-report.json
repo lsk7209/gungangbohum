@@ -1,11 +1,10 @@
 {
-  "generatedAt": "2026-06-08T14:42:23.989166+00:00",
+  "generatedAt": "2026-06-08T14:45:43.953571+00:00",
   "git_snapshot": {
-    "head": "21ee8fb9626256249b762619996e80e1f88b99bb",
+    "head": "feaff5447332e387654bde52a24c2612afa17192",
     "worktree_clean": false,
     "changed_paths": [
       "scripts/print_launch_status.py",
-      "scripts/production_readiness_audit.py",
       "scripts/validate_content_quality.py"
     ]
   },
