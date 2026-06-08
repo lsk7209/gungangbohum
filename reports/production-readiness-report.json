@@ -7,6 +7,11 @@
       "detail": "content-quality-report.json has error_count 0"
     },
     {
+      "name": "article_generation_contract",
+      "ok": true,
+      "detail": "article generation contract passed: 200+ articles, quality >= 90, Codex-only, no manual ad slots"
+    },
+    {
       "name": "seo_adsense_audit",
       "ok": true,
       "detail": "SEO and AdSense audit passed with 0 errors and 0 warnings"
@@ -147,6 +152,15 @@
     "sitemap_urls": 16,
     "public_origin_mismatch_count": 0,
     "error_count": 0
+  },
+  "article_generation_snapshot": {
+    "articles": 200,
+    "publishedArticles": 2,
+    "scheduledArticles": 198,
+    "minQualityScore": 94,
+    "maxQualityScore": 99,
+    "codexOnlyGenerationArticles": 200,
+    "manualAdSlotArticles": 0
   },
   "seo_adsense_snapshot": {
     "pages_checked": 215,
