@@ -40,6 +40,20 @@ def run_gh(args):
     return result
 
 
+def worktree_has_uncommitted_changes(result):
+    if not result or result.returncode != 0:
+        return True
+    ignored = {"reports/production-readiness-report.json"}
+    changed = []
+    for line in result.stdout.splitlines():
+        if not line.strip():
+            continue
+        path = line[3:].replace("\\", "/")
+        if path not in ignored:
+            changed.append(path)
+    return bool(changed)
+
+
 def public_files():
     patterns = ["*.html", "aca/*.html", "guides/*.html", "*.xml", "*.txt", "content/*.json"]
     seen = set()
@@ -86,7 +100,7 @@ def audit():
     git_status = run_git(["status", "--short"])
     in_git_repo = bool(git_root and git_root.returncode == 0)
     has_commit = bool(git_head and git_head.returncode == 0)
-    worktree_clean = bool(git_status and git_status.returncode == 0 and not git_status.stdout.strip())
+    worktree_clean = not worktree_has_uncommitted_changes(git_status)
     remotes = []
     if git_remote and git_remote.returncode == 0:
         remotes = [line.strip() for line in git_remote.stdout.splitlines() if line.strip()]
@@ -219,7 +233,7 @@ def main():
     print(json.dumps(report, ensure_ascii=False, indent=2))
     if args.write_report:
         REPORT_DIR.mkdir(exist_ok=True)
-        READINESS_REPORT.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
+        READINESS_REPORT.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     if args.require_ready and not report["ready_for_production_submission"]:
         return 1
     return 0
