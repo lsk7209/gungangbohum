@@ -310,6 +310,7 @@ def validate(require_site_origin=False):
     readiness_script_path = ROOT / "scripts" / "production_readiness_audit.py"
     launch_script_path = ROOT / "scripts" / "launch_prepare.py"
     launch_commands_script_path = ROOT / "scripts" / "print_launch_commands.py"
+    launch_status_script_path = ROOT / "scripts" / "print_launch_status.py"
     contact_script_path = ROOT / "scripts" / "apply_contact_channel.py"
     launch_env_check_script_path = ROOT / "scripts" / "check_launch_env.py"
     ads_txt_script_path = ROOT / "scripts" / "apply_ads_txt.py"
@@ -329,6 +330,7 @@ def validate(require_site_origin=False):
         (readiness_script_path, "production_readiness_audit"),
         (launch_script_path, "launch_prepare"),
         (launch_commands_script_path, "print_launch_commands"),
+        (launch_status_script_path, "print_launch_status"),
         (contact_script_path, "apply_contact_channel"),
         (launch_env_check_script_path, "check_launch_env"),
         (ads_txt_script_path, "apply_ads_txt"),
@@ -344,7 +346,7 @@ def validate(require_site_origin=False):
         for script in ("generate", "validate", "check"):
             if script not in scripts:
                 errors.append({"type": "missing_package_script", "script": script})
-        for script in ("adsense:apply", "analytics:apply", "audit:performance", "audit:seo", "contact:apply", "check:production", "launch:check-env", "launch:commands", "launch:preflight", "launch:prepare", "ready", "ready:production", "gsc:check", "gsc:submit"):
+        for script in ("adsense:apply", "analytics:apply", "audit:performance", "audit:seo", "contact:apply", "check:production", "launch:check-env", "launch:commands", "launch:status", "launch:preflight", "launch:prepare", "ready", "ready:production", "gsc:check", "gsc:submit"):
             if script not in scripts:
                 errors.append({"type": "missing_operations_package_script", "script": script})
     if vercel_path.exists():
@@ -476,6 +478,17 @@ def validate(require_site_origin=False):
                 errors.append({"type": f"launch_env_example_missing_{label}"})
     if launch_commands_script_path.exists():
         errors.extend(validate_launch_command_printer())
+    if launch_status_script_path.exists():
+        launch_status_script = launch_status_script_path.read_text(encoding="utf-8")
+        for needle, label in [
+            ("production-readiness-report.json", "readiness_report"),
+            ("missing_external_inputs", "missing_external_inputs"),
+            ("site_origin_placeholder_count", "site_origin_placeholder_count"),
+            ("ready_for_production_submission", "ready_for_production_submission"),
+            ("--require-ready", "require_ready_flag"),
+        ]:
+            if needle not in launch_status_script:
+                errors.append({"type": f"launch_status_missing_{label}"})
 
     queue_path = CONTENT_DIR / "article-queue.json"
     generation_report_path = REPORT_DIR / "article-generation-report.json"

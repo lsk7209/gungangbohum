@@ -13,6 +13,7 @@ npm run audit:seo
 npm run audit:performance
 npm run check
 npm run ready
+npm run launch:status
 ```
 
 For production after a domain is assigned:
@@ -33,6 +34,7 @@ Replace every `your-domain.example` placeholder with the real production domain 
 Use `docs/launch-env.example.ps1` as the complete no-secret launch environment checklist.
 Run `npm run launch:check-env` after filling local environment values to validate them without changing files or calling Google APIs. It also confirms `SITE_ORIGIN`, `GSC_SITE_URL`, and `GSC_SITEMAP_URL` point to the same production host or a covering `sc-domain` property.
 Run `npm run launch:commands -- --origin https://your-domain.example --contact-email contact@your-domain.example --ga4-measurement-id G-XXXXXXXXXX --adsense-publisher-id pub-0000000000000000` to print validated PowerShell launch commands without changing files.
+Run `npm run launch:status` after `npm run ready` to print the current readiness summary and missing launch inputs without opening the JSON report.
 
 Or run the launch preparation wrapper, which applies the production origin, validates public artifacts, checks local GSC credentials, and writes the readiness report:
 
