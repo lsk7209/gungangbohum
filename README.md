@@ -70,7 +70,7 @@ npm run gsc:check
 npm run gsc:submit
 ```
 
-The GitHub workflow `.github/workflows/gsc-sitemap-submit.yml` also submits automatically on `main` pushes that change sitemap-related artifacts when repository variables `GSC_SITE_URL`, `GSC_SITEMAP_URL` and secrets `GSC_CLIENT_JSON`, `GSC_TOKEN_JSON` are set. The content quality workflow also writes the production readiness report so CI catches missing readiness-audit wiring.
+The GitHub workflow `.github/workflows/gsc-sitemap-submit.yml` also submits automatically on `main` pushes that change sitemap-related artifacts when repository variables `GSC_SITE_URL`, `GSC_SITEMAP_URL` and secrets `GSC_CLIENT_JSON`, `GSC_TOKEN_JSON` are set. It can also be run manually with `site_url` and `sitemap_url` inputs, and it retries daily after the repository variables are set. The content quality workflow also writes the production readiness report so CI catches missing readiness-audit wiring.
 
 The repository secrets can be prepared before the domain is assigned:
 

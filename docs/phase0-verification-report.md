@@ -85,7 +85,7 @@ Implemented:
 Known blocker:
 
 - Production domain is not assigned. Until `SITE_ORIGIN` is set to an HTTPS domain, canonical URLs and GSC sitemap submission cannot be proven successful.
-- Google Search Console automatic sitemap submission is wired through `.github/workflows/gsc-sitemap-submit.yml`, but it requires repository variables `GSC_SITE_URL`, `GSC_SITEMAP_URL` and secrets `GSC_CLIENT_JSON`, `GSC_TOKEN_JSON`.
+- Google Search Console automatic sitemap submission is wired through `.github/workflows/gsc-sitemap-submit.yml`, but it requires repository variables `GSC_SITE_URL`, `GSC_SITEMAP_URL` and secrets `GSC_CLIENT_JSON`, `GSC_TOKEN_JSON`. The workflow also supports manual `site_url` and `sitemap_url` inputs, and retries daily after the repository variables are set.
 - GitHub repository secrets `GSC_CLIENT_JSON` and `GSC_TOKEN_JSON` can be set before launch; repository variables `GSC_SITE_URL` and `GSC_SITEMAP_URL` require the final production domain.
 
 ## Validation Evidence

@@ -287,7 +287,10 @@ def validate(require_site_origin=False):
         workflow = gsc_workflow_path.read_text(encoding="utf-8")
         for needle, label in [
             ("push:", "push_trigger"),
+            ("schedule:", "schedule_trigger"),
             ("workflow_dispatch:", "manual_trigger"),
+            ("site_url:", "manual_site_url_input"),
+            ("sitemap_url:", "manual_sitemap_url_input"),
             ("GSC_SITE_URL", "site_url_var"),
             ("GSC_SITEMAP_URL", "sitemap_url_var"),
             ("GSC_CLIENT_JSON", "client_secret"),

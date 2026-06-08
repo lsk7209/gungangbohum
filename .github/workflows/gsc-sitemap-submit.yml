@@ -12,7 +12,18 @@ on:
       - content/search-index.json
       - scripts/gsc_submit_sitemap.py
       - .github/workflows/gsc-sitemap-submit.yml
+  schedule:
+    - cron: "17 3 * * *"
   workflow_dispatch:
+    inputs:
+      site_url:
+        description: "GSC property URL, for example https://example.com/ or sc-domain:example.com"
+        required: false
+        type: string
+      sitemap_url:
+        description: "Production sitemap URL, for example https://example.com/sitemap.xml"
+        required: false
+        type: string
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
@@ -23,9 +34,9 @@ jobs:
     env:
       GSC_CLIENT_JSON: ${{ secrets.GSC_CLIENT_JSON }}
       GSC_TOKEN_JSON: ${{ secrets.GSC_TOKEN_JSON }}
-      GSC_SITE_URL: ${{ vars.GSC_SITE_URL }}
-      GSC_SITEMAP_URL: ${{ vars.GSC_SITEMAP_URL }}
-    if: ${{ vars.GSC_SITE_URL != '' && vars.GSC_SITEMAP_URL != '' }}
+      GSC_SITE_URL: ${{ github.event_name == 'workflow_dispatch' && inputs.site_url || vars.GSC_SITE_URL }}
+      GSC_SITEMAP_URL: ${{ github.event_name == 'workflow_dispatch' && inputs.sitemap_url || vars.GSC_SITEMAP_URL }}
+    if: ${{ (github.event_name == 'workflow_dispatch' && inputs.site_url != '' && inputs.sitemap_url != '') || (vars.GSC_SITE_URL != '' && vars.GSC_SITEMAP_URL != '') }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
