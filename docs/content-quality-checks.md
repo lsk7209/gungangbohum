@@ -38,8 +38,9 @@ The validator checks:
 - meta descriptions do not end on weak truncated connector words such as `and`, `with`, `before`, or `plus`
 - repeated title phrase checks for generated long-tail article patterns
 - 5-hour publishing interval
-- article meta, canonical, OG/Twitter, RSS alternate, OpenSearch discovery, table of contents, external source, related path, and editorial block
+- article meta, canonical, OG/Twitter, RSS alternate, OpenSearch discovery, table of contents, source list, related path, and editorial block
 - article CTA blocks, at least two internal links, and at least one external link
+- article source boxes with at least two official citation entries in Article schema
 - Article, BreadcrumbList, and FAQPage JSON-LD counts
 - representative Organization and WebSite/SearchAction entity schema on home, blog, guide hubs, and generated articles
 - guide hub CollectionPage, ItemList, and BreadcrumbList JSON-LD

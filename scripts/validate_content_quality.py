@@ -65,7 +65,7 @@ def body_sentences_from_html(html):
     text = re.sub(r"<style[\s\S]*?</style>|<script[\s\S]*?</script>|<[^>]+>", " ", text)
     text = re.sub(r"\s+", " ", text)
     skip_fragments = [
-        "Official source:",
+        "Official source",
         "Internal links:",
         "Editorial standards for this ACA estimate",
         "Related guide path",
@@ -358,6 +358,7 @@ def validate(require_site_origin=False):
             ("Verification snapshot", "verification_snapshot"),
             ("Related guide path", "related_path"),
             ("Editorial standards for this ACA estimate", "editorial_block"),
+            ('class="source-list"', "source_list"),
             ('target="_blank"', "external_source"),
             ('<meta property="og:title"', "og_title"),
             ('<meta name="twitter:title"', "twitter_title"),
@@ -410,6 +411,8 @@ def validate(require_site_origin=False):
                 errors.append({"type": "article_schema_date_not_iso_datetime", "slug": item["slug"]})
             if not isinstance(article_schema.get("keywords"), list) or len(article_schema.get("keywords", [])) < 3:
                 errors.append({"type": "article_schema_keywords_weak", "slug": item["slug"]})
+            if not isinstance(article_schema.get("citation"), list) or len(article_schema.get("citation", [])) < 2:
+                errors.append({"type": "article_schema_citation_weak", "slug": item["slug"]})
         for typ in [schema.get("@type") for schema in schemas]:
             schema_counts[typ] = schema_counts.get(typ, 0) + 1
         if BAD_PATTERNS.search(html):
