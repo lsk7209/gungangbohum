@@ -538,10 +538,24 @@ def validate(require_site_origin=False):
             ("npm run launch:check-env", "launch_check_env"),
             ("npm run launch:preflight", "launch_preflight"),
             ("npm run launch:prepare", "launch_prepare"),
+            ("--site-url $env:GSC_SITE_URL", "launch_commands_site_url"),
+            ("--sitemap-url $env:GSC_SITEMAP_URL", "launch_commands_sitemap_url"),
             ("npm run ready:production", "ready_production"),
         ]:
             if needle not in launch_env_example:
                 errors.append({"type": f"launch_env_example_missing_{label}"})
+    if readme_path.exists():
+        readme = readme_path.read_text(encoding="utf-8")
+        for needle, label in [
+            ("npm run launch:commands", "launch_commands"),
+            ("npm run launch:preflight -- --origin", "launch_preflight"),
+            ("npm run launch:prepare -- --origin", "launch_prepare"),
+            ("--site-url https://your-domain.example/", "launch_site_url"),
+            ("--sitemap-url https://your-domain.example/sitemap.xml", "launch_sitemap_url"),
+            ("npm run launch:status", "launch_status"),
+        ]:
+            if needle not in readme:
+                errors.append({"type": f"readme_missing_{label}"})
     if launch_env_check_script_path.exists():
         launch_env_check_script = launch_env_check_script_path.read_text(encoding="utf-8")
         for needle, label in [

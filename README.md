@@ -39,13 +39,13 @@ Run `npm run launch:status` after `npm run ready` to print the current readiness
 Or run the launch preparation wrapper, which applies the production origin, validates public artifacts, checks local GSC credentials, and writes the readiness report:
 
 ```powershell
-npm run launch:prepare -- --origin https://your-domain.example --contact-email contact@your-domain.example --ga4-measurement-id G-XXXXXXXXXX --adsense-publisher-id pub-3050601904412736
+npm run launch:prepare -- --origin https://your-domain.example --site-url https://your-domain.example/ --sitemap-url https://your-domain.example/sitemap.xml --contact-email contact@your-domain.example --ga4-measurement-id G-XXXXXXXXXX --adsense-publisher-id pub-3050601904412736
 ```
 
 Run the same input checks without changing files first:
 
 ```powershell
-npm run launch:preflight -- --origin https://your-domain.example --contact-email contact@your-domain.example --ga4-measurement-id G-XXXXXXXXXX --adsense-publisher-id pub-3050601904412736
+npm run launch:preflight -- --origin https://your-domain.example --site-url https://your-domain.example/ --sitemap-url https://your-domain.example/sitemap.xml --contact-email contact@your-domain.example --ga4-measurement-id G-XXXXXXXXXX --adsense-publisher-id pub-3050601904412736
 ```
 
 `launch:prepare` requires a clean git worktree before it changes files or repository variables. Commit or stash local edits first; use `--allow-dirty-worktree` only for an intentional local preview. It exits successfully only when production readiness passes. For a non-submission preview with known blockers, add `--allow-incomplete-readiness`.
@@ -53,7 +53,7 @@ npm run launch:preflight -- --origin https://your-domain.example --contact-email
 To also set the GitHub repository variables used by the sitemap workflow:
 
 ```powershell
-npm run launch:prepare -- --origin https://your-domain.example --contact-email contact@your-domain.example --ga4-measurement-id G-XXXXXXXXXX --adsense-publisher-id pub-3050601904412736 --set-github-vars
+npm run launch:prepare -- --origin https://your-domain.example --site-url https://your-domain.example/ --sitemap-url https://your-domain.example/sitemap.xml --contact-email contact@your-domain.example --ga4-measurement-id G-XXXXXXXXXX --adsense-publisher-id pub-3050601904412736 --set-github-vars
 ```
 
 ## Deployment Notes
