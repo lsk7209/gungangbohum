@@ -474,7 +474,9 @@ def validate(require_site_origin=False):
         errors.extend(validate_launch_command_printer())
 
     queue_path = CONTENT_DIR / "article-queue.json"
+    generation_report_path = REPORT_DIR / "article-generation-report.json"
     q = load_json(queue_path)
+    generation_report = load_json(generation_report_path) if generation_report_path.exists() else {}
     site_origin = origin_from_canonical(q[0].get("canonical", "")) if q else "{SITE_ORIGIN}"
     expected_org_id = f"{site_origin}/#organization"
     expected_website_id = f"{site_origin}/#website"
@@ -486,6 +488,24 @@ def validate(require_site_origin=False):
     article_files = sorted(ARTICLE_DIR.glob("*.html"))
     all_html_files = sorted(ROOT.glob("*.html")) + article_files + sorted(GUIDE_DIR.glob("*.html"))
     errors.extend(validate_html_structure(all_html_files))
+
+    if len(q) < 200:
+        errors.append({"type": "article_queue_below_committed_scope", "count": len(q), "minimum": 200})
+    if not generation_report:
+        errors.append({"type": "article_generation_report_missing"})
+    else:
+        if generation_report.get("articles", 0) < 200:
+            errors.append({"type": "article_generation_below_committed_scope", "count": generation_report.get("articles"), "minimum": 200})
+        if generation_report.get("minQualityScore", 0) < 90:
+            errors.append({"type": "article_generation_quality_score_below_90", "minQualityScore": generation_report.get("minQualityScore")})
+        if generation_report.get("codexOnlyGenerationArticles") != generation_report.get("articles"):
+            errors.append({
+                "type": "article_generation_not_all_codex_only",
+                "articles": generation_report.get("articles"),
+                "codexOnlyGenerationArticles": generation_report.get("codexOnlyGenerationArticles"),
+            })
+        if generation_report.get("manualAdSlotArticles") != 0:
+            errors.append({"type": "article_generation_manual_ad_slots_enabled", "manualAdSlotArticles": generation_report.get("manualAdSlotArticles")})
 
     for field in ("title", "slug", "main_keyword", "meta_title", "meta_description"):
         values = [item[field] for item in q]
@@ -521,7 +541,6 @@ def validate(require_site_origin=False):
             errors.append({"type": "non_readable_slug", "slug": item["slug"]})
         if len(item["slug"]) > 120:
             errors.append({"type": "slug_too_long", "slug": item["slug"], "length": len(item["slug"])})
-
     for i in range(1, len(q)):
         prev = datetime.fromisoformat(q[i - 1]["publishAt"])
         cur = datetime.fromisoformat(q[i]["publishAt"])
@@ -852,6 +871,12 @@ def validate(require_site_origin=False):
 
     summary = {
         "queue_count": len(q),
+        "quality_score_min_max": [
+            generation_report.get("minQualityScore"),
+            generation_report.get("maxQualityScore"),
+        ],
+        "codex_only_articles": generation_report.get("codexOnlyGenerationArticles"),
+        "manual_ad_slot_articles": generation_report.get("manualAdSlotArticles"),
         "site_origin": site_origin,
         "production_site_origin_required": require_site_origin,
         "package_json_present": package_path.exists(),

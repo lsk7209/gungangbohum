@@ -10,6 +10,8 @@ ROOT = Path(__file__).resolve().parents[1]
 POST_DIR = ROOT / "aca"
 DATA_DIR = ROOT / "content"
 GUIDE_DIR = ROOT / "guides"
+REPORT_DIR = ROOT / "reports"
+GENERATION_REPORT = REPORT_DIR / "article-generation-report.json"
 SITE_ORIGIN = os.getenv("SITE_ORIGIN", "{SITE_ORIGIN}").rstrip("/")
 KST = timezone(timedelta(hours=9))
 FIRST_PUBLISH_AT = datetime(2026, 6, 8, 13, 23, tzinfo=KST)
@@ -2127,6 +2129,7 @@ def main():
     POST_DIR.mkdir(exist_ok=True)
     DATA_DIR.mkdir(exist_ok=True)
     GUIDE_DIR.mkdir(exist_ok=True)
+    REPORT_DIR.mkdir(exist_ok=True)
     topics = TOPICS
     now = publication_now()
     for i, topic in enumerate(topics):
@@ -2185,7 +2188,7 @@ def main():
         f"User-agent: *\nAllow: /\n\nSitemap: {SITE_ORIGIN}/sitemap.xml\n# LLM guide: {SITE_ORIGIN}/llms.txt\n",
         encoding="utf-8",
     )
-    print(json.dumps({
+    generation_report = {
         "articles": len(topics),
         "publishedArticles": len(published_topics),
         "scheduledArticles": len(topics) - len(published_topics),
@@ -2194,7 +2197,11 @@ def main():
         "lastPublishAt": topics[-1]["publishAt"],
         "minQualityScore": min(t["quality_score"] for t in topics),
         "maxQualityScore": max(t["quality_score"] for t in topics),
-    }, ensure_ascii=False, indent=2))
+        "codexOnlyGenerationArticles": sum(1 for t in topics if t["codex_only_generation"] is True),
+        "manualAdSlotArticles": sum(1 for t in topics if t["manual_ad_slots"] is not False),
+    }
+    GENERATION_REPORT.write_text(json.dumps(generation_report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    print(json.dumps(generation_report, ensure_ascii=False, indent=2))
 
 
 if __name__ == "__main__":

@@ -1,5 +1,11 @@
 {
   "queue_count": 200,
+  "quality_score_min_max": [
+    94,
+    99
+  ],
+  "codex_only_articles": 200,
+  "manual_ad_slot_articles": 0,
   "site_origin": "{SITE_ORIGIN}",
   "production_site_origin_required": false,
   "package_json_present": true,
