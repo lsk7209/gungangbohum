@@ -380,6 +380,13 @@ def validate(require_site_origin=False):
                 errors.append({"type": f"{label}_workflow_checkout_not_node24"})
             if "actions/setup-python@v6" not in workflow:
                 errors.append({"type": f"{label}_workflow_setup_python_not_node24"})
+    for workflow_path, label, permission in [
+        (quality_workflow_path, "content_quality", "contents: read"),
+        (gsc_workflow_path, "gsc_sitemap", "contents: read"),
+        (scheduled_workflow_path, "publish_scheduled_content", "contents: write"),
+    ]:
+        if workflow_path.exists() and permission not in workflow_path.read_text(encoding="utf-8"):
+            errors.append({"type": f"{label}_workflow_missing_minimum_permissions", "permission": permission})
     if scheduled_workflow_path.exists():
         scheduled_workflow = scheduled_workflow_path.read_text(encoding="utf-8")
         for needle, label in [
