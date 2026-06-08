@@ -1,11 +1,14 @@
 import json
 import argparse
 import subprocess
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
 READINESS_REPORT = ROOT / "reports" / "production-readiness-report.json"
+ARTICLE_QUEUE = ROOT / "content" / "article-queue.json"
+KST = timezone(timedelta(hours=9))
 READINESS_INPUTS = [
     ROOT / "reports" / "article-generation-report.json",
     ROOT / "reports" / "content-quality-report.json",
@@ -73,6 +76,25 @@ def display_actions(actions, current_changed_paths, stale_git_status):
     return filtered
 
 
+def parse_publish_at(value):
+    dt = datetime.fromisoformat(value)
+    return dt if dt.tzinfo else dt.replace(tzinfo=KST)
+
+
+def next_scheduled_article():
+    if not ARTICLE_QUEUE.exists():
+        return None
+    queue = json.loads(ARTICLE_QUEUE.read_text(encoding="utf-8"))
+    scheduled = [
+        item
+        for item in queue
+        if not item.get("is_published") and item.get("publishAt")
+    ]
+    if not scheduled:
+        return None
+    return min(scheduled, key=lambda item: parse_publish_at(item["publishAt"]))
+
+
 def main():
     parser = argparse.ArgumentParser(description="Print the latest production readiness summary.")
     parser.add_argument("--require-ready", action="store_true", help="Exit non-zero when production readiness is incomplete.")
@@ -114,6 +136,11 @@ def main():
         f"{article_generation.get('scheduledArticles', 'unknown')} scheduled, "
         f"quality {article_generation.get('minQualityScore', 'unknown')}-{article_generation.get('maxQualityScore', 'unknown')}"
     )
+    next_article = next_scheduled_article()
+    if next_article:
+        print(f"Next scheduled article: {next_article.get('publishAt')} - {next_article.get('title')}")
+    else:
+        print("Next scheduled article: none")
     print(
         "SEO/AdSense audit: "
         f"errors={seo.get('error_count', 'unknown')}, "

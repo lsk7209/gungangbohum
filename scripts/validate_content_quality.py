@@ -615,6 +615,8 @@ def validate(require_site_origin=False):
             ("display_code_blockers", "current_code_blockers"),
             ("display_actions", "current_required_actions"),
             ("Current worktree", "current_worktree_status"),
+            ("Next scheduled article", "next_scheduled_article"),
+            ("article-queue.json", "article_queue_schedule_source"),
             ("Remote CI gate", "remote_ci_gate_status"),
             ("npm run launch:check-ci", "remote_ci_gate_command"),
             ("git_snapshot", "git_snapshot"),
