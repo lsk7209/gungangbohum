@@ -71,7 +71,17 @@
         "GSC_SITE_URL": false,
         "GSC_SITEMAP_URL": false,
         "GSC_CLIENT_JSON": true,
-        "GSC_TOKEN_JSON": true
+        "GSC_TOKEN_JSON": true,
+        "errors": [
+          {
+            "name": "GSC_SITE_URL",
+            "error": "GSC_SITE_URL must be set after the project domain is assigned."
+          },
+          {
+            "name": "GSC_SITEMAP_URL",
+            "error": "GSC_SITEMAP_URL must be set after the project domain is assigned."
+          }
+        ]
       }
     },
     {
@@ -104,7 +114,17 @@
         "GSC_SITE_URL": false,
         "GSC_SITEMAP_URL": false,
         "GSC_CLIENT_JSON": true,
-        "GSC_TOKEN_JSON": true
+        "GSC_TOKEN_JSON": true,
+        "errors": [
+          {
+            "name": "GSC_SITE_URL",
+            "error": "GSC_SITE_URL must be set after the project domain is assigned."
+          },
+          {
+            "name": "GSC_SITEMAP_URL",
+            "error": "GSC_SITEMAP_URL must be set after the project domain is assigned."
+          }
+        ]
       }
     },
     {
