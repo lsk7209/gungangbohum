@@ -25,6 +25,20 @@ def run_git(args):
     return result
 
 
+def run_gh(args):
+    try:
+        result = subprocess.run(
+            ["gh", *args],
+            cwd=ROOT,
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+    except FileNotFoundError:
+        return None
+    return result
+
+
 def public_files():
     patterns = ["*.html", "aca/*.html", "guides/*.html", "*.xml", "*.txt", "content/*.json"]
     seen = set()
@@ -58,6 +72,11 @@ def audit():
     remotes = []
     if git_remote and git_remote.returncode == 0:
         remotes = [line.strip() for line in git_remote.stdout.splitlines() if line.strip()]
+    remote_repo = ""
+    if remotes:
+        repo_view = run_gh(["repo", "view", "--json", "nameWithOwner", "-q", ".nameWithOwner"])
+        if repo_view and repo_view.returncode == 0:
+            remote_repo = repo_view.stdout.strip()
 
     gsc_env = {
         "GSC_SITE_URL": bool(os.getenv("GSC_SITE_URL")),
@@ -65,6 +84,24 @@ def audit():
         "GSC_CLIENT_JSON": bool(os.getenv("GSC_CLIENT_JSON") or (Path(r"D:\env\adsense_oauth_client.json").exists())),
         "GSC_TOKEN_JSON": bool(os.getenv("GSC_TOKEN_JSON") or (Path(r"D:\env\gsc_token.json").exists())),
     }
+    github_gsc = {
+        "repo": remote_repo,
+        "GSC_CLIENT_JSON_secret": False,
+        "GSC_TOKEN_JSON_secret": False,
+        "GSC_SITE_URL_variable": False,
+        "GSC_SITEMAP_URL_variable": False,
+    }
+    if remote_repo:
+        secret_list = run_gh(["secret", "list", "--repo", remote_repo])
+        variable_list = run_gh(["variable", "list", "--repo", remote_repo])
+        if secret_list and secret_list.returncode == 0:
+            secret_names = {line.split()[0] for line in secret_list.stdout.splitlines() if line.strip()}
+            github_gsc["GSC_CLIENT_JSON_secret"] = "GSC_CLIENT_JSON" in secret_names
+            github_gsc["GSC_TOKEN_JSON_secret"] = "GSC_TOKEN_JSON" in secret_names
+        if variable_list and variable_list.returncode == 0:
+            variable_names = {line.split()[0] for line in variable_list.stdout.splitlines() if line.strip()}
+            github_gsc["GSC_SITE_URL_variable"] = "GSC_SITE_URL" in variable_names
+            github_gsc["GSC_SITEMAP_URL_variable"] = "GSC_SITEMAP_URL" in variable_names
 
     checks = [
         {
@@ -102,6 +139,16 @@ def audit():
             "ok": all(gsc_env.values()),
             "detail": gsc_env,
         },
+        {
+            "name": "github_gsc_configuration",
+            "ok": all([
+                github_gsc["GSC_CLIENT_JSON_secret"],
+                github_gsc["GSC_TOKEN_JSON_secret"],
+                github_gsc["GSC_SITE_URL_variable"],
+                github_gsc["GSC_SITEMAP_URL_variable"],
+            ]),
+            "detail": github_gsc,
+        },
     ]
 
     ready = all(item["ok"] for item in checks)
@@ -115,6 +162,10 @@ def audit():
         next_required_actions.append("Connect this folder to a GitHub remote repository before git push.")
     if not all(gsc_env.values()):
         next_required_actions.append("Set GSC_SITE_URL and GSC_SITEMAP_URL, then run npm run gsc:submit after the domain is verified in Search Console.")
+    if remote_repo and not github_gsc["GSC_SITE_URL_variable"]:
+        next_required_actions.append("Set GitHub repository variable GSC_SITE_URL after the production domain is assigned.")
+    if remote_repo and not github_gsc["GSC_SITEMAP_URL_variable"]:
+        next_required_actions.append("Set GitHub repository variable GSC_SITEMAP_URL after the production domain is assigned.")
 
     report = {
         "ready_for_production_submission": ready,

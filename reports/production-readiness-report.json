@@ -23,8 +23,8 @@
     },
     {
       "name": "git_worktree_clean",
-      "ok": true,
-      "detail": "worktree clean"
+      "ok": false,
+      "detail": "worktree has uncommitted or untracked files"
     },
     {
       "name": "github_remote",
@@ -43,6 +43,17 @@
         "GSC_CLIENT_JSON": true,
         "GSC_TOKEN_JSON": true
       }
+    },
+    {
+      "name": "github_gsc_configuration",
+      "ok": false,
+      "detail": {
+        "repo": "lsk7209/gungangbohum",
+        "GSC_CLIENT_JSON_secret": true,
+        "GSC_TOKEN_JSON_secret": true,
+        "GSC_SITE_URL_variable": false,
+        "GSC_SITEMAP_URL_variable": false
+      }
     }
   ],
   "blockers": [
@@ -52,6 +63,11 @@
       "detail": "221 public files still contain {SITE_ORIGIN}"
     },
     {
+      "name": "git_worktree_clean",
+      "ok": false,
+      "detail": "worktree has uncommitted or untracked files"
+    },
+    {
       "name": "gsc_configuration",
       "ok": false,
       "detail": {
@@ -59,6 +75,17 @@
         "GSC_SITEMAP_URL": false,
         "GSC_CLIENT_JSON": true,
         "GSC_TOKEN_JSON": true
+      }
+    },
+    {
+      "name": "github_gsc_configuration",
+      "ok": false,
+      "detail": {
+        "repo": "lsk7209/gungangbohum",
+        "GSC_CLIENT_JSON_secret": true,
+        "GSC_TOKEN_JSON_secret": true,
+        "GSC_SITE_URL_variable": false,
+        "GSC_SITEMAP_URL_variable": false
       }
     }
   ],
@@ -70,6 +97,9 @@
   },
   "next_required_actions": [
     "Assign an HTTPS production domain and run npm run check:production.",
-    "Set GSC_SITE_URL and GSC_SITEMAP_URL, then run npm run gsc:submit after the domain is verified in Search Console."
+    "Commit the local work before git push.",
+    "Set GSC_SITE_URL and GSC_SITEMAP_URL, then run npm run gsc:submit after the domain is verified in Search Console.",
+    "Set GitHub repository variable GSC_SITE_URL after the production domain is assigned.",
+    "Set GitHub repository variable GSC_SITEMAP_URL after the production domain is assigned."
   ]
 }

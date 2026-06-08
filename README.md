@@ -41,6 +41,13 @@ npm run gsc:submit
 
 The GitHub workflow `.github/workflows/gsc-sitemap-submit.yml` also submits automatically on `main` pushes that change sitemap-related artifacts when repository variables `GSC_SITE_URL`, `GSC_SITEMAP_URL` and secrets `GSC_CLIENT_JSON`, `GSC_TOKEN_JSON` are set.
 
+The repository secrets can be prepared before the domain is assigned:
+
+```powershell
+Get-Content D:\env\adsense_oauth_client.json -Raw | gh secret set GSC_CLIENT_JSON --repo lsk7209/gungangbohum
+Get-Content D:\env\gsc_token.json -Raw | gh secret set GSC_TOKEN_JSON --repo lsk7209/gungangbohum
+```
+
 ## Quality Gate
 
 Run `npm run check` before publishing. The validator checks generated article counts, metadata, canonical links, schemas, accessibility landmarks, sitemap/feed/search-index parity, public marker leakage, and repeated body sentence risk.
