@@ -93,6 +93,59 @@ def origin_from_canonical(url):
     return match.group(0) if match else ""
 
 
+def is_url_within_origin(url, origin):
+    return url == origin or url.startswith(f"{origin}/")
+
+
+def canonical_from_html(html):
+    match = re.search(r'<link[^>]+rel="canonical"[^>]+href="([^"]+)"', html)
+    return match.group(1) if match else ""
+
+
+def meta_content_from_html(html, property_name):
+    pattern = rf'<meta[^>]+(?:property|name)="{re.escape(property_name)}"[^>]+content="([^"]+)"'
+    match = re.search(pattern, html)
+    return match.group(1) if match else ""
+
+
+def validate_public_artifact_origins(site_origin, all_html_files, sitemap, robots, feed_root, opensearch_xml):
+    errors = []
+    sitemap_urls = re.findall(r"<loc>(.*?)</loc>", sitemap)
+    for url in sitemap_urls:
+        if not is_url_within_origin(url, site_origin):
+            errors.append({"type": "sitemap_url_origin_mismatch", "url": url})
+    expected_robots_urls = [
+        f"Sitemap: {site_origin}/sitemap.xml",
+        f"# LLM guide: {site_origin}/llms.txt",
+    ]
+    for expected in expected_robots_urls:
+        if expected not in robots:
+            errors.append({"type": "robots_origin_mismatch", "expected": expected})
+    feed_channel = feed_root.find("./channel")
+    if feed_channel is None:
+        errors.append({"type": "feed_missing_channel"})
+    else:
+        feed_urls = [feed_channel.findtext("link", default="")]
+        for node in feed_root.findall("./channel/item"):
+            feed_urls.append(node.findtext("link", default=""))
+            feed_urls.append(node.findtext("guid", default=""))
+        for url in [url for url in feed_urls if url]:
+            if not is_url_within_origin(url, site_origin):
+                errors.append({"type": "feed_url_origin_mismatch", "url": url})
+    if f'{site_origin}/blog.html?q={{searchTerms}}' not in opensearch_xml:
+        errors.append({"type": "opensearch_origin_mismatch"})
+    for path in all_html_files:
+        rel = str(path.relative_to(ROOT)).replace("\\", "/")
+        html = path.read_text(encoding="utf-8")
+        canonical_url = canonical_from_html(html)
+        if canonical_url and not is_url_within_origin(canonical_url, site_origin):
+            errors.append({"type": "canonical_origin_mismatch", "file": rel, "url": canonical_url})
+        og_url = meta_content_from_html(html, "og:url")
+        if og_url and not is_url_within_origin(og_url, site_origin):
+            errors.append({"type": "og_url_origin_mismatch", "file": rel, "url": og_url})
+    return errors
+
+
 def schema_types(html):
     types = []
     for raw in re.findall(r'<script type="application/ld\+json">(.*?)</script>', html):
@@ -569,6 +622,7 @@ def validate(require_site_origin=False):
     feed_items = len(feed_nodes)
     feed_links = {node.findtext("link", default="") for node in feed_nodes}
     sitemap = (ROOT / "sitemap.xml").read_text(encoding="utf-8")
+    robots = (ROOT / "robots.txt").read_text(encoding="utf-8")
     llms = (ROOT / "llms.txt").read_text(encoding="utf-8")
     opensearch_path = ROOT / "opensearch.xml"
     if not opensearch_path.exists():
@@ -584,6 +638,7 @@ def validate(require_site_origin=False):
             errors.append({"type": "opensearch_parse_error", "message": str(exc)})
         if f"{site_origin}/blog.html?q={{searchTerms}}" not in opensearch_xml:
             errors.append({"type": "opensearch_bad_search_template"})
+    errors.extend(validate_public_artifact_origins(site_origin, all_html_files, sitemap, robots, feed_root, opensearch_xml))
     search_index = load_json(CONTENT_DIR / "search-index.json")
     documents = search_index["documents"]
     article_documents = [doc for doc in documents if doc.get("type") == "article"]
