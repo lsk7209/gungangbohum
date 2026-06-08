@@ -21,6 +21,12 @@ SEO_ADSENSE_REPORT = REPORT_DIR / "seo-adsense-audit-report.json"
 PERFORMANCE_REPORT = REPORT_DIR / "performance-budget-report.json"
 READINESS_REPORT = REPORT_DIR / "production-readiness-report.json"
 GSC_WORKFLOW = ROOT / ".github" / "workflows" / "gsc-sitemap-submit.yml"
+EXTERNAL_INPUT_BLOCKERS = {
+    "production_origin_applied",
+    "production_contact_channel",
+    "gsc_configuration",
+    "github_gsc_configuration",
+}
 
 
 def run_git(args):
@@ -326,6 +332,10 @@ def audit():
 
     ready = all(item["ok"] for item in checks)
     blockers = [item for item in checks if not item["ok"]]
+    blocker_summary = {
+        "external_input_blockers": [item["name"] for item in blockers if item["name"] in EXTERNAL_INPUT_BLOCKERS],
+        "code_or_repository_blockers": [item["name"] for item in blockers if item["name"] not in EXTERNAL_INPUT_BLOCKERS],
+    }
     next_required_actions = []
     if not article_generation_ok:
         next_required_actions.append("Run npm run generate and fix article generation contract issues before production submission.")
@@ -354,6 +364,7 @@ def audit():
         "ready_for_production_submission": ready,
         "checks": checks,
         "blockers": blockers,
+        "blocker_summary": blocker_summary,
         "quality_snapshot": {
             "article_files": quality.get("article_files") if quality else None,
             "guide_files": quality.get("guide_files") if quality else None,

@@ -377,6 +377,8 @@ def validate(require_site_origin=False):
             ("seo_adsense_snapshot", "seo_adsense_snapshot"),
             ("performance_snapshot", "performance_snapshot"),
             ("public_origin_mismatch_count", "public_origin_mismatch_snapshot"),
+            ("EXTERNAL_INPUT_BLOCKERS", "external_input_blocker_classification"),
+            ("blocker_summary", "blocker_summary"),
         ]:
             if needle not in readiness_script:
                 errors.append({"type": f"readiness_missing_{label}"})
