@@ -55,6 +55,7 @@ def main():
     parser.add_argument("--contact-email", default=os.getenv("PUBLIC_CONTACT_EMAIL", ""), help="Public contact email to apply to contact.html.")
     parser.add_argument("--contact-url", default=os.getenv("PUBLIC_CONTACT_URL", ""), help="Public https contact form URL to apply to contact.html.")
     parser.add_argument("--ga4-measurement-id", default=os.getenv("GA4_MEASUREMENT_ID", ""), help="Optional GA4 measurement ID, for example G-XXXXXXXXXX.")
+    parser.add_argument("--adsense-publisher-id", default=os.getenv("ADSENSE_PUBLISHER_ID", ""), help="Optional AdSense publisher ID, for example pub-0000000000000000.")
     parser.add_argument("--skip-gsc-check", action="store_true", help="Skip local GSC credential and URL validation.")
     parser.add_argument("--set-github-vars", action="store_true", help="Set GitHub repo variables GSC_SITE_URL and GSC_SITEMAP_URL.")
     args = parser.parse_args()
@@ -73,6 +74,8 @@ def main():
         env["PUBLIC_CONTACT_URL"] = args.contact_url
     if args.ga4_measurement_id:
         env["GA4_MEASUREMENT_ID"] = args.ga4_measurement_id
+    if args.adsense_publisher_id:
+        env["ADSENSE_PUBLISHER_ID"] = args.adsense_publisher_id
 
     if args.set_github_vars:
         repo = github_repo(env)
@@ -85,6 +88,8 @@ def main():
         run_step("Apply public contact channel", [sys.executable, "scripts/apply_contact_channel.py"], env)
     if args.ga4_measurement_id:
         run_step("Apply GA4 measurement ID", [sys.executable, "scripts/apply_ga4_measurement.py"], env)
+    if args.adsense_publisher_id:
+        run_step("Apply AdSense ads.txt", [sys.executable, "scripts/apply_ads_txt.py"], env)
     run_step("Apply production origin to static files", [sys.executable, "scripts/apply_site_origin.py", "--origin", origin], env)
     run_step("Validate production content", [sys.executable, "scripts/validate_content_quality.py", "--write-report", "--require-site-origin"], env)
 

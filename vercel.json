@@ -30,7 +30,7 @@
       ]
     },
     {
-      "source": "/(robots|llms)\\.txt",
+      "source": "/(robots|llms|ads)\\.txt",
       "headers": [
         {
           "key": "Cache-Control",

@@ -208,6 +208,7 @@ def validate(require_site_origin=False):
     readiness_script_path = ROOT / "scripts" / "production_readiness_audit.py"
     launch_script_path = ROOT / "scripts" / "launch_prepare.py"
     contact_script_path = ROOT / "scripts" / "apply_contact_channel.py"
+    ads_txt_script_path = ROOT / "scripts" / "apply_ads_txt.py"
     ga4_script_path = ROOT / "scripts" / "apply_ga4_measurement.py"
     seo_audit_script_path = ROOT / "scripts" / "audit_seo_adsense.py"
     seo_audit_report_path = ROOT / "reports" / "seo-adsense-audit-report.json"
@@ -223,6 +224,7 @@ def validate(require_site_origin=False):
         (readiness_script_path, "production_readiness_audit"),
         (launch_script_path, "launch_prepare"),
         (contact_script_path, "apply_contact_channel"),
+        (ads_txt_script_path, "apply_ads_txt"),
         (ga4_script_path, "apply_ga4_measurement"),
         (seo_audit_script_path, "seo_adsense_audit"),
         (performance_audit_script_path, "performance_budget_audit"),
@@ -235,13 +237,15 @@ def validate(require_site_origin=False):
         for script in ("generate", "validate", "check"):
             if script not in scripts:
                 errors.append({"type": "missing_package_script", "script": script})
-        for script in ("analytics:apply", "audit:performance", "audit:seo", "contact:apply", "check:production", "launch:prepare", "ready", "ready:production", "gsc:check", "gsc:submit"):
+        for script in ("adsense:apply", "analytics:apply", "audit:performance", "audit:seo", "contact:apply", "check:production", "launch:prepare", "ready", "ready:production", "gsc:check", "gsc:submit"):
             if script not in scripts:
                 errors.append({"type": "missing_operations_package_script", "script": script})
     if vercel_path.exists():
         vercel_data = load_json(vercel_path)
         if not any(header.get("source") == "/(sitemap|feed|opensearch)\\.xml" for header in vercel_data.get("headers", [])):
             errors.append({"type": "vercel_missing_xml_headers"})
+        if not any(header.get("source") == "/(robots|llms|ads)\\.txt" for header in vercel_data.get("headers", [])):
+            errors.append({"type": "vercel_missing_text_headers"})
     if quality_workflow_path.exists():
         workflow = quality_workflow_path.read_text(encoding="utf-8")
         if "generate_aca_articles.py" not in workflow or "validate_content_quality.py" not in workflow:
@@ -284,6 +288,8 @@ def validate(require_site_origin=False):
             ("npm run contact:apply", "contact_apply_gate"),
             ("GA4_MEASUREMENT_ID", "ga4_measurement_id"),
             ("npm run analytics:apply", "analytics_apply_gate"),
+            ("ADSENSE_PUBLISHER_ID", "adsense_publisher_id"),
+            ("npm run adsense:apply", "adsense_apply_gate"),
             ("npm run check:production", "production_gate"),
             ("npm run launch:prepare", "launch_prepare_gate"),
             ("npm run gsc:submit", "gsc_submit_gate"),

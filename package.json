@@ -8,6 +8,7 @@
     "origin:apply": "python scripts/apply_site_origin.py",
     "contact:apply": "python scripts/apply_contact_channel.py",
     "analytics:apply": "python scripts/apply_ga4_measurement.py",
+    "adsense:apply": "python scripts/apply_ads_txt.py",
     "validate": "python scripts/validate_content_quality.py --write-report",
     "validate:production": "python scripts/validate_content_quality.py --write-report --require-site-origin",
     "audit:seo": "python scripts/audit_seo_adsense.py --write-report",

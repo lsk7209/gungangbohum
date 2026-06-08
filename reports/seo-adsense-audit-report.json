@@ -8,6 +8,7 @@
     "canonical_per_page": true,
     "sitemap_xml_present": true,
     "robots_txt_present": true,
+    "ads_txt_present_valid": true,
     "h_tags_per_page": true,
     "image_alt_text": true,
     "blog_cta_inlink_outlink": true,

@@ -7,6 +7,7 @@ Static Florida ACA subsidy calculator and guide library.
 ```powershell
 npm run generate
 npm run validate
+npm run adsense:apply -- --publisher-id pub-3050601904412736 --dry-run
 npm run analytics:apply -- --measurement-id G-XXXXXXXXXX --dry-run
 npm run audit:seo
 npm run audit:performance
@@ -20,8 +21,10 @@ For production after a domain is assigned:
 $env:SITE_ORIGIN = "https://your-domain.example"
 $env:PUBLIC_CONTACT_EMAIL = "contact@your-domain.example"
 $env:GA4_MEASUREMENT_ID = "G-XXXXXXXXXX"
+$env:ADSENSE_PUBLISHER_ID = "pub-3050601904412736"
 npm run contact:apply
 npm run analytics:apply
+npm run adsense:apply
 npm run check:production
 npm run ready:production
 ```
@@ -29,13 +32,13 @@ npm run ready:production
 Or run the launch preparation wrapper, which applies the production origin, validates public artifacts, checks local GSC credentials, and writes the readiness report:
 
 ```powershell
-npm run launch:prepare -- --origin https://your-domain.example --contact-email contact@your-domain.example --ga4-measurement-id G-XXXXXXXXXX
+npm run launch:prepare -- --origin https://your-domain.example --contact-email contact@your-domain.example --ga4-measurement-id G-XXXXXXXXXX --adsense-publisher-id pub-3050601904412736
 ```
 
 To also set the GitHub repository variables used by the sitemap workflow:
 
 ```powershell
-npm run launch:prepare -- --origin https://your-domain.example --contact-email contact@your-domain.example --ga4-measurement-id G-XXXXXXXXXX --set-github-vars
+npm run launch:prepare -- --origin https://your-domain.example --contact-email contact@your-domain.example --ga4-measurement-id G-XXXXXXXXXX --adsense-publisher-id pub-3050601904412736 --set-github-vars
 ```
 
 ## Deployment Notes
@@ -43,6 +46,7 @@ npm run launch:prepare -- --origin https://your-domain.example --contact-email c
 - The site is static HTML/CSS/JS and can be served from the repository root.
 - Use `SITE_ORIGIN` and `npm run check:production` to replace `{SITE_ORIGIN}` and fail the build if placeholders remain.
 - Do not add manual ad slots; AdSense should use automatic ads only.
+- Keep `ads.txt` at the site root with the verified AdSense publisher ID.
 - `sitemap.xml`, `robots.txt`, `feed.xml`, `llms.txt`, `opensearch.xml`, and `content/search-index.json` are public artifacts.
 
 ## Search Console

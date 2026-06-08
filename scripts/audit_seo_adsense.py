@@ -11,6 +11,7 @@ REPORT_DIR = ROOT / "reports"
 REPORT_PATH = REPORT_DIR / "seo-adsense-audit-report.json"
 ARTICLE_DIR = ROOT / "aca"
 GUIDE_DIR = ROOT / "guides"
+ADS_TXT_RE = re.compile(r"^google\.com,\s+pub-\d{16},\s+DIRECT,\s+f08c47fec0942fa\s*$")
 
 
 class AuditParser(HTMLParser):
@@ -198,10 +199,19 @@ def audit():
 
     sitemap_exists = (ROOT / "sitemap.xml").exists()
     robots_exists = (ROOT / "robots.txt").exists()
+    ads_txt_path = ROOT / "ads.txt"
+    ads_txt_valid = False
     if not sitemap_exists:
         errors.append({"file": "sitemap.xml", "type": "missing_sitemap"})
     if not robots_exists:
         errors.append({"file": "robots.txt", "type": "missing_robots"})
+    if not ads_txt_path.exists():
+        errors.append({"file": "ads.txt", "type": "missing_ads_txt"})
+    else:
+        ads_txt_lines = [line.strip() for line in ads_txt_path.read_text(encoding="utf-8").splitlines() if line.strip()]
+        ads_txt_valid = any(ADS_TXT_RE.match(line) for line in ads_txt_lines)
+        if not ads_txt_valid:
+            errors.append({"file": "ads.txt", "type": "invalid_ads_txt"})
 
     checklist = {
         "meta_title_per_page": all(page["title"] for page in pages),
@@ -210,6 +220,7 @@ def audit():
         "canonical_per_page": all(page["canonical"] for page in pages),
         "sitemap_xml_present": sitemap_exists,
         "robots_txt_present": robots_exists,
+        "ads_txt_present_valid": ads_txt_valid,
         "h_tags_per_page": all(page["heading_hierarchy"] for page in pages),
         "image_alt_text": all(page["images"] == page["images_with_alt"] for page in pages),
         "blog_cta_inlink_outlink": not any(error["type"].startswith("article_") for error in errors),

@@ -110,15 +110,17 @@ Production-only gate:
 $env:SITE_ORIGIN = "https://your-production-domain.example"
 $env:PUBLIC_CONTACT_EMAIL = "contact@your-production-domain.example"
 $env:GA4_MEASUREMENT_ID = "G-XXXXXXXXXX"
+$env:ADSENSE_PUBLISHER_ID = "pub-3050601904412736"
 npm run contact:apply
 npm run analytics:apply
+npm run adsense:apply
 npm run check:production
 ```
 
 Launch wrapper:
 
 ```powershell
-npm run launch:prepare -- --origin https://your-production-domain.example --contact-email contact@your-production-domain.example --ga4-measurement-id G-XXXXXXXXXX
+npm run launch:prepare -- --origin https://your-production-domain.example --contact-email contact@your-production-domain.example --ga4-measurement-id G-XXXXXXXXXX --adsense-publisher-id pub-3050601904412736
 ```
 
 Expected:
@@ -127,6 +129,7 @@ Expected:
 - `sitemap.xml`, `robots.txt`, canonical URLs, feed, OpenSearch, and JSON search index all use the production origin.
 - `contact.html` exposes a public email or HTTPS contact form instead of the prelaunch notice.
 - GA4 is applied only when a production `GA4_MEASUREMENT_ID` is available.
+- Root `ads.txt` contains the verified AdSense publisher record.
 - Local GSC credential and URL validation passes when `D:\env\adsense_oauth_client.json` and `D:\env\gsc_token.json` are available.
 
 Search Console gate:

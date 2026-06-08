@@ -32,6 +32,12 @@ Preview optional GA4 injection before launch:
 python scripts\apply_ga4_measurement.py --measurement-id G-XXXXXXXXXX --dry-run
 ```
 
+Preview or write AdSense `ads.txt`:
+
+```powershell
+python scripts\apply_ads_txt.py --publisher-id pub-3050601904412736 --dry-run
+```
+
 The validator checks:
 
 - project operation files: `package.json`, `vercel.json`, `README.md`, and the GitHub content-quality workflow
@@ -78,6 +84,7 @@ The SEO and AdSense audit writes `reports/seo-adsense-audit-report.json` and sum
 - per-page meta title, meta description, and canonical URL presence
 - target keyword front-signal checks in title and description text
 - `sitemap.xml` and `robots.txt` presence
+- valid root `ads.txt`
 - H1/H2/H3 hierarchy checks
 - image alt text coverage
 - article CTA, two-or-more internal links, and one-or-more external links
@@ -93,6 +100,8 @@ The performance budget audit writes `reports/performance-budget-report.json` and
 - required static cache and content-type headers in `vercel.json`
 
 Optional GA4 injection uses `scripts/apply_ga4_measurement.py` and only runs when a production `GA4_MEASUREMENT_ID` is supplied.
+
+AdSense `ads.txt` uses `scripts/apply_ads_txt.py` and writes only the verified Google AdSense DIRECT record.
 
 The latest generated report is written to `reports/content-quality-report.json`.
 
