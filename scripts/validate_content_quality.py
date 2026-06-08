@@ -280,6 +280,20 @@ def validate(require_site_origin=False):
         ]:
             if needle not in launch_script:
                 errors.append({"type": f"launch_prepare_missing_{label}"})
+    for path, label in [
+        (ROOT / "scripts" / "apply_site_origin.py", "site_origin"),
+        (ROOT / "scripts" / "gsc_submit_sitemap.py", "gsc_submit"),
+        (ROOT / "scripts" / "apply_contact_channel.py", "contact_channel"),
+    ]:
+        if path.exists():
+            text = path.read_text(encoding="utf-8")
+            for needle, guard_label in [
+                ("example.com", "example_domain_guard"),
+                (".example", "example_tld_guard"),
+                ("your-domain", "placeholder_domain_guard"),
+            ]:
+                if needle not in text:
+                    errors.append({"type": f"{label}_missing_{guard_label}"})
     if seo_audit_report_path.exists():
         seo_audit_report = load_json(seo_audit_report_path)
         if seo_audit_report.get("error_count") != 0 or not seo_audit_report.get("passed"):

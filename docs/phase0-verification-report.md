@@ -117,6 +117,8 @@ npm run adsense:apply
 npm run check:production
 ```
 
+Replace every `your-production-domain.example` placeholder with the real production domain before running production commands; launch scripts reject placeholder, example, and local domains.
+
 Launch wrapper:
 
 ```powershell

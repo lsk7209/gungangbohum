@@ -29,6 +29,8 @@ npm run check:production
 npm run ready:production
 ```
 
+Replace every `your-domain.example` placeholder with the real production domain before running production commands; launch scripts reject placeholder, example, and local domains.
+
 Or run the launch preparation wrapper, which applies the production origin, validates public artifacts, checks local GSC credentials, and writes the readiness report:
 
 ```powershell

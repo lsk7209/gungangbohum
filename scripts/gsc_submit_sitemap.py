@@ -10,6 +10,15 @@ DEFAULT_SITE_URL = ""
 DEFAULT_SITEMAP_URL = ""
 
 
+def is_nonproduction_host(hostname: str) -> bool:
+    host = (hostname or "").lower()
+    return (
+        host in {"localhost", "127.0.0.1", "example.com"}
+        or host.endswith(".example")
+        or "your-domain" in host
+    )
+
+
 def _json_from_env_or_file(env_name: str, fallback_path: str) -> dict:
     raw = os.getenv(env_name)
     if raw:
@@ -49,14 +58,16 @@ def normalize_site_url(value: str) -> str:
         raise ValueError("GSC_SITE_URL must be set after the project domain is assigned.")
     if site_url.startswith("sc-domain:"):
         domain = site_url.removeprefix("sc-domain:").strip()
-        if not domain or "/" in domain or "localhost" in domain:
-            raise ValueError("GSC_SITE_URL sc-domain property must look like sc-domain:example.com")
+        if not domain or "/" in domain:
+            raise ValueError("GSC_SITE_URL sc-domain property must look like sc-domain:your-production-domain.com")
+        if is_nonproduction_host(domain):
+            raise ValueError("GSC_SITE_URL must be the production property, not a placeholder, example, or local domain.")
         return site_url
     parsed = urlsplit(site_url)
     if parsed.scheme != "https" or not parsed.netloc:
         raise ValueError("GSC_SITE_URL must be an https:// URL-prefix property or sc-domain:example.com")
-    if parsed.hostname in {"localhost", "127.0.0.1"}:
-        raise ValueError("GSC_SITE_URL must be the production property, not a local URL.")
+    if is_nonproduction_host(parsed.hostname or ""):
+        raise ValueError("GSC_SITE_URL must be the production property, not a placeholder, example, or local URL.")
     return site_url + "/"
 
 
@@ -67,8 +78,8 @@ def normalize_sitemap_url(value: str) -> str:
     parsed = urlsplit(sitemap_url)
     if parsed.scheme != "https" or not parsed.netloc:
         raise ValueError("GSC_SITEMAP_URL must be an https:// URL.")
-    if parsed.hostname in {"localhost", "127.0.0.1"}:
-        raise ValueError("GSC_SITEMAP_URL must be the production sitemap, not a local URL.")
+    if is_nonproduction_host(parsed.hostname or ""):
+        raise ValueError("GSC_SITEMAP_URL must be the production sitemap, not a placeholder, example, or local URL.")
     if not parsed.path.endswith("/sitemap.xml"):
         raise ValueError("GSC_SITEMAP_URL should point to the production /sitemap.xml file.")
     return sitemap_url

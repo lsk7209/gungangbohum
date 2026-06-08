@@ -1,6 +1,7 @@
 import argparse
 import os
 from pathlib import Path
+from urllib.parse import urlsplit
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -19,8 +20,15 @@ def normalize_origin(value: str) -> str:
     origin = (value or "").strip().rstrip("/")
     if not origin.startswith("https://"):
         raise SystemExit("SITE_ORIGIN must be an https:// origin, for example https://example.com")
-    if PLACEHOLDER in origin or "localhost" in origin or "127.0.0.1" in origin:
-        raise SystemExit("SITE_ORIGIN must be the production origin, not a placeholder or local URL")
+    parsed = urlsplit(origin)
+    host = (parsed.hostname or "").lower()
+    if (
+        PLACEHOLDER in origin
+        or host in {"localhost", "127.0.0.1", "example.com"}
+        or host.endswith(".example")
+        or "your-domain" in host
+    ):
+        raise SystemExit("SITE_ORIGIN must be the production origin, not a placeholder, example, or local URL")
     return origin
 
 

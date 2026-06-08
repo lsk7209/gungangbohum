@@ -12,12 +12,24 @@ PRELAUNCH_BLOCK_RE = re.compile(r'<div class="box"><strong>Current launch status
 EMAIL_RE = re.compile(r"^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$", re.IGNORECASE)
 
 
+def is_nonproduction_host(hostname):
+    host = (hostname or "").lower()
+    return (
+        host in {"localhost", "127.0.0.1", "example.com"}
+        or host.endswith(".example")
+        or "your-domain" in host
+    )
+
+
 def normalize_email(value):
     email = (value or "").strip()
     if not email:
         return ""
     if not EMAIL_RE.match(email):
         raise SystemExit("PUBLIC_CONTACT_EMAIL must be a valid email address.")
+    domain = email.rsplit("@", 1)[1]
+    if is_nonproduction_host(domain):
+        raise SystemExit("PUBLIC_CONTACT_EMAIL must use a production domain, not a placeholder, example, or local domain.")
     return email
 
 
@@ -28,8 +40,8 @@ def normalize_url(value):
     parsed = urlsplit(url)
     if parsed.scheme != "https" or not parsed.netloc:
         raise SystemExit("PUBLIC_CONTACT_URL must be an https:// URL.")
-    if parsed.hostname in {"localhost", "127.0.0.1"}:
-        raise SystemExit("PUBLIC_CONTACT_URL must be public, not localhost.")
+    if is_nonproduction_host(parsed.hostname):
+        raise SystemExit("PUBLIC_CONTACT_URL must be public, not a placeholder, example, or local URL.")
     return url
 
 
