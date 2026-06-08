@@ -397,6 +397,7 @@ def validate(require_site_origin=False):
             ("scripts/production_readiness_audit.py", "readiness_script_commit"),
             ("group: publish-scheduled-content-${{ github.ref }}", "concurrency_group"),
             ("cancel-in-progress: false", "concurrency_no_cancel"),
+            ("git pull --rebase", "rebase_before_push"),
         ]:
             if needle not in scheduled_workflow:
                 errors.append({"type": f"publish_scheduled_workflow_missing_{label}"})

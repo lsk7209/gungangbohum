@@ -42,5 +42,6 @@ jobs:
           else
             git add aca blog.html content/article-queue.json content/search-index.json feed.xml guides llms.txt reports/article-generation-report.json reports/content-quality-report.json reports/performance-budget-report.json reports/production-readiness-report.json reports/seo-adsense-audit-report.json sitemap.xml scripts/generate_aca_articles.py scripts/production_readiness_audit.py scripts/validate_content_quality.py
             git commit -m "Publish scheduled ACA guide state"
+            git pull --rebase
             git push
           fi
