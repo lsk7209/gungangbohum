@@ -83,6 +83,7 @@ The validator checks:
 The SEO and AdSense audit writes `reports/seo-adsense-audit-report.json` and summarizes:
 
 - per-page meta title, meta description, and canonical URL presence
+- meta title and description search-snippet length ranges, plus duplicate title/description detection
 - target keyword front-signal checks in title and description text
 - `sitemap.xml` and `robots.txt` presence
 - valid root `ads.txt`

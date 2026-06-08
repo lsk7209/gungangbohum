@@ -12,6 +12,10 @@ REPORT_PATH = REPORT_DIR / "seo-adsense-audit-report.json"
 ARTICLE_DIR = ROOT / "aca"
 GUIDE_DIR = ROOT / "guides"
 ADS_TXT_RE = re.compile(r"^google\.com,\s+pub-\d{16},\s+DIRECT,\s+f08c47fec0942fa\s*$")
+TITLE_MIN_LENGTH = 30
+TITLE_MAX_LENGTH = 70
+DESCRIPTION_MIN_LENGTH = 90
+DESCRIPTION_MAX_LENGTH = 170
 
 
 class AuditParser(HTMLParser):
@@ -134,6 +138,29 @@ def keyword_front_signal(parser):
     return any(term in title_front for term in target_terms) and any(term in desc_front for term in target_terms)
 
 
+def normalized_snippet_text(value):
+    return re.sub(r"\s+", " ", value).strip()
+
+
+def snippet_length_ok(value, minimum, maximum):
+    length = len(normalized_snippet_text(value))
+    return minimum <= length <= maximum
+
+
+def add_duplicate_snippet_errors(pages, field, error_type, errors):
+    seen = {}
+    for page in pages:
+        if page["noindex"]:
+            continue
+        value = normalized_snippet_text(page.get(field, ""))
+        if not value:
+            continue
+        seen.setdefault(value, []).append(page["file"])
+    for value, files in seen.items():
+        if len(files) > 1:
+            errors.append({"files": files, "type": error_type, "value": value})
+
+
 def audit():
     html_files = public_html_files()
     pages = []
@@ -148,11 +175,18 @@ def audit():
         page_errors = []
         page_warnings = []
         internal_links, external_links = link_counts(path, parser)
+        title_text = normalized_snippet_text(parser.title)
+        description_text = normalized_snippet_text(parser.meta.get("description", ""))
+        noindex = parser.meta.get("robots", "").startswith("noindex")
 
-        if not parser.title.strip():
+        if not title_text:
             page_errors.append("missing_title")
-        if not parser.meta.get("description", "").strip():
+        elif not noindex and not snippet_length_ok(title_text, TITLE_MIN_LENGTH, TITLE_MAX_LENGTH):
+            page_errors.append("title_length_outside_search_snippet_range")
+        if not description_text:
             page_errors.append("missing_meta_description")
+        elif not noindex and not snippet_length_ok(description_text, DESCRIPTION_MIN_LENGTH, DESCRIPTION_MAX_LENGTH):
+            page_errors.append("meta_description_length_outside_search_snippet_range")
         if not canonical(parser):
             page_errors.append("missing_canonical")
         if not heading_hierarchy_ok(parser.headings):
@@ -165,7 +199,7 @@ def audit():
             page_errors.append("manual_ad_slot_marker")
         if parser.forms:
             page_warnings.append("form_present_review_for_lead_capture")
-        if parser.meta.get("robots", "").startswith("noindex"):
+        if noindex:
             pass
         elif not keyword_front_signal(parser):
             page_warnings.append("weak_keyword_front_signal")
@@ -186,8 +220,13 @@ def audit():
             warnings.append({"file": rel, "type": item})
         pages.append({
             "file": rel,
-            "title": bool(parser.title.strip()),
-            "meta_description": bool(parser.meta.get("description", "").strip()),
+            "title": bool(title_text),
+            "title_text": title_text,
+            "title_length_ok": noindex or snippet_length_ok(title_text, TITLE_MIN_LENGTH, TITLE_MAX_LENGTH),
+            "meta_description": bool(description_text),
+            "description_text": description_text,
+            "description_length_ok": noindex or snippet_length_ok(description_text, DESCRIPTION_MIN_LENGTH, DESCRIPTION_MAX_LENGTH),
+            "noindex": noindex,
             "canonical": bool(canonical(parser)),
             "heading_hierarchy": heading_hierarchy_ok(parser.headings),
             "images": len(parser.images),
@@ -196,6 +235,9 @@ def audit():
             "internal_links": internal_links,
             "external_links": external_links,
         })
+
+    add_duplicate_snippet_errors(pages, "title_text", "duplicate_meta_title", errors)
+    add_duplicate_snippet_errors(pages, "description_text", "duplicate_meta_description", errors)
 
     sitemap_exists = (ROOT / "sitemap.xml").exists()
     robots_exists = (ROOT / "robots.txt").exists()
@@ -215,7 +257,11 @@ def audit():
 
     checklist = {
         "meta_title_per_page": all(page["title"] for page in pages),
+        "meta_title_length": all(page["title_length_ok"] for page in pages),
+        "meta_title_unique": not any(error["type"] == "duplicate_meta_title" for error in errors),
         "meta_description_per_page": all(page["meta_description"] for page in pages),
+        "meta_description_length": all(page["description_length_ok"] for page in pages),
+        "meta_description_unique": not any(error["type"] == "duplicate_meta_description" for error in errors),
         "keyword_front_signal": len([w for w in warnings if w["type"] == "weak_keyword_front_signal"]) == 0,
         "canonical_per_page": all(page["canonical"] for page in pages),
         "sitemap_xml_present": sitemap_exists,

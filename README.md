@@ -94,7 +94,7 @@ Run `npm run check` before publishing. The validator checks generated article co
 
 `npm run generate` writes `reports/article-generation-report.json`. The readiness gate expects at least 200 articles, a minimum quality score of 90, all articles marked as Codex-generated, and zero manual ad slot articles.
 
-Run `npm run audit:seo` to write `reports/seo-adsense-audit-report.json`. It maps the SEO and AdSense checklist to machine checks for per-page meta titles and descriptions, canonical URLs, sitemap and robots files, H-tag hierarchy, image alt text, article CTA/internal/external links, readable URLs, and absence of manual ad slots.
+Run `npm run audit:seo` to write `reports/seo-adsense-audit-report.json`. It maps the SEO and AdSense checklist to machine checks for per-page meta titles and descriptions, search-snippet length and uniqueness, canonical URLs, sitemap and robots files, H-tag hierarchy, image alt text, article CTA/internal/external links, readable URLs, and absence of manual ad slots.
 
 Run `npm run audit:performance` to write `reports/performance-budget-report.json`. It checks static HTML size budgets, article average size, inline style/script budgets, public JSON size, and static header configuration.
 

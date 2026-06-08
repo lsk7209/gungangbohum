@@ -213,10 +213,10 @@ FAQ_QUESTION_SETS = [
 
 GUIDE_CLUSTERS = [
     ("County and rating-area guides", "county and rating-area intent", "county-and-rating-area-guides", "Florida county and rating-area ACA subsidy estimates"),
-    ("Life event and income-change guides", "life event and income-change intent", "life-event-and-income-change-guides", "ACA subsidy estimates after Florida life and income changes"),
-    ("Plan selection and out-of-pocket guides", "plan selection and out-of-pocket intent", "plan-selection-and-out-of-pocket-guides", "ACA plan selection, CSR, deductibles, and out-of-pocket planning"),
-    ("Tax, MAGI, and reconciliation guides", "tax MAGI and reconciliation intent", "tax-magi-and-reconciliation-guides", "Florida ACA subsidy estimates with MAGI and tax reconciliation questions"),
-    ("Official verification and troubleshooting guides", "official verification and risk-prevention intent", "official-verification-and-troubleshooting-guides", "Florida ACA estimate troubleshooting and official Marketplace verification"),
+    ("Life event and income-change guides", "life event and income-change intent", "life-event-and-income-change-guides", "Florida ACA life-event subsidy estimate guides"),
+    ("Plan selection and out-of-pocket guides", "plan selection and out-of-pocket intent", "plan-selection-and-out-of-pocket-guides", "Florida ACA plan selection and CSR guides"),
+    ("Tax, MAGI, and reconciliation guides", "tax MAGI and reconciliation intent", "tax-magi-and-reconciliation-guides", "Florida ACA MAGI and tax reconciliation guides"),
+    ("Official verification and troubleshooting guides", "official verification and risk-prevention intent", "official-verification-and-troubleshooting-guides", "Florida ACA estimate verification guides"),
 ]
 
 
