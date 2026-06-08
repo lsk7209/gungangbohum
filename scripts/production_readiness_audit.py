@@ -328,6 +328,7 @@ def audit():
             "article_files": quality.get("article_files") if quality else None,
             "guide_files": quality.get("guide_files") if quality else None,
             "sitemap_urls": quality.get("sitemap_urls") if quality else None,
+            "public_origin_mismatch_count": quality.get("public_origin_mismatch_count") if quality else None,
             "error_count": quality.get("error_count") if quality else None,
         },
         "seo_adsense_snapshot": {

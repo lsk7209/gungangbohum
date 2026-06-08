@@ -326,6 +326,7 @@ def validate(require_site_origin=False):
             ("_json_from_env_or_file", "gsc_credential_json_validation"),
             ("seo_adsense_snapshot", "seo_adsense_snapshot"),
             ("performance_snapshot", "performance_snapshot"),
+            ("public_origin_mismatch_count", "public_origin_mismatch_snapshot"),
         ]:
             if needle not in readiness_script:
                 errors.append({"type": f"readiness_missing_{label}"})
@@ -638,7 +639,8 @@ def validate(require_site_origin=False):
             errors.append({"type": "opensearch_parse_error", "message": str(exc)})
         if f"{site_origin}/blog.html?q={{searchTerms}}" not in opensearch_xml:
             errors.append({"type": "opensearch_bad_search_template"})
-    errors.extend(validate_public_artifact_origins(site_origin, all_html_files, sitemap, robots, feed_root, opensearch_xml))
+    public_origin_errors = validate_public_artifact_origins(site_origin, all_html_files, sitemap, robots, feed_root, opensearch_xml)
+    errors.extend(public_origin_errors)
     search_index = load_json(CONTENT_DIR / "search-index.json")
     documents = search_index["documents"]
     article_documents = [doc for doc in documents if doc.get("type") == "article"]
@@ -822,6 +824,7 @@ def validate(require_site_origin=False):
         "html_with_focus_visible": html_with_focus_visible,
         "html_with_search_discovery": html_with_search_discovery,
         "opensearch_present": opensearch_path.exists(),
+        "public_origin_mismatch_count": len(public_origin_errors),
         "llms_has_sitemap": "/sitemap.xml" in llms,
         "llms_has_feed": "/feed.xml" in llms,
         "llms_has_search_index": "/content/search-index.json" in llms,

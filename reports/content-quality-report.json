@@ -25,6 +25,7 @@
   "html_with_focus_visible": 215,
   "html_with_search_discovery": 215,
   "opensearch_present": true,
+  "public_origin_mismatch_count": 0,
   "llms_has_sitemap": true,
   "llms_has_feed": true,
   "llms_has_search_index": true,
