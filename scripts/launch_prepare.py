@@ -1,0 +1,102 @@
+import argparse
+import os
+import subprocess
+import sys
+from pathlib import Path
+from urllib.parse import urlsplit
+
+from apply_site_origin import normalize_origin
+
+
+ROOT = Path(__file__).resolve().parents[1]
+
+
+def run_step(label, args, env):
+    print(f"\n== {label} ==")
+    result = subprocess.run(args, cwd=ROOT, env=env, text=True)
+    if result.returncode != 0:
+        raise SystemExit(result.returncode)
+
+
+def run_capture(args, env):
+    return subprocess.run(args, cwd=ROOT, env=env, capture_output=True, text=True, check=False)
+
+
+def github_repo(env):
+    result = run_capture(["gh", "repo", "view", "--json", "nameWithOwner", "-q", ".nameWithOwner"], env)
+    if result.returncode != 0:
+        raise SystemExit("Could not resolve GitHub repository with gh repo view.")
+    return result.stdout.strip()
+
+
+def ensure_sitemap_url(origin):
+    parsed = urlsplit(origin)
+    if parsed.scheme != "https" or not parsed.netloc:
+        raise SystemExit("Origin must be an https:// production origin.")
+    return f"{origin}/sitemap.xml"
+
+
+def set_github_variable(repo, name, value, env):
+    result = subprocess.run(
+        ["gh", "variable", "set", name, "--repo", repo, "--body", value],
+        cwd=ROOT,
+        env=env,
+        text=True,
+    )
+    if result.returncode != 0:
+        raise SystemExit(result.returncode)
+
+
+def main():
+    parser = argparse.ArgumentParser(description="Prepare the static site for production after a domain is assigned.")
+    parser.add_argument("--origin", default=os.getenv("SITE_ORIGIN", ""), help="Production origin, for example https://example.com")
+    parser.add_argument("--site-url", default=os.getenv("GSC_SITE_URL", ""), help="GSC property URL or sc-domain property. Defaults to origin URL-prefix.")
+    parser.add_argument("--sitemap-url", default=os.getenv("GSC_SITEMAP_URL", ""), help="Production sitemap URL. Defaults to origin/sitemap.xml.")
+    parser.add_argument("--skip-gsc-check", action="store_true", help="Skip local GSC credential and URL validation.")
+    parser.add_argument("--set-github-vars", action="store_true", help="Set GitHub repo variables GSC_SITE_URL and GSC_SITEMAP_URL.")
+    args = parser.parse_args()
+
+    origin = normalize_origin(args.origin)
+    sitemap_url = args.sitemap_url.strip() or ensure_sitemap_url(origin)
+    site_url = args.site_url.strip() or f"{origin}/"
+
+    env = os.environ.copy()
+    env["SITE_ORIGIN"] = origin
+    env["GSC_SITE_URL"] = site_url
+    env["GSC_SITEMAP_URL"] = sitemap_url
+
+    if args.set_github_vars:
+        repo = github_repo(env)
+        print(f"Setting GitHub variables on {repo}")
+        set_github_variable(repo, "GSC_SITE_URL", site_url, env)
+        set_github_variable(repo, "GSC_SITEMAP_URL", sitemap_url, env)
+
+    run_step("Generate public artifacts with production origin", [sys.executable, "scripts/generate_aca_articles.py"], env)
+    run_step("Apply production origin to static files", [sys.executable, "scripts/apply_site_origin.py", "--origin", origin], env)
+    run_step("Validate production content", [sys.executable, "scripts/validate_content_quality.py", "--write-report", "--require-site-origin"], env)
+
+    if not args.skip_gsc_check:
+        run_step(
+            "Validate GSC sitemap configuration",
+            [
+                sys.executable,
+                "scripts/gsc_submit_sitemap.py",
+                "--check-config",
+                "--site-url",
+                site_url,
+                "--sitemap-url",
+                sitemap_url,
+            ],
+            env,
+        )
+
+    run_step("Write production readiness report", [sys.executable, "scripts/production_readiness_audit.py", "--write-report"], env)
+    print("\nLaunch preparation checks completed.")
+    print(f"SITE_ORIGIN={origin}")
+    print(f"GSC_SITE_URL={site_url}")
+    print(f"GSC_SITEMAP_URL={sitemap_url}")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

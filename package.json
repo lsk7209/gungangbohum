@@ -10,6 +10,7 @@
     "validate:production": "python scripts/validate_content_quality.py --write-report --require-site-origin",
     "check": "python scripts/generate_aca_articles.py && python scripts/validate_content_quality.py --write-report",
     "check:production": "python scripts/generate_aca_articles.py && python scripts/apply_site_origin.py && python scripts/validate_content_quality.py --write-report --require-site-origin",
+    "launch:prepare": "python scripts/launch_prepare.py",
     "ready": "python scripts/production_readiness_audit.py --write-report",
     "ready:production": "python scripts/production_readiness_audit.py --write-report --require-ready",
     "gsc:check": "python scripts/gsc_submit_sitemap.py --check-config",

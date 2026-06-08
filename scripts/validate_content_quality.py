@@ -206,6 +206,7 @@ def validate(require_site_origin=False):
     readme_path = ROOT / "README.md"
     phase0_report_path = ROOT / "docs" / "phase0-verification-report.md"
     readiness_script_path = ROOT / "scripts" / "production_readiness_audit.py"
+    launch_script_path = ROOT / "scripts" / "launch_prepare.py"
     for path, label in [
         (package_path, "package_json"),
         (vercel_path, "vercel_json"),
@@ -214,6 +215,7 @@ def validate(require_site_origin=False):
         (readme_path, "readme"),
         (phase0_report_path, "phase0_verification_report"),
         (readiness_script_path, "production_readiness_audit"),
+        (launch_script_path, "launch_prepare"),
     ]:
         if not path.exists():
             errors.append({"type": f"missing_{label}", "file": str(path.relative_to(ROOT))})
@@ -223,7 +225,7 @@ def validate(require_site_origin=False):
         for script in ("generate", "validate", "check"):
             if script not in scripts:
                 errors.append({"type": "missing_package_script", "script": script})
-        for script in ("check:production", "ready", "ready:production", "gsc:check", "gsc:submit"):
+        for script in ("check:production", "launch:prepare", "ready", "ready:production", "gsc:check", "gsc:submit"):
             if script not in scripts:
                 errors.append({"type": "missing_operations_package_script", "script": script})
     if vercel_path.exists():
@@ -257,6 +259,7 @@ def validate(require_site_origin=False):
             ("G0-4 Florida Coverage Gap Handling", "coverage_gap"),
             ("Production domain is not assigned", "domain_blocker"),
             ("npm run check:production", "production_gate"),
+            ("npm run launch:prepare", "launch_prepare_gate"),
             ("npm run gsc:submit", "gsc_submit_gate"),
             ("npm run ready:production", "readiness_gate"),
         ]:

@@ -100,8 +100,8 @@ Expected:
 
 - 200 generated ACA article pages.
 - 5 guide hubs.
-- 212 sitemap URLs.
-- 200 RSS feed items.
+- 16 sitemap URLs while only currently published articles are indexable.
+- 2 RSS feed items while scheduled articles remain `noindex,follow`.
 - 0 validator errors.
 
 Production-only gate:
@@ -111,10 +111,17 @@ $env:SITE_ORIGIN = "https://your-production-domain.example"
 npm run check:production
 ```
 
+Launch wrapper:
+
+```powershell
+npm run launch:prepare -- --origin https://your-production-domain.example
+```
+
 Expected:
 
 - No `{SITE_ORIGIN}` placeholder in public artifacts.
 - `sitemap.xml`, `robots.txt`, canonical URLs, feed, OpenSearch, and JSON search index all use the production origin.
+- Local GSC credential and URL validation passes when `D:\env\adsense_oauth_client.json` and `D:\env\gsc_token.json` are available.
 
 Search Console gate:
 

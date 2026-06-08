@@ -19,6 +19,18 @@ npm run check:production
 npm run ready:production
 ```
 
+Or run the launch preparation wrapper, which applies the production origin, validates public artifacts, checks local GSC credentials, and writes the readiness report:
+
+```powershell
+npm run launch:prepare -- --origin https://your-domain.example
+```
+
+To also set the GitHub repository variables used by the sitemap workflow:
+
+```powershell
+npm run launch:prepare -- --origin https://your-domain.example --set-github-vars
+```
+
 ## Deployment Notes
 
 - The site is static HTML/CSS/JS and can be served from the repository root.
