@@ -336,6 +336,37 @@ def audit():
         "external_input_blockers": [item["name"] for item in blockers if item["name"] in EXTERNAL_INPUT_BLOCKERS],
         "code_or_repository_blockers": [item["name"] for item in blockers if item["name"] not in EXTERNAL_INPUT_BLOCKERS],
     }
+    missing_external_inputs = []
+    if public_with_placeholder:
+        missing_external_inputs.append({
+            "name": "SITE_ORIGIN",
+            "detail": "Assign the HTTPS production origin, then run npm run launch:prepare or npm run check:production.",
+        })
+    if not contact_channel_ok:
+        missing_external_inputs.append({
+            "name": "PUBLIC_CONTACT_EMAIL_OR_URL",
+            "detail": "Provide PUBLIC_CONTACT_EMAIL or PUBLIC_CONTACT_URL so contact.html exposes a production public contact channel.",
+        })
+    if not gsc_config_detail.get("GSC_SITE_URL"):
+        missing_external_inputs.append({
+            "name": "GSC_SITE_URL",
+            "detail": "Set the verified Search Console URL-prefix property or covering sc-domain property after the production domain is assigned.",
+        })
+    if not gsc_config_detail.get("GSC_SITEMAP_URL"):
+        missing_external_inputs.append({
+            "name": "GSC_SITEMAP_URL",
+            "detail": "Set the production sitemap URL, normally SITE_ORIGIN + /sitemap.xml.",
+        })
+    if remote_repo and not github_gsc["GSC_SITE_URL_variable"]:
+        missing_external_inputs.append({
+            "name": "GITHUB_VAR_GSC_SITE_URL",
+            "detail": "Set the GitHub repository variable GSC_SITE_URL after the production domain is assigned.",
+        })
+    if remote_repo and not github_gsc["GSC_SITEMAP_URL_variable"]:
+        missing_external_inputs.append({
+            "name": "GITHUB_VAR_GSC_SITEMAP_URL",
+            "detail": "Set the GitHub repository variable GSC_SITEMAP_URL after the production domain is assigned.",
+        })
     next_required_actions = []
     if not article_generation_ok:
         next_required_actions.append("Run npm run generate and fix article generation contract issues before production submission.")
@@ -365,6 +396,7 @@ def audit():
         "checks": checks,
         "blockers": blockers,
         "blocker_summary": blocker_summary,
+        "missing_external_inputs": missing_external_inputs,
         "quality_snapshot": {
             "article_files": quality.get("article_files") if quality else None,
             "guide_files": quality.get("guide_files") if quality else None,

@@ -380,6 +380,7 @@ def validate(require_site_origin=False):
             ("site_origin_placeholder_count", "site_origin_placeholder_snapshot"),
             ("EXTERNAL_INPUT_BLOCKERS", "external_input_blocker_classification"),
             ("blocker_summary", "blocker_summary"),
+            ("missing_external_inputs", "missing_external_inputs"),
         ]:
             if needle not in readiness_script:
                 errors.append({"type": f"readiness_missing_{label}"})
