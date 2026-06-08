@@ -81,7 +81,8 @@
             "name": "GSC_SITEMAP_URL",
             "error": "GSC_SITEMAP_URL must be set after the project domain is assigned."
           }
-        ]
+        ],
+        "GSC_URL_ALIGNMENT": false
       }
     },
     {
@@ -124,7 +125,8 @@
             "name": "GSC_SITEMAP_URL",
             "error": "GSC_SITEMAP_URL must be set after the project domain is assigned."
           }
-        ]
+        ],
+        "GSC_URL_ALIGNMENT": false
       }
     },
     {
@@ -143,6 +145,7 @@
     "article_files": 200,
     "guide_files": 5,
     "sitemap_urls": 16,
+    "public_origin_mismatch_count": 0,
     "error_count": 0
   },
   "seo_adsense_snapshot": {
