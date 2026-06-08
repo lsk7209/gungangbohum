@@ -89,4 +89,4 @@ Run `npm run audit:performance` to write `reports/performance-budget-report.json
 
 The launch assumptions are tracked in `docs/phase0-verification-report.md`. Keep that report current when rating-area data, SLCSP data, subsidy law status, or Florida coverage-gap handling changes.
 
-Run `npm run ready` to write `reports/production-readiness-report.json`. It reports whether content quality, SEO/AdSense audit status, static performance budgets, production origin replacement, GitHub remote state, public contact channel, and GSC configuration are ready for production submission.
+Run `npm run ready` to write `reports/production-readiness-report.json`. It reports whether content quality, SEO/AdSense audit status, static performance budgets, production origin replacement, GitHub remote state, public contact channel, GSC workflow automation, and GSC configuration are ready for production submission.

@@ -12,6 +12,7 @@ QUALITY_REPORT = REPORT_DIR / "content-quality-report.json"
 SEO_ADSENSE_REPORT = REPORT_DIR / "seo-adsense-audit-report.json"
 PERFORMANCE_REPORT = REPORT_DIR / "performance-budget-report.json"
 READINESS_REPORT = REPORT_DIR / "production-readiness-report.json"
+GSC_WORKFLOW = ROOT / ".github" / "workflows" / "gsc-sitemap-submit.yml"
 
 
 def run_git(args):
@@ -110,6 +111,24 @@ def contact_channel_status():
     return True, "production public contact channel is present"
 
 
+def gsc_workflow_status():
+    if not GSC_WORKFLOW.exists():
+        return False, {"file": str(GSC_WORKFLOW.relative_to(ROOT)), "missing": True}
+    workflow = GSC_WORKFLOW.read_text(encoding="utf-8")
+    markers = {
+        "push_trigger": "push:" in workflow,
+        "schedule_trigger": "schedule:" in workflow,
+        "manual_trigger": "workflow_dispatch:" in workflow,
+        "manual_site_url_input": "site_url:" in workflow,
+        "manual_sitemap_url_input": "sitemap_url:" in workflow,
+        "uses_gsc_site_url": "GSC_SITE_URL" in workflow,
+        "uses_gsc_sitemap_url": "GSC_SITEMAP_URL" in workflow,
+        "validates_config": "--check-config" in workflow,
+        "submits_sitemap": "scripts/gsc_submit_sitemap.py" in workflow,
+    }
+    return all(markers.values()), markers
+
+
 def audit():
     quality = load_quality_report()
     seo_adsense_ok, seo_adsense_detail, seo_adsense = report_pass_status(SEO_ADSENSE_REPORT, "SEO and AdSense audit")
@@ -161,6 +180,7 @@ def audit():
             github_gsc["GSC_SITEMAP_URL_variable"] = "GSC_SITEMAP_URL" in variable_names
 
     contact_channel_ok, contact_channel_detail = contact_channel_status()
+    gsc_workflow_ok, gsc_workflow_detail = gsc_workflow_status()
 
     checks = [
         {
@@ -209,6 +229,11 @@ def audit():
             "detail": contact_channel_detail,
         },
         {
+            "name": "gsc_workflow_automation",
+            "ok": gsc_workflow_ok,
+            "detail": gsc_workflow_detail,
+        },
+        {
             "name": "gsc_configuration",
             "ok": all(gsc_env.values()),
             "detail": gsc_env,
@@ -240,6 +265,8 @@ def audit():
         next_required_actions.append("Connect this folder to a GitHub remote repository before git push.")
     if not contact_channel_ok:
         next_required_actions.append("Replace the prelaunch contact notice with a production public contact channel.")
+    if not gsc_workflow_ok:
+        next_required_actions.append("Repair .github/workflows/gsc-sitemap-submit.yml before relying on automatic sitemap submission.")
     if not all(gsc_env.values()):
         next_required_actions.append("Set GSC_SITE_URL and GSC_SITEMAP_URL, then run npm run gsc:submit after the domain is verified in Search Console.")
     if remote_repo and not github_gsc["GSC_SITE_URL_variable"]:

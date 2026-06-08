@@ -261,6 +261,8 @@ def validate(require_site_origin=False):
         for needle, label in [
             ("SEO_ADSENSE_REPORT", "seo_adsense_report"),
             ("PERFORMANCE_REPORT", "performance_report"),
+            ("GSC_WORKFLOW", "gsc_workflow_path"),
+            ("gsc_workflow_automation", "gsc_workflow_automation_check"),
             ("seo_adsense_snapshot", "seo_adsense_snapshot"),
             ("performance_snapshot", "performance_snapshot"),
         ]:
