@@ -23,6 +23,8 @@ jobs:
         run: python scripts/generate_aca_articles.py
       - name: Audit SEO and AdSense checklist
         run: python scripts/audit_seo_adsense.py --write-report
+      - name: Audit performance budget
+        run: python scripts/audit_performance_budget.py --write-report
       - name: Validate generated site
         run: python scripts/validate_content_quality.py --write-report
       - name: Commit published content changes
@@ -32,7 +34,7 @@ jobs:
           if git diff --quiet; then
             echo "No scheduled content changes to publish."
           else
-            git add aca blog.html content/article-queue.json content/search-index.json feed.xml guides llms.txt reports/content-quality-report.json reports/seo-adsense-audit-report.json sitemap.xml scripts/generate_aca_articles.py scripts/validate_content_quality.py
+            git add aca blog.html content/article-queue.json content/search-index.json feed.xml guides llms.txt reports/content-quality-report.json reports/performance-budget-report.json reports/seo-adsense-audit-report.json sitemap.xml scripts/generate_aca_articles.py scripts/validate_content_quality.py
             git commit -m "Publish scheduled ACA guide state"
             git push
           fi

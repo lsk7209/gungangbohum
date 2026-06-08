@@ -20,6 +20,12 @@ Run the SEO and AdSense checklist audit:
 python scripts\audit_seo_adsense.py --write-report
 ```
 
+Run the static performance budget audit:
+
+```powershell
+python scripts\audit_performance_budget.py --write-report
+```
+
 The validator checks:
 
 - project operation files: `package.json`, `vercel.json`, `README.md`, and the GitHub content-quality workflow
@@ -71,6 +77,14 @@ The SEO and AdSense audit writes `reports/seo-adsense-audit-report.json` and sum
 - article CTA, two-or-more internal links, and one-or-more external links
 - readable URL slugs
 - AdSense auto-ads-only policy by checking for manual ad slot markers
+
+The performance budget audit writes `reports/performance-budget-report.json` and summarizes:
+
+- largest HTML files and page-size budgets
+- article page maximum and average byte budgets
+- inline style and script byte budgets
+- public JSON size budgets for the article queue and search index
+- required static cache and content-type headers in `vercel.json`
 
 The latest generated report is written to `reports/content-quality-report.json`.
 

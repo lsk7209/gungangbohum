@@ -22,5 +22,7 @@ jobs:
         run: python scripts/generate_aca_articles.py
       - name: Audit SEO and AdSense checklist
         run: python scripts/audit_seo_adsense.py --write-report
+      - name: Audit performance budget
+        run: python scripts/audit_performance_budget.py --write-report
       - name: Validate generated site
         run: python scripts/validate_content_quality.py --write-report

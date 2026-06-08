@@ -8,6 +8,7 @@ Static Florida ACA subsidy calculator and guide library.
 npm run generate
 npm run validate
 npm run audit:seo
+npm run audit:performance
 npm run check
 npm run ready
 ```
@@ -68,6 +69,8 @@ Get-Content D:\env\gsc_token.json -Raw | gh secret set GSC_TOKEN_JSON --repo lsk
 Run `npm run check` before publishing. The validator checks generated article counts, metadata, canonical links, schemas, accessibility landmarks, sitemap/feed/search-index parity, public marker leakage, and repeated body sentence risk.
 
 Run `npm run audit:seo` to write `reports/seo-adsense-audit-report.json`. It maps the SEO and AdSense checklist to machine checks for per-page meta titles and descriptions, canonical URLs, sitemap and robots files, H-tag hierarchy, image alt text, article CTA/internal/external links, readable URLs, and absence of manual ad slots.
+
+Run `npm run audit:performance` to write `reports/performance-budget-report.json`. It checks static HTML size budgets, article average size, inline style/script budgets, public JSON size, and static header configuration.
 
 The launch assumptions are tracked in `docs/phase0-verification-report.md`. Keep that report current when rating-area data, SLCSP data, subsidy law status, or Florida coverage-gap handling changes.
 
