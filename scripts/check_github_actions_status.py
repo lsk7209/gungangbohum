@@ -87,9 +87,26 @@ def check_workflow(repo, branch, head, workflow, required=True):
     }
 
 
+def check_latest_workflow(repo, branch, workflow, required=True):
+    runs = workflow_runs(repo, branch, workflow)
+    latest = runs[0] if runs else None
+    ok = bool(latest and latest.get("status") == "completed" and latest.get("conclusion") == "success")
+    if not required and latest is None:
+        ok = True
+    return {
+        "name": workflow,
+        "ok": ok,
+        "required": required,
+        "current_head_run": None,
+        "latest_run": run_summary(latest),
+        "scope": "latest",
+    }
+
+
 def main():
     parser = argparse.ArgumentParser(description="Check GitHub Actions status for the current launch commit.")
     parser.add_argument("--require-gsc-success", action="store_true", help="Require the GSC sitemap workflow to have succeeded for the current HEAD.")
+    parser.add_argument("--skip-scheduled-check", action="store_true", help="Do not check the latest scheduled publishing workflow result.")
     args = parser.parse_args()
 
     head = git_value(["rev-parse", "--verify", "HEAD"])
@@ -99,6 +116,8 @@ def main():
         check_workflow(repo, branch, head, "Content quality", required=True),
         check_workflow(repo, branch, head, "Submit sitemap to Google Search Console", required=args.require_gsc_success),
     ]
+    if not args.skip_scheduled_check:
+        checks.append(check_latest_workflow(repo, branch, "Publish scheduled content", required=True))
     report = {
         "passed": all(item["ok"] for item in checks),
         "repo": repo,

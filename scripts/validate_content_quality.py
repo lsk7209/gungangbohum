@@ -570,7 +570,9 @@ def validate(require_site_origin=False):
         for needle, label in [
             ("Content quality", "content_quality_workflow"),
             ("Submit sitemap to Google Search Console", "gsc_workflow"),
+            ("Publish scheduled content", "scheduled_workflow"),
             ("--require-gsc-success", "require_gsc_success"),
+            ("--skip-scheduled-check", "skip_scheduled_check"),
             ("headSha", "head_sha_match"),
         ]:
             if needle not in launch_ci_script:

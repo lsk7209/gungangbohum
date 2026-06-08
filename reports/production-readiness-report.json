@@ -1,12 +1,13 @@
 {
-  "generatedAt": "2026-06-08T15:05:13.588400+00:00",
+  "generatedAt": "2026-06-08T15:09:30.839987+00:00",
   "git_snapshot": {
-    "head": "c13b2fa2f94d93b99da3ad0865dd16f9b2787079",
+    "head": "bdd3034be66b9767fb0e661937073c2d459de727",
     "worktree_clean": false,
     "changed_paths": [
-      ".github/workflows/publish-scheduled-content.yml",
       "README.md",
       "docs/content-quality-checks.md",
+      "docs/phase0-verification-report.md",
+      "scripts/check_github_actions_status.py",
       "scripts/validate_content_quality.py"
     ]
   },

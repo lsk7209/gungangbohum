@@ -33,7 +33,7 @@ npm run ready:production
 Replace every `your-domain.example` placeholder with the real production domain before running production commands; launch scripts reject placeholder, example, and local domains.
 Use `docs/launch-env.example.ps1` as the complete no-secret launch environment checklist.
 Run `npm run launch:check-env` after filling local environment values to validate them without changing files or calling Google APIs. It also confirms `SITE_ORIGIN`, `GSC_SITE_URL`, and `GSC_SITEMAP_URL` point to the same production host or a covering `sc-domain` property, and checks that GitHub GSC secrets/variables are present and aligned.
-Run `npm run launch:check-ci` to confirm the current commit has a successful GitHub Content quality workflow before launch preparation.
+Run `npm run launch:check-ci` to confirm the current commit has a successful GitHub Content quality workflow and the latest scheduled publishing workflow succeeded before launch preparation.
 Run `npm run launch:commands -- --origin https://your-domain.example --contact-email contact@your-domain.example --ga4-measurement-id G-XXXXXXXXXX --adsense-publisher-id pub-0000000000000000` to print validated PowerShell launch commands without changing files.
 Run `npm run launch:status` after `npm run ready` to print the current readiness summary and missing launch inputs without opening the JSON report.
 
