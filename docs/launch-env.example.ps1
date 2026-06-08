@@ -18,6 +18,11 @@ $env:GSC_SITEMAP_URL = "https://your-production-domain.example/sitemap.xml"
 $env:GSC_CLIENT_JSON = Get-Content D:\env\adsense_oauth_client.json -Raw
 $env:GSC_TOKEN_JSON = Get-Content D:\env\gsc_token.json -Raw
 
+Get-Content D:\env\adsense_oauth_client.json -Raw | gh secret set GSC_CLIENT_JSON --repo lsk7209/gungangbohum
+Get-Content D:\env\gsc_token.json -Raw | gh secret set GSC_TOKEN_JSON --repo lsk7209/gungangbohum
+gh variable set GSC_SITE_URL --repo lsk7209/gungangbohum --body $env:GSC_SITE_URL
+gh variable set GSC_SITEMAP_URL --repo lsk7209/gungangbohum --body $env:GSC_SITEMAP_URL
+
 # Optional: print validated commands from the final production values without changing files.
 npm run launch:commands -- --origin $env:SITE_ORIGIN --site-url $env:GSC_SITE_URL --sitemap-url $env:GSC_SITEMAP_URL --contact-email $env:PUBLIC_CONTACT_EMAIL --contact-url $env:PUBLIC_CONTACT_URL --ga4-measurement-id $env:GA4_MEASUREMENT_ID --adsense-publisher-id $env:ADSENSE_PUBLISHER_ID
 
