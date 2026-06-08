@@ -112,6 +112,8 @@ $env:SITE_ORIGIN = "https://your-production-domain.example"
 $env:PUBLIC_CONTACT_EMAIL = "contact@your-production-domain.example"
 $env:GA4_MEASUREMENT_ID = "G-XXXXXXXXXX"
 $env:ADSENSE_PUBLISHER_ID = "pub-3050601904412736"
+$env:GSC_SITE_URL = "https://your-production-domain.example/"
+$env:GSC_SITEMAP_URL = "https://your-production-domain.example/sitemap.xml"
 npm run contact:apply
 npm run analytics:apply
 npm run adsense:apply
@@ -126,8 +128,8 @@ Run `npm run launch:commands -- --origin https://your-production-domain.example 
 Launch wrapper:
 
 ```powershell
-npm run launch:preflight -- --origin https://your-production-domain.example --contact-email contact@your-production-domain.example --ga4-measurement-id G-XXXXXXXXXX --adsense-publisher-id pub-3050601904412736
-npm run launch:prepare -- --origin https://your-production-domain.example --contact-email contact@your-production-domain.example --ga4-measurement-id G-XXXXXXXXXX --adsense-publisher-id pub-3050601904412736
+npm run launch:preflight -- --origin https://your-production-domain.example --site-url https://your-production-domain.example/ --sitemap-url https://your-production-domain.example/sitemap.xml --contact-email contact@your-production-domain.example --ga4-measurement-id G-XXXXXXXXXX --adsense-publisher-id pub-3050601904412736
+npm run launch:prepare -- --origin https://your-production-domain.example --site-url https://your-production-domain.example/ --sitemap-url https://your-production-domain.example/sitemap.xml --contact-email contact@your-production-domain.example --ga4-measurement-id G-XXXXXXXXXX --adsense-publisher-id pub-3050601904412736
 ```
 
 `launch:preflight` validates launch inputs and local GSC configuration without changing files or GitHub variables. `launch:prepare` requires a clean git worktree before it changes files or repository variables, then exits successfully only when the production readiness audit passes. Use `--allow-dirty-worktree` only for an intentional local preview, and use `--allow-incomplete-readiness` only for a non-submission preview with known blockers.

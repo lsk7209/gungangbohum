@@ -516,8 +516,12 @@ def validate(require_site_origin=False):
             ("npm run analytics:apply", "analytics_apply_gate"),
             ("ADSENSE_PUBLISHER_ID", "adsense_publisher_id"),
             ("npm run adsense:apply", "adsense_apply_gate"),
+            ("GSC_SITE_URL", "gsc_site_url"),
+            ("GSC_SITEMAP_URL", "gsc_sitemap_url"),
             ("npm run check:production", "production_gate"),
             ("npm run launch:prepare", "launch_prepare_gate"),
+            ("--site-url https://your-production-domain.example/", "launch_site_url"),
+            ("--sitemap-url https://your-production-domain.example/sitemap.xml", "launch_sitemap_url"),
             ("npm run gsc:submit", "gsc_submit_gate"),
             ("npm run ready:production", "readiness_gate"),
         ]:

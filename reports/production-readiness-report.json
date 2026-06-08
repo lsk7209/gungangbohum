@@ -1,11 +1,10 @@
 {
-  "generatedAt": "2026-06-08T14:50:00.480403+00:00",
+  "generatedAt": "2026-06-08T14:53:20.960254+00:00",
   "git_snapshot": {
-    "head": "c2f865196feae488a2214f9404e0d76010a4eeb4",
+    "head": "6ed04c19baaa7b7e0e037d0241274949935f1d19",
     "worktree_clean": false,
     "changed_paths": [
-      "README.md",
-      "docs/launch-env.example.ps1",
+      "docs/phase0-verification-report.md",
       "scripts/validate_content_quality.py"
     ]
   },
