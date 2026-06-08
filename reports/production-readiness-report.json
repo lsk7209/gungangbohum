@@ -23,8 +23,8 @@
     },
     {
       "name": "git_worktree_clean",
-      "ok": true,
-      "detail": "worktree clean"
+      "ok": false,
+      "detail": "worktree has uncommitted or untracked files"
     },
     {
       "name": "github_remote",
@@ -47,6 +47,11 @@
       "name": "production_origin_applied",
       "ok": false,
       "detail": "221 public files still contain {SITE_ORIGIN}"
+    },
+    {
+      "name": "git_worktree_clean",
+      "ok": false,
+      "detail": "worktree has uncommitted or untracked files"
     },
     {
       "name": "github_remote",
@@ -72,7 +77,8 @@
   },
   "next_required_actions": [
     "Assign an HTTPS production domain and run npm run check:production.",
-    "Commit the local work and connect this folder to a GitHub remote repository before git push.",
+    "Commit the local work before git push.",
+    "Connect this folder to a GitHub remote repository before git push.",
     "Set GSC_SITE_URL and GSC_SITEMAP_URL, then run npm run gsc:submit after the domain is verified in Search Console."
   ]
 }

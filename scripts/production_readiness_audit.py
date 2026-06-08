@@ -106,6 +106,16 @@ def audit():
 
     ready = all(item["ok"] for item in checks)
     blockers = [item for item in checks if not item["ok"]]
+    next_required_actions = []
+    if public_with_placeholder:
+        next_required_actions.append("Assign an HTTPS production domain and run npm run check:production.")
+    if not has_commit or not worktree_clean:
+        next_required_actions.append("Commit the local work before git push.")
+    if not remotes:
+        next_required_actions.append("Connect this folder to a GitHub remote repository before git push.")
+    if not all(gsc_env.values()):
+        next_required_actions.append("Set GSC_SITE_URL and GSC_SITEMAP_URL, then run npm run gsc:submit after the domain is verified in Search Console.")
+
     report = {
         "ready_for_production_submission": ready,
         "checks": checks,
@@ -116,11 +126,7 @@ def audit():
             "sitemap_urls": quality.get("sitemap_urls") if quality else None,
             "error_count": quality.get("error_count") if quality else None,
         },
-        "next_required_actions": [
-            "Assign an HTTPS production domain and run npm run check:production.",
-            "Commit the local work and connect this folder to a GitHub remote repository before git push.",
-            "Set GSC_SITE_URL and GSC_SITEMAP_URL, then run npm run gsc:submit after the domain is verified in Search Console.",
-        ] if not ready else [],
+        "next_required_actions": next_required_actions,
     }
     return report
 
