@@ -38,8 +38,8 @@ jobs:
       GSC_SITEMAP_URL: ${{ github.event_name == 'workflow_dispatch' && inputs.sitemap_url || vars.GSC_SITEMAP_URL }}
     if: ${{ (github.event_name == 'workflow_dispatch' && inputs.site_url != '' && inputs.sitemap_url != '') || (vars.GSC_SITE_URL != '' && vars.GSC_SITEMAP_URL != '') }}
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.11"
       - run: pip install google-api-python-client google-auth google-auth-oauthlib

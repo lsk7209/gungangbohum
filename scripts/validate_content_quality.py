@@ -304,6 +304,7 @@ def validate(require_site_origin=False):
     vercel_path = ROOT / "vercel.json"
     quality_workflow_path = ROOT / ".github" / "workflows" / "content-quality.yml"
     gsc_workflow_path = ROOT / ".github" / "workflows" / "gsc-sitemap-submit.yml"
+    scheduled_workflow_path = ROOT / ".github" / "workflows" / "publish-scheduled-content.yml"
     readme_path = ROOT / "README.md"
     phase0_report_path = ROOT / "docs" / "phase0-verification-report.md"
     launch_env_example_path = ROOT / "docs" / "launch-env.example.ps1"
@@ -324,6 +325,7 @@ def validate(require_site_origin=False):
         (vercel_path, "vercel_json"),
         (quality_workflow_path, "content_quality_workflow"),
         (gsc_workflow_path, "gsc_sitemap_workflow"),
+        (scheduled_workflow_path, "publish_scheduled_content_workflow"),
         (readme_path, "readme"),
         (phase0_report_path, "phase0_verification_report"),
         (launch_env_example_path, "launch_env_example"),
@@ -365,6 +367,17 @@ def validate(require_site_origin=False):
             errors.append({"type": "content_quality_workflow_missing_performance_audit"})
         if "production_readiness_audit.py" not in workflow:
             errors.append({"type": "content_quality_workflow_missing_readiness_audit"})
+    for workflow_path, label in [
+        (quality_workflow_path, "content_quality"),
+        (gsc_workflow_path, "gsc_sitemap"),
+        (scheduled_workflow_path, "publish_scheduled_content"),
+    ]:
+        if workflow_path.exists():
+            workflow = workflow_path.read_text(encoding="utf-8")
+            if "actions/checkout@v5" not in workflow:
+                errors.append({"type": f"{label}_workflow_checkout_not_node24"})
+            if "actions/setup-python@v6" not in workflow:
+                errors.append({"type": f"{label}_workflow_setup_python_not_node24"})
     if readiness_script_path.exists():
         readiness_script = readiness_script_path.read_text(encoding="utf-8")
         for needle, label in [
