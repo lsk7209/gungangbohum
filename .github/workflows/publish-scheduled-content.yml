@@ -1,0 +1,33 @@
+name: Publish scheduled content
+
+on:
+  schedule:
+    - cron: "23 */5 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish-scheduled-content:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Generate scheduled content state
+        run: python scripts/generate_aca_articles.py
+      - name: Validate generated site
+        run: python scripts/validate_content_quality.py --write-report
+      - name: Commit published content changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet; then
+            echo "No scheduled content changes to publish."
+          else
+            git add aca blog.html content/article-queue.json content/search-index.json feed.xml guides llms.txt reports/content-quality-report.json sitemap.xml scripts/generate_aca_articles.py scripts/validate_content_quality.py
+            git commit -m "Publish scheduled ACA guide state"
+            git push
+          fi

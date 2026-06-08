@@ -271,6 +271,8 @@ def validate(require_site_origin=False):
     if require_site_origin and (site_origin == "{SITE_ORIGIN}" or not site_origin.startswith("https://")):
         errors.append({"type": "production_site_origin_not_set", "site_origin": site_origin})
     by_slug = {item["slug"]: item for item in q}
+    published_items = [item for item in q if item.get("is_published")]
+    scheduled_items = [item for item in q if not item.get("is_published")]
     article_files = sorted(ARTICLE_DIR.glob("*.html"))
     all_html_files = sorted(ROOT.glob("*.html")) + article_files + sorted(GUIDE_DIR.glob("*.html"))
     errors.extend(validate_html_structure(all_html_files))
@@ -369,6 +371,11 @@ def validate(require_site_origin=False):
                 errors.append({"type": f"missing_{label}", "slug": item["slug"]})
         if 'type="application/rss+xml"' not in html:
             article_feed_alt_missing += 1
+        if item.get("is_published"):
+            if '<meta name="robots" content="noindex,follow' in html:
+                errors.append({"type": "published_article_noindexed", "slug": item["slug"]})
+        elif '<meta name="robots" content="noindex,follow' not in html:
+            errors.append({"type": "scheduled_article_indexable", "slug": item["slug"]})
         if "../editorial-policy.html" not in html or "../sources-corrections.html" not in html or "../contact.html" not in html:
             article_trust_missing += 1
         parser = parse_page(path)
@@ -454,7 +461,10 @@ def validate(require_site_origin=False):
         if "Quality score" in html or "Score " in html:
             errors.append({"type": "guide_internal_quality_score_visible", "file": p.name})
 
-    feed_items = len(ET.parse(ROOT / "feed.xml").getroot().findall("./channel/item"))
+    feed_root = ET.parse(ROOT / "feed.xml").getroot()
+    feed_nodes = feed_root.findall("./channel/item")
+    feed_items = len(feed_nodes)
+    feed_links = {node.findtext("link", default="") for node in feed_nodes}
     sitemap = (ROOT / "sitemap.xml").read_text(encoding="utf-8")
     llms = (ROOT / "llms.txt").read_text(encoding="utf-8")
     opensearch_path = ROOT / "opensearch.xml"
@@ -473,9 +483,33 @@ def validate(require_site_origin=False):
             errors.append({"type": "opensearch_bad_search_template"})
     search_index = load_json(CONTENT_DIR / "search-index.json")
     documents = search_index["documents"]
+    article_documents = [doc for doc in documents if doc.get("type") == "article"]
+    indexed_article_urls = {doc.get("url") for doc in article_documents}
     document_urls = {doc.get("url") for doc in documents}
     if "contact.html" not in document_urls:
         errors.append({"type": "search_index_missing_contact"})
+    if feed_items != len(published_items):
+        errors.append({"type": "feed_published_count_mismatch", "feed_items": feed_items, "published_items": len(published_items)})
+    if len(article_documents) != len(published_items):
+        errors.append({"type": "search_index_published_count_mismatch", "search_index_articles": len(article_documents), "published_items": len(published_items)})
+    for item in published_items:
+        article_url = f"{site_origin}/aca/{item['slug']}.html"
+        relative_url = f"aca/{item['slug']}.html"
+        if article_url not in sitemap:
+            errors.append({"type": "published_article_missing_sitemap", "slug": item["slug"]})
+        if article_url not in feed_links:
+            errors.append({"type": "published_article_missing_feed", "slug": item["slug"]})
+        if relative_url not in indexed_article_urls:
+            errors.append({"type": "published_article_missing_search_index", "slug": item["slug"]})
+    for item in scheduled_items:
+        article_url = f"{site_origin}/aca/{item['slug']}.html"
+        relative_url = f"aca/{item['slug']}.html"
+        if article_url in sitemap:
+            errors.append({"type": "scheduled_article_in_sitemap", "slug": item["slug"]})
+        if article_url in feed_links:
+            errors.append({"type": "scheduled_article_in_feed", "slug": item["slug"]})
+        if relative_url in indexed_article_urls:
+            errors.append({"type": "scheduled_article_in_search_index", "slug": item["slug"]})
     blog_html = (ROOT / "blog.html").read_text(encoding="utf-8")
     blog_size_bytes = (ROOT / "blog.html").stat().st_size
     blog_schema_posts = blog_html.count('"@type":"BlogPosting"')
@@ -591,6 +625,8 @@ def validate(require_site_origin=False):
         "content_quality_workflow_present": quality_workflow_path.exists(),
         "readme_present": readme_path.exists(),
         "article_files": len(article_files),
+        "published_article_files": len(published_items),
+        "scheduled_article_files": len(scheduled_items),
         "guide_files": len(guide_files),
         "feed_items": feed_items,
         "sitemap_urls": sitemap.count("<url>"),

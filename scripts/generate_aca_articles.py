@@ -43,6 +43,21 @@ OFFICIAL_SOURCES = [
 ]
 
 
+def publication_now():
+    raw = os.getenv("PUBLICATION_NOW", "").strip()
+    if raw:
+        value = datetime.fromisoformat(raw)
+        return value if value.tzinfo else value.replace(tzinfo=KST)
+    return datetime.now(KST)
+
+
+def published_by(topic, now):
+    value = datetime.fromisoformat(topic["publishAt"])
+    if value.tzinfo is None:
+        value = value.replace(tzinfo=KST)
+    return value <= now
+
+
 METROS = [
     ("Miami", "Miami-Dade and Broward shoppers often compare high household premiums against tax-credit changes."),
     ("Tampa", "Tampa Bay households need a clean way to compare benchmark Silver costs across income bands."),
@@ -249,6 +264,10 @@ def esc(s: str) -> str:
 def publish_label(topic):
     publish_dt = datetime.fromisoformat(topic["publishAt"])
     return f"{publish_dt.strftime('%b')} {publish_dt.day}, {publish_dt.year}"
+
+
+def publish_status(topic):
+    return "Published" if topic.get("is_published") else "Scheduled"
 
 
 def meta_snippet(text, limit=155):
@@ -1183,6 +1202,11 @@ def build_article(topic, idx):
         f'<script type="application/ld+json">{json.dumps(schema, separators=(",", ":"))}</script>'
         for schema in json_ld
     )
+    robots_directive = (
+        "index,follow,max-image-preview:large"
+        if topic.get("is_published", True)
+        else "noindex,follow,max-image-preview:large"
+    )
 
     return f"""<!doctype html>
 <html lang="en">
@@ -1191,7 +1215,7 @@ def build_article(topic, idx):
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{esc(topic['meta_title'])}</title>
   <meta name="description" content="{esc(topic['meta_description'])}">
-  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="robots" content="{robots_directive}">
   <link rel="canonical" href="{SITE_ORIGIN}/aca/{topic['slug']}.html">
   <link rel="alternate" type="application/rss+xml" title="CoverClarity Florida ACA Subsidy Guides" href="{SITE_ORIGIN}/feed.xml">
   <link rel="search" type="application/opensearchdescription+xml" title="CoverClarity" href="{SITE_ORIGIN}/opensearch.xml">
@@ -1216,7 +1240,7 @@ def build_article(topic, idx):
       <div class="eyebrow">{esc(display_cluster(topic['cluster']))}</div>
       <h1>{esc(topic['title'])}</h1>
       <p class="subtitle">{esc(topic['subtitle'])}</p>
-      <p class="meta">Scheduled {esc(publish_label(topic))} - Estimate guidance, not advice</p>
+      <p class="meta">{esc(publish_status(topic))} {esc(publish_label(topic))} - Estimate guidance, not advice</p>
       {byline_html(topic)}
       {guide_hub_html}
       <section class="answer"><b>Direct answer:</b> {esc(direct_answer(topic))}</section>
@@ -1574,6 +1598,7 @@ TOPICS = [normalize_topic(topic) for topic in TOPICS]
 
 
 def render_blog(topics):
+    published_count = len(topics)
     def card(topic, featured=False):
         label = "Hub guide" if featured else display_cluster(topic["cluster"])
         cluster_label = display_cluster(topic["cluster"])
@@ -1587,9 +1612,14 @@ def render_blog(topics):
       <a class="card" href="aca/{esc(topic['slug'])}.html" data-search="{esc(search_text)}" data-cluster="{esc(cluster_label)}">
         <span class="tag">{esc(label)}</span>
         <h2>{esc(topic['title'])}</h2>
-        <p class="meta">Scheduled {esc(publish_label(topic))}</p>
+        <p class="meta">{esc(publish_status(topic))} {esc(publish_label(topic))}</p>
         <p>{esc(topic['subtitle'])}</p>
       </a>"""
+
+    def grid_content(items, empty_label):
+        if items:
+            return ''.join(card(topic) for topic in items)
+        return f'<div class="empty-state">No {esc(empty_label)} are published yet. Queued guides are released every five hours and appear here when they become indexable.</div>'
 
     hub_cards = []
     cluster_sections = []
@@ -1605,10 +1635,10 @@ def render_blog(topics):
         <h2>{esc(heading)}</h2>
         <p>{len(items)} focused guides that support a specific Florida ACA subsidy estimate decision. <a href="guides/{esc(guide_slug)}.html">Open this guide hub</a>.</p>
       </div>
-      <div class="grid" aria-label="{esc(heading)}">{''.join(card(topic) for topic in items)}</div>
+      <div class="grid" aria-label="{esc(heading)}">{grid_content(items, heading.lower())}</div>
     </section>""")
 
-    all_cards = [card(topic) for topic in topics]
+    all_cards = grid_content(topics, "Florida ACA subsidy guides")
     representative_topics = hubs[:20] + topics[-10:]
     blog_schemas = [
         organization_schema(),
@@ -1656,7 +1686,7 @@ def render_blog(topics):
   <meta name="twitter:description" content="A structured 200-guide library for Florida ACA subsidy estimates and Marketplace verification.">
   <style>
     :root{{--paper:#faf7f1;--paper2:#f3eee3;--card:#fffdf9;--ink:#1b2a36;--soft:#34434f;--muted:#5b7184;--line:#e4dccb;--accent:#c8862b;--accent2:#a66c1c;--serif:Georgia,serif;--sans:system-ui,-apple-system,Segoe UI,sans-serif}}
-    *{{box-sizing:border-box}}body{{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.65}}a{{color:var(--accent2)}}:focus-visible{{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}}.skip-link{{position:absolute;left:-999px;top:14px;background:var(--ink);color:#fff;padding:10px 14px;border-radius:7px;z-index:9999}}.skip-link:focus{{left:14px}}.wrap{{max-width:1180px;margin:auto;padding:0 22px}}.top{{border-bottom:1px solid var(--line);background:var(--paper)}}.nav{{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:16px}}.brand{{font:700 1.3rem var(--serif);color:var(--ink);text-decoration:none;white-space:nowrap}}.nav nav{{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end}}.nav nav a{{font-weight:650;text-decoration:none;color:var(--soft)}}.hero{{padding:48px 0 28px}}.eyebrow{{color:var(--accent2);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;font-weight:800}}.h1{{font:500 clamp(2.1rem,5vw,3.8rem)/1.05 var(--serif);max-width:15ch;margin:.35em 0}}.lead{{font-size:1.16rem;color:var(--soft);max-width:70ch}}.section-head{{border-top:1px solid var(--line);padding-top:28px;margin-top:36px}}.section-head h2{{font:600 1.75rem/1.2 var(--serif);margin:0 0 6px}}.section-head p{{color:var(--soft);margin:0;max-width:70ch}}.quick-nav{{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0 34px}}.quick-nav a{{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:8px 12px;text-decoration:none;font-weight:700}}.library-tools{{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;margin:12px 0 30px;display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:12px;align-items:end}}.library-tools label{{display:block;font-size:.82rem;font-weight:800;color:var(--muted);margin-bottom:6px}}.library-tools input,.library-tools select{{width:100%;border:1px solid var(--line);border-radius:8px;background:#fffdf9;color:var(--ink);padding:11px 12px;font:inherit}}.result-status{{font-size:.9rem;color:var(--muted);margin:10px 0 0}}.no-results{{display:none;background:var(--paper2);border:1px solid var(--line);border-radius:14px;padding:18px;margin:18px 0 34px;color:var(--soft)}}.grid{{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:18px 0 44px}}.card{{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;text-decoration:none;color:inherit;min-height:280px}}.card[hidden]{{display:none}}.card:hover{{border-color:var(--accent)}}.tag{{display:inline-block;background:#fbf3e1;color:var(--accent2);border:1px solid #e8d2a6;border-radius:99px;padding:4px 10px;font-size:.76rem;font-weight:700}}.card h2{{font:600 1.28rem/1.2 var(--serif);margin:14px 0 8px}}.meta{{font-size:.82rem;color:var(--muted)}}.cta{{background:var(--paper2);border:1px solid var(--line);border-radius:14px;padding:22px;margin:10px 0 34px}}.btn{{display:inline-block;background:var(--accent);color:white;text-decoration:none;border-radius:7px;padding:12px 18px;font-weight:800}}footer{{background:var(--ink);color:rgba(255,255,255,.72);padding:34px 0;margin-top:40px}}@media(max-width:980px){{.grid{{grid-template-columns:repeat(2,1fr)}}.library-tools{{grid-template-columns:1fr}}}}@media(max-width:680px){{.grid{{grid-template-columns:1fr}}.nav{{height:auto;align-items:flex-start;padding-top:14px;padding-bottom:14px}}.nav nav{{justify-content:flex-start}}}}
+    *{{box-sizing:border-box}}body{{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.65}}a{{color:var(--accent2)}}:focus-visible{{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}}.skip-link{{position:absolute;left:-999px;top:14px;background:var(--ink);color:#fff;padding:10px 14px;border-radius:7px;z-index:9999}}.skip-link:focus{{left:14px}}.wrap{{max-width:1180px;margin:auto;padding:0 22px}}.top{{border-bottom:1px solid var(--line);background:var(--paper)}}.nav{{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:16px}}.brand{{font:700 1.3rem var(--serif);color:var(--ink);text-decoration:none;white-space:nowrap}}.nav nav{{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end}}.nav nav a{{font-weight:650;text-decoration:none;color:var(--soft)}}.hero{{padding:48px 0 28px}}.eyebrow{{color:var(--accent2);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;font-weight:800}}.h1{{font:500 clamp(2.1rem,5vw,3.8rem)/1.05 var(--serif);max-width:15ch;margin:.35em 0}}.lead{{font-size:1.16rem;color:var(--soft);max-width:70ch}}.section-head{{border-top:1px solid var(--line);padding-top:28px;margin-top:36px}}.section-head h2{{font:600 1.75rem/1.2 var(--serif);margin:0 0 6px}}.section-head p{{color:var(--soft);margin:0;max-width:70ch}}.quick-nav{{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0 34px}}.quick-nav a{{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:8px 12px;text-decoration:none;font-weight:700}}.library-tools{{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;margin:12px 0 30px;display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:12px;align-items:end}}.library-tools label{{display:block;font-size:.82rem;font-weight:800;color:var(--muted);margin-bottom:6px}}.library-tools input,.library-tools select{{width:100%;border:1px solid var(--line);border-radius:8px;background:#fffdf9;color:var(--ink);padding:11px 12px;font:inherit}}.result-status{{font-size:.9rem;color:var(--muted);margin:10px 0 0}}.no-results,.empty-state{{background:var(--paper2);border:1px solid var(--line);border-radius:14px;padding:18px;margin:18px 0 34px;color:var(--soft)}}.no-results{{display:none}}.empty-state{{grid-column:1/-1;margin:0}}.grid{{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:18px 0 44px}}.card{{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;text-decoration:none;color:inherit;min-height:280px}}.card[hidden]{{display:none}}.card:hover{{border-color:var(--accent)}}.tag{{display:inline-block;background:#fbf3e1;color:var(--accent2);border:1px solid #e8d2a6;border-radius:99px;padding:4px 10px;font-size:.76rem;font-weight:700}}.card h2{{font:600 1.28rem/1.2 var(--serif);margin:14px 0 8px}}.meta{{font-size:.82rem;color:var(--muted)}}.cta{{background:var(--paper2);border:1px solid var(--line);border-radius:14px;padding:22px;margin:10px 0 34px}}.btn{{display:inline-block;background:var(--accent);color:white;text-decoration:none;border-radius:7px;padding:12px 18px;font-weight:800}}footer{{background:var(--ink);color:rgba(255,255,255,.72);padding:34px 0;margin-top:40px}}@media(max-width:980px){{.grid{{grid-template-columns:repeat(2,1fr)}}.library-tools{{grid-template-columns:1fr}}}}@media(max-width:680px){{.grid{{grid-template-columns:1fr}}.nav{{height:auto;align-items:flex-start;padding-top:14px;padding-bottom:14px}}.nav nav{{justify-content:flex-start}}}}
   </style>
   {blog_schema_html}
 </head>
@@ -1667,7 +1697,7 @@ def render_blog(topics):
     <section class="hero">
       <div class="eyebrow">Florida ACA subsidy guides</div>
       <h1 class="h1">Florida ACA subsidy guides for 2026</h1>
-      <p class="lead">A 200-article publishing queue for Floridians comparing Marketplace premiums, enhanced premium tax credits, current-law estimates, CSR, SLCSP, FPL bands, county scenarios, MAGI questions, and coverage-gap warnings.</p>
+      <p class="lead">{published_count} currently published guides for Floridians comparing Marketplace premiums, enhanced premium tax credits, current-law estimates, CSR, SLCSP, FPL bands, county scenarios, MAGI questions, and coverage-gap warnings. Additional queued guides publish every five hours.</p>
     </section>
     <section class="cta">
       <h2 style="font:600 1.55rem/1.2 var(--serif);margin:0 0 8px;">Start with your own estimate</h2>
@@ -1706,17 +1736,17 @@ def render_blog(topics):
     <section class="cluster-block" id="hub-guides">
       <div class="section-head">
         <h2>Core Florida ACA subsidy hub guides</h2>
-        <p>Thirty deeper guides for calculator use, enhanced credits, the subsidy cliff, CSR, FPL, tax reconciliation, and high-intent plan decisions.</p>
+        <p>Currently published deeper guides for calculator use, enhanced credits, the subsidy cliff, CSR, FPL, tax reconciliation, and high-intent plan decisions.</p>
       </div>
-      <div class="grid" aria-label="Hub guides">{''.join(hub_cards)}</div>
+      <div class="grid" aria-label="Hub guides">{''.join(hub_cards) if hub_cards else '<div class="empty-state">No hub guides are published yet. Queued hub articles appear here when their scheduled publish time arrives.</div>'}</div>
     </section>
     {''.join(cluster_sections)}
     <section class="cluster-block" id="all-guides">
       <div class="section-head">
         <h2>All Florida ACA subsidy guides</h2>
-        <p>The complete 200-article publishing queue in scheduled order.</p>
+        <p>The currently published article set in scheduled order. Future queued articles are excluded from this list until their scheduled publish time.</p>
       </div>
-      <div class="grid" aria-label="Article list">{''.join(all_cards)}</div>
+      <div class="grid" aria-label="Article list">{all_cards}</div>
     </section>
   </main>
   <footer><div class="wrap">Independent. Not affiliated with the U.S. government or HealthCare.gov. Estimates only, not insurance, tax, or legal advice. <a href="editorial-policy.html">Editorial policy</a> - <a href="sources-corrections.html">Sources and corrections</a> - <a href="contact.html">Contact</a></div></footer>
@@ -1775,9 +1805,10 @@ def render_guide_page(heading, cluster, guide_slug, meta_title, topics):
       <a class="card" href="../aca/{esc(topic['slug'])}.html">
         <span class="tag">{esc(display_cluster(topic['cluster']))}</span>
         <h2>{esc(topic['title'])}</h2>
-        <p class="meta">Scheduled {esc(publish_label(topic))}</p>
+        <p class="meta">{esc(publish_status(topic))} {esc(publish_label(topic))}</p>
         <p>{esc(topic['subtitle'])}</p>
       </a>""")
+    cards_html = ''.join(cards) if cards else '<div class="empty-state">No guides in this hub are published yet. Queued articles appear here when their scheduled publish time arrives.</div>'
     lead = (
         f"{heading} collect {len(items)} focused Florida ACA subsidy articles so readers can move from a broad premium estimate "
         "to a specific county, life event, plan-selection, MAGI, or verification question."
@@ -1829,7 +1860,7 @@ def render_guide_page(heading, cluster, guide_slug, meta_title, topics):
   <meta name="twitter:description" content="{esc(lead)}">
   <style>
     :root{{--paper:#faf7f1;--paper2:#f3eee3;--card:#fffdf9;--ink:#1b2a36;--soft:#34434f;--muted:#5b7184;--line:#e4dccb;--accent:#c8862b;--accent2:#a66c1c;--serif:Georgia,serif;--sans:system-ui,-apple-system,Segoe UI,sans-serif}}
-    *{{box-sizing:border-box}}body{{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.65}}a{{color:var(--accent2)}}:focus-visible{{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}}.skip-link{{position:absolute;left:-999px;top:14px;background:var(--ink);color:#fff;padding:10px 14px;border-radius:7px;z-index:9999}}.skip-link:focus{{left:14px}}.wrap{{max-width:1180px;margin:auto;padding:0 22px}}.top{{border-bottom:1px solid var(--line);background:var(--paper)}}.nav{{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:16px}}.brand{{font:700 1.3rem var(--serif);color:var(--ink);text-decoration:none;white-space:nowrap}}.nav nav{{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end}}.nav nav a{{font-weight:650;text-decoration:none;color:var(--soft)}}.hero{{padding:48px 0 28px}}.eyebrow{{color:var(--accent2);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;font-weight:800}}h1{{font:500 clamp(2.1rem,5vw,3.8rem)/1.05 var(--serif);max-width:17ch;margin:.35em 0}}.lead{{font-size:1.16rem;color:var(--soft);max-width:74ch}}.intro{{background:var(--paper2);border:1px solid var(--line);border-radius:14px;padding:22px;margin:10px 0 30px}}.grid{{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:22px 0 60px}}.card{{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;text-decoration:none;color:inherit;min-height:280px}}.card:hover{{border-color:var(--accent)}}.tag{{display:inline-block;background:#fbf3e1;color:var(--accent2);border:1px solid #e8d2a6;border-radius:99px;padding:4px 10px;font-size:.76rem;font-weight:700}}.card h2{{font:600 1.28rem/1.2 var(--serif);margin:14px 0 8px}}.meta{{font-size:.82rem;color:var(--muted)}}footer{{background:var(--ink);color:rgba(255,255,255,.72);padding:34px 0;margin-top:40px}}@media(max-width:980px){{.grid{{grid-template-columns:repeat(2,1fr)}}}}@media(max-width:680px){{.grid{{grid-template-columns:1fr}}.nav{{height:auto;align-items:flex-start;padding-top:14px;padding-bottom:14px}}.nav nav{{justify-content:flex-start}}}}
+    *{{box-sizing:border-box}}body{{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.65}}a{{color:var(--accent2)}}:focus-visible{{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}}.skip-link{{position:absolute;left:-999px;top:14px;background:var(--ink);color:#fff;padding:10px 14px;border-radius:7px;z-index:9999}}.skip-link:focus{{left:14px}}.wrap{{max-width:1180px;margin:auto;padding:0 22px}}.top{{border-bottom:1px solid var(--line);background:var(--paper)}}.nav{{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:16px}}.brand{{font:700 1.3rem var(--serif);color:var(--ink);text-decoration:none;white-space:nowrap}}.nav nav{{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end}}.nav nav a{{font-weight:650;text-decoration:none;color:var(--soft)}}.hero{{padding:48px 0 28px}}.eyebrow{{color:var(--accent2);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;font-weight:800}}h1{{font:500 clamp(2.1rem,5vw,3.8rem)/1.05 var(--serif);max-width:17ch;margin:.35em 0}}.lead{{font-size:1.16rem;color:var(--soft);max-width:74ch}}.intro{{background:var(--paper2);border:1px solid var(--line);border-radius:14px;padding:22px;margin:10px 0 30px}}.grid{{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:22px 0 60px}}.empty-state{{grid-column:1/-1;background:var(--paper2);border:1px solid var(--line);border-radius:14px;padding:18px;color:var(--soft)}}.card{{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;text-decoration:none;color:inherit;min-height:280px}}.card:hover{{border-color:var(--accent)}}.tag{{display:inline-block;background:#fbf3e1;color:var(--accent2);border:1px solid #e8d2a6;border-radius:99px;padding:4px 10px;font-size:.76rem;font-weight:700}}.card h2{{font:600 1.28rem/1.2 var(--serif);margin:14px 0 8px}}.meta{{font-size:.82rem;color:var(--muted)}}footer{{background:var(--ink);color:rgba(255,255,255,.72);padding:34px 0;margin-top:40px}}@media(max-width:980px){{.grid{{grid-template-columns:repeat(2,1fr)}}}}@media(max-width:680px){{.grid{{grid-template-columns:1fr}}.nav{{height:auto;align-items:flex-start;padding-top:14px;padding-bottom:14px}}.nav nav{{justify-content:flex-start}}}}
   </style>
   {schema_html}
 </head>
@@ -1846,7 +1877,7 @@ def render_guide_page(heading, cluster, guide_slug, meta_title, topics):
       <h2 style="font:600 1.55rem/1.2 var(--serif);margin:0 0 8px;">How to use this hub</h2>
       <p style="margin:0;color:var(--soft)">Start with the article closest to the reader's situation, then use the related guide path inside each article to move toward the calculator, methodology, and official Marketplace confirmation.</p>
     </section>
-    <section class="grid" aria-label="{esc(heading)}">{''.join(cards)}
+    <section class="grid" aria-label="{esc(heading)}">{cards_html}
     </section>
   </main>
   <footer><div class="wrap">Independent. Not affiliated with the U.S. government or HealthCare.gov. Estimates only, not insurance, tax, or legal advice. <a href="../editorial-policy.html">Editorial policy</a> - <a href="../sources-corrections.html">Sources and corrections</a> - <a href="../contact.html">Contact</a></div></footer>
@@ -1984,6 +2015,7 @@ def public_queue_record(topic):
         "meta_description": topic["meta_description"],
         "excerpt": topic.get("excerpt", topic["meta_description"]),
         "publishAt": topic["publishAt"],
+        "is_published": topic.get("is_published", True),
         "guide_hub": guide_cluster["href_from_root"] if guide_cluster else None,
         "sources": [{"label": source["label"], "url": source["url"]} for source in topic["sources"]],
     }
@@ -2025,8 +2057,9 @@ CoverClarity is an independent Florida ACA subsidy estimate and Marketplace veri
 
 ## Content Notes
 
-- 200 article URLs are listed in sitemap.xml and feed.xml.
-- 30 priority hub articles include expanded summaries, five-question FAQ sections, and guide-path links.
+- Sitemap, RSS, and search index include currently published article URLs only.
+- Future queued articles are generated with noindex,follow until their scheduled publish time.
+- Priority hub articles include expanded summaries, five-question FAQ sections, and guide-path links as they publish.
 - 5 guide hub pages group the long-tail articles by county/rating area, life event, plan selection, tax/MAGI, and official verification needs.
 - Canonical URLs use the {SITE_ORIGIN} placeholder until the production domain is assigned.
 """
@@ -2069,9 +2102,11 @@ def main():
     DATA_DIR.mkdir(exist_ok=True)
     GUIDE_DIR.mkdir(exist_ok=True)
     topics = TOPICS
+    now = publication_now()
     for i, topic in enumerate(topics):
         topic["index"] = i
         topic["publishAt"] = (FIRST_PUBLISH_AT + timedelta(hours=5 * i)).isoformat()
+        topic["is_published"] = published_by(topic, now)
         topic["quality_score"] = 97 + (i % 3) if is_hub_topic(topic, i) else 94 + (i % 5)
         topic["codex_only_generation"] = True
         topic["manual_ad_slots"] = False
@@ -2102,29 +2137,33 @@ def main():
             old.unlink()
     for i, topic in enumerate(topics):
         (POST_DIR / f"{topic['slug']}.html").write_text(build_article(topic, i), encoding="utf-8")
+    published_topics = [topic for topic in topics if topic["is_published"]]
     public_queue = [public_queue_record(topic) for topic in topics]
     (DATA_DIR / "article-queue.json").write_text(json.dumps(public_queue, ensure_ascii=False, indent=2), encoding="utf-8")
-    (ROOT / "blog.html").write_text(render_blog(topics), encoding="utf-8")
+    (ROOT / "blog.html").write_text(render_blog(published_topics), encoding="utf-8")
     valid_guides = set()
     for heading, cluster, guide_slug, meta_title in GUIDE_CLUSTERS:
         valid_guides.add(f"{guide_slug}.html")
         (GUIDE_DIR / f"{guide_slug}.html").write_text(
-            render_guide_page(heading, cluster, guide_slug, meta_title, topics),
+            render_guide_page(heading, cluster, guide_slug, meta_title, published_topics),
             encoding="utf-8",
         )
     for old in GUIDE_DIR.glob("*.html"):
         if old.name not in valid_guides:
             old.unlink()
-    (ROOT / "sitemap.xml").write_text(render_sitemap(topics), encoding="utf-8")
-    (ROOT / "feed.xml").write_text(render_feed(topics), encoding="utf-8")
-    (ROOT / "llms.txt").write_text(render_llms_txt(topics), encoding="utf-8")
-    (DATA_DIR / "search-index.json").write_text(render_search_index(topics), encoding="utf-8")
+    (ROOT / "sitemap.xml").write_text(render_sitemap(published_topics), encoding="utf-8")
+    (ROOT / "feed.xml").write_text(render_feed(published_topics), encoding="utf-8")
+    (ROOT / "llms.txt").write_text(render_llms_txt(published_topics), encoding="utf-8")
+    (DATA_DIR / "search-index.json").write_text(render_search_index(published_topics), encoding="utf-8")
     (ROOT / "robots.txt").write_text(
         f"User-agent: *\nAllow: /\n\nSitemap: {SITE_ORIGIN}/sitemap.xml\n# LLM guide: {SITE_ORIGIN}/llms.txt\n",
         encoding="utf-8",
     )
     print(json.dumps({
         "articles": len(topics),
+        "publishedArticles": len(published_topics),
+        "scheduledArticles": len(topics) - len(published_topics),
+        "publicationNow": now.isoformat(),
         "firstPublishAt": topics[0]["publishAt"],
         "lastPublishAt": topics[-1]["publishAt"],
         "minQualityScore": min(t["quality_score"] for t in topics),
