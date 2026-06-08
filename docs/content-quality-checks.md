@@ -62,6 +62,7 @@ The validator checks:
 - meta descriptions do not end on weak truncated connector words such as `and`, `with`, `before`, or `plus`
 - repeated title phrase checks for generated long-tail article patterns
 - 5-hour publishing interval
+- content-quality CI pins `PUBLICATION_NOW` to the latest committed published article, while scheduled publishing uses real time
 - article meta, canonical, OG/Twitter, RSS alternate, OpenSearch discovery, table of contents, source list, related path, and editorial block
 - article CTA blocks, at least two internal links, and at least one external link
 - article source boxes with at least two official citation entries in Article schema

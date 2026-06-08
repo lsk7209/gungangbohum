@@ -94,6 +94,8 @@ Get-Content D:\env\gsc_token.json -Raw | gh secret set GSC_TOKEN_JSON --repo lsk
 
 Run `npm run check` before publishing. The validator checks generated article counts, the article generation contract, metadata, canonical links, schemas, accessibility landmarks, sitemap/feed/search-index parity, empty guide hub indexing, `llms.txt` section quality, public marker leakage, and repeated body sentence risk.
 
+The content quality workflow pins `PUBLICATION_NOW` from the committed article queue before regenerating files, so normal push/PR CI validates the committed public state. The scheduled publishing workflow intentionally uses real time every 5 hours and commits newly publishable articles.
+
 `npm run generate` writes `reports/article-generation-report.json`. The readiness gate expects at least 200 articles, a minimum quality score of 90, all articles marked as Codex-generated, and zero manual ad slot articles.
 
 Run `npm run audit:seo` to write `reports/seo-adsense-audit-report.json`. It maps the SEO and AdSense checklist to machine checks for per-page meta titles and descriptions, search-snippet length and uniqueness, canonical URLs, sitemap/canonical/noindex consistency, sitemap and robots files, H-tag hierarchy, image alt text, article CTA/internal/external links, readable URLs, and absence of manual ad slots.

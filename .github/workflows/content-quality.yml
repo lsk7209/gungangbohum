@@ -25,6 +25,8 @@ jobs:
       - uses: actions/setup-python@v6
         with:
           python-version: "3.11"
+      - name: Pin publication time to committed state
+        run: echo "PUBLICATION_NOW=$(python scripts/print_committed_publication_now.py)" >> "$GITHUB_ENV"
       - name: Generate static content
         run: python scripts/generate_aca_articles.py
       - name: Audit SEO and AdSense checklist

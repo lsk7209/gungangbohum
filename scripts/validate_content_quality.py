@@ -365,6 +365,8 @@ def validate(require_site_origin=False):
         workflow = quality_workflow_path.read_text(encoding="utf-8")
         if "generate_aca_articles.py" not in workflow or "validate_content_quality.py" not in workflow:
             errors.append({"type": "content_quality_workflow_missing_commands"})
+        if "print_committed_publication_now.py" not in workflow or "PUBLICATION_NOW=" not in workflow:
+            errors.append({"type": "content_quality_workflow_missing_publication_time_pin"})
         if "audit_seo_adsense.py" not in workflow:
             errors.append({"type": "content_quality_workflow_missing_seo_adsense_audit"})
         if "audit_performance_budget.py" not in workflow:
@@ -404,6 +406,8 @@ def validate(require_site_origin=False):
                 errors.append({"type": f"{label}_workflow_missing_concurrency_cancel_policy"})
     if scheduled_workflow_path.exists():
         scheduled_workflow = scheduled_workflow_path.read_text(encoding="utf-8")
+        if "print_committed_publication_now.py" in scheduled_workflow or "PUBLICATION_NOW=" in scheduled_workflow:
+            errors.append({"type": "publish_scheduled_workflow_must_use_real_publication_time"})
         for needle, label in [
             ("23 */5 * * *", "five_hour_schedule"),
             ("production_readiness_audit.py --write-report", "readiness_report_step"),
