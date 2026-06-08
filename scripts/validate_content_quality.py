@@ -66,6 +66,7 @@ def body_sentences_from_html(html):
     text = re.sub(r"\s+", " ", text)
     skip_fragments = [
         "Official source",
+        "Reviewed by CoverClarity editorial desk",
         "Internal links:",
         "Editorial standards for this ACA estimate",
         "Related guide path",
@@ -356,6 +357,7 @@ def validate(require_site_origin=False):
             ('<link rel="canonical"', "canonical"),
             ("Table of contents", "toc"),
             ("Verification snapshot", "verification_snapshot"),
+            ("Reviewed by CoverClarity editorial desk", "reviewed_byline"),
             ("Related guide path", "related_path"),
             ("Editorial standards for this ACA estimate", "editorial_block"),
             ('class="source-list"', "source_list"),
@@ -405,6 +407,8 @@ def validate(require_site_origin=False):
                     errors.append({"type": f"article_schema_missing_{field}", "slug": item["slug"]})
             if article_schema.get("publisher", {}).get("@id") != expected_org_id:
                 errors.append({"type": "article_schema_publisher_not_entity_reference", "slug": item["slug"]})
+            if article_schema.get("reviewedBy", {}).get("@id") != expected_org_id:
+                errors.append({"type": "article_schema_reviewer_not_entity_reference", "slug": item["slug"]})
             if article_schema.get("isPartOf", {}).get("@id") != expected_website_id:
                 errors.append({"type": "article_schema_website_not_entity_reference", "slug": item["slug"]})
             if "T" not in str(article_schema.get("datePublished", "")):

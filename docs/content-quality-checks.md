@@ -41,6 +41,7 @@ The validator checks:
 - article meta, canonical, OG/Twitter, RSS alternate, OpenSearch discovery, table of contents, source list, related path, and editorial block
 - article CTA blocks, at least two internal links, and at least one external link
 - article source boxes with at least two official citation entries in Article schema
+- visible article byline/review signal and Article schema `reviewedBy` entity reference
 - Article, BreadcrumbList, and FAQPage JSON-LD counts
 - representative Organization and WebSite/SearchAction entity schema on home, blog, guide hubs, and generated articles
 - guide hub CollectionPage, ItemList, and BreadcrumbList JSON-LD
