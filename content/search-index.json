@@ -249,6 +249,33 @@
         "aca/what-300-percent-fpl-changes-in-a-miami-aca-estimate-for-a-family-of-four.html",
         "aca/family-of-four-aca-planning-in-miami-subsidy-notes-at-150-percent-fpl.html"
       ]
+    },
+    {
+      "id": "a-family-of-three-in-miami-and-the-2026-aca-current-law-comparison-at-100-percent-fpl",
+      "type": "article",
+      "title": "A family of three in Miami and the 2026 ACA current-law comparison at 100 percent FPL",
+      "subtitle": "For Miami family of three ACA subsidy estimate 100 percent FPL, compare Miami Marketplace premium with enhanced premium tax credits before relying on any monthly number.",
+      "url": "aca/a-family-of-three-in-miami-and-the-2026-aca-current-law-comparison-at-100-percent-fpl.html",
+      "canonical": "{SITE_ORIGIN}/aca/a-family-of-three-in-miami-and-the-2026-aca-current-law-comparison-at-100-percent-fpl.html",
+      "main_keyword": "Miami family of three ACA subsidy estimate 100 percent FPL",
+      "expanded_keywords": [
+        "Miami Marketplace premium",
+        "Family of three health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Miami family of three ACA subsidy estimate 100 percent FPL explained with Miami Marketplace premium, Family of three health insurance subsidy, estimate limits, related guide paths, and official HealthCare.gov.",
+      "publishAt": "2026-06-10T00:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/what-300-percent-fpl-changes-in-a-miami-aca-estimate-for-a-family-of-four.html",
+        "aca/family-of-four-aca-planning-in-miami-subsidy-notes-at-150-percent-fpl.html",
+        "aca/miami-older-couple-aca-subsidy-estimate-at-400-percent-fpl-what-the-2026-premium-gap-can-mean.html"
+      ]
     }
   ]
 }

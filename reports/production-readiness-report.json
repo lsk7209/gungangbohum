@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-09T12:18:21.378750+00:00",
+  "generatedAt": "2026-06-09T15:30:08.013094+00:00",
   "git_snapshot": {
-    "head": "7fcae493b627c5ded41157c10b2dede06b44d296",
+    "head": "e9c9bbb9a0e3048a53cf963ef6ea6e628bd2c92b",
     "worktree_clean": false,
     "changed_paths": [
-      "aca/miami-aca-benchmark-premium-questions-for-a-family-of-three-at-250-percent-fpl.html",
+      "aca/a-family-of-three-in-miami-and-the-2026-aca-current-law-comparison-at-100-percent-fpl.html",
       "blog.html",
       "content/article-queue.json",
       "content/search-index.json",
@@ -215,7 +215,7 @@
   "quality_snapshot": {
     "article_files": 200,
     "guide_files": 5,
-    "sitemap_urls": 16,
+    "sitemap_urls": 17,
     "site_origin_placeholder_count": 222,
     "site_origin_placeholder_sample": [
       "contact.html",
@@ -234,8 +234,8 @@
   },
   "article_generation_snapshot": {
     "articles": 200,
-    "publishedArticles": 7,
-    "scheduledArticles": 193,
+    "publishedArticles": 8,
+    "scheduledArticles": 192,
     "minQualityScore": 94,
     "maxQualityScore": 99,
     "codexOnlyGenerationArticles": 200,
