@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-09T04:39:06.558019+00:00",
+  "generatedAt": "2026-06-09T08:43:06.021201+00:00",
   "git_snapshot": {
-    "head": "17deb18eb882c53af9b8e9c2e6819db580f3318b",
+    "head": "77d634479fea07193568303848f0f0cde262e4d6",
     "worktree_clean": false,
     "changed_paths": [
-      "aca/200-percent-fpl-aca-subsidy-guide-for-a-miami-single-parent.html",
+      "aca/why-miami-single-parent-premium-estimates-shift-around-400-percent-fpl.html",
       "blog.html",
       "content/article-queue.json",
       "content/search-index.json",
@@ -215,7 +215,7 @@
   "quality_snapshot": {
     "article_files": 200,
     "guide_files": 5,
-    "sitemap_urls": 14,
+    "sitemap_urls": 15,
     "site_origin_placeholder_count": 222,
     "site_origin_placeholder_sample": [
       "contact.html",
@@ -234,8 +234,8 @@
   },
   "article_generation_snapshot": {
     "articles": 200,
-    "publishedArticles": 5,
-    "scheduledArticles": 195,
+    "publishedArticles": 6,
+    "scheduledArticles": 194,
     "minQualityScore": 94,
     "maxQualityScore": 99,
     "codexOnlyGenerationArticles": 200,

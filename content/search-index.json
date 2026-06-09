@@ -195,6 +195,33 @@
         "aca/miami-aca-benchmark-premium-questions-for-a-family-of-three-at-250-percent-fpl.html",
         "aca/a-family-of-three-in-miami-and-the-2026-aca-current-law-comparison-at-100-percent-fpl.html"
       ]
+    },
+    {
+      "id": "why-miami-single-parent-premium-estimates-shift-around-400-percent-fpl",
+      "type": "article",
+      "title": "Why Miami single parent premium estimates shift around 400 percent FPL",
+      "subtitle": "A plain-English look at Miami single parent ACA subsidy estimate 400 percent FPL, with Miami Marketplace premium and enhanced premium tax credits explained without quote forms.",
+      "url": "aca/why-miami-single-parent-premium-estimates-shift-around-400-percent-fpl.html",
+      "canonical": "{SITE_ORIGIN}/aca/why-miami-single-parent-premium-estimates-shift-around-400-percent-fpl.html",
+      "main_keyword": "Miami single parent ACA subsidy estimate 400 percent FPL",
+      "expanded_keywords": [
+        "Miami Marketplace premium",
+        "Single parent health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Miami single parent ACA subsidy estimate 400 percent FPL explained with Miami Marketplace premium, Single parent health insurance subsidy, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-09T14:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/miami-aca-benchmark-premium-questions-for-a-family-of-three-at-250-percent-fpl.html",
+        "aca/a-family-of-three-in-miami-and-the-2026-aca-current-law-comparison-at-100-percent-fpl.html",
+        "aca/what-300-percent-fpl-changes-in-a-miami-aca-estimate-for-a-family-of-four.html"
+      ]
     }
   ]
 }
