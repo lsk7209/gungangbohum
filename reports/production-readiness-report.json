@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-10T14:31:16.215459+00:00",
+  "generatedAt": "2026-06-10T18:11:24.070487+00:00",
   "git_snapshot": {
-    "head": "8759149429c5d99f05d11180734431d32a097ac2",
+    "head": "d4989608961a18c2600d53b5729ff8398163fcd4",
     "worktree_clean": false,
     "changed_paths": [
-      "aca/at-200-percent-fpl-how-a-miami-older-couple-can-read-an-aca-premium-estimate.html",
+      "aca/single-adult-in-tampa-aca-subsidy-calculator-notes-for-150-percent-fpl.html",
       "blog.html",
       "content/article-queue.json",
       "content/search-index.json",
@@ -215,18 +215,18 @@
   "quality_snapshot": {
     "article_files": 200,
     "guide_files": 5,
-    "sitemap_urls": 21,
+    "sitemap_urls": 22,
     "site_origin_placeholder_count": 222,
     "site_origin_placeholder_sample": [
-      "contact.html",
-      "about.html",
-      "404.html",
-      "privacy.html",
-      "sources-corrections.html",
-      "methodology.html",
-      "aca-enhanced-subsidies-2026-florida.html",
       "blog.html",
       "editorial-policy.html",
+      "aca-enhanced-subsidies-2026-florida.html",
+      "404.html",
+      "methodology.html",
+      "privacy.html",
+      "sources-corrections.html",
+      "about.html",
+      "contact.html",
       "index.html"
     ],
     "public_origin_mismatch_count": 0,
@@ -234,8 +234,8 @@
   },
   "article_generation_snapshot": {
     "articles": 200,
-    "publishedArticles": 12,
-    "scheduledArticles": 188,
+    "publishedArticles": 13,
+    "scheduledArticles": 187,
     "minQualityScore": 94,
     "maxQualityScore": 99,
     "codexOnlyGenerationArticles": 200,
