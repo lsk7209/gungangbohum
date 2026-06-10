@@ -303,6 +303,33 @@
         "aca/miami-older-couple-aca-subsidy-estimate-at-400-percent-fpl-what-the-2026-premium-gap-can-mean.html",
         "aca/at-200-percent-fpl-how-a-miami-older-couple-can-read-an-aca-premium-estimate.html"
       ]
+    },
+    {
+      "id": "family-of-four-aca-planning-in-miami-subsidy-notes-at-150-percent-fpl",
+      "type": "article",
+      "title": "Family of four ACA planning in Miami: subsidy notes at 150 percent FPL",
+      "subtitle": "A plain-English look at Miami family of four ACA subsidy estimate 150 percent FPL, with Miami Marketplace premium and enhanced premium tax credits explained without quote forms.",
+      "url": "aca/family-of-four-aca-planning-in-miami-subsidy-notes-at-150-percent-fpl.html",
+      "canonical": "{SITE_ORIGIN}/aca/family-of-four-aca-planning-in-miami-subsidy-notes-at-150-percent-fpl.html",
+      "main_keyword": "Miami family of four ACA subsidy estimate 150 percent FPL",
+      "expanded_keywords": [
+        "Miami Marketplace premium",
+        "Family of four health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Miami family of four ACA subsidy estimate 150 percent FPL explained with Miami Marketplace premium, Family of four health insurance subsidy, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-10T10:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/miami-older-couple-aca-subsidy-estimate-at-400-percent-fpl-what-the-2026-premium-gap-can-mean.html",
+        "aca/at-200-percent-fpl-how-a-miami-older-couple-can-read-an-aca-premium-estimate.html",
+        "aca/single-adult-in-tampa-aca-subsidy-calculator-notes-for-150-percent-fpl.html"
+      ]
     }
   ]
 }
