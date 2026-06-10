@@ -45,16 +45,16 @@
         "bytes": 31398
       },
       {
+        "file": "blog.html",
+        "bytes": 31282
+      },
+      {
         "file": "aca/broward-county-aca-subsidy-estimate-south-florida-rating-area-check-for-2026-coverage.html",
         "bytes": 31282
       },
       {
         "file": "aca/florida-aca-open-enrollment-planning-without-the-jargon-marketplace-deadline-preparation-and-next-steps.html",
         "bytes": 31172
-      },
-      {
-        "file": "aca/when-aca-metal-tiers-and-subsidy-estimates-matter-most-for-florida-marketplace-shoppers.html",
-        "bytes": 31164
       }
     ],
     "article_average_bytes": 24311,
@@ -102,8 +102,8 @@
         "bytes": 4878
       }
     ],
-    "article_queue_bytes": 354210,
-    "search_index_bytes": 20911
+    "article_queue_bytes": 354209,
+    "search_index_bytes": 22559
   },
   "errors": [],
   "warnings": []
