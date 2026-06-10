@@ -1,19 +1,9 @@
 {
-  "generatedAt": "2026-06-10T18:11:24.070487+00:00",
+  "generatedAt": "2026-06-10T20:47:41.252974+00:00",
   "git_snapshot": {
-    "head": "d4989608961a18c2600d53b5729ff8398163fcd4",
-    "worktree_clean": false,
-    "changed_paths": [
-      "aca/single-adult-in-tampa-aca-subsidy-calculator-notes-for-150-percent-fpl.html",
-      "blog.html",
-      "content/article-queue.json",
-      "content/search-index.json",
-      "feed.xml",
-      "reports/article-generation-report.json",
-      "reports/content-quality-report.json",
-      "reports/performance-budget-report.json",
-      "sitemap.xml"
-    ]
+    "head": "2c2c753c243633ef530ea3f2ff3f2f50707e9c56",
+    "worktree_clean": true,
+    "changed_paths": []
   },
   "ready_for_production_submission": false,
   "checks": [
@@ -54,8 +44,8 @@
     },
     {
       "name": "git_worktree_clean",
-      "ok": false,
-      "detail": "worktree has uncommitted or untracked files"
+      "ok": true,
+      "detail": "worktree clean"
     },
     {
       "name": "github_remote",
@@ -133,11 +123,6 @@
       "detail": "222 public files still contain {SITE_ORIGIN}"
     },
     {
-      "name": "git_worktree_clean",
-      "ok": false,
-      "detail": "worktree has uncommitted or untracked files"
-    },
-    {
       "name": "production_contact_channel",
       "ok": false,
       "detail": "contact page still contains prelaunch contact-channel language"
@@ -190,9 +175,7 @@
       "gsc_configuration",
       "github_gsc_configuration"
     ],
-    "code_or_repository_blockers": [
-      "git_worktree_clean"
-    ]
+    "code_or_repository_blockers": []
   },
   "missing_external_inputs": [
     {
@@ -218,15 +201,15 @@
     "sitemap_urls": 22,
     "site_origin_placeholder_count": 222,
     "site_origin_placeholder_sample": [
-      "blog.html",
-      "editorial-policy.html",
-      "aca-enhanced-subsidies-2026-florida.html",
+      "contact.html",
+      "about.html",
       "404.html",
-      "methodology.html",
       "privacy.html",
       "sources-corrections.html",
-      "about.html",
-      "contact.html",
+      "methodology.html",
+      "aca-enhanced-subsidies-2026-florida.html",
+      "blog.html",
+      "editorial-policy.html",
       "index.html"
     ],
     "public_origin_mismatch_count": 0,
@@ -257,7 +240,6 @@
   },
   "next_required_actions": [
     "Assign an HTTPS production domain and run npm run check:production.",
-    "Commit the local work before git push.",
     "Replace the prelaunch contact notice with a production public contact channel.",
     "Set GSC_SITE_URL and GSC_SITEMAP_URL, then run npm run gsc:submit after the domain is verified in Search Console."
   ]
