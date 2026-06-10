@@ -330,6 +330,33 @@
         "aca/at-200-percent-fpl-how-a-miami-older-couple-can-read-an-aca-premium-estimate.html",
         "aca/single-adult-in-tampa-aca-subsidy-calculator-notes-for-150-percent-fpl.html"
       ]
+    },
+    {
+      "id": "miami-older-couple-aca-subsidy-estimate-at-400-percent-fpl-what-the-2026-premium-gap-can-mean",
+      "type": "article",
+      "title": "Miami older couple ACA subsidy estimate at 400 percent FPL: what the 2026 premium gap can mean",
+      "subtitle": "This guide frames Miami older couple ACA subsidy estimate 400 percent FPL around Miami Marketplace premium, enhanced premium tax credits, and the estimate-not-a-quote limit.",
+      "url": "aca/miami-older-couple-aca-subsidy-estimate-at-400-percent-fpl-what-the-2026-premium-gap-can-mean.html",
+      "canonical": "{SITE_ORIGIN}/aca/miami-older-couple-aca-subsidy-estimate-at-400-percent-fpl-what-the-2026-premium-gap-can-mean.html",
+      "main_keyword": "Miami older couple ACA subsidy estimate 400 percent FPL",
+      "expanded_keywords": [
+        "Miami Marketplace premium",
+        "Older couple health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Miami older couple ACA subsidy estimate 400 percent FPL explained with Miami Marketplace premium, Older couple health insurance subsidy, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-10T15:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/at-200-percent-fpl-how-a-miami-older-couple-can-read-an-aca-premium-estimate.html",
+        "aca/single-adult-in-tampa-aca-subsidy-calculator-notes-for-150-percent-fpl.html",
+        "aca/reading-the-tampa-marketplace-estimate-for-a-single-adult-near-300-percent-fpl.html"
+      ]
     }
   ]
 }

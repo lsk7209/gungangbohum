@@ -102,8 +102,8 @@
         "bytes": 4878
       }
     ],
-    "article_queue_bytes": 354211,
-    "search_index_bytes": 19164
+    "article_queue_bytes": 354210,
+    "search_index_bytes": 20911
   },
   "errors": [],
   "warnings": []
