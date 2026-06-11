@@ -438,6 +438,33 @@
         "aca/why-tampa-couple-premium-estimates-shift-around-400-percent-fpl.html",
         "aca/tampa-aca-benchmark-premium-questions-for-a-single-parent-at-250-percent-fpl.html"
       ]
+    },
+    {
+      "id": "200-percent-fpl-aca-subsidy-guide-for-a-tampa-couple",
+      "type": "article",
+      "title": "200 percent FPL ACA subsidy guide for a Tampa couple",
+      "subtitle": "This guide frames Tampa couple ACA subsidy estimate 200 percent FPL around Tampa Marketplace premium, enhanced premium tax credits, and the estimate-not-a-quote limit.",
+      "url": "aca/200-percent-fpl-aca-subsidy-guide-for-a-tampa-couple.html",
+      "canonical": "{SITE_ORIGIN}/aca/200-percent-fpl-aca-subsidy-guide-for-a-tampa-couple.html",
+      "main_keyword": "Tampa couple ACA subsidy estimate 200 percent FPL",
+      "expanded_keywords": [
+        "Tampa Marketplace premium",
+        "Couple health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Tampa couple ACA subsidy estimate 200 percent FPL explained with Tampa Marketplace premium, Couple health insurance subsidy, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-11T11:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/why-tampa-couple-premium-estimates-shift-around-400-percent-fpl.html",
+        "aca/tampa-aca-benchmark-premium-questions-for-a-single-parent-at-250-percent-fpl.html",
+        "aca/a-single-parent-in-tampa-and-the-2026-aca-current-law-comparison-at-100-percent-fpl.html"
+      ]
     }
   ]
 }
