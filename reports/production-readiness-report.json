@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-11T16:31:34.304970+00:00",
+  "generatedAt": "2026-06-11T19:48:41.487214+00:00",
   "git_snapshot": {
-    "head": "5a89e604dba14d6d283421618436bd076c9a9644",
+    "head": "7cd773876fe2a8245344d0cd430d2dbea2719b48",
     "worktree_clean": false,
     "changed_paths": [
-      "aca/tampa-aca-benchmark-premium-questions-for-a-single-parent-at-250-percent-fpl.html",
+      "aca/a-single-parent-in-tampa-and-the-2026-aca-current-law-comparison-at-100-percent-fpl.html",
       "blog.html",
       "content/article-queue.json",
       "content/search-index.json",
@@ -215,7 +215,7 @@
   "quality_snapshot": {
     "article_files": 200,
     "guide_files": 5,
-    "sitemap_urls": 26,
+    "sitemap_urls": 27,
     "site_origin_placeholder_count": 222,
     "site_origin_placeholder_sample": [
       "blog.html",
@@ -234,8 +234,8 @@
   },
   "article_generation_snapshot": {
     "articles": 200,
-    "publishedArticles": 17,
-    "scheduledArticles": 183,
+    "publishedArticles": 18,
+    "scheduledArticles": 182,
     "minQualityScore": 94,
     "maxQualityScore": 99,
     "codexOnlyGenerationArticles": 200,

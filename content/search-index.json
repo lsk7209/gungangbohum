@@ -519,6 +519,33 @@
         "aca/what-300-percent-fpl-changes-in-a-tampa-aca-estimate-for-a-family-of-three.html",
         "aca/family-of-three-aca-planning-in-tampa-subsidy-notes-at-150-percent-fpl.html"
       ]
+    },
+    {
+      "id": "a-single-parent-in-tampa-and-the-2026-aca-current-law-comparison-at-100-percent-fpl",
+      "type": "article",
+      "title": "A single parent in Tampa and the 2026 ACA current-law comparison at 100 percent FPL",
+      "subtitle": "A plain-English look at Tampa single parent ACA subsidy estimate 100 percent FPL, with Tampa Marketplace premium and enhanced premium tax credits explained without quote forms.",
+      "url": "aca/a-single-parent-in-tampa-and-the-2026-aca-current-law-comparison-at-100-percent-fpl.html",
+      "canonical": "{SITE_ORIGIN}/aca/a-single-parent-in-tampa-and-the-2026-aca-current-law-comparison-at-100-percent-fpl.html",
+      "main_keyword": "Tampa single parent ACA subsidy estimate 100 percent FPL",
+      "expanded_keywords": [
+        "Tampa Marketplace premium",
+        "Single parent health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Tampa single parent ACA subsidy estimate 100 percent FPL explained with Tampa Marketplace premium, Single parent health insurance subsidy, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-12T02:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/what-300-percent-fpl-changes-in-a-tampa-aca-estimate-for-a-family-of-three.html",
+        "aca/family-of-three-aca-planning-in-tampa-subsidy-notes-at-150-percent-fpl.html",
+        "aca/tampa-family-of-four-aca-subsidy-estimate-at-400-percent-fpl-what-the-2026-premium-gap-can-mean.html"
+      ]
     }
   ]
 }
