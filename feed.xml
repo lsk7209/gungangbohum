@@ -135,5 +135,13 @@
       <category>Florida household estimate</category>
       <pubDate>2026-06-11T16:23:00+09:00</pubDate>
     </item>
+    <item>
+      <title>Tampa ACA benchmark premium questions for a single parent at 250 percent FPL</title>
+      <link>{SITE_ORIGIN}/aca/tampa-aca-benchmark-premium-questions-for-a-single-parent-at-250-percent-fpl.html</link>
+      <guid>{SITE_ORIGIN}/aca/tampa-aca-benchmark-premium-questions-for-a-single-parent-at-250-percent-fpl.html</guid>
+      <description>Tampa single parent ACA subsidy estimate 250 percent FPL explained with Tampa Marketplace premium, Single parent health insurance subsidy, estimate limits, related guide paths, and official HealthCare.gov confirmation.</description>
+      <category>Florida household estimate</category>
+      <pubDate>2026-06-11T21:23:00+09:00</pubDate>
+    </item>
   </channel>
 </rss>

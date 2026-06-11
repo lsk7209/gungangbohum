@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-11T11:51:04.962901+00:00",
+  "generatedAt": "2026-06-11T16:31:34.304970+00:00",
   "git_snapshot": {
-    "head": "b53b88285bff7a2fad1e0ed89eaed83e4229a3ef",
+    "head": "5a89e604dba14d6d283421618436bd076c9a9644",
     "worktree_clean": false,
     "changed_paths": [
-      "aca/why-tampa-couple-premium-estimates-shift-around-400-percent-fpl.html",
+      "aca/tampa-aca-benchmark-premium-questions-for-a-single-parent-at-250-percent-fpl.html",
       "blog.html",
       "content/article-queue.json",
       "content/search-index.json",
@@ -215,18 +215,18 @@
   "quality_snapshot": {
     "article_files": 200,
     "guide_files": 5,
-    "sitemap_urls": 25,
+    "sitemap_urls": 26,
     "site_origin_placeholder_count": 222,
     "site_origin_placeholder_sample": [
-      "contact.html",
-      "about.html",
-      "404.html",
-      "privacy.html",
-      "sources-corrections.html",
-      "methodology.html",
-      "aca-enhanced-subsidies-2026-florida.html",
       "blog.html",
       "editorial-policy.html",
+      "aca-enhanced-subsidies-2026-florida.html",
+      "404.html",
+      "methodology.html",
+      "privacy.html",
+      "sources-corrections.html",
+      "about.html",
+      "contact.html",
       "index.html"
     ],
     "public_origin_mismatch_count": 0,
@@ -234,8 +234,8 @@
   },
   "article_generation_snapshot": {
     "articles": 200,
-    "publishedArticles": 16,
-    "scheduledArticles": 184,
+    "publishedArticles": 17,
+    "scheduledArticles": 183,
     "minQualityScore": 94,
     "maxQualityScore": 99,
     "codexOnlyGenerationArticles": 200,
