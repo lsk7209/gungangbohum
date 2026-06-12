@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-11T23:56:27.531133+00:00",
+  "generatedAt": "2026-06-12T05:09:04.298773+00:00",
   "git_snapshot": {
-    "head": "4b978aca2ed07eb96d1545a00ab1b181a299cbc5",
+    "head": "cb0b6166c2528829f956e718d4da76b5f22588c5",
     "worktree_clean": false,
     "changed_paths": [
-      "aca/what-300-percent-fpl-changes-in-a-tampa-aca-estimate-for-a-family-of-three.html",
+      "aca/family-of-three-aca-planning-in-tampa-subsidy-notes-at-150-percent-fpl.html",
       "blog.html",
       "content/article-queue.json",
       "content/search-index.json",
@@ -215,7 +215,7 @@
   "quality_snapshot": {
     "article_files": 200,
     "guide_files": 5,
-    "sitemap_urls": 28,
+    "sitemap_urls": 29,
     "site_origin_placeholder_count": 222,
     "site_origin_placeholder_sample": [
       "blog.html",
@@ -234,8 +234,8 @@
   },
   "article_generation_snapshot": {
     "articles": 200,
-    "publishedArticles": 19,
-    "scheduledArticles": 181,
+    "publishedArticles": 20,
+    "scheduledArticles": 180,
     "minQualityScore": 94,
     "maxQualityScore": 99,
     "codexOnlyGenerationArticles": 200,
