@@ -654,6 +654,33 @@
         "aca/reading-the-tampa-marketplace-estimate-for-an-older-couple-near-250-percent-fpl.html",
         "aca/200-percent-fpl-aca-subsidy-guide-for-an-orlando-single-adult.html"
       ]
+    },
+    {
+      "id": "older-couple-in-tampa-aca-subsidy-calculator-notes-for-100-percent-fpl",
+      "type": "article",
+      "title": "Older couple in Tampa: ACA subsidy calculator notes for 100 percent FPL",
+      "subtitle": "This guide frames Tampa older couple ACA subsidy estimate 100 percent FPL around Tampa Marketplace premium, enhanced premium tax credits, and the estimate-not-a-quote limit.",
+      "url": "aca/older-couple-in-tampa-aca-subsidy-calculator-notes-for-100-percent-fpl.html",
+      "canonical": "{SITE_ORIGIN}/aca/older-couple-in-tampa-aca-subsidy-calculator-notes-for-100-percent-fpl.html",
+      "main_keyword": "Tampa older couple ACA subsidy estimate 100 percent FPL",
+      "expanded_keywords": [
+        "Tampa Marketplace premium",
+        "Older couple health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Tampa older couple ACA subsidy estimate 100 percent FPL explained with Tampa Marketplace premium, Older couple health insurance subsidy, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-13T03:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/reading-the-tampa-marketplace-estimate-for-an-older-couple-near-250-percent-fpl.html",
+        "aca/200-percent-fpl-aca-subsidy-guide-for-an-orlando-single-adult.html",
+        "aca/why-orlando-single-adult-premium-estimates-shift-around-400-percent-fpl.html"
+      ]
     }
   ]
 }

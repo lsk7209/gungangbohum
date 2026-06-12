@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-12T16:28:58.688558+00:00",
+  "generatedAt": "2026-06-12T19:24:33.310174+00:00",
   "git_snapshot": {
-    "head": "634eaa05187bb57e448a1de38350e26750367903",
+    "head": "9d06abc196f43258611ed0db3ab824ac98a76d58",
     "worktree_clean": false,
     "changed_paths": [
-      "aca/at-200-percent-fpl-how-a-tampa-family-of-four-can-read-an-aca-premium-estimate.html",
+      "aca/older-couple-in-tampa-aca-subsidy-calculator-notes-for-100-percent-fpl.html",
       "blog.html",
       "content/article-queue.json",
       "content/search-index.json",
@@ -215,7 +215,7 @@
   "quality_snapshot": {
     "article_files": 200,
     "guide_files": 5,
-    "sitemap_urls": 31,
+    "sitemap_urls": 32,
     "site_origin_placeholder_count": 222,
     "site_origin_placeholder_sample": [
       "blog.html",
@@ -234,8 +234,8 @@
   },
   "article_generation_snapshot": {
     "articles": 200,
-    "publishedArticles": 22,
-    "scheduledArticles": 178,
+    "publishedArticles": 23,
+    "scheduledArticles": 177,
     "minQualityScore": 94,
     "maxQualityScore": 99,
     "codexOnlyGenerationArticles": 200,
