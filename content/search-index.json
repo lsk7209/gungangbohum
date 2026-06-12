@@ -600,6 +600,33 @@
         "aca/at-200-percent-fpl-how-a-tampa-family-of-four-can-read-an-aca-premium-estimate.html",
         "aca/older-couple-in-tampa-aca-subsidy-calculator-notes-for-100-percent-fpl.html"
       ]
+    },
+    {
+      "id": "tampa-family-of-four-aca-subsidy-estimate-at-400-percent-fpl-what-the-2026-premium-gap-can-mean",
+      "type": "article",
+      "title": "Tampa family of four ACA subsidy estimate at 400 percent FPL: what the 2026 premium gap can mean",
+      "subtitle": "Use this Tampa family of four ACA subsidy estimate 400 percent FPL guide to connect Tampa Marketplace premium, enhanced premium tax credits, and a HealthCare.gov confirmation step.",
+      "url": "aca/tampa-family-of-four-aca-subsidy-estimate-at-400-percent-fpl-what-the-2026-premium-gap-can-mean.html",
+      "canonical": "{SITE_ORIGIN}/aca/tampa-family-of-four-aca-subsidy-estimate-at-400-percent-fpl-what-the-2026-premium-gap-can-mean.html",
+      "main_keyword": "Tampa family of four ACA subsidy estimate 400 percent FPL",
+      "expanded_keywords": [
+        "Tampa Marketplace premium",
+        "Family of four health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Tampa family of four ACA subsidy estimate 400 percent FPL explained with Tampa Marketplace premium, Family of four health insurance subsidy, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-12T17:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/at-200-percent-fpl-how-a-tampa-family-of-four-can-read-an-aca-premium-estimate.html",
+        "aca/older-couple-in-tampa-aca-subsidy-calculator-notes-for-100-percent-fpl.html",
+        "aca/reading-the-tampa-marketplace-estimate-for-an-older-couple-near-250-percent-fpl.html"
+      ]
     }
   ]
 }

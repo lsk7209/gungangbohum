@@ -22,7 +22,7 @@
       },
       {
         "file": "blog.html",
-        "bytes": 37964
+        "bytes": 38896
       },
       {
         "file": "aca/when-moving-to-florida-from-another-state-changes-a-florida-aca-subsidy-estimate.html",
@@ -87,7 +87,7 @@
       },
       {
         "file": "blog.html",
-        "bytes": 8191
+        "bytes": 8199
       },
       {
         "file": "aca/when-moving-to-florida-from-another-state-changes-a-florida-aca-subsidy-estimate.html",
@@ -102,8 +102,8 @@
         "bytes": 4878
       }
     ],
-    "article_queue_bytes": 354201,
-    "search_index_bytes": 35770
+    "article_queue_bytes": 354200,
+    "search_index_bytes": 37543
   },
   "errors": [],
   "warnings": []
