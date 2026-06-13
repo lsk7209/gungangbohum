@@ -735,6 +735,33 @@
         "aca/orlando-aca-benchmark-premium-questions-for-a-couple-at-250-percent-fpl.html",
         "aca/a-couple-in-orlando-and-the-2026-aca-current-law-comparison-at-100-percent-fpl.html"
       ]
+    },
+    {
+      "id": "why-orlando-single-adult-premium-estimates-shift-around-400-percent-fpl",
+      "type": "article",
+      "title": "Why Orlando single adult premium estimates shift around 400 percent FPL",
+      "subtitle": "A plain-English look at Orlando single adult ACA subsidy estimate 400 percent FPL, with Orlando Marketplace premium and enhanced premium tax credits explained without quote forms.",
+      "url": "aca/why-orlando-single-adult-premium-estimates-shift-around-400-percent-fpl.html",
+      "canonical": "{SITE_ORIGIN}/aca/why-orlando-single-adult-premium-estimates-shift-around-400-percent-fpl.html",
+      "main_keyword": "Orlando single adult ACA subsidy estimate 400 percent FPL",
+      "expanded_keywords": [
+        "Orlando Marketplace premium",
+        "Single adult health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Orlando single adult ACA subsidy estimate 400 percent FPL explained with Orlando Marketplace premium, Single adult health insurance subsidy, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-13T18:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/orlando-aca-benchmark-premium-questions-for-a-couple-at-250-percent-fpl.html",
+        "aca/a-couple-in-orlando-and-the-2026-aca-current-law-comparison-at-100-percent-fpl.html",
+        "aca/what-300-percent-fpl-changes-in-an-orlando-aca-estimate-for-a-single-parent.html"
+      ]
     }
   ]
 }
