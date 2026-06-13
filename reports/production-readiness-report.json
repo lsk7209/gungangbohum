@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-12T23:55:16.708104+00:00",
+  "generatedAt": "2026-06-13T04:54:57.251643+00:00",
   "git_snapshot": {
-    "head": "fde7af99625816a702d30dbf5b0d8b1d4eda511c",
+    "head": "c366bdc056d1e9d192172f5e3709fe123ad2e4ee",
     "worktree_clean": false,
     "changed_paths": [
-      "aca/reading-the-tampa-marketplace-estimate-for-an-older-couple-near-250-percent-fpl.html",
+      "aca/200-percent-fpl-aca-subsidy-guide-for-an-orlando-single-adult.html",
       "blog.html",
       "content/article-queue.json",
       "content/search-index.json",
@@ -215,7 +215,7 @@
   "quality_snapshot": {
     "article_files": 200,
     "guide_files": 5,
-    "sitemap_urls": 33,
+    "sitemap_urls": 34,
     "site_origin_placeholder_count": 222,
     "site_origin_placeholder_sample": [
       "blog.html",
@@ -234,8 +234,8 @@
   },
   "article_generation_snapshot": {
     "articles": 200,
-    "publishedArticles": 24,
-    "scheduledArticles": 176,
+    "publishedArticles": 25,
+    "scheduledArticles": 175,
     "minQualityScore": 94,
     "maxQualityScore": 99,
     "codexOnlyGenerationArticles": 200,
