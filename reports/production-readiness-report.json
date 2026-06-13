@@ -1,19 +1,9 @@
 {
-  "generatedAt": "2026-06-13T04:54:57.251643+00:00",
+  "generatedAt": "2026-06-13T08:33:14.275738+00:00",
   "git_snapshot": {
-    "head": "c366bdc056d1e9d192172f5e3709fe123ad2e4ee",
-    "worktree_clean": false,
-    "changed_paths": [
-      "aca/200-percent-fpl-aca-subsidy-guide-for-an-orlando-single-adult.html",
-      "blog.html",
-      "content/article-queue.json",
-      "content/search-index.json",
-      "feed.xml",
-      "reports/article-generation-report.json",
-      "reports/content-quality-report.json",
-      "reports/performance-budget-report.json",
-      "sitemap.xml"
-    ]
+    "head": "f86fed0aa4b3d9fbf28871041c7c700cd1d61bab",
+    "worktree_clean": true,
+    "changed_paths": []
   },
   "ready_for_production_submission": false,
   "checks": [
@@ -54,8 +44,8 @@
     },
     {
       "name": "git_worktree_clean",
-      "ok": false,
-      "detail": "worktree has uncommitted or untracked files"
+      "ok": true,
+      "detail": "worktree clean"
     },
     {
       "name": "github_remote",
@@ -133,11 +123,6 @@
       "detail": "222 public files still contain {SITE_ORIGIN}"
     },
     {
-      "name": "git_worktree_clean",
-      "ok": false,
-      "detail": "worktree has uncommitted or untracked files"
-    },
-    {
       "name": "production_contact_channel",
       "ok": false,
       "detail": "contact page still contains prelaunch contact-channel language"
@@ -190,9 +175,7 @@
       "gsc_configuration",
       "github_gsc_configuration"
     ],
-    "code_or_repository_blockers": [
-      "git_worktree_clean"
-    ]
+    "code_or_repository_blockers": []
   },
   "missing_external_inputs": [
     {
@@ -257,7 +240,6 @@
   },
   "next_required_actions": [
     "Assign an HTTPS production domain and run npm run check:production.",
-    "Commit the local work before git push.",
     "Replace the prelaunch contact notice with a production public contact channel.",
     "Set GSC_SITE_URL and GSC_SITEMAP_URL, then run npm run gsc:submit after the domain is verified in Search Console."
   ]
