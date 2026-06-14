@@ -897,6 +897,33 @@
         "aca/family-of-four-in-orlando-aca-subsidy-calculator-notes-for-100-percent-fpl.html",
         "aca/reading-the-orlando-marketplace-estimate-for-a-family-of-four-near-250-percent-fpl.html"
       ]
+    },
+    {
+      "id": "at-200-percent-fpl-how-an-orlando-family-of-three-can-read-an-aca-premium-estimate",
+      "type": "article",
+      "title": "At 200 percent FPL, how an Orlando family of three can read an ACA premium estimate",
+      "subtitle": "For Orlando family of three ACA subsidy estimate 200 percent FPL, compare Orlando Marketplace premium with enhanced premium tax credits before relying on any monthly number.",
+      "url": "aca/at-200-percent-fpl-how-an-orlando-family-of-three-can-read-an-aca-premium-estimate.html",
+      "canonical": "{SITE_ORIGIN}/aca/at-200-percent-fpl-how-an-orlando-family-of-three-can-read-an-aca-premium-estimate.html",
+      "main_keyword": "Orlando family of three ACA subsidy estimate 200 percent FPL",
+      "expanded_keywords": [
+        "Orlando Marketplace premium",
+        "Family of three health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Orlando family of three ACA subsidy estimate 200 percent FPL explained with Orlando Marketplace premium, Family of three health insurance subsidy, estimate limits, related guide paths, and official HealthCare.gov.",
+      "publishAt": "2026-06-15T00:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/family-of-four-in-orlando-aca-subsidy-calculator-notes-for-100-percent-fpl.html",
+        "aca/reading-the-orlando-marketplace-estimate-for-a-family-of-four-near-250-percent-fpl.html",
+        "aca/150-percent-fpl-aca-subsidy-guide-for-an-orlando-older-couple.html"
+      ]
     }
   ]
 }
