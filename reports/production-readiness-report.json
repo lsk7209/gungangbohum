@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-14T01:38:33.149868+00:00",
+  "generatedAt": "2026-06-14T06:59:29.725619+00:00",
   "git_snapshot": {
-    "head": "4e94623b6463e89204bcf1d72aee348dd6fff488",
+    "head": "311e6c73efe33b8289fdb03f99459f6980e6e452",
     "worktree_clean": false,
     "changed_paths": [
-      "aca/what-300-percent-fpl-changes-in-an-orlando-aca-estimate-for-a-single-parent.html",
+      "aca/single-parent-aca-planning-in-orlando-subsidy-notes-at-150-percent-fpl.html",
       "blog.html",
       "content/article-queue.json",
       "content/search-index.json",
@@ -215,7 +215,7 @@
   "quality_snapshot": {
     "article_files": 200,
     "guide_files": 5,
-    "sitemap_urls": 38,
+    "sitemap_urls": 39,
     "site_origin_placeholder_count": 222,
     "site_origin_placeholder_sample": [
       "blog.html",
@@ -234,8 +234,8 @@
   },
   "article_generation_snapshot": {
     "articles": 200,
-    "publishedArticles": 29,
-    "scheduledArticles": 171,
+    "publishedArticles": 30,
+    "scheduledArticles": 170,
     "minQualityScore": 94,
     "maxQualityScore": 99,
     "codexOnlyGenerationArticles": 200,
@@ -252,8 +252,8 @@
     "html_files_checked": 215,
     "error_count": 0,
     "warning_count": 0,
-    "largest_html_bytes": 45714,
-    "article_average_bytes": 24311
+    "largest_html_bytes": 46565,
+    "article_average_bytes": 24310
   },
   "next_required_actions": [
     "Assign an HTTPS production domain and run npm run check:production.",
