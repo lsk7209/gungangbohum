@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-14T06:59:29.725619+00:00",
+  "generatedAt": "2026-06-14T10:33:30.698237+00:00",
   "git_snapshot": {
-    "head": "311e6c73efe33b8289fdb03f99459f6980e6e452",
+    "head": "945b81f2527c58982bbb9e4af88780bbf1a3853a",
     "worktree_clean": false,
     "changed_paths": [
-      "aca/single-parent-aca-planning-in-orlando-subsidy-notes-at-150-percent-fpl.html",
+      "aca/orlando-family-of-three-aca-subsidy-estimate-at-400-percent-fpl-what-the-2026-premium-gap-can-mean.html",
       "blog.html",
       "content/article-queue.json",
       "content/search-index.json",
@@ -215,7 +215,7 @@
   "quality_snapshot": {
     "article_files": 200,
     "guide_files": 5,
-    "sitemap_urls": 39,
+    "sitemap_urls": 40,
     "site_origin_placeholder_count": 222,
     "site_origin_placeholder_sample": [
       "blog.html",
@@ -234,8 +234,8 @@
   },
   "article_generation_snapshot": {
     "articles": 200,
-    "publishedArticles": 30,
-    "scheduledArticles": 170,
+    "publishedArticles": 31,
+    "scheduledArticles": 169,
     "minQualityScore": 94,
     "maxQualityScore": 99,
     "codexOnlyGenerationArticles": 200,
@@ -252,7 +252,7 @@
     "html_files_checked": 215,
     "error_count": 0,
     "warning_count": 0,
-    "largest_html_bytes": 46565,
+    "largest_html_bytes": 47516,
     "article_average_bytes": 24310
   },
   "next_required_actions": [

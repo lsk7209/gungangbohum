@@ -870,6 +870,33 @@
         "aca/at-200-percent-fpl-how-an-orlando-family-of-three-can-read-an-aca-premium-estimate.html",
         "aca/family-of-four-in-orlando-aca-subsidy-calculator-notes-for-100-percent-fpl.html"
       ]
+    },
+    {
+      "id": "orlando-family-of-three-aca-subsidy-estimate-at-400-percent-fpl-what-the-2026-premium-gap-can-mean",
+      "type": "article",
+      "title": "Orlando family of three ACA subsidy estimate at 400 percent FPL: what the 2026 premium gap can mean",
+      "subtitle": "This guide frames Orlando family of three ACA subsidy estimate 400 percent FPL around Orlando Marketplace premium, enhanced premium tax credits, and the estimate-not-a-quote limit.",
+      "url": "aca/orlando-family-of-three-aca-subsidy-estimate-at-400-percent-fpl-what-the-2026-premium-gap-can-mean.html",
+      "canonical": "{SITE_ORIGIN}/aca/orlando-family-of-three-aca-subsidy-estimate-at-400-percent-fpl-what-the-2026-premium-gap-can-mean.html",
+      "main_keyword": "Orlando family of three ACA subsidy estimate 400 percent FPL",
+      "expanded_keywords": [
+        "Orlando Marketplace premium",
+        "Family of three health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Orlando family of three ACA subsidy estimate 400 percent FPL explained with Orlando Marketplace premium, Family of three health insurance subsidy, estimate limits, related guide paths, and official HealthCare.gov.",
+      "publishAt": "2026-06-14T19:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/at-200-percent-fpl-how-an-orlando-family-of-three-can-read-an-aca-premium-estimate.html",
+        "aca/family-of-four-in-orlando-aca-subsidy-calculator-notes-for-100-percent-fpl.html",
+        "aca/reading-the-orlando-marketplace-estimate-for-a-family-of-four-near-250-percent-fpl.html"
+      ]
     }
   ]
 }
