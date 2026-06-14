@@ -924,6 +924,33 @@
         "aca/reading-the-orlando-marketplace-estimate-for-a-family-of-four-near-250-percent-fpl.html",
         "aca/150-percent-fpl-aca-subsidy-guide-for-an-orlando-older-couple.html"
       ]
+    },
+    {
+      "id": "family-of-four-in-orlando-aca-subsidy-calculator-notes-for-100-percent-fpl",
+      "type": "article",
+      "title": "Family of four in Orlando: ACA subsidy calculator notes for 100 percent FPL",
+      "subtitle": "Use this Orlando family of four ACA subsidy estimate 100 percent FPL guide to connect Orlando Marketplace premium, enhanced premium tax credits, and a HealthCare.gov confirmation step.",
+      "url": "aca/family-of-four-in-orlando-aca-subsidy-calculator-notes-for-100-percent-fpl.html",
+      "canonical": "{SITE_ORIGIN}/aca/family-of-four-in-orlando-aca-subsidy-calculator-notes-for-100-percent-fpl.html",
+      "main_keyword": "Orlando family of four ACA subsidy estimate 100 percent FPL",
+      "expanded_keywords": [
+        "Orlando Marketplace premium",
+        "Family of four health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Orlando family of four ACA subsidy estimate 100 percent FPL explained with Orlando Marketplace premium, Family of four health insurance subsidy, estimate limits, related guide paths, and official HealthCare.gov.",
+      "publishAt": "2026-06-15T05:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/reading-the-orlando-marketplace-estimate-for-a-family-of-four-near-250-percent-fpl.html",
+        "aca/150-percent-fpl-aca-subsidy-guide-for-an-orlando-older-couple.html",
+        "aca/why-orlando-older-couple-premium-estimates-shift-around-300-percent-fpl.html"
+      ]
     }
   ]
 }
