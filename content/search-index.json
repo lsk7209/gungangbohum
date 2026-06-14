@@ -816,6 +816,33 @@
         "aca/single-parent-aca-planning-in-orlando-subsidy-notes-at-150-percent-fpl.html",
         "aca/orlando-family-of-three-aca-subsidy-estimate-at-400-percent-fpl-what-the-2026-premium-gap-can-mean.html"
       ]
+    },
+    {
+      "id": "what-300-percent-fpl-changes-in-an-orlando-aca-estimate-for-a-single-parent",
+      "type": "article",
+      "title": "What 300 percent FPL changes in an Orlando ACA estimate for a single parent",
+      "subtitle": "Use this Orlando single parent ACA subsidy estimate 300 percent FPL guide to connect Orlando Marketplace premium, enhanced premium tax credits, and a HealthCare.gov confirmation step.",
+      "url": "aca/what-300-percent-fpl-changes-in-an-orlando-aca-estimate-for-a-single-parent.html",
+      "canonical": "{SITE_ORIGIN}/aca/what-300-percent-fpl-changes-in-an-orlando-aca-estimate-for-a-single-parent.html",
+      "main_keyword": "Orlando single parent ACA subsidy estimate 300 percent FPL",
+      "expanded_keywords": [
+        "Orlando Marketplace premium",
+        "Single parent health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Orlando single parent ACA subsidy estimate 300 percent FPL explained with Orlando Marketplace premium, Single parent health insurance subsidy, estimate limits, related guide paths, and official HealthCare.gov.",
+      "publishAt": "2026-06-14T09:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/single-parent-aca-planning-in-orlando-subsidy-notes-at-150-percent-fpl.html",
+        "aca/orlando-family-of-three-aca-subsidy-estimate-at-400-percent-fpl-what-the-2026-premium-gap-can-mean.html",
+        "aca/at-200-percent-fpl-how-an-orlando-family-of-three-can-read-an-aca-premium-estimate.html"
+      ]
     }
   ]
 }
