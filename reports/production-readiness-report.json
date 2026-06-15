@@ -1,9 +1,19 @@
 {
-  "generatedAt": "2026-06-14T22:36:25.440831+00:00",
+  "generatedAt": "2026-06-15T01:42:09.882859+00:00",
   "git_snapshot": {
-    "head": "9bb85fa4a92f604d2933dfce55b357d50d14e027",
-    "worktree_clean": true,
-    "changed_paths": []
+    "head": "d60907711a722446c89e00dcfb3cbf460a0a8609",
+    "worktree_clean": false,
+    "changed_paths": [
+      "aca/reading-the-orlando-marketplace-estimate-for-a-family-of-four-near-250-percent-fpl.html",
+      "blog.html",
+      "content/article-queue.json",
+      "content/search-index.json",
+      "feed.xml",
+      "reports/article-generation-report.json",
+      "reports/content-quality-report.json",
+      "reports/performance-budget-report.json",
+      "sitemap.xml"
+    ]
   },
   "ready_for_production_submission": false,
   "checks": [
@@ -44,8 +54,8 @@
     },
     {
       "name": "git_worktree_clean",
-      "ok": true,
-      "detail": "worktree clean"
+      "ok": false,
+      "detail": "worktree has uncommitted or untracked files"
     },
     {
       "name": "github_remote",
@@ -123,6 +133,11 @@
       "detail": "222 public files still contain {SITE_ORIGIN}"
     },
     {
+      "name": "git_worktree_clean",
+      "ok": false,
+      "detail": "worktree has uncommitted or untracked files"
+    },
+    {
       "name": "production_contact_channel",
       "ok": false,
       "detail": "contact page still contains prelaunch contact-channel language"
@@ -175,7 +190,9 @@
       "gsc_configuration",
       "github_gsc_configuration"
     ],
-    "code_or_repository_blockers": []
+    "code_or_repository_blockers": [
+      "git_worktree_clean"
+    ]
   },
   "missing_external_inputs": [
     {
@@ -198,7 +215,7 @@
   "quality_snapshot": {
     "article_files": 200,
     "guide_files": 5,
-    "sitemap_urls": 42,
+    "sitemap_urls": 43,
     "site_origin_placeholder_count": 222,
     "site_origin_placeholder_sample": [
       "blog.html",
@@ -217,8 +234,8 @@
   },
   "article_generation_snapshot": {
     "articles": 200,
-    "publishedArticles": 33,
-    "scheduledArticles": 167,
+    "publishedArticles": 34,
+    "scheduledArticles": 166,
     "minQualityScore": 94,
     "maxQualityScore": 99,
     "codexOnlyGenerationArticles": 200,
@@ -235,11 +252,12 @@
     "html_files_checked": 215,
     "error_count": 0,
     "warning_count": 0,
-    "largest_html_bytes": 49301,
+    "largest_html_bytes": 50201,
     "article_average_bytes": 24310
   },
   "next_required_actions": [
     "Assign an HTTPS production domain and run npm run check:production.",
+    "Commit the local work before git push.",
     "Replace the prelaunch contact notice with a production public contact channel.",
     "Set GSC_SITE_URL and GSC_SITEMAP_URL, then run npm run gsc:submit after the domain is verified in Search Console."
   ]

@@ -18,7 +18,7 @@
     "largest_html": [
       {
         "file": "blog.html",
-        "bytes": 49301
+        "bytes": 50201
       },
       {
         "file": "index.html",
@@ -87,7 +87,7 @@
       },
       {
         "file": "blog.html",
-        "bytes": 8287
+        "bytes": 8299
       },
       {
         "file": "aca/when-moving-to-florida-from-another-state-changes-a-florida-aca-subsidy-estimate.html",
@@ -102,8 +102,8 @@
         "bytes": 4878
       }
     ],
-    "article_queue_bytes": 354188,
-    "search_index_bytes": 57727
+    "article_queue_bytes": 354187,
+    "search_index_bytes": 59430
   },
   "errors": [],
   "warnings": []
