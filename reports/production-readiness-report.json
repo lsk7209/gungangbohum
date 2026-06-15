@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-15T19:09:50.915962+00:00",
+  "generatedAt": "2026-06-15T21:58:41.016978+00:00",
   "git_snapshot": {
-    "head": "788d04e5e4cf9d60775fe7f2a2fdf1586b41fb88",
+    "head": "3ced2cfa8a1a072b8a69511f81fb80731359dbfd",
     "worktree_clean": false,
     "changed_paths": [
-      "aca/jacksonville-aca-benchmark-premium-questions-for-a-single-adult-at-250-percent-fpl.html",
+      "aca/a-single-adult-in-jacksonville-and-the-2026-aca-current-law-comparison-at-100-percent-fpl.html",
       "blog.html",
       "content/article-queue.json",
       "content/search-index.json",
@@ -215,7 +215,7 @@
   "quality_snapshot": {
     "article_files": 200,
     "guide_files": 5,
-    "sitemap_urls": 46,
+    "sitemap_urls": 47,
     "site_origin_placeholder_count": 222,
     "site_origin_placeholder_sample": [
       "blog.html",
@@ -234,8 +234,8 @@
   },
   "article_generation_snapshot": {
     "articles": 200,
-    "publishedArticles": 37,
-    "scheduledArticles": 163,
+    "publishedArticles": 38,
+    "scheduledArticles": 162,
     "minQualityScore": 94,
     "maxQualityScore": 99,
     "codexOnlyGenerationArticles": 200,
@@ -252,7 +252,7 @@
     "html_files_checked": 215,
     "error_count": 0,
     "warning_count": 0,
-    "largest_html_bytes": 52807,
+    "largest_html_bytes": 53774,
     "article_average_bytes": 24310
   },
   "next_required_actions": [
