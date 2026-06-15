@@ -1032,6 +1032,33 @@
         "aca/a-single-adult-in-jacksonville-and-the-2026-aca-current-law-comparison-at-100-percent-fpl.html",
         "aca/what-300-percent-fpl-changes-in-a-jacksonville-aca-estimate-for-a-couple.html"
       ]
+    },
+    {
+      "id": "jacksonville-aca-benchmark-premium-questions-for-a-single-adult-at-250-percent-fpl",
+      "type": "article",
+      "title": "Jacksonville ACA benchmark premium questions for a single adult at 250 percent FPL",
+      "subtitle": "Use this Jacksonville single adult ACA subsidy estimate 250 percent FPL guide to connect Jacksonville Marketplace premium, enhanced premium tax credits, and a HealthCare.gov confirmation step.",
+      "url": "aca/jacksonville-aca-benchmark-premium-questions-for-a-single-adult-at-250-percent-fpl.html",
+      "canonical": "{SITE_ORIGIN}/aca/jacksonville-aca-benchmark-premium-questions-for-a-single-adult-at-250-percent-fpl.html",
+      "main_keyword": "Jacksonville single adult ACA subsidy estimate 250 percent FPL",
+      "expanded_keywords": [
+        "Jacksonville Marketplace premium",
+        "Single adult health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Jacksonville single adult ACA subsidy estimate 250 percent FPL explained with Jacksonville Marketplace premium, Single adult health insurance subsidy, estimate limits, related guide paths, and official HealthCare.gov.",
+      "publishAt": "2026-06-16T01:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/a-single-adult-in-jacksonville-and-the-2026-aca-current-law-comparison-at-100-percent-fpl.html",
+        "aca/what-300-percent-fpl-changes-in-a-jacksonville-aca-estimate-for-a-couple.html",
+        "aca/couple-aca-planning-in-jacksonville-subsidy-notes-at-150-percent-fpl.html"
+      ]
     }
   ]
 }

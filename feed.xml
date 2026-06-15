@@ -295,5 +295,13 @@
       <category>Florida household estimate</category>
       <pubDate>2026-06-15T20:23:00+09:00</pubDate>
     </item>
+    <item>
+      <title>Jacksonville ACA benchmark premium questions for a single adult at 250 percent FPL</title>
+      <link>{SITE_ORIGIN}/aca/jacksonville-aca-benchmark-premium-questions-for-a-single-adult-at-250-percent-fpl.html</link>
+      <guid>{SITE_ORIGIN}/aca/jacksonville-aca-benchmark-premium-questions-for-a-single-adult-at-250-percent-fpl.html</guid>
+      <description>Jacksonville single adult ACA subsidy estimate 250 percent FPL explained with Jacksonville Marketplace premium, Single adult health insurance subsidy, estimate limits, related guide paths, and official HealthCare.gov.</description>
+      <category>Florida household estimate</category>
+      <pubDate>2026-06-16T01:23:00+09:00</pubDate>
+    </item>
   </channel>
 </rss>
