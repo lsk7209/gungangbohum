@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-15T07:41:23.385288+00:00",
+  "generatedAt": "2026-06-15T14:38:28.192318+00:00",
   "git_snapshot": {
-    "head": "af4e7f571d508f204ede10f027540d1fa202458d",
+    "head": "295c8ccd628b0267f8c214b66b3f053bc57a00c5",
     "worktree_clean": false,
     "changed_paths": [
-      "aca/150-percent-fpl-aca-subsidy-guide-for-an-orlando-older-couple.html",
+      "aca/why-orlando-older-couple-premium-estimates-shift-around-300-percent-fpl.html",
       "blog.html",
       "content/article-queue.json",
       "content/search-index.json",
@@ -215,7 +215,7 @@
   "quality_snapshot": {
     "article_files": 200,
     "guide_files": 5,
-    "sitemap_urls": 44,
+    "sitemap_urls": 45,
     "site_origin_placeholder_count": 222,
     "site_origin_placeholder_sample": [
       "blog.html",
@@ -234,8 +234,8 @@
   },
   "article_generation_snapshot": {
     "articles": 200,
-    "publishedArticles": 35,
-    "scheduledArticles": 165,
+    "publishedArticles": 36,
+    "scheduledArticles": 164,
     "minQualityScore": 94,
     "maxQualityScore": 99,
     "codexOnlyGenerationArticles": 200,
@@ -252,7 +252,7 @@
     "html_files_checked": 215,
     "error_count": 0,
     "warning_count": 0,
-    "largest_html_bytes": 51018,
+    "largest_html_bytes": 51858,
     "article_average_bytes": 24310
   },
   "next_required_actions": [

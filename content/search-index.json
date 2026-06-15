@@ -1005,6 +1005,33 @@
         "aca/jacksonville-aca-benchmark-premium-questions-for-a-single-adult-at-250-percent-fpl.html",
         "aca/a-single-adult-in-jacksonville-and-the-2026-aca-current-law-comparison-at-100-percent-fpl.html"
       ]
+    },
+    {
+      "id": "why-orlando-older-couple-premium-estimates-shift-around-300-percent-fpl",
+      "type": "article",
+      "title": "Why Orlando older couple premium estimates shift around 300 percent FPL",
+      "subtitle": "For Orlando older couple ACA subsidy estimate 300 percent FPL, compare Orlando Marketplace premium with enhanced premium tax credits before relying on any monthly number.",
+      "url": "aca/why-orlando-older-couple-premium-estimates-shift-around-300-percent-fpl.html",
+      "canonical": "{SITE_ORIGIN}/aca/why-orlando-older-couple-premium-estimates-shift-around-300-percent-fpl.html",
+      "main_keyword": "Orlando older couple ACA subsidy estimate 300 percent FPL",
+      "expanded_keywords": [
+        "Orlando Marketplace premium",
+        "Older couple health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Orlando older couple ACA subsidy estimate 300 percent FPL explained with Orlando Marketplace premium, Older couple health insurance subsidy, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-15T20:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/jacksonville-aca-benchmark-premium-questions-for-a-single-adult-at-250-percent-fpl.html",
+        "aca/a-single-adult-in-jacksonville-and-the-2026-aca-current-law-comparison-at-100-percent-fpl.html",
+        "aca/what-300-percent-fpl-changes-in-a-jacksonville-aca-estimate-for-a-couple.html"
+      ]
     }
   ]
 }
