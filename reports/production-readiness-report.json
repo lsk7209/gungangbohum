@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-15T01:42:09.882859+00:00",
+  "generatedAt": "2026-06-15T07:41:23.385288+00:00",
   "git_snapshot": {
-    "head": "d60907711a722446c89e00dcfb3cbf460a0a8609",
+    "head": "af4e7f571d508f204ede10f027540d1fa202458d",
     "worktree_clean": false,
     "changed_paths": [
-      "aca/reading-the-orlando-marketplace-estimate-for-a-family-of-four-near-250-percent-fpl.html",
+      "aca/150-percent-fpl-aca-subsidy-guide-for-an-orlando-older-couple.html",
       "blog.html",
       "content/article-queue.json",
       "content/search-index.json",
@@ -215,7 +215,7 @@
   "quality_snapshot": {
     "article_files": 200,
     "guide_files": 5,
-    "sitemap_urls": 43,
+    "sitemap_urls": 44,
     "site_origin_placeholder_count": 222,
     "site_origin_placeholder_sample": [
       "blog.html",
@@ -234,8 +234,8 @@
   },
   "article_generation_snapshot": {
     "articles": 200,
-    "publishedArticles": 34,
-    "scheduledArticles": 166,
+    "publishedArticles": 35,
+    "scheduledArticles": 165,
     "minQualityScore": 94,
     "maxQualityScore": 99,
     "codexOnlyGenerationArticles": 200,
@@ -252,7 +252,7 @@
     "html_files_checked": 215,
     "error_count": 0,
     "warning_count": 0,
-    "largest_html_bytes": 50201,
+    "largest_html_bytes": 51018,
     "article_average_bytes": 24310
   },
   "next_required_actions": [

@@ -18,7 +18,7 @@
     "largest_html": [
       {
         "file": "blog.html",
-        "bytes": 50201
+        "bytes": 51018
       },
       {
         "file": "index.html",
@@ -102,8 +102,8 @@
         "bytes": 4878
       }
     ],
-    "article_queue_bytes": 354187,
-    "search_index_bytes": 59430
+    "article_queue_bytes": 354186,
+    "search_index_bytes": 61078
   },
   "errors": [],
   "warnings": []
