@@ -1,19 +1,9 @@
 {
-  "generatedAt": "2026-06-15T21:58:41.016978+00:00",
+  "generatedAt": "2026-06-16T00:03:34.738334+00:00",
   "git_snapshot": {
-    "head": "3ced2cfa8a1a072b8a69511f81fb80731359dbfd",
-    "worktree_clean": false,
-    "changed_paths": [
-      "aca/a-single-adult-in-jacksonville-and-the-2026-aca-current-law-comparison-at-100-percent-fpl.html",
-      "blog.html",
-      "content/article-queue.json",
-      "content/search-index.json",
-      "feed.xml",
-      "reports/article-generation-report.json",
-      "reports/content-quality-report.json",
-      "reports/performance-budget-report.json",
-      "sitemap.xml"
-    ]
+    "head": "f7b22bcb4d52eb739e97f4e3b5bc20ca5ad82821",
+    "worktree_clean": true,
+    "changed_paths": []
   },
   "ready_for_production_submission": false,
   "checks": [
@@ -54,8 +44,8 @@
     },
     {
       "name": "git_worktree_clean",
-      "ok": false,
-      "detail": "worktree has uncommitted or untracked files"
+      "ok": true,
+      "detail": "worktree clean"
     },
     {
       "name": "github_remote",
@@ -133,11 +123,6 @@
       "detail": "222 public files still contain {SITE_ORIGIN}"
     },
     {
-      "name": "git_worktree_clean",
-      "ok": false,
-      "detail": "worktree has uncommitted or untracked files"
-    },
-    {
       "name": "production_contact_channel",
       "ok": false,
       "detail": "contact page still contains prelaunch contact-channel language"
@@ -190,9 +175,7 @@
       "gsc_configuration",
       "github_gsc_configuration"
     ],
-    "code_or_repository_blockers": [
-      "git_worktree_clean"
-    ]
+    "code_or_repository_blockers": []
   },
   "missing_external_inputs": [
     {
@@ -257,7 +240,6 @@
   },
   "next_required_actions": [
     "Assign an HTTPS production domain and run npm run check:production.",
-    "Commit the local work before git push.",
     "Replace the prelaunch contact notice with a production public contact channel.",
     "Set GSC_SITE_URL and GSC_SITEMAP_URL, then run npm run gsc:submit after the domain is verified in Search Console."
   ]
