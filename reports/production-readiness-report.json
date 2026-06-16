@@ -1,10 +1,11 @@
 {
-  "generatedAt": "2026-06-16T11:37:57.049627+00:00",
+  "generatedAt": "2026-06-16T17:24:56.488654+00:00",
   "git_snapshot": {
-    "head": "3cf3afe33d072e58c61ac1fdbd9b426099c4b4aa",
+    "head": "371244833bc0f6e308bb51a83b63c07a8e8cfbd3",
     "worktree_clean": false,
     "changed_paths": [
-      "aca/couple-aca-planning-in-jacksonville-subsidy-notes-at-150-percent-fpl.html",
+      "aca/at-200-percent-fpl-how-a-jacksonville-single-parent-can-read-an-aca-premium-estimate.html",
+      "aca/jacksonville-single-parent-aca-subsidy-estimate-at-400-percent-fpl-what-the-2026-premium-gap-can-mean.html",
       "blog.html",
       "content/article-queue.json",
       "content/search-index.json",
@@ -215,7 +216,7 @@
   "quality_snapshot": {
     "article_files": 200,
     "guide_files": 5,
-    "sitemap_urls": 49,
+    "sitemap_urls": 51,
     "site_origin_placeholder_count": 222,
     "site_origin_placeholder_sample": [
       "blog.html",
@@ -234,8 +235,8 @@
   },
   "article_generation_snapshot": {
     "articles": 200,
-    "publishedArticles": 40,
-    "scheduledArticles": 160,
+    "publishedArticles": 42,
+    "scheduledArticles": 158,
     "minQualityScore": 94,
     "maxQualityScore": 99,
     "codexOnlyGenerationArticles": 200,
@@ -252,7 +253,7 @@
     "html_files_checked": 215,
     "error_count": 0,
     "warning_count": 0,
-    "largest_html_bytes": 55441,
+    "largest_html_bytes": 57341,
     "article_average_bytes": 24310
   },
   "next_required_actions": [
