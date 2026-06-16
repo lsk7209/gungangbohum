@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-16T05:38:03.119232+00:00",
+  "generatedAt": "2026-06-16T11:37:57.049627+00:00",
   "git_snapshot": {
-    "head": "bcb07485b8c8f02eb7e867712b591d5c27b22539",
+    "head": "3cf3afe33d072e58c61ac1fdbd9b426099c4b4aa",
     "worktree_clean": false,
     "changed_paths": [
-      "aca/what-300-percent-fpl-changes-in-a-jacksonville-aca-estimate-for-a-couple.html",
+      "aca/couple-aca-planning-in-jacksonville-subsidy-notes-at-150-percent-fpl.html",
       "blog.html",
       "content/article-queue.json",
       "content/search-index.json",
@@ -215,7 +215,7 @@
   "quality_snapshot": {
     "article_files": 200,
     "guide_files": 5,
-    "sitemap_urls": 48,
+    "sitemap_urls": 49,
     "site_origin_placeholder_count": 222,
     "site_origin_placeholder_sample": [
       "blog.html",
@@ -234,8 +234,8 @@
   },
   "article_generation_snapshot": {
     "articles": 200,
-    "publishedArticles": 39,
-    "scheduledArticles": 161,
+    "publishedArticles": 40,
+    "scheduledArticles": 160,
     "minQualityScore": 94,
     "maxQualityScore": 99,
     "codexOnlyGenerationArticles": 200,
@@ -252,7 +252,7 @@
     "html_files_checked": 215,
     "error_count": 0,
     "warning_count": 0,
-    "largest_html_bytes": 54614,
+    "largest_html_bytes": 55441,
     "article_average_bytes": 24310
   },
   "next_required_actions": [
