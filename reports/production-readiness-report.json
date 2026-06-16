@@ -1,9 +1,19 @@
 {
-  "generatedAt": "2026-06-16T21:22:14.854062+00:00",
+  "generatedAt": "2026-06-16T22:58:55.138434+00:00",
   "git_snapshot": {
-    "head": "f18f624e7b2ef378da192bcca376c81182f53316",
-    "worktree_clean": true,
-    "changed_paths": []
+    "head": "79c55c49a3f9fc0e47804104b79f75fa719d8d15",
+    "worktree_clean": false,
+    "changed_paths": [
+      "aca/family-of-three-in-jacksonville-aca-subsidy-calculator-notes-for-100-percent-fpl.html",
+      "blog.html",
+      "content/article-queue.json",
+      "content/search-index.json",
+      "feed.xml",
+      "reports/article-generation-report.json",
+      "reports/content-quality-report.json",
+      "reports/performance-budget-report.json",
+      "sitemap.xml"
+    ]
   },
   "ready_for_production_submission": false,
   "checks": [
@@ -44,8 +54,8 @@
     },
     {
       "name": "git_worktree_clean",
-      "ok": true,
-      "detail": "worktree clean"
+      "ok": false,
+      "detail": "worktree has uncommitted or untracked files"
     },
     {
       "name": "github_remote",
@@ -123,6 +133,11 @@
       "detail": "222 public files still contain {SITE_ORIGIN}"
     },
     {
+      "name": "git_worktree_clean",
+      "ok": false,
+      "detail": "worktree has uncommitted or untracked files"
+    },
+    {
       "name": "production_contact_channel",
       "ok": false,
       "detail": "contact page still contains prelaunch contact-channel language"
@@ -175,7 +190,9 @@
       "gsc_configuration",
       "github_gsc_configuration"
     ],
-    "code_or_repository_blockers": []
+    "code_or_repository_blockers": [
+      "git_worktree_clean"
+    ]
   },
   "missing_external_inputs": [
     {
@@ -198,7 +215,7 @@
   "quality_snapshot": {
     "article_files": 200,
     "guide_files": 5,
-    "sitemap_urls": 51,
+    "sitemap_urls": 52,
     "site_origin_placeholder_count": 222,
     "site_origin_placeholder_sample": [
       "blog.html",
@@ -217,8 +234,8 @@
   },
   "article_generation_snapshot": {
     "articles": 200,
-    "publishedArticles": 42,
-    "scheduledArticles": 158,
+    "publishedArticles": 43,
+    "scheduledArticles": 157,
     "minQualityScore": 94,
     "maxQualityScore": 99,
     "codexOnlyGenerationArticles": 200,
@@ -235,11 +252,12 @@
     "html_files_checked": 215,
     "error_count": 0,
     "warning_count": 0,
-    "largest_html_bytes": 57341,
+    "largest_html_bytes": 58270,
     "article_average_bytes": 24310
   },
   "next_required_actions": [
     "Assign an HTTPS production domain and run npm run check:production.",
+    "Commit the local work before git push.",
     "Replace the prelaunch contact notice with a production public contact channel.",
     "Set GSC_SITE_URL and GSC_SITEMAP_URL, then run npm run gsc:submit after the domain is verified in Search Console."
   ]
