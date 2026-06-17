@@ -1221,6 +1221,33 @@
         "aca/150-percent-fpl-aca-subsidy-guide-for-a-jacksonville-family-of-four.html",
         "aca/why-jacksonville-family-of-four-premium-estimates-shift-around-300-percent-fpl.html"
       ]
+    },
+    {
+      "id": "reading-the-jacksonville-marketplace-estimate-for-a-family-of-three-near-250-percent-fpl",
+      "type": "article",
+      "title": "Reading the Jacksonville Marketplace estimate for a family of three near 250 percent FPL",
+      "subtitle": "For Jacksonville family of three ACA subsidy estimate 250 percent FPL, compare Jacksonville Marketplace premium with enhanced premium tax credits before relying on any monthly number.",
+      "url": "aca/reading-the-jacksonville-marketplace-estimate-for-a-family-of-three-near-250-percent-fpl.html",
+      "canonical": "{SITE_ORIGIN}/aca/reading-the-jacksonville-marketplace-estimate-for-a-family-of-three-near-250-percent-fpl.html",
+      "main_keyword": "Jacksonville family of three ACA subsidy estimate 250 percent FPL",
+      "expanded_keywords": [
+        "Jacksonville Marketplace premium",
+        "Family of three health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Jacksonville family of three ACA subsidy estimate 250 percent FPL explained with Jacksonville Marketplace premium, Family of three health insurance subsidy, estimate limits, related guide paths, and official.",
+      "publishAt": "2026-06-17T12:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/150-percent-fpl-aca-subsidy-guide-for-a-jacksonville-family-of-four.html",
+        "aca/why-jacksonville-family-of-four-premium-estimates-shift-around-300-percent-fpl.html",
+        "aca/jacksonville-aca-benchmark-premium-questions-for-an-older-couple-at-200-percent-fpl.html"
+      ]
     }
   ]
 }
