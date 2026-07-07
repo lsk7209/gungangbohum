@@ -291,7 +291,6 @@ def compact_title_text(text):
         (r"\bpercent FPL\b", "% FPL"),
         (r"\bHealthCare\.gov\b", "Marketplace"),
         (r"\bMarketplace premium\b", "premium"),
-        (r"\bpremium tax credit\b", "PTC"),
         (r"\bcost-sharing reduction\b", "CSR"),
         (r"\bmodified adjusted gross income\b", "MAGI"),
         (r"\bwithout the jargon\b", "plain-English"),
@@ -1346,7 +1345,7 @@ def make_topics():
             "search_intent": f"Estimate comparison for {metro} {household} at {band}",
             "cluster": "pSEO Florida household estimate",
             "slug": slug,
-            "meta_title": (title[:56] + " | CoverClarity") if len(title) < 58 else title[:57],
+            "meta_title": make_meta_title(title, main_keyword, expanded),
             "meta_description": f"{main_keyword} guide with {expanded[0]}, enhanced premium tax credits, current-law comparison, and HealthCare.gov confirmation.",
             "context": f"{metro_context} This scenario is for {household_context} and {band_context}.",
             "format": FORMATS[i % len(FORMATS)],
@@ -1813,8 +1812,7 @@ def render_guide_page(heading, cluster, guide_slug, meta_title, topics):
       </a>""")
     cards_html = ''.join(cards) if cards else '<div class="empty-state">This hub is not open for indexing yet. Queued articles appear here when their scheduled publish time arrives.</div>'
     lead = (
-        f"{heading} collect {len(items)} focused Florida ACA subsidy articles so readers can move from a broad premium estimate "
-        "to a specific county, life event, plan-selection, MAGI, or verification question."
+        f"{heading} collect {len(items)} Florida ACA guides for county, life-event, MAGI, plan, and Marketplace checks."
         if has_items
         else f"{heading} will collect focused Florida ACA subsidy articles once scheduled guides in this cluster reach their publish time."
     )
