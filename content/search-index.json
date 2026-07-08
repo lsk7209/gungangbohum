@@ -62,6 +62,26 @@
       "description": "Privacy policy for CoverClarity's browser-based ACA subsidy calculator, cookies, analytics, and Google AdSense auto ads."
     },
     {
+      "id": "county-and-rating-area-guides",
+      "type": "guide_hub",
+      "title": "County and rating-area guides",
+      "url": "guides/county-and-rating-area-guides.html",
+      "canonical": "{SITE_ORIGIN}/guides/county-and-rating-area-guides.html",
+      "cluster": "County and rating area",
+      "description": "Florida county and rating-area ACA subsidy estimates",
+      "article_count": 25
+    },
+    {
+      "id": "life-event-and-income-change-guides",
+      "type": "guide_hub",
+      "title": "Life event and income-change guides",
+      "url": "guides/life-event-and-income-change-guides.html",
+      "canonical": "{SITE_ORIGIN}/guides/life-event-and-income-change-guides.html",
+      "cluster": "Life event and income change",
+      "description": "Florida ACA life-event subsidy estimate guides",
+      "article_count": 19
+    },
+    {
       "id": "miami-single-adult-aca-subsidy-estimate-at-100-percent-fpl-what-the-2026-premium-gap-can-mean",
       "type": "article",
       "title": "Miami single adult ACA subsidy estimate at 100 percent FPL: what the 2026 premium gap can mean",
@@ -1247,6 +1267,2750 @@
         "aca/150-percent-fpl-aca-subsidy-guide-for-a-jacksonville-family-of-four.html",
         "aca/why-jacksonville-family-of-four-premium-estimates-shift-around-300-percent-fpl.html",
         "aca/jacksonville-aca-benchmark-premium-questions-for-an-older-couple-at-200-percent-fpl.html"
+      ]
+    },
+    {
+      "id": "150-percent-fpl-aca-subsidy-guide-for-a-jacksonville-family-of-four",
+      "type": "article",
+      "title": "150 percent FPL ACA subsidy guide for a Jacksonville family of four",
+      "subtitle": "Use this Jacksonville family of four ACA subsidy estimate 150 percent FPL guide to connect Jacksonville Marketplace premium, enhanced premium tax credits, and a HealthCare.gov confirmation step.",
+      "url": "aca/150-percent-fpl-aca-subsidy-guide-for-a-jacksonville-family-of-four.html",
+      "canonical": "{SITE_ORIGIN}/aca/150-percent-fpl-aca-subsidy-guide-for-a-jacksonville-family-of-four.html",
+      "main_keyword": "Jacksonville family of four ACA subsidy estimate 150 percent FPL",
+      "expanded_keywords": [
+        "Jacksonville Marketplace premium",
+        "Family of four health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Jacksonville family of four ACA subsidy estimate 150 percent FPL explained with Jacksonville Marketplace premium, Family of four health insurance subsidy, estimate limits, related guide paths, and official.",
+      "publishAt": "2026-06-17T17:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/why-jacksonville-family-of-four-premium-estimates-shift-around-300-percent-fpl.html",
+        "aca/jacksonville-aca-benchmark-premium-questions-for-an-older-couple-at-200-percent-fpl.html",
+        "aca/an-older-couple-in-jacksonville-and-the-2026-aca-current-law-comparison-at-400-percent-fpl.html"
+      ]
+    },
+    {
+      "id": "why-jacksonville-family-of-four-premium-estimates-shift-around-300-percent-fpl",
+      "type": "article",
+      "title": "Why Jacksonville family of four premium estimates shift around 300 percent FPL",
+      "subtitle": "A plain-English look at Jacksonville family of four ACA subsidy estimate 300 percent FPL, with Jacksonville Marketplace premium and enhanced premium tax credits explained without quote forms.",
+      "url": "aca/why-jacksonville-family-of-four-premium-estimates-shift-around-300-percent-fpl.html",
+      "canonical": "{SITE_ORIGIN}/aca/why-jacksonville-family-of-four-premium-estimates-shift-around-300-percent-fpl.html",
+      "main_keyword": "Jacksonville family of four ACA subsidy estimate 300 percent FPL",
+      "expanded_keywords": [
+        "Jacksonville Marketplace premium",
+        "Family of four health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Jacksonville family of four ACA subsidy estimate 300 percent FPL explained with Jacksonville Marketplace premium, Family of four health insurance subsidy, estimate limits, related guide paths, and official.",
+      "publishAt": "2026-06-17T22:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/jacksonville-aca-benchmark-premium-questions-for-an-older-couple-at-200-percent-fpl.html",
+        "aca/an-older-couple-in-jacksonville-and-the-2026-aca-current-law-comparison-at-400-percent-fpl.html",
+        "aca/what-300-percent-fpl-changes-in-a-tallahassee-aca-estimate-for-a-single-adult.html"
+      ]
+    },
+    {
+      "id": "jacksonville-aca-benchmark-premium-questions-for-an-older-couple-at-200-percent-fpl",
+      "type": "article",
+      "title": "Jacksonville ACA benchmark premium questions for an older couple at 200 percent FPL",
+      "subtitle": "This guide frames Jacksonville older couple ACA subsidy estimate 200 percent FPL around Jacksonville Marketplace premium, enhanced premium tax credits, and the estimate-not-a-quote limit.",
+      "url": "aca/jacksonville-aca-benchmark-premium-questions-for-an-older-couple-at-200-percent-fpl.html",
+      "canonical": "{SITE_ORIGIN}/aca/jacksonville-aca-benchmark-premium-questions-for-an-older-couple-at-200-percent-fpl.html",
+      "main_keyword": "Jacksonville older couple ACA subsidy estimate 200 percent FPL",
+      "expanded_keywords": [
+        "Jacksonville Marketplace premium",
+        "Older couple health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Jacksonville older couple ACA subsidy estimate 200 percent FPL explained with Jacksonville Marketplace premium, Older couple health insurance subsidy, estimate limits, related guide paths, and official HealthCare.gov.",
+      "publishAt": "2026-06-18T03:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/an-older-couple-in-jacksonville-and-the-2026-aca-current-law-comparison-at-400-percent-fpl.html",
+        "aca/what-300-percent-fpl-changes-in-a-tallahassee-aca-estimate-for-a-single-adult.html",
+        "aca/single-adult-aca-planning-in-tallahassee-subsidy-notes-at-150-percent-fpl.html"
+      ]
+    },
+    {
+      "id": "an-older-couple-in-jacksonville-and-the-2026-aca-current-law-comparison-at-400-percent-fpl",
+      "type": "article",
+      "title": "An older couple in Jacksonville and the 2026 ACA current-law comparison at 400 percent FPL",
+      "subtitle": "For Jacksonville older couple ACA subsidy estimate 400 percent FPL, compare Jacksonville Marketplace premium with enhanced premium tax credits before relying on any monthly number.",
+      "url": "aca/an-older-couple-in-jacksonville-and-the-2026-aca-current-law-comparison-at-400-percent-fpl.html",
+      "canonical": "{SITE_ORIGIN}/aca/an-older-couple-in-jacksonville-and-the-2026-aca-current-law-comparison-at-400-percent-fpl.html",
+      "main_keyword": "Jacksonville older couple ACA subsidy estimate 400 percent FPL",
+      "expanded_keywords": [
+        "Jacksonville Marketplace premium",
+        "Older couple health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Jacksonville older couple ACA subsidy estimate 400 percent FPL explained with Jacksonville Marketplace premium, Older couple health insurance subsidy, estimate limits, related guide paths, and official HealthCare.gov.",
+      "publishAt": "2026-06-18T08:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/what-300-percent-fpl-changes-in-a-tallahassee-aca-estimate-for-a-single-adult.html",
+        "aca/single-adult-aca-planning-in-tallahassee-subsidy-notes-at-150-percent-fpl.html",
+        "aca/tallahassee-couple-aca-subsidy-estimate-at-400-percent-fpl-what-the-2026-premium-gap-can-mean.html"
+      ]
+    },
+    {
+      "id": "what-300-percent-fpl-changes-in-a-tallahassee-aca-estimate-for-a-single-adult",
+      "type": "article",
+      "title": "What 300 percent FPL changes in a Tallahassee ACA estimate for a single adult",
+      "subtitle": "Use this Tallahassee single adult ACA subsidy estimate 300 percent FPL guide to connect Tallahassee Marketplace premium, enhanced premium tax credits, and a HealthCare.gov confirmation step.",
+      "url": "aca/what-300-percent-fpl-changes-in-a-tallahassee-aca-estimate-for-a-single-adult.html",
+      "canonical": "{SITE_ORIGIN}/aca/what-300-percent-fpl-changes-in-a-tallahassee-aca-estimate-for-a-single-adult.html",
+      "main_keyword": "Tallahassee single adult ACA subsidy estimate 300 percent FPL",
+      "expanded_keywords": [
+        "Tallahassee Marketplace premium",
+        "Single adult health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Tallahassee single adult ACA subsidy estimate 300 percent FPL explained with Tallahassee Marketplace premium, Single adult health insurance subsidy, estimate limits, related guide paths, and official HealthCare.gov.",
+      "publishAt": "2026-06-18T13:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/single-adult-aca-planning-in-tallahassee-subsidy-notes-at-150-percent-fpl.html",
+        "aca/tallahassee-couple-aca-subsidy-estimate-at-400-percent-fpl-what-the-2026-premium-gap-can-mean.html",
+        "aca/at-200-percent-fpl-how-a-tallahassee-couple-can-read-an-aca-premium-estimate.html"
+      ]
+    },
+    {
+      "id": "single-adult-aca-planning-in-tallahassee-subsidy-notes-at-150-percent-fpl",
+      "type": "article",
+      "title": "Single adult ACA planning in Tallahassee: subsidy notes at 150 percent FPL",
+      "subtitle": "A plain-English look at Tallahassee single adult ACA subsidy estimate 150 percent FPL, with Tallahassee Marketplace premium and enhanced premium tax credits explained without quote forms.",
+      "url": "aca/single-adult-aca-planning-in-tallahassee-subsidy-notes-at-150-percent-fpl.html",
+      "canonical": "{SITE_ORIGIN}/aca/single-adult-aca-planning-in-tallahassee-subsidy-notes-at-150-percent-fpl.html",
+      "main_keyword": "Tallahassee single adult ACA subsidy estimate 150 percent FPL",
+      "expanded_keywords": [
+        "Tallahassee Marketplace premium",
+        "Single adult health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Tallahassee single adult ACA subsidy estimate 150 percent FPL explained with Tallahassee Marketplace premium, Single adult health insurance subsidy, estimate limits, related guide paths, and official HealthCare.gov.",
+      "publishAt": "2026-06-18T18:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/tallahassee-couple-aca-subsidy-estimate-at-400-percent-fpl-what-the-2026-premium-gap-can-mean.html",
+        "aca/at-200-percent-fpl-how-a-tallahassee-couple-can-read-an-aca-premium-estimate.html",
+        "aca/single-parent-in-tallahassee-aca-subsidy-calculator-notes-for-100-percent-fpl.html"
+      ]
+    },
+    {
+      "id": "tallahassee-couple-aca-subsidy-estimate-at-400-percent-fpl-what-the-2026-premium-gap-can-mean",
+      "type": "article",
+      "title": "Tallahassee couple ACA subsidy estimate at 400 percent FPL: what the 2026 premium gap can mean",
+      "subtitle": "This guide frames Tallahassee couple ACA subsidy estimate 400 percent FPL around Tallahassee Marketplace premium, enhanced premium tax credits, and the estimate-not-a-quote limit.",
+      "url": "aca/tallahassee-couple-aca-subsidy-estimate-at-400-percent-fpl-what-the-2026-premium-gap-can-mean.html",
+      "canonical": "{SITE_ORIGIN}/aca/tallahassee-couple-aca-subsidy-estimate-at-400-percent-fpl-what-the-2026-premium-gap-can-mean.html",
+      "main_keyword": "Tallahassee couple ACA subsidy estimate 400 percent FPL",
+      "expanded_keywords": [
+        "Tallahassee Marketplace premium",
+        "Couple health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Tallahassee couple ACA subsidy estimate 400 percent FPL explained with Tallahassee Marketplace premium, Couple health insurance subsidy, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-18T23:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/at-200-percent-fpl-how-a-tallahassee-couple-can-read-an-aca-premium-estimate.html",
+        "aca/single-parent-in-tallahassee-aca-subsidy-calculator-notes-for-100-percent-fpl.html",
+        "aca/reading-the-tallahassee-marketplace-estimate-for-a-single-parent-near-250-percent-fpl.html"
+      ]
+    },
+    {
+      "id": "at-200-percent-fpl-how-a-tallahassee-couple-can-read-an-aca-premium-estimate",
+      "type": "article",
+      "title": "At 200 percent FPL, how a Tallahassee couple can read an ACA premium estimate",
+      "subtitle": "For Tallahassee couple ACA subsidy estimate 200 percent FPL, compare Tallahassee Marketplace premium with enhanced premium tax credits before relying on any monthly number.",
+      "url": "aca/at-200-percent-fpl-how-a-tallahassee-couple-can-read-an-aca-premium-estimate.html",
+      "canonical": "{SITE_ORIGIN}/aca/at-200-percent-fpl-how-a-tallahassee-couple-can-read-an-aca-premium-estimate.html",
+      "main_keyword": "Tallahassee couple ACA subsidy estimate 200 percent FPL",
+      "expanded_keywords": [
+        "Tallahassee Marketplace premium",
+        "Couple health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Tallahassee couple ACA subsidy estimate 200 percent FPL explained with Tallahassee Marketplace premium, Couple health insurance subsidy, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-19T04:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/single-parent-in-tallahassee-aca-subsidy-calculator-notes-for-100-percent-fpl.html",
+        "aca/reading-the-tallahassee-marketplace-estimate-for-a-single-parent-near-250-percent-fpl.html",
+        "aca/150-percent-fpl-aca-subsidy-guide-for-a-tallahassee-family-of-three.html"
+      ]
+    },
+    {
+      "id": "single-parent-in-tallahassee-aca-subsidy-calculator-notes-for-100-percent-fpl",
+      "type": "article",
+      "title": "Single parent in Tallahassee: ACA subsidy calculator notes for 100 percent FPL",
+      "subtitle": "Use this Tallahassee single parent ACA subsidy estimate 100 percent FPL guide to connect Tallahassee Marketplace premium, enhanced premium tax credits, and a HealthCare.gov confirmation step.",
+      "url": "aca/single-parent-in-tallahassee-aca-subsidy-calculator-notes-for-100-percent-fpl.html",
+      "canonical": "{SITE_ORIGIN}/aca/single-parent-in-tallahassee-aca-subsidy-calculator-notes-for-100-percent-fpl.html",
+      "main_keyword": "Tallahassee single parent ACA subsidy estimate 100 percent FPL",
+      "expanded_keywords": [
+        "Tallahassee Marketplace premium",
+        "Single parent health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Tallahassee single parent ACA subsidy estimate 100 percent FPL explained with Tallahassee Marketplace premium, Single parent health insurance subsidy, estimate limits, related guide paths, and official HealthCare.gov.",
+      "publishAt": "2026-06-19T09:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/reading-the-tallahassee-marketplace-estimate-for-a-single-parent-near-250-percent-fpl.html",
+        "aca/150-percent-fpl-aca-subsidy-guide-for-a-tallahassee-family-of-three.html",
+        "aca/why-tallahassee-family-of-three-premium-estimates-shift-around-300-percent-fpl.html"
+      ]
+    },
+    {
+      "id": "reading-the-tallahassee-marketplace-estimate-for-a-single-parent-near-250-percent-fpl",
+      "type": "article",
+      "title": "Reading the Tallahassee Marketplace estimate for a single parent near 250 percent FPL",
+      "subtitle": "A plain-English look at Tallahassee single parent ACA subsidy estimate 250 percent FPL, with Tallahassee Marketplace premium and enhanced premium tax credits explained without quote forms.",
+      "url": "aca/reading-the-tallahassee-marketplace-estimate-for-a-single-parent-near-250-percent-fpl.html",
+      "canonical": "{SITE_ORIGIN}/aca/reading-the-tallahassee-marketplace-estimate-for-a-single-parent-near-250-percent-fpl.html",
+      "main_keyword": "Tallahassee single parent ACA subsidy estimate 250 percent FPL",
+      "expanded_keywords": [
+        "Tallahassee Marketplace premium",
+        "Single parent health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Tallahassee single parent ACA subsidy estimate 250 percent FPL explained with Tallahassee Marketplace premium, Single parent health insurance subsidy, estimate limits, related guide paths, and official HealthCare.gov.",
+      "publishAt": "2026-06-19T14:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/150-percent-fpl-aca-subsidy-guide-for-a-tallahassee-family-of-three.html",
+        "aca/why-tallahassee-family-of-three-premium-estimates-shift-around-300-percent-fpl.html",
+        "aca/tallahassee-aca-benchmark-premium-questions-for-a-family-of-four-at-200-percent-fpl.html"
+      ]
+    },
+    {
+      "id": "150-percent-fpl-aca-subsidy-guide-for-a-tallahassee-family-of-three",
+      "type": "article",
+      "title": "150 percent FPL ACA subsidy guide for a Tallahassee family of three",
+      "subtitle": "This guide frames Tallahassee family of three ACA subsidy estimate 150 percent FPL around Tallahassee Marketplace premium, enhanced premium tax credits, and the estimate-not-a-quote limit.",
+      "url": "aca/150-percent-fpl-aca-subsidy-guide-for-a-tallahassee-family-of-three.html",
+      "canonical": "{SITE_ORIGIN}/aca/150-percent-fpl-aca-subsidy-guide-for-a-tallahassee-family-of-three.html",
+      "main_keyword": "Tallahassee family of three ACA subsidy estimate 150 percent FPL",
+      "expanded_keywords": [
+        "Tallahassee Marketplace premium",
+        "Family of three health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Tallahassee family of three ACA subsidy estimate 150 percent FPL explained with Tallahassee Marketplace premium, Family of three health insurance subsidy, estimate limits, related guide paths, and official.",
+      "publishAt": "2026-06-19T19:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/why-tallahassee-family-of-three-premium-estimates-shift-around-300-percent-fpl.html",
+        "aca/tallahassee-aca-benchmark-premium-questions-for-a-family-of-four-at-200-percent-fpl.html",
+        "aca/a-family-of-four-in-tallahassee-and-the-2026-aca-current-law-comparison-at-400-percent-fpl.html"
+      ]
+    },
+    {
+      "id": "why-tallahassee-family-of-three-premium-estimates-shift-around-300-percent-fpl",
+      "type": "article",
+      "title": "Why Tallahassee family of three premium estimates shift around 300 percent FPL",
+      "subtitle": "For Tallahassee family of three ACA subsidy estimate 300 percent FPL, compare Tallahassee Marketplace premium with enhanced premium tax credits before relying on any monthly number.",
+      "url": "aca/why-tallahassee-family-of-three-premium-estimates-shift-around-300-percent-fpl.html",
+      "canonical": "{SITE_ORIGIN}/aca/why-tallahassee-family-of-three-premium-estimates-shift-around-300-percent-fpl.html",
+      "main_keyword": "Tallahassee family of three ACA subsidy estimate 300 percent FPL",
+      "expanded_keywords": [
+        "Tallahassee Marketplace premium",
+        "Family of three health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Tallahassee family of three ACA subsidy estimate 300 percent FPL explained with Tallahassee Marketplace premium, Family of three health insurance subsidy, estimate limits, related guide paths, and official.",
+      "publishAt": "2026-06-20T00:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/tallahassee-aca-benchmark-premium-questions-for-a-family-of-four-at-200-percent-fpl.html",
+        "aca/a-family-of-four-in-tallahassee-and-the-2026-aca-current-law-comparison-at-400-percent-fpl.html",
+        "aca/what-250-percent-fpl-changes-in-a-tallahassee-aca-estimate-for-an-older-couple.html"
+      ]
+    },
+    {
+      "id": "tallahassee-aca-benchmark-premium-questions-for-a-family-of-four-at-200-percent-fpl",
+      "type": "article",
+      "title": "Tallahassee ACA benchmark premium questions for a family of four at 200 percent FPL",
+      "subtitle": "Use this Tallahassee family of four ACA subsidy estimate 200 percent FPL guide to connect Tallahassee Marketplace premium, enhanced premium tax credits, and a HealthCare.gov confirmation step.",
+      "url": "aca/tallahassee-aca-benchmark-premium-questions-for-a-family-of-four-at-200-percent-fpl.html",
+      "canonical": "{SITE_ORIGIN}/aca/tallahassee-aca-benchmark-premium-questions-for-a-family-of-four-at-200-percent-fpl.html",
+      "main_keyword": "Tallahassee family of four ACA subsidy estimate 200 percent FPL",
+      "expanded_keywords": [
+        "Tallahassee Marketplace premium",
+        "Family of four health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Tallahassee family of four ACA subsidy estimate 200 percent FPL explained with Tallahassee Marketplace premium, Family of four health insurance subsidy, estimate limits, related guide paths, and official HealthCare.gov.",
+      "publishAt": "2026-06-20T05:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/a-family-of-four-in-tallahassee-and-the-2026-aca-current-law-comparison-at-400-percent-fpl.html",
+        "aca/what-250-percent-fpl-changes-in-a-tallahassee-aca-estimate-for-an-older-couple.html",
+        "aca/older-couple-aca-planning-in-tallahassee-subsidy-notes-at-100-percent-fpl.html"
+      ]
+    },
+    {
+      "id": "a-family-of-four-in-tallahassee-and-the-2026-aca-current-law-comparison-at-400-percent-fpl",
+      "type": "article",
+      "title": "A family of four in Tallahassee and the 2026 ACA current-law comparison at 400 percent FPL",
+      "subtitle": "A plain-English look at Tallahassee family of four ACA subsidy estimate 400 percent FPL, with Tallahassee Marketplace premium and enhanced premium tax credits explained without quote forms.",
+      "url": "aca/a-family-of-four-in-tallahassee-and-the-2026-aca-current-law-comparison-at-400-percent-fpl.html",
+      "canonical": "{SITE_ORIGIN}/aca/a-family-of-four-in-tallahassee-and-the-2026-aca-current-law-comparison-at-400-percent-fpl.html",
+      "main_keyword": "Tallahassee family of four ACA subsidy estimate 400 percent FPL",
+      "expanded_keywords": [
+        "Tallahassee Marketplace premium",
+        "Family of four health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Tallahassee family of four ACA subsidy estimate 400 percent FPL explained with Tallahassee Marketplace premium, Family of four health insurance subsidy, estimate limits, related guide paths, and official HealthCare.gov.",
+      "publishAt": "2026-06-20T10:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/what-250-percent-fpl-changes-in-a-tallahassee-aca-estimate-for-an-older-couple.html",
+        "aca/older-couple-aca-planning-in-tallahassee-subsidy-notes-at-100-percent-fpl.html",
+        "aca/miami-single-adult-aca-subsidy-estimate-at-100-percent-fpl-what-the-2026-premium-gap-can-mean.html"
+      ]
+    },
+    {
+      "id": "what-250-percent-fpl-changes-in-a-tallahassee-aca-estimate-for-an-older-couple",
+      "type": "article",
+      "title": "What 250 percent FPL changes in a Tallahassee ACA estimate for an older couple",
+      "subtitle": "This guide frames Tallahassee older couple ACA subsidy estimate 250 percent FPL around Tallahassee Marketplace premium, enhanced premium tax credits, and the estimate-not-a-quote limit.",
+      "url": "aca/what-250-percent-fpl-changes-in-a-tallahassee-aca-estimate-for-an-older-couple.html",
+      "canonical": "{SITE_ORIGIN}/aca/what-250-percent-fpl-changes-in-a-tallahassee-aca-estimate-for-an-older-couple.html",
+      "main_keyword": "Tallahassee older couple ACA subsidy estimate 250 percent FPL",
+      "expanded_keywords": [
+        "Tallahassee Marketplace premium",
+        "Older couple health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Tallahassee older couple ACA subsidy estimate 250 percent FPL explained with Tallahassee Marketplace premium, Older couple health insurance subsidy, estimate limits, related guide paths, and official HealthCare.gov.",
+      "publishAt": "2026-06-20T15:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/older-couple-aca-planning-in-tallahassee-subsidy-notes-at-100-percent-fpl.html",
+        "aca/miami-single-adult-aca-subsidy-estimate-at-100-percent-fpl-what-the-2026-premium-gap-can-mean.html",
+        "aca/at-250-percent-fpl-how-a-miami-single-adult-can-read-an-aca-premium-estimate.html"
+      ]
+    },
+    {
+      "id": "older-couple-aca-planning-in-tallahassee-subsidy-notes-at-100-percent-fpl",
+      "type": "article",
+      "title": "Older couple ACA planning in Tallahassee: subsidy notes at 100 percent FPL",
+      "subtitle": "For Tallahassee older couple ACA subsidy estimate 100 percent FPL, compare Tallahassee Marketplace premium with enhanced premium tax credits before relying on any monthly number.",
+      "url": "aca/older-couple-aca-planning-in-tallahassee-subsidy-notes-at-100-percent-fpl.html",
+      "canonical": "{SITE_ORIGIN}/aca/older-couple-aca-planning-in-tallahassee-subsidy-notes-at-100-percent-fpl.html",
+      "main_keyword": "Tallahassee older couple ACA subsidy estimate 100 percent FPL",
+      "expanded_keywords": [
+        "Tallahassee Marketplace premium",
+        "Older couple health insurance subsidy",
+        "Enhanced premium tax credits",
+        "Current-law ACA premium"
+      ],
+      "cluster": "Florida household estimate",
+      "guide_hub": null,
+      "excerpt": "Tallahassee older couple ACA subsidy estimate 100 percent FPL explained with Tallahassee Marketplace premium, Older couple health insurance subsidy, estimate limits, related guide paths, and official HealthCare.gov.",
+      "publishAt": "2026-06-20T20:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/miami-single-adult-aca-subsidy-estimate-at-100-percent-fpl-what-the-2026-premium-gap-can-mean.html",
+        "aca/at-250-percent-fpl-how-a-miami-single-adult-can-read-an-aca-premium-estimate.html",
+        "aca/couple-in-miami-aca-subsidy-calculator-notes-for-150-percent-fpl.html"
+      ]
+    },
+    {
+      "id": "florida-aca-subsidy-calculator-walkthrough-a-florida-reader-s-guide-to-aca-premium-estimate",
+      "type": "article",
+      "title": "Florida ACA subsidy calculator walkthrough: a Florida reader's guide to ACA premium estimate",
+      "subtitle": "Florida ACA subsidy calculator walkthrough explained with ACA premium estimate, enhanced premium tax credits, and the official Marketplace confirmation step.",
+      "url": "aca/florida-aca-subsidy-calculator-walkthrough-a-florida-reader-s-guide-to-aca-premium-estimate.html",
+      "canonical": "{SITE_ORIGIN}/aca/florida-aca-subsidy-calculator-walkthrough-a-florida-reader-s-guide-to-aca-premium-estimate.html",
+      "main_keyword": "Florida ACA subsidy calculator walkthrough",
+      "expanded_keywords": [
+        "ACA premium estimate",
+        "Florida Marketplace coverage",
+        "Enhanced premium tax credits",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "Calculator guide",
+      "guide_hub": null,
+      "excerpt": "Florida ACA subsidy calculator walkthrough explained with ACA premium estimate, Florida Marketplace coverage, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-21T01:23:00+09:00",
+      "is_hub": true,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/when-florida-medicaid-coverage-gap-explanation-matters-most-for-florida-marketplace-shoppers.html",
+        "aca/the-practical-slcsp-benchmark-silver-premium-checklist-for-2026-aca-planning.html",
+        "aca/cost-sharing-reductions-on-silver-plans-a-florida-reader-s-guide-to-csr-eligibility.html"
+      ]
+    },
+    {
+      "id": "how-to-read-enhanced-premium-tax-credits-in-florida-inside-a-2026-premium-estimate",
+      "type": "article",
+      "title": "How to read enhanced premium tax credits in Florida inside a 2026 premium estimate",
+      "subtitle": "Enhanced premium tax credits in Florida explained with current law comparison, enhanced premium tax credits, and the official Marketplace confirmation step.",
+      "url": "aca/how-to-read-enhanced-premium-tax-credits-in-florida-inside-a-2026-premium-estimate.html",
+      "canonical": "{SITE_ORIGIN}/aca/how-to-read-enhanced-premium-tax-credits-in-florida-inside-a-2026-premium-estimate.html",
+      "main_keyword": "Enhanced premium tax credits in Florida",
+      "expanded_keywords": [
+        "Current law comparison",
+        "Florida Marketplace coverage",
+        "Enhanced premium tax credits",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "Policy status",
+      "guide_hub": null,
+      "excerpt": "Enhanced premium tax credits in Florida explained with Current law comparison, Florida Marketplace coverage, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-21T06:23:00+09:00",
+      "is_hub": true,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/the-practical-slcsp-benchmark-silver-premium-checklist-for-2026-aca-planning.html",
+        "aca/cost-sharing-reductions-on-silver-plans-a-florida-reader-s-guide-to-csr-eligibility.html",
+        "aca/how-to-read-federal-poverty-level-for-aca-subsidies-inside-a-2026-premium-estimate.html"
+      ]
+    },
+    {
+      "id": "aca-subsidy-cliff-over-400-percent-fpl-without-the-jargon-premium-tax-credit-threshold-and-next-steps",
+      "type": "article",
+      "title": "ACA subsidy cliff over 400 percent FPL without the jargon: premium tax credit threshold and next steps",
+      "subtitle": "ACA subsidy cliff over 400 percent FPL explained with premium tax credit threshold, enhanced premium tax credits, and the official Marketplace confirmation step.",
+      "url": "aca/aca-subsidy-cliff-over-400-percent-fpl-without-the-jargon-premium-tax-credit-threshold-and-next-steps.html",
+      "canonical": "{SITE_ORIGIN}/aca/aca-subsidy-cliff-over-400-percent-fpl-without-the-jargon-premium-tax-credit-threshold-and-next-steps.html",
+      "main_keyword": "ACA subsidy cliff over 400 percent FPL",
+      "expanded_keywords": [
+        "Premium tax credit threshold",
+        "Florida Marketplace coverage",
+        "Enhanced premium tax credits",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "Subsidy cliff",
+      "guide_hub": null,
+      "excerpt": "ACA subsidy cliff over 400 percent FPL explained with Premium tax credit threshold, Florida Marketplace coverage, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-21T11:23:00+09:00",
+      "is_hub": true,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/cost-sharing-reductions-on-silver-plans-a-florida-reader-s-guide-to-csr-eligibility.html",
+        "aca/how-to-read-federal-poverty-level-for-aca-subsidies-inside-a-2026-premium-estimate.html",
+        "aca/healthcare-gov-confirmation-checklist-without-the-jargon-marketplace-enrollment-and-next-steps.html"
+      ]
+    },
+    {
+      "id": "when-florida-medicaid-coverage-gap-explanation-matters-most-for-florida-marketplace-shoppers",
+      "type": "article",
+      "title": "When Florida Medicaid coverage gap explanation matters most for Florida Marketplace shoppers",
+      "subtitle": "Florida Medicaid coverage gap explanation explained with income below 100 percent FPL, enhanced premium tax credits, and the official Marketplace confirmation step.",
+      "url": "aca/when-florida-medicaid-coverage-gap-explanation-matters-most-for-florida-marketplace-shoppers.html",
+      "canonical": "{SITE_ORIGIN}/aca/when-florida-medicaid-coverage-gap-explanation-matters-most-for-florida-marketplace-shoppers.html",
+      "main_keyword": "Florida Medicaid coverage gap explanation",
+      "expanded_keywords": [
+        "Income below 100 percent FPL",
+        "Florida Marketplace coverage",
+        "Enhanced premium tax credits",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "Coverage gap",
+      "guide_hub": null,
+      "excerpt": "Florida Medicaid coverage gap explanation explained with Income below 100 percent FPL, Florida Marketplace coverage, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-21T16:23:00+09:00",
+      "is_hub": true,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/how-to-read-federal-poverty-level-for-aca-subsidies-inside-a-2026-premium-estimate.html",
+        "aca/healthcare-gov-confirmation-checklist-without-the-jargon-marketplace-enrollment-and-next-steps.html",
+        "aca/when-aca-metal-tiers-and-subsidy-estimates-matter-most-for-florida-marketplace-shoppers.html"
+      ]
+    },
+    {
+      "id": "the-practical-slcsp-benchmark-silver-premium-checklist-for-2026-aca-planning",
+      "type": "article",
+      "title": "The practical SLCSP benchmark Silver premium checklist for 2026 ACA planning",
+      "subtitle": "SLCSP benchmark Silver premium explained with second lowest cost Silver plan, enhanced premium tax credits, and the official Marketplace confirmation step.",
+      "url": "aca/the-practical-slcsp-benchmark-silver-premium-checklist-for-2026-aca-planning.html",
+      "canonical": "{SITE_ORIGIN}/aca/the-practical-slcsp-benchmark-silver-premium-checklist-for-2026-aca-planning.html",
+      "main_keyword": "SLCSP benchmark Silver premium",
+      "expanded_keywords": [
+        "Second lowest cost Silver plan",
+        "Florida Marketplace coverage",
+        "Enhanced premium tax credits",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "Methodology",
+      "guide_hub": null,
+      "excerpt": "SLCSP benchmark Silver premium explained with Second lowest cost Silver plan, Florida Marketplace coverage, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-21T21:23:00+09:00",
+      "is_hub": true,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/healthcare-gov-confirmation-checklist-without-the-jargon-marketplace-enrollment-and-next-steps.html",
+        "aca/when-aca-metal-tiers-and-subsidy-estimates-matter-most-for-florida-marketplace-shoppers.html",
+        "aca/the-practical-marketplace-income-estimate-mistakes-checklist-for-2026-aca-planning.html"
+      ]
+    },
+    {
+      "id": "cost-sharing-reductions-on-silver-plans-a-florida-reader-s-guide-to-csr-eligibility",
+      "type": "article",
+      "title": "Cost-sharing reductions on Silver plans: a Florida reader's guide to CSR eligibility",
+      "subtitle": "Cost-sharing reductions on Silver plans explained with CSR eligibility, enhanced premium tax credits, and the official Marketplace confirmation step.",
+      "url": "aca/cost-sharing-reductions-on-silver-plans-a-florida-reader-s-guide-to-csr-eligibility.html",
+      "canonical": "{SITE_ORIGIN}/aca/cost-sharing-reductions-on-silver-plans-a-florida-reader-s-guide-to-csr-eligibility.html",
+      "main_keyword": "Cost-sharing reductions on Silver plans",
+      "expanded_keywords": [
+        "CSR eligibility",
+        "Florida Marketplace coverage",
+        "Enhanced premium tax credits",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "CSR",
+      "guide_hub": null,
+      "excerpt": "Cost-sharing reductions on Silver plans explained with CSR eligibility, Florida Marketplace coverage, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-22T02:23:00+09:00",
+      "is_hub": true,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/when-aca-metal-tiers-and-subsidy-estimates-matter-most-for-florida-marketplace-shoppers.html",
+        "aca/the-practical-marketplace-income-estimate-mistakes-checklist-for-2026-aca-planning.html",
+        "aca/aca-estimate-versus-insurance-quote-a-florida-reader-s-guide-to-not-a-quote-disclaimer.html"
+      ]
+    },
+    {
+      "id": "how-to-read-federal-poverty-level-for-aca-subsidies-inside-a-2026-premium-estimate",
+      "type": "article",
+      "title": "How to read federal poverty level for ACA subsidies inside a 2026 premium estimate",
+      "subtitle": "Federal poverty level for ACA subsidies explained with 2026 poverty guidelines, enhanced premium tax credits, and the official Marketplace confirmation step.",
+      "url": "aca/how-to-read-federal-poverty-level-for-aca-subsidies-inside-a-2026-premium-estimate.html",
+      "canonical": "{SITE_ORIGIN}/aca/how-to-read-federal-poverty-level-for-aca-subsidies-inside-a-2026-premium-estimate.html",
+      "main_keyword": "Federal poverty level for ACA subsidies",
+      "expanded_keywords": [
+        "2026 poverty guidelines",
+        "Florida Marketplace coverage",
+        "Enhanced premium tax credits",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "FPL",
+      "guide_hub": null,
+      "excerpt": "Federal poverty level for ACA subsidies explained with 2026 poverty guidelines, Florida Marketplace coverage, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-22T07:23:00+09:00",
+      "is_hub": true,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/the-practical-marketplace-income-estimate-mistakes-checklist-for-2026-aca-planning.html",
+        "aca/aca-estimate-versus-insurance-quote-a-florida-reader-s-guide-to-not-a-quote-disclaimer.html",
+        "aca/how-to-read-premium-tax-credit-reconciliation-basics-inside-a-2026-premium-estimate.html"
+      ]
+    },
+    {
+      "id": "healthcare-gov-confirmation-checklist-without-the-jargon-marketplace-enrollment-and-next-steps",
+      "type": "article",
+      "title": "HealthCare.gov confirmation checklist without the jargon: Marketplace enrollment and next steps",
+      "subtitle": "HealthCare.gov confirmation checklist explained with Marketplace enrollment, enhanced premium tax credits, and the official Marketplace confirmation step.",
+      "url": "aca/healthcare-gov-confirmation-checklist-without-the-jargon-marketplace-enrollment-and-next-steps.html",
+      "canonical": "{SITE_ORIGIN}/aca/healthcare-gov-confirmation-checklist-without-the-jargon-marketplace-enrollment-and-next-steps.html",
+      "main_keyword": "HealthCare.gov confirmation checklist",
+      "expanded_keywords": [
+        "Marketplace enrollment",
+        "Florida Marketplace coverage",
+        "Enhanced premium tax credits",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "Official confirmation",
+      "guide_hub": null,
+      "excerpt": "HealthCare.gov confirmation checklist explained with Marketplace enrollment, Florida Marketplace coverage, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-22T12:23:00+09:00",
+      "is_hub": true,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/aca-estimate-versus-insurance-quote-a-florida-reader-s-guide-to-not-a-quote-disclaimer.html",
+        "aca/how-to-read-premium-tax-credit-reconciliation-basics-inside-a-2026-premium-estimate.html",
+        "aca/florida-aca-open-enrollment-planning-without-the-jargon-marketplace-deadline-preparation-and-next-steps.html"
+      ]
+    },
+    {
+      "id": "when-aca-metal-tiers-and-subsidy-estimates-matter-most-for-florida-marketplace-shoppers",
+      "type": "article",
+      "title": "When ACA metal tiers and subsidy estimates matter most for Florida Marketplace shoppers",
+      "subtitle": "ACA metal tiers and subsidy estimates explained with Bronze Silver Gold plans, enhanced premium tax credits, and the official Marketplace confirmation step.",
+      "url": "aca/when-aca-metal-tiers-and-subsidy-estimates-matter-most-for-florida-marketplace-shoppers.html",
+      "canonical": "{SITE_ORIGIN}/aca/when-aca-metal-tiers-and-subsidy-estimates-matter-most-for-florida-marketplace-shoppers.html",
+      "main_keyword": "ACA metal tiers and subsidy estimates",
+      "expanded_keywords": [
+        "Bronze Silver Gold plans",
+        "Florida Marketplace coverage",
+        "Enhanced premium tax credits",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "Metal tiers",
+      "guide_hub": null,
+      "excerpt": "ACA metal tiers and subsidy estimates explained with Bronze Silver Gold plans, Florida Marketplace coverage, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-22T17:23:00+09:00",
+      "is_hub": true,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/how-to-read-premium-tax-credit-reconciliation-basics-inside-a-2026-premium-estimate.html",
+        "aca/florida-aca-open-enrollment-planning-without-the-jargon-marketplace-deadline-preparation-and-next-steps.html",
+        "aca/when-household-size-for-marketplace-subsidies-matters-most-for-florida-marketplace-shoppers.html"
+      ]
+    },
+    {
+      "id": "the-practical-marketplace-income-estimate-mistakes-checklist-for-2026-aca-planning",
+      "type": "article",
+      "title": "The practical Marketplace income estimate mistakes checklist for 2026 ACA planning",
+      "subtitle": "Marketplace income estimate mistakes explained with 2026 income projection, enhanced premium tax credits, and the official Marketplace confirmation step.",
+      "url": "aca/the-practical-marketplace-income-estimate-mistakes-checklist-for-2026-aca-planning.html",
+      "canonical": "{SITE_ORIGIN}/aca/the-practical-marketplace-income-estimate-mistakes-checklist-for-2026-aca-planning.html",
+      "main_keyword": "Marketplace income estimate mistakes",
+      "expanded_keywords": [
+        "2026 income projection",
+        "Florida Marketplace coverage",
+        "Enhanced premium tax credits",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "Income estimate",
+      "guide_hub": null,
+      "excerpt": "Marketplace income estimate mistakes explained with 2026 income projection, Florida Marketplace coverage, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-22T22:23:00+09:00",
+      "is_hub": true,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/florida-aca-open-enrollment-planning-without-the-jargon-marketplace-deadline-preparation-and-next-steps.html",
+        "aca/when-household-size-for-marketplace-subsidies-matters-most-for-florida-marketplace-shoppers.html",
+        "aca/the-practical-age-rating-in-aca-premium-estimates-checklist-for-2026-aca-planning.html"
+      ]
+    },
+    {
+      "id": "aca-estimate-versus-insurance-quote-a-florida-reader-s-guide-to-not-a-quote-disclaimer",
+      "type": "article",
+      "title": "ACA estimate versus insurance quote: a Florida reader's guide to not a quote disclaimer",
+      "subtitle": "ACA estimate versus insurance quote explained with not a quote disclaimer, enhanced premium tax credits, and the official Marketplace confirmation step.",
+      "url": "aca/aca-estimate-versus-insurance-quote-a-florida-reader-s-guide-to-not-a-quote-disclaimer.html",
+      "canonical": "{SITE_ORIGIN}/aca/aca-estimate-versus-insurance-quote-a-florida-reader-s-guide-to-not-a-quote-disclaimer.html",
+      "main_keyword": "ACA estimate versus insurance quote",
+      "expanded_keywords": [
+        "Not a quote disclaimer",
+        "Florida Marketplace coverage",
+        "Enhanced premium tax credits",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "Trust and editorial standards",
+      "guide_hub": null,
+      "excerpt": "ACA estimate versus insurance quote explained with Not a quote disclaimer, Florida Marketplace coverage, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-23T03:23:00+09:00",
+      "is_hub": true,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/when-household-size-for-marketplace-subsidies-matters-most-for-florida-marketplace-shoppers.html",
+        "aca/the-practical-age-rating-in-aca-premium-estimates-checklist-for-2026-aca-planning.html",
+        "aca/tobacco-surcharge-in-florida-estimates-a-florida-reader-s-guide-to-marketplace-tobacco-rating.html"
+      ]
+    },
+    {
+      "id": "how-to-read-premium-tax-credit-reconciliation-basics-inside-a-2026-premium-estimate",
+      "type": "article",
+      "title": "How to read premium tax credit reconciliation basics inside a 2026 premium estimate",
+      "subtitle": "Premium tax credit reconciliation basics explained with Form 8962 planning, enhanced premium tax credits, and the official Marketplace confirmation step.",
+      "url": "aca/how-to-read-premium-tax-credit-reconciliation-basics-inside-a-2026-premium-estimate.html",
+      "canonical": "{SITE_ORIGIN}/aca/how-to-read-premium-tax-credit-reconciliation-basics-inside-a-2026-premium-estimate.html",
+      "main_keyword": "Premium tax credit reconciliation basics",
+      "expanded_keywords": [
+        "Form 8962 planning",
+        "Florida Marketplace coverage",
+        "Enhanced premium tax credits",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "Tax reconciliation",
+      "guide_hub": null,
+      "excerpt": "Premium tax credit reconciliation basics explained with Form 8962 planning, Florida Marketplace coverage, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-23T08:23:00+09:00",
+      "is_hub": true,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/the-practical-age-rating-in-aca-premium-estimates-checklist-for-2026-aca-planning.html",
+        "aca/tobacco-surcharge-in-florida-estimates-a-florida-reader-s-guide-to-marketplace-tobacco-rating.html",
+        "aca/how-to-read-csr-versus-premium-tax-credit-inside-a-2026-premium-estimate.html"
+      ]
+    },
+    {
+      "id": "florida-aca-open-enrollment-planning-without-the-jargon-marketplace-deadline-preparation-and-next-steps",
+      "type": "article",
+      "title": "Florida ACA open enrollment planning without the jargon: Marketplace deadline preparation and next steps",
+      "subtitle": "Florida ACA open enrollment planning explained with Marketplace deadline preparation, enhanced premium tax credits, and the official Marketplace confirmation step.",
+      "url": "aca/florida-aca-open-enrollment-planning-without-the-jargon-marketplace-deadline-preparation-and-next-steps.html",
+      "canonical": "{SITE_ORIGIN}/aca/florida-aca-open-enrollment-planning-without-the-jargon-marketplace-deadline-preparation-and-next-steps.html",
+      "main_keyword": "Florida ACA open enrollment planning",
+      "expanded_keywords": [
+        "Marketplace deadline preparation",
+        "Florida Marketplace coverage",
+        "Enhanced premium tax credits",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "Open enrollment",
+      "guide_hub": null,
+      "excerpt": "Florida ACA open enrollment planning explained with Marketplace deadline preparation, Florida Marketplace coverage, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-23T13:23:00+09:00",
+      "is_hub": true,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/tobacco-surcharge-in-florida-estimates-a-florida-reader-s-guide-to-marketplace-tobacco-rating.html",
+        "aca/how-to-read-csr-versus-premium-tax-credit-inside-a-2026-premium-estimate.html",
+        "aca/current-law-aca-premium-scenario-without-the-jargon-pre-2021-rules-and-next-steps.html"
+      ]
+    },
+    {
+      "id": "when-household-size-for-marketplace-subsidies-matters-most-for-florida-marketplace-shoppers",
+      "type": "article",
+      "title": "When household size for Marketplace subsidies matters most for Florida Marketplace shoppers",
+      "subtitle": "Household size for Marketplace subsidies explained with tax household rules, enhanced premium tax credits, and the official Marketplace confirmation step.",
+      "url": "aca/when-household-size-for-marketplace-subsidies-matters-most-for-florida-marketplace-shoppers.html",
+      "canonical": "{SITE_ORIGIN}/aca/when-household-size-for-marketplace-subsidies-matters-most-for-florida-marketplace-shoppers.html",
+      "main_keyword": "Household size for Marketplace subsidies",
+      "expanded_keywords": [
+        "Tax household rules",
+        "Florida Marketplace coverage",
+        "Enhanced premium tax credits",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "Household size",
+      "guide_hub": null,
+      "excerpt": "Household size for Marketplace subsidies explained with Tax household rules, Florida Marketplace coverage, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-23T18:23:00+09:00",
+      "is_hub": true,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/how-to-read-csr-versus-premium-tax-credit-inside-a-2026-premium-estimate.html",
+        "aca/current-law-aca-premium-scenario-without-the-jargon-pre-2021-rules-and-next-steps.html",
+        "aca/when-florida-aca-estimate-privacy-matters-most-for-florida-marketplace-shoppers.html"
+      ]
+    },
+    {
+      "id": "the-practical-age-rating-in-aca-premium-estimates-checklist-for-2026-aca-planning",
+      "type": "article",
+      "title": "The practical age rating in ACA premium estimates checklist for 2026 ACA planning",
+      "subtitle": "Age rating in ACA premium estimates explained with older adult Marketplace premium, enhanced premium tax credits, and the official Marketplace confirmation step.",
+      "url": "aca/the-practical-age-rating-in-aca-premium-estimates-checklist-for-2026-aca-planning.html",
+      "canonical": "{SITE_ORIGIN}/aca/the-practical-age-rating-in-aca-premium-estimates-checklist-for-2026-aca-planning.html",
+      "main_keyword": "Age rating in ACA premium estimates",
+      "expanded_keywords": [
+        "Older adult Marketplace premium",
+        "Florida Marketplace coverage",
+        "Enhanced premium tax credits",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "Age rating",
+      "guide_hub": null,
+      "excerpt": "Age rating in ACA premium estimates explained with Older adult Marketplace premium, Florida Marketplace coverage, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-23T23:23:00+09:00",
+      "is_hub": true,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/current-law-aca-premium-scenario-without-the-jargon-pre-2021-rules-and-next-steps.html",
+        "aca/when-florida-aca-estimate-privacy-matters-most-for-florida-marketplace-shoppers.html",
+        "aca/the-practical-marketplace-subsidy-source-list-checklist-for-2026-aca-planning.html"
+      ]
+    },
+    {
+      "id": "tobacco-surcharge-in-florida-estimates-a-florida-reader-s-guide-to-marketplace-tobacco-rating",
+      "type": "article",
+      "title": "Tobacco surcharge in Florida estimates: a Florida reader's guide to Marketplace tobacco rating",
+      "subtitle": "Tobacco surcharge in Florida estimates explained with Marketplace tobacco rating, enhanced premium tax credits, and the official Marketplace confirmation step.",
+      "url": "aca/tobacco-surcharge-in-florida-estimates-a-florida-reader-s-guide-to-marketplace-tobacco-rating.html",
+      "canonical": "{SITE_ORIGIN}/aca/tobacco-surcharge-in-florida-estimates-a-florida-reader-s-guide-to-marketplace-tobacco-rating.html",
+      "main_keyword": "Tobacco surcharge in Florida estimates",
+      "expanded_keywords": [
+        "Marketplace tobacco rating",
+        "Florida Marketplace coverage",
+        "Enhanced premium tax credits",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "Tobacco surcharge",
+      "guide_hub": null,
+      "excerpt": "Tobacco surcharge in Florida estimates explained with Marketplace tobacco rating, Florida Marketplace coverage, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-24T04:23:00+09:00",
+      "is_hub": true,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/when-florida-aca-estimate-privacy-matters-most-for-florida-marketplace-shoppers.html",
+        "aca/the-practical-marketplace-subsidy-source-list-checklist-for-2026-aca-planning.html",
+        "aca/broward-county-aca-subsidy-estimate-south-florida-rating-area-check-for-2026-coverage.html"
+      ]
+    },
+    {
+      "id": "how-to-read-csr-versus-premium-tax-credit-inside-a-2026-premium-estimate",
+      "type": "article",
+      "title": "How to read CSR versus premium tax credit inside a 2026 premium estimate",
+      "subtitle": "CSR versus premium tax credit explained with Silver plan savings, enhanced premium tax credits, and the official Marketplace confirmation step.",
+      "url": "aca/how-to-read-csr-versus-premium-tax-credit-inside-a-2026-premium-estimate.html",
+      "canonical": "{SITE_ORIGIN}/aca/how-to-read-csr-versus-premium-tax-credit-inside-a-2026-premium-estimate.html",
+      "main_keyword": "CSR versus premium tax credit",
+      "expanded_keywords": [
+        "Silver plan savings",
+        "Florida Marketplace coverage",
+        "Enhanced premium tax credits",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "CSR versus premium tax credit",
+      "guide_hub": null,
+      "excerpt": "CSR versus premium tax credit explained with Silver plan savings, Florida Marketplace coverage, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-24T09:23:00+09:00",
+      "is_hub": true,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/the-practical-marketplace-subsidy-source-list-checklist-for-2026-aca-planning.html",
+        "aca/broward-county-aca-subsidy-estimate-south-florida-rating-area-check-for-2026-coverage.html",
+        "aca/how-palm-beach-county-shoppers-should-read-an-aca-subsidy-estimate-in-2026.html"
+      ]
+    },
+    {
+      "id": "current-law-aca-premium-scenario-without-the-jargon-pre-2021-rules-and-next-steps",
+      "type": "article",
+      "title": "Current-law ACA premium scenario without the jargon: pre-2021 rules and next steps",
+      "subtitle": "Current-law ACA premium scenario explained with pre-2021 rules, enhanced premium tax credits, and the official Marketplace confirmation step.",
+      "url": "aca/current-law-aca-premium-scenario-without-the-jargon-pre-2021-rules-and-next-steps.html",
+      "canonical": "{SITE_ORIGIN}/aca/current-law-aca-premium-scenario-without-the-jargon-pre-2021-rules-and-next-steps.html",
+      "main_keyword": "Current-law ACA premium scenario",
+      "expanded_keywords": [
+        "Pre-2021 rules",
+        "Florida Marketplace coverage",
+        "Enhanced premium tax credits",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "Current law",
+      "guide_hub": null,
+      "excerpt": "Current-law ACA premium scenario explained with Pre-2021 rules, Florida Marketplace coverage, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-24T14:23:00+09:00",
+      "is_hub": true,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/broward-county-aca-subsidy-estimate-south-florida-rating-area-check-for-2026-coverage.html",
+        "aca/how-palm-beach-county-shoppers-should-read-an-aca-subsidy-estimate-in-2026.html",
+        "aca/hillsborough-county-marketplace-premium-guide-for-aca-subsidy-estimate-decisions.html"
+      ]
+    },
+    {
+      "id": "when-florida-aca-estimate-privacy-matters-most-for-florida-marketplace-shoppers",
+      "type": "article",
+      "title": "When Florida ACA estimate privacy matters most for Florida Marketplace shoppers",
+      "subtitle": "Florida ACA estimate privacy explained with browser-only calculator, enhanced premium tax credits, and the official Marketplace confirmation step.",
+      "url": "aca/when-florida-aca-estimate-privacy-matters-most-for-florida-marketplace-shoppers.html",
+      "canonical": "{SITE_ORIGIN}/aca/when-florida-aca-estimate-privacy-matters-most-for-florida-marketplace-shoppers.html",
+      "main_keyword": "Florida ACA estimate privacy",
+      "expanded_keywords": [
+        "Browser-only calculator",
+        "Florida Marketplace coverage",
+        "Enhanced premium tax credits",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "Privacy",
+      "guide_hub": null,
+      "excerpt": "Florida ACA estimate privacy explained with Browser-only calculator, Florida Marketplace coverage, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-24T19:23:00+09:00",
+      "is_hub": true,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/how-palm-beach-county-shoppers-should-read-an-aca-subsidy-estimate-in-2026.html",
+        "aca/hillsborough-county-marketplace-premium-guide-for-aca-subsidy-estimate-decisions.html",
+        "aca/aca-subsidy-estimate-in-orange-county-orlando-area-income-scenario-without-quote-confusion.html"
+      ]
+    },
+    {
+      "id": "the-practical-marketplace-subsidy-source-list-checklist-for-2026-aca-planning",
+      "type": "article",
+      "title": "The practical Marketplace subsidy source list checklist for 2026 ACA planning",
+      "subtitle": "Marketplace subsidy source list explained with IRS HHS CMS sources, enhanced premium tax credits, and the official Marketplace confirmation step.",
+      "url": "aca/the-practical-marketplace-subsidy-source-list-checklist-for-2026-aca-planning.html",
+      "canonical": "{SITE_ORIGIN}/aca/the-practical-marketplace-subsidy-source-list-checklist-for-2026-aca-planning.html",
+      "main_keyword": "Marketplace subsidy source list",
+      "expanded_keywords": [
+        "IRS HHS CMS sources",
+        "Florida Marketplace coverage",
+        "Enhanced premium tax credits",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "Source trust",
+      "guide_hub": null,
+      "excerpt": "Marketplace subsidy source list explained with IRS HHS CMS sources, Florida Marketplace coverage, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-25T00:23:00+09:00",
+      "is_hub": true,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/hillsborough-county-marketplace-premium-guide-for-aca-subsidy-estimate-decisions.html",
+        "aca/aca-subsidy-estimate-in-orange-county-orlando-area-income-scenario-without-quote-confusion.html",
+        "aca/what-can-change-the-duval-county-aca-subsidy-estimate-before-enrollment.html"
+      ]
+    },
+    {
+      "id": "aca-subsidy-estimate-for-early-retirees-a-florida-reader-s-guide-to-pre-medicare-health-insurance",
+      "type": "article",
+      "title": "ACA subsidy estimate for early retirees: a Florida reader's guide to pre-Medicare health insurance",
+      "subtitle": "ACA subsidy estimate for early retirees explained with pre-Medicare health insurance, enhanced premium tax credits, and the official Marketplace confirmation step.",
+      "url": "aca/aca-subsidy-estimate-for-early-retirees-a-florida-reader-s-guide-to-pre-medicare-health-insurance.html",
+      "canonical": "{SITE_ORIGIN}/aca/aca-subsidy-estimate-for-early-retirees-a-florida-reader-s-guide-to-pre-medicare-health-insurance.html",
+      "main_keyword": "ACA subsidy estimate for early retirees",
+      "expanded_keywords": [
+        "Pre-Medicare health insurance",
+        "Florida Marketplace coverage",
+        "Enhanced premium tax credits",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "Early retiree",
+      "guide_hub": null,
+      "excerpt": "ACA subsidy estimate for early retirees explained with Pre-Medicare health insurance, Florida Marketplace coverage, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-25T05:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/broward-county-aca-subsidy-estimate-south-florida-rating-area-check-for-2026-coverage.html",
+        "aca/how-palm-beach-county-shoppers-should-read-an-aca-subsidy-estimate-in-2026.html",
+        "aca/hillsborough-county-marketplace-premium-guide-for-aca-subsidy-estimate-decisions.html"
+      ]
+    },
+    {
+      "id": "how-to-read-aca-subsidy-estimate-for-gig-workers-inside-a-2026-premium-estimate",
+      "type": "article",
+      "title": "How to read ACA subsidy estimate for gig workers inside a 2026 premium estimate",
+      "subtitle": "ACA subsidy estimate for gig workers explained with variable income Marketplace, enhanced premium tax credits, and the official Marketplace confirmation step.",
+      "url": "aca/how-to-read-aca-subsidy-estimate-for-gig-workers-inside-a-2026-premium-estimate.html",
+      "canonical": "{SITE_ORIGIN}/aca/how-to-read-aca-subsidy-estimate-for-gig-workers-inside-a-2026-premium-estimate.html",
+      "main_keyword": "ACA subsidy estimate for gig workers",
+      "expanded_keywords": [
+        "Variable income Marketplace",
+        "Florida Marketplace coverage",
+        "Enhanced premium tax credits",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "Self-employed income",
+      "guide_hub": null,
+      "excerpt": "ACA subsidy estimate for gig workers explained with Variable income Marketplace, Florida Marketplace coverage, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-25T10:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/how-palm-beach-county-shoppers-should-read-an-aca-subsidy-estimate-in-2026.html",
+        "aca/hillsborough-county-marketplace-premium-guide-for-aca-subsidy-estimate-decisions.html",
+        "aca/aca-subsidy-estimate-in-orange-county-orlando-area-income-scenario-without-quote-confusion.html"
+      ]
+    },
+    {
+      "id": "aca-subsidy-estimate-for-new-florida-residents-without-the-jargon-florida-marketplace-move-and-next-steps",
+      "type": "article",
+      "title": "ACA subsidy estimate for new Florida residents without the jargon: Florida Marketplace move and next steps",
+      "subtitle": "ACA subsidy estimate for new Florida residents explained with Florida Marketplace move, enhanced premium tax credits, and the official Marketplace confirmation step.",
+      "url": "aca/aca-subsidy-estimate-for-new-florida-residents-without-the-jargon-florida-marketplace-move-and-next-steps.html",
+      "canonical": "{SITE_ORIGIN}/aca/aca-subsidy-estimate-for-new-florida-residents-without-the-jargon-florida-marketplace-move-and-next-steps.html",
+      "main_keyword": "ACA subsidy estimate for new Florida residents",
+      "expanded_keywords": [
+        "Florida Marketplace move",
+        "Florida Marketplace coverage",
+        "Enhanced premium tax credits",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "Moving to Florida",
+      "guide_hub": null,
+      "excerpt": "ACA subsidy estimate for new Florida residents explained with Florida Marketplace move, Florida Marketplace coverage, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-25T15:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/hillsborough-county-marketplace-premium-guide-for-aca-subsidy-estimate-decisions.html",
+        "aca/aca-subsidy-estimate-in-orange-county-orlando-area-income-scenario-without-quote-confusion.html",
+        "aca/what-can-change-the-duval-county-aca-subsidy-estimate-before-enrollment.html"
+      ]
+    },
+    {
+      "id": "when-aca-subsidy-estimate-after-job-loss-matters-most-for-florida-marketplace-shoppers",
+      "type": "article",
+      "title": "When ACA subsidy estimate after job loss matters most for Florida Marketplace shoppers",
+      "subtitle": "ACA subsidy estimate after job loss explained with loss of employer coverage, enhanced premium tax credits, and the official Marketplace confirmation step.",
+      "url": "aca/when-aca-subsidy-estimate-after-job-loss-matters-most-for-florida-marketplace-shoppers.html",
+      "canonical": "{SITE_ORIGIN}/aca/when-aca-subsidy-estimate-after-job-loss-matters-most-for-florida-marketplace-shoppers.html",
+      "main_keyword": "ACA subsidy estimate after job loss",
+      "expanded_keywords": [
+        "Loss of employer coverage",
+        "Florida Marketplace coverage",
+        "Enhanced premium tax credits",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "Special enrollment",
+      "guide_hub": null,
+      "excerpt": "ACA subsidy estimate after job loss explained with Loss of employer coverage, Florida Marketplace coverage, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-25T20:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/aca-subsidy-estimate-in-orange-county-orlando-area-income-scenario-without-quote-confusion.html",
+        "aca/what-can-change-the-duval-county-aca-subsidy-estimate-before-enrollment.html",
+        "aca/how-to-update-a-florida-aca-subsidy-estimate-after-dependent-returning-home.html"
+      ]
+    },
+    {
+      "id": "the-practical-aca-subsidy-estimate-for-part-time-workers-checklist-for-2026-aca-planning",
+      "type": "article",
+      "title": "The practical ACA subsidy estimate for part-time workers checklist for 2026 ACA planning",
+      "subtitle": "ACA subsidy estimate for part-time workers explained with low income Marketplace planning, enhanced premium tax credits, and the official Marketplace confirmation step.",
+      "url": "aca/the-practical-aca-subsidy-estimate-for-part-time-workers-checklist-for-2026-aca-planning.html",
+      "canonical": "{SITE_ORIGIN}/aca/the-practical-aca-subsidy-estimate-for-part-time-workers-checklist-for-2026-aca-planning.html",
+      "main_keyword": "ACA subsidy estimate for part-time workers",
+      "expanded_keywords": [
+        "Low income Marketplace planning",
+        "Florida Marketplace coverage",
+        "Enhanced premium tax credits",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "Part-time income",
+      "guide_hub": null,
+      "excerpt": "ACA subsidy estimate for part-time workers explained with Low income Marketplace planning, Florida Marketplace coverage, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-26T01:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/what-can-change-the-duval-county-aca-subsidy-estimate-before-enrollment.html",
+        "aca/how-to-update-a-florida-aca-subsidy-estimate-after-dependent-returning-home.html",
+        "aca/florida-aca-subsidy-estimate-after-retiring-before-medicare-what-to-check-first.html"
+      ]
+    },
+    {
+      "id": "aca-subsidy-estimate-for-college-graduates-a-florida-reader-s-guide-to-first-marketplace-plan",
+      "type": "article",
+      "title": "ACA subsidy estimate for college graduates: a Florida reader's guide to first Marketplace plan",
+      "subtitle": "ACA subsidy estimate for college graduates explained with first Marketplace plan, enhanced premium tax credits, and the official Marketplace confirmation step.",
+      "url": "aca/aca-subsidy-estimate-for-college-graduates-a-florida-reader-s-guide-to-first-marketplace-plan.html",
+      "canonical": "{SITE_ORIGIN}/aca/aca-subsidy-estimate-for-college-graduates-a-florida-reader-s-guide-to-first-marketplace-plan.html",
+      "main_keyword": "ACA subsidy estimate for college graduates",
+      "expanded_keywords": [
+        "First Marketplace plan",
+        "Florida Marketplace coverage",
+        "Enhanced premium tax credits",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "Young adult coverage",
+      "guide_hub": null,
+      "excerpt": "ACA subsidy estimate for college graduates explained with First Marketplace plan, Florida Marketplace coverage, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-26T06:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/how-to-update-a-florida-aca-subsidy-estimate-after-dependent-returning-home.html",
+        "aca/florida-aca-subsidy-estimate-after-retiring-before-medicare-what-to-check-first.html",
+        "aca/when-moving-to-florida-from-another-state-changes-a-florida-aca-subsidy-estimate.html"
+      ]
+    },
+    {
+      "id": "how-to-read-aca-subsidy-estimate-for-divorced-parents-inside-a-2026-premium-estimate",
+      "type": "article",
+      "title": "How to read ACA subsidy estimate for divorced parents inside a 2026 premium estimate",
+      "subtitle": "ACA subsidy estimate for divorced parents explained with tax household and dependents, enhanced premium tax credits, and the official Marketplace confirmation step.",
+      "url": "aca/how-to-read-aca-subsidy-estimate-for-divorced-parents-inside-a-2026-premium-estimate.html",
+      "canonical": "{SITE_ORIGIN}/aca/how-to-read-aca-subsidy-estimate-for-divorced-parents-inside-a-2026-premium-estimate.html",
+      "main_keyword": "ACA subsidy estimate for divorced parents",
+      "expanded_keywords": [
+        "Tax household and dependents",
+        "Florida Marketplace coverage",
+        "Enhanced premium tax credits",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "Dependent claim",
+      "guide_hub": null,
+      "excerpt": "ACA subsidy estimate for divorced parents explained with Tax household and dependents, Florida Marketplace coverage, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-26T11:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/florida-aca-subsidy-estimate-after-retiring-before-medicare-what-to-check-first.html",
+        "aca/when-moving-to-florida-from-another-state-changes-a-florida-aca-subsidy-estimate.html",
+        "aca/losing-medicaid-eligibility-and-the-florida-aca-subsidy-estimate-for-2026.html"
+      ]
+    },
+    {
+      "id": "aca-subsidy-estimate-for-seasonal-workers-without-the-jargon-seasonal-income-projection-and-next-steps",
+      "type": "article",
+      "title": "ACA subsidy estimate for seasonal workers without the jargon: seasonal income projection and next steps",
+      "subtitle": "ACA subsidy estimate for seasonal workers explained with seasonal income projection, enhanced premium tax credits, and the official Marketplace confirmation step.",
+      "url": "aca/aca-subsidy-estimate-for-seasonal-workers-without-the-jargon-seasonal-income-projection-and-next-steps.html",
+      "canonical": "{SITE_ORIGIN}/aca/aca-subsidy-estimate-for-seasonal-workers-without-the-jargon-seasonal-income-projection-and-next-steps.html",
+      "main_keyword": "ACA subsidy estimate for seasonal workers",
+      "expanded_keywords": [
+        "Seasonal income projection",
+        "Florida Marketplace coverage",
+        "Enhanced premium tax credits",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "Income volatility",
+      "guide_hub": null,
+      "excerpt": "ACA subsidy estimate for seasonal workers explained with Seasonal income projection, Florida Marketplace coverage, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-26T16:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/when-moving-to-florida-from-another-state-changes-a-florida-aca-subsidy-estimate.html",
+        "aca/losing-medicaid-eligibility-and-the-florida-aca-subsidy-estimate-for-2026.html",
+        "aca/how-to-update-a-florida-aca-subsidy-estimate-after-starting-a-small-business.html"
+      ]
+    },
+    {
+      "id": "when-aca-subsidy-estimate-for-small-business-owners-matters-most-for-florida-marketplace-shoppers",
+      "type": "article",
+      "title": "When ACA subsidy estimate for small business owners matters most for Florida Marketplace shoppers",
+      "subtitle": "ACA subsidy estimate for small business owners explained with self-employment income, enhanced premium tax credits, and the official Marketplace confirmation step.",
+      "url": "aca/when-aca-subsidy-estimate-for-small-business-owners-matters-most-for-florida-marketplace-shoppers.html",
+      "canonical": "{SITE_ORIGIN}/aca/when-aca-subsidy-estimate-for-small-business-owners-matters-most-for-florida-marketplace-shoppers.html",
+      "main_keyword": "ACA subsidy estimate for small business owners",
+      "expanded_keywords": [
+        "Self-employment income",
+        "Florida Marketplace coverage",
+        "Enhanced premium tax credits",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "Business owner",
+      "guide_hub": null,
+      "excerpt": "ACA subsidy estimate for small business owners explained with Self-employment income, Florida Marketplace coverage, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-26T21:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/losing-medicaid-eligibility-and-the-florida-aca-subsidy-estimate-for-2026.html",
+        "aca/how-to-update-a-florida-aca-subsidy-estimate-after-starting-a-small-business.html",
+        "aca/florida-aca-subsidy-calculator-walkthrough-a-florida-reader-s-guide-to-aca-premium-estimate.html"
+      ]
+    },
+    {
+      "id": "the-practical-aca-subsidy-estimate-for-caregivers-checklist-for-2026-aca-planning",
+      "type": "article",
+      "title": "The practical ACA subsidy estimate for caregivers checklist for 2026 ACA planning",
+      "subtitle": "ACA subsidy estimate for caregivers explained with family coverage planning, enhanced premium tax credits, and the official Marketplace confirmation step.",
+      "url": "aca/the-practical-aca-subsidy-estimate-for-caregivers-checklist-for-2026-aca-planning.html",
+      "canonical": "{SITE_ORIGIN}/aca/the-practical-aca-subsidy-estimate-for-caregivers-checklist-for-2026-aca-planning.html",
+      "main_keyword": "ACA subsidy estimate for caregivers",
+      "expanded_keywords": [
+        "Family coverage planning",
+        "Florida Marketplace coverage",
+        "Enhanced premium tax credits",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "Caregiver household",
+      "guide_hub": null,
+      "excerpt": "ACA subsidy estimate for caregivers explained with Family coverage planning, Florida Marketplace coverage, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-27T02:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/how-to-update-a-florida-aca-subsidy-estimate-after-starting-a-small-business.html",
+        "aca/florida-aca-subsidy-calculator-walkthrough-a-florida-reader-s-guide-to-aca-premium-estimate.html",
+        "aca/how-to-read-enhanced-premium-tax-credits-in-florida-inside-a-2026-premium-estimate.html"
+      ]
+    },
+    {
+      "id": "aca-subsidy-estimate-for-immigrants-in-florida-a-florida-reader-s-guide-to-marketplace-eligibility-basics",
+      "type": "article",
+      "title": "ACA subsidy estimate for immigrants in Florida: a Florida reader's guide to Marketplace eligibility basics",
+      "subtitle": "ACA subsidy estimate for immigrants in Florida explained with Marketplace eligibility basics, enhanced premium tax credits, and the official Marketplace confirmation step.",
+      "url": "aca/aca-subsidy-estimate-for-immigrants-in-florida-a-florida-reader-s-guide-to-marketplace-eligibility-basics.html",
+      "canonical": "{SITE_ORIGIN}/aca/aca-subsidy-estimate-for-immigrants-in-florida-a-florida-reader-s-guide-to-marketplace-eligibility-basics.html",
+      "main_keyword": "ACA subsidy estimate for immigrants in Florida",
+      "expanded_keywords": [
+        "Marketplace eligibility basics",
+        "Florida Marketplace coverage",
+        "Enhanced premium tax credits",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "Immigration status",
+      "guide_hub": null,
+      "excerpt": "ACA subsidy estimate for immigrants in Florida explained with Marketplace eligibility basics, Florida Marketplace coverage, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-27T07:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/florida-aca-subsidy-calculator-walkthrough-a-florida-reader-s-guide-to-aca-premium-estimate.html",
+        "aca/how-to-read-enhanced-premium-tax-credits-in-florida-inside-a-2026-premium-estimate.html",
+        "aca/aca-subsidy-cliff-over-400-percent-fpl-without-the-jargon-premium-tax-credit-threshold-and-next-steps.html"
+      ]
+    },
+    {
+      "id": "how-to-read-aca-subsidy-estimate-for-rural-florida-counties-inside-a-2026-premium-estimate",
+      "type": "article",
+      "title": "How to read ACA subsidy estimate for rural Florida counties inside a 2026 premium estimate",
+      "subtitle": "ACA subsidy estimate for rural Florida counties explained with rating area differences, enhanced premium tax credits, and the official Marketplace confirmation step.",
+      "url": "aca/how-to-read-aca-subsidy-estimate-for-rural-florida-counties-inside-a-2026-premium-estimate.html",
+      "canonical": "{SITE_ORIGIN}/aca/how-to-read-aca-subsidy-estimate-for-rural-florida-counties-inside-a-2026-premium-estimate.html",
+      "main_keyword": "ACA subsidy estimate for rural Florida counties",
+      "expanded_keywords": [
+        "Rating area differences",
+        "Florida Marketplace coverage",
+        "Enhanced premium tax credits",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "Rural Florida",
+      "guide_hub": null,
+      "excerpt": "ACA subsidy estimate for rural Florida counties explained with Rating area differences, Florida Marketplace coverage, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-27T12:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/how-to-read-enhanced-premium-tax-credits-in-florida-inside-a-2026-premium-estimate.html",
+        "aca/aca-subsidy-cliff-over-400-percent-fpl-without-the-jargon-premium-tax-credit-threshold-and-next-steps.html",
+        "aca/when-florida-medicaid-coverage-gap-explanation-matters-most-for-florida-marketplace-shoppers.html"
+      ]
+    },
+    {
+      "id": "aca-subsidy-estimate-with-adult-children-without-the-jargon-dependents-and-age-rating-and-next-steps",
+      "type": "article",
+      "title": "ACA subsidy estimate with adult children without the jargon: dependents and age rating and next steps",
+      "subtitle": "ACA subsidy estimate with adult children explained with dependents and age rating, enhanced premium tax credits, and the official Marketplace confirmation step.",
+      "url": "aca/aca-subsidy-estimate-with-adult-children-without-the-jargon-dependents-and-age-rating-and-next-steps.html",
+      "canonical": "{SITE_ORIGIN}/aca/aca-subsidy-estimate-with-adult-children-without-the-jargon-dependents-and-age-rating-and-next-steps.html",
+      "main_keyword": "ACA subsidy estimate with adult children",
+      "expanded_keywords": [
+        "Dependents and age rating",
+        "Florida Marketplace coverage",
+        "Enhanced premium tax credits",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "Adult child coverage",
+      "guide_hub": null,
+      "excerpt": "ACA subsidy estimate with adult children explained with Dependents and age rating, Florida Marketplace coverage, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-27T17:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/aca-subsidy-cliff-over-400-percent-fpl-without-the-jargon-premium-tax-credit-threshold-and-next-steps.html",
+        "aca/when-florida-medicaid-coverage-gap-explanation-matters-most-for-florida-marketplace-shoppers.html",
+        "aca/the-practical-slcsp-benchmark-silver-premium-checklist-for-2026-aca-planning.html"
+      ]
+    },
+    {
+      "id": "when-aca-subsidy-estimate-after-marriage-matters-most-for-florida-marketplace-shoppers",
+      "type": "article",
+      "title": "When ACA subsidy estimate after marriage matters most for Florida Marketplace shoppers",
+      "subtitle": "ACA subsidy estimate after marriage explained with combined household income, enhanced premium tax credits, and the official Marketplace confirmation step.",
+      "url": "aca/when-aca-subsidy-estimate-after-marriage-matters-most-for-florida-marketplace-shoppers.html",
+      "canonical": "{SITE_ORIGIN}/aca/when-aca-subsidy-estimate-after-marriage-matters-most-for-florida-marketplace-shoppers.html",
+      "main_keyword": "ACA subsidy estimate after marriage",
+      "expanded_keywords": [
+        "Combined household income",
+        "Florida Marketplace coverage",
+        "Enhanced premium tax credits",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "Marriage and Marketplace",
+      "guide_hub": null,
+      "excerpt": "ACA subsidy estimate after marriage explained with Combined household income, Florida Marketplace coverage, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-27T22:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/when-florida-medicaid-coverage-gap-explanation-matters-most-for-florida-marketplace-shoppers.html",
+        "aca/the-practical-slcsp-benchmark-silver-premium-checklist-for-2026-aca-planning.html",
+        "aca/cost-sharing-reductions-on-silver-plans-a-florida-reader-s-guide-to-csr-eligibility.html"
+      ]
+    },
+    {
+      "id": "the-practical-aca-subsidy-estimate-after-a-raise-checklist-for-2026-aca-planning",
+      "type": "article",
+      "title": "The practical ACA subsidy estimate after a raise checklist for 2026 ACA planning",
+      "subtitle": "ACA subsidy estimate after a raise explained with income increase premium tax credit, enhanced premium tax credits, and the official Marketplace confirmation step.",
+      "url": "aca/the-practical-aca-subsidy-estimate-after-a-raise-checklist-for-2026-aca-planning.html",
+      "canonical": "{SITE_ORIGIN}/aca/the-practical-aca-subsidy-estimate-after-a-raise-checklist-for-2026-aca-planning.html",
+      "main_keyword": "ACA subsidy estimate after a raise",
+      "expanded_keywords": [
+        "Income increase premium tax credit",
+        "Florida Marketplace coverage",
+        "Enhanced premium tax credits",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "Raise impact",
+      "guide_hub": null,
+      "excerpt": "ACA subsidy estimate after a raise explained with Income increase premium tax credit, Florida Marketplace coverage, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-28T03:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/the-practical-slcsp-benchmark-silver-premium-checklist-for-2026-aca-planning.html",
+        "aca/cost-sharing-reductions-on-silver-plans-a-florida-reader-s-guide-to-csr-eligibility.html",
+        "aca/how-to-read-federal-poverty-level-for-aca-subsidies-inside-a-2026-premium-estimate.html"
+      ]
+    },
+    {
+      "id": "aca-subsidy-estimate-after-retirement-account-withdrawals-a-florida-reader-s-guide-to-magi-planning",
+      "type": "article",
+      "title": "ACA subsidy estimate after retirement account withdrawals: a Florida reader's guide to MAGI planning",
+      "subtitle": "ACA subsidy estimate after retirement account withdrawals explained with MAGI planning, enhanced premium tax credits, and the official Marketplace confirmation step.",
+      "url": "aca/aca-subsidy-estimate-after-retirement-account-withdrawals-a-florida-reader-s-guide-to-magi-planning.html",
+      "canonical": "{SITE_ORIGIN}/aca/aca-subsidy-estimate-after-retirement-account-withdrawals-a-florida-reader-s-guide-to-magi-planning.html",
+      "main_keyword": "ACA subsidy estimate after retirement account withdrawals",
+      "expanded_keywords": [
+        "MAGI planning",
+        "Florida Marketplace coverage",
+        "Enhanced premium tax credits",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "Retirement withdrawals",
+      "guide_hub": null,
+      "excerpt": "ACA subsidy estimate after retirement account withdrawals explained with MAGI planning, Florida Marketplace coverage, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-28T08:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/cost-sharing-reductions-on-silver-plans-a-florida-reader-s-guide-to-csr-eligibility.html",
+        "aca/how-to-read-federal-poverty-level-for-aca-subsidies-inside-a-2026-premium-estimate.html",
+        "aca/healthcare-gov-confirmation-checklist-without-the-jargon-marketplace-enrollment-and-next-steps.html"
+      ]
+    },
+    {
+      "id": "how-to-read-aca-subsidy-estimate-for-pregnant-applicants-inside-a-2026-premium-estimate",
+      "type": "article",
+      "title": "How to read ACA subsidy estimate for pregnant applicants inside a 2026 premium estimate",
+      "subtitle": "ACA subsidy estimate for pregnant applicants explained with household planning, enhanced premium tax credits, and the official Marketplace confirmation step.",
+      "url": "aca/how-to-read-aca-subsidy-estimate-for-pregnant-applicants-inside-a-2026-premium-estimate.html",
+      "canonical": "{SITE_ORIGIN}/aca/how-to-read-aca-subsidy-estimate-for-pregnant-applicants-inside-a-2026-premium-estimate.html",
+      "main_keyword": "ACA subsidy estimate for pregnant applicants",
+      "expanded_keywords": [
+        "Household planning",
+        "Florida Marketplace coverage",
+        "Enhanced premium tax credits",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "Pregnancy and coverage",
+      "guide_hub": null,
+      "excerpt": "ACA subsidy estimate for pregnant applicants explained with Household planning, Florida Marketplace coverage, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-28T13:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/how-to-read-federal-poverty-level-for-aca-subsidies-inside-a-2026-premium-estimate.html",
+        "aca/healthcare-gov-confirmation-checklist-without-the-jargon-marketplace-enrollment-and-next-steps.html",
+        "aca/when-aca-metal-tiers-and-subsidy-estimates-matter-most-for-florida-marketplace-shoppers.html"
+      ]
+    },
+    {
+      "id": "aca-subsidy-estimate-for-prescription-heavy-households-without-the-jargon-silver-plan-csr-and-next-steps",
+      "type": "article",
+      "title": "ACA subsidy estimate for prescription-heavy households without the jargon: Silver plan CSR and next steps",
+      "subtitle": "ACA subsidy estimate for prescription-heavy households explained with Silver plan CSR, enhanced premium tax credits, and the official Marketplace confirmation step.",
+      "url": "aca/aca-subsidy-estimate-for-prescription-heavy-households-without-the-jargon-silver-plan-csr-and-next-steps.html",
+      "canonical": "{SITE_ORIGIN}/aca/aca-subsidy-estimate-for-prescription-heavy-households-without-the-jargon-silver-plan-csr-and-next-steps.html",
+      "main_keyword": "ACA subsidy estimate for prescription-heavy households",
+      "expanded_keywords": [
+        "Silver plan CSR",
+        "Florida Marketplace coverage",
+        "Enhanced premium tax credits",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "Drug cost planning",
+      "guide_hub": null,
+      "excerpt": "ACA subsidy estimate for prescription-heavy households explained with Silver plan CSR, Florida Marketplace coverage, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-28T18:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/healthcare-gov-confirmation-checklist-without-the-jargon-marketplace-enrollment-and-next-steps.html",
+        "aca/when-aca-metal-tiers-and-subsidy-estimates-matter-most-for-florida-marketplace-shoppers.html",
+        "aca/the-practical-marketplace-income-estimate-mistakes-checklist-for-2026-aca-planning.html"
+      ]
+    },
+    {
+      "id": "when-aca-subsidy-estimate-with-hsa-questions-matters-most-for-florida-marketplace-shoppers",
+      "type": "article",
+      "title": "When ACA subsidy estimate with HSA questions matters most for Florida Marketplace shoppers",
+      "subtitle": "ACA subsidy estimate with HSA questions explained with HSA eligible plan, enhanced premium tax credits, and the official Marketplace confirmation step.",
+      "url": "aca/when-aca-subsidy-estimate-with-hsa-questions-matters-most-for-florida-marketplace-shoppers.html",
+      "canonical": "{SITE_ORIGIN}/aca/when-aca-subsidy-estimate-with-hsa-questions-matters-most-for-florida-marketplace-shoppers.html",
+      "main_keyword": "ACA subsidy estimate with HSA questions",
+      "expanded_keywords": [
+        "HSA eligible plan",
+        "Florida Marketplace coverage",
+        "Enhanced premium tax credits",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "HSA planning",
+      "guide_hub": null,
+      "excerpt": "ACA subsidy estimate with HSA questions explained with HSA eligible plan, Florida Marketplace coverage, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-28T23:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/when-aca-metal-tiers-and-subsidy-estimates-matter-most-for-florida-marketplace-shoppers.html",
+        "aca/the-practical-marketplace-income-estimate-mistakes-checklist-for-2026-aca-planning.html",
+        "aca/aca-estimate-versus-insurance-quote-a-florida-reader-s-guide-to-not-a-quote-disclaimer.html"
+      ]
+    },
+    {
+      "id": "the-practical-aca-subsidy-estimate-when-income-is-uncertain-checklist-for-2026-aca-planning",
+      "type": "article",
+      "title": "The practical ACA subsidy estimate when income is uncertain checklist for 2026 ACA planning",
+      "subtitle": "ACA subsidy estimate when income is uncertain explained with income update strategy, enhanced premium tax credits, and the official Marketplace confirmation step.",
+      "url": "aca/the-practical-aca-subsidy-estimate-when-income-is-uncertain-checklist-for-2026-aca-planning.html",
+      "canonical": "{SITE_ORIGIN}/aca/the-practical-aca-subsidy-estimate-when-income-is-uncertain-checklist-for-2026-aca-planning.html",
+      "main_keyword": "ACA subsidy estimate when income is uncertain",
+      "expanded_keywords": [
+        "Income update strategy",
+        "Florida Marketplace coverage",
+        "Enhanced premium tax credits",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "Uncertain income",
+      "guide_hub": null,
+      "excerpt": "ACA subsidy estimate when income is uncertain explained with Income update strategy, Florida Marketplace coverage, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-29T04:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "aca/the-practical-marketplace-income-estimate-mistakes-checklist-for-2026-aca-planning.html",
+        "aca/aca-estimate-versus-insurance-quote-a-florida-reader-s-guide-to-not-a-quote-disclaimer.html",
+        "aca/how-to-read-premium-tax-credit-reconciliation-basics-inside-a-2026-premium-estimate.html"
+      ]
+    },
+    {
+      "id": "broward-county-aca-subsidy-estimate-south-florida-rating-area-check-for-2026-coverage",
+      "type": "article",
+      "title": "Broward County ACA subsidy estimate: South Florida rating area check for 2026 coverage",
+      "subtitle": "Broward County ACA subsidy estimate explained with county rating area, dense provider networks, and official Marketplace verification.",
+      "url": "aca/broward-county-aca-subsidy-estimate-south-florida-rating-area-check-for-2026-coverage.html",
+      "canonical": "{SITE_ORIGIN}/aca/broward-county-aca-subsidy-estimate-south-florida-rating-area-check-for-2026-coverage.html",
+      "main_keyword": "Broward County ACA subsidy estimate",
+      "expanded_keywords": [
+        "County rating area",
+        "Dense provider networks",
+        "Florida Marketplace coverage",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "County and rating area",
+      "guide_hub": "guides/county-and-rating-area-guides.html",
+      "excerpt": "Broward County ACA subsidy estimate explained with County rating area, Dense provider networks, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-29T09:23:00+09:00",
+      "is_hub": true,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/county-and-rating-area-guides.html",
+        "aca/pinellas-county-aca-subsidy-estimate-gulf-coast-plan-comparison-for-2026-coverage.html",
+        "aca/how-lee-county-shoppers-should-read-an-aca-subsidy-estimate-in-2026.html",
+        "aca/polk-county-marketplace-premium-guide-for-aca-subsidy-estimate-decisions.html"
+      ]
+    },
+    {
+      "id": "how-palm-beach-county-shoppers-should-read-an-aca-subsidy-estimate-in-2026",
+      "type": "article",
+      "title": "How Palm Beach County shoppers should read an ACA subsidy estimate in 2026",
+      "subtitle": "Palm Beach County ACA subsidy estimate explained with older adult premium, coastal county comparison, and official Marketplace verification.",
+      "url": "aca/how-palm-beach-county-shoppers-should-read-an-aca-subsidy-estimate-in-2026.html",
+      "canonical": "{SITE_ORIGIN}/aca/how-palm-beach-county-shoppers-should-read-an-aca-subsidy-estimate-in-2026.html",
+      "main_keyword": "Palm Beach County ACA subsidy estimate",
+      "expanded_keywords": [
+        "Older adult premium",
+        "Coastal county comparison",
+        "Florida Marketplace coverage",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "County and rating area",
+      "guide_hub": "guides/county-and-rating-area-guides.html",
+      "excerpt": "Palm Beach County ACA subsidy estimate explained with Older adult premium, Coastal county comparison, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-29T14:23:00+09:00",
+      "is_hub": true,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/county-and-rating-area-guides.html",
+        "aca/how-lee-county-shoppers-should-read-an-aca-subsidy-estimate-in-2026.html",
+        "aca/polk-county-marketplace-premium-guide-for-aca-subsidy-estimate-decisions.html",
+        "aca/aca-subsidy-estimate-in-volusia-county-daytona-area-aca-estimate-without-quote-confusion.html"
+      ]
+    },
+    {
+      "id": "hillsborough-county-marketplace-premium-guide-for-aca-subsidy-estimate-decisions",
+      "type": "article",
+      "title": "Hillsborough County Marketplace premium guide for ACA subsidy estimate decisions",
+      "subtitle": "Hillsborough County ACA subsidy estimate explained with benchmark Silver check, urban household estimate, and official Marketplace verification.",
+      "url": "aca/hillsborough-county-marketplace-premium-guide-for-aca-subsidy-estimate-decisions.html",
+      "canonical": "{SITE_ORIGIN}/aca/hillsborough-county-marketplace-premium-guide-for-aca-subsidy-estimate-decisions.html",
+      "main_keyword": "Hillsborough County ACA subsidy estimate",
+      "expanded_keywords": [
+        "Benchmark Silver check",
+        "Urban household estimate",
+        "Florida Marketplace coverage",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "County and rating area",
+      "guide_hub": "guides/county-and-rating-area-guides.html",
+      "excerpt": "Hillsborough County ACA subsidy estimate explained with Benchmark Silver check, Urban household estimate, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-29T19:23:00+09:00",
+      "is_hub": true,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/county-and-rating-area-guides.html",
+        "aca/polk-county-marketplace-premium-guide-for-aca-subsidy-estimate-decisions.html",
+        "aca/aca-subsidy-estimate-in-volusia-county-daytona-area-aca-estimate-without-quote-confusion.html",
+        "aca/what-can-change-the-brevard-county-aca-subsidy-estimate-before-enrollment.html"
+      ]
+    },
+    {
+      "id": "aca-subsidy-estimate-in-orange-county-orlando-area-income-scenario-without-quote-confusion",
+      "type": "article",
+      "title": "ACA subsidy estimate in Orange County: Orlando-area income scenario without quote confusion",
+      "subtitle": "Orange County ACA subsidy estimate explained with family Marketplace premium, Central Florida plan check, and official Marketplace verification.",
+      "url": "aca/aca-subsidy-estimate-in-orange-county-orlando-area-income-scenario-without-quote-confusion.html",
+      "canonical": "{SITE_ORIGIN}/aca/aca-subsidy-estimate-in-orange-county-orlando-area-income-scenario-without-quote-confusion.html",
+      "main_keyword": "Orange County ACA subsidy estimate",
+      "expanded_keywords": [
+        "Family Marketplace premium",
+        "Central Florida plan check",
+        "Florida Marketplace coverage",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "County and rating area",
+      "guide_hub": "guides/county-and-rating-area-guides.html",
+      "excerpt": "Orange County ACA subsidy estimate explained with Family Marketplace premium, Central Florida plan check, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-30T00:23:00+09:00",
+      "is_hub": true,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/county-and-rating-area-guides.html",
+        "aca/aca-subsidy-estimate-in-volusia-county-daytona-area-aca-estimate-without-quote-confusion.html",
+        "aca/what-can-change-the-brevard-county-aca-subsidy-estimate-before-enrollment.html",
+        "aca/sarasota-county-aca-subsidy-estimate-retirement-age-premium-planning-for-2026-coverage.html"
+      ]
+    },
+    {
+      "id": "what-can-change-the-duval-county-aca-subsidy-estimate-before-enrollment",
+      "type": "article",
+      "title": "What can change the Duval County ACA subsidy estimate before enrollment",
+      "subtitle": "Duval County ACA subsidy estimate explained with age-rated premium, North Florida benchmark, and official Marketplace verification.",
+      "url": "aca/what-can-change-the-duval-county-aca-subsidy-estimate-before-enrollment.html",
+      "canonical": "{SITE_ORIGIN}/aca/what-can-change-the-duval-county-aca-subsidy-estimate-before-enrollment.html",
+      "main_keyword": "Duval County ACA subsidy estimate",
+      "expanded_keywords": [
+        "Age-rated premium",
+        "North Florida benchmark",
+        "Florida Marketplace coverage",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "County and rating area",
+      "guide_hub": "guides/county-and-rating-area-guides.html",
+      "excerpt": "Duval County ACA subsidy estimate explained with Age-rated premium, North Florida benchmark, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-30T05:23:00+09:00",
+      "is_hub": true,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/county-and-rating-area-guides.html",
+        "aca/what-can-change-the-brevard-county-aca-subsidy-estimate-before-enrollment.html",
+        "aca/sarasota-county-aca-subsidy-estimate-retirement-age-premium-planning-for-2026-coverage.html",
+        "aca/how-manatee-county-shoppers-should-read-an-aca-subsidy-estimate-in-2026.html"
+      ]
+    },
+    {
+      "id": "pinellas-county-aca-subsidy-estimate-gulf-coast-plan-comparison-for-2026-coverage",
+      "type": "article",
+      "title": "Pinellas County ACA subsidy estimate: Gulf Coast plan comparison for 2026 coverage",
+      "subtitle": "Pinellas County ACA subsidy estimate explained with Silver benchmark estimate, county premium context, and official Marketplace verification.",
+      "url": "aca/pinellas-county-aca-subsidy-estimate-gulf-coast-plan-comparison-for-2026-coverage.html",
+      "canonical": "{SITE_ORIGIN}/aca/pinellas-county-aca-subsidy-estimate-gulf-coast-plan-comparison-for-2026-coverage.html",
+      "main_keyword": "Pinellas County ACA subsidy estimate",
+      "expanded_keywords": [
+        "Silver benchmark estimate",
+        "County premium context",
+        "Florida Marketplace coverage",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "County and rating area",
+      "guide_hub": "guides/county-and-rating-area-guides.html",
+      "excerpt": "Pinellas County ACA subsidy estimate explained with Silver benchmark estimate, County premium context, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-30T10:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/county-and-rating-area-guides.html",
+        "aca/sarasota-county-aca-subsidy-estimate-retirement-age-premium-planning-for-2026-coverage.html",
+        "aca/how-manatee-county-shoppers-should-read-an-aca-subsidy-estimate-in-2026.html",
+        "aca/collier-county-marketplace-premium-guide-for-aca-subsidy-estimate-decisions.html"
+      ]
+    },
+    {
+      "id": "how-lee-county-shoppers-should-read-an-aca-subsidy-estimate-in-2026",
+      "type": "article",
+      "title": "How Lee County shoppers should read an ACA subsidy estimate in 2026",
+      "subtitle": "Lee County ACA subsidy estimate explained with rating-area difference, coastal household planning, and official Marketplace verification.",
+      "url": "aca/how-lee-county-shoppers-should-read-an-aca-subsidy-estimate-in-2026.html",
+      "canonical": "{SITE_ORIGIN}/aca/how-lee-county-shoppers-should-read-an-aca-subsidy-estimate-in-2026.html",
+      "main_keyword": "Lee County ACA subsidy estimate",
+      "expanded_keywords": [
+        "Rating-area difference",
+        "Coastal household planning",
+        "Florida Marketplace coverage",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "County and rating area",
+      "guide_hub": "guides/county-and-rating-area-guides.html",
+      "excerpt": "Lee County ACA subsidy estimate explained with Rating-area difference, Coastal household planning, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-30T15:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/county-and-rating-area-guides.html",
+        "aca/how-manatee-county-shoppers-should-read-an-aca-subsidy-estimate-in-2026.html",
+        "aca/collier-county-marketplace-premium-guide-for-aca-subsidy-estimate-decisions.html",
+        "aca/aca-subsidy-estimate-in-pasco-county-commuter-household-estimate-without-quote-confusion.html"
+      ]
+    },
+    {
+      "id": "polk-county-marketplace-premium-guide-for-aca-subsidy-estimate-decisions",
+      "type": "article",
+      "title": "Polk County Marketplace premium guide for ACA subsidy estimate decisions",
+      "subtitle": "Polk County ACA subsidy estimate explained with household income band, county-specific ACA planning, and official Marketplace verification.",
+      "url": "aca/polk-county-marketplace-premium-guide-for-aca-subsidy-estimate-decisions.html",
+      "canonical": "{SITE_ORIGIN}/aca/polk-county-marketplace-premium-guide-for-aca-subsidy-estimate-decisions.html",
+      "main_keyword": "Polk County ACA subsidy estimate",
+      "expanded_keywords": [
+        "Household income band",
+        "County-specific ACA planning",
+        "Florida Marketplace coverage",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "County and rating area",
+      "guide_hub": "guides/county-and-rating-area-guides.html",
+      "excerpt": "Polk County ACA subsidy estimate explained with Household income band, County-specific ACA planning, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-06-30T20:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/county-and-rating-area-guides.html",
+        "aca/collier-county-marketplace-premium-guide-for-aca-subsidy-estimate-decisions.html",
+        "aca/aca-subsidy-estimate-in-pasco-county-commuter-household-estimate-without-quote-confusion.html",
+        "aca/what-can-change-the-osceola-county-aca-subsidy-estimate-before-enrollment.html"
+      ]
+    },
+    {
+      "id": "aca-subsidy-estimate-in-volusia-county-daytona-area-aca-estimate-without-quote-confusion",
+      "type": "article",
+      "title": "ACA subsidy estimate in Volusia County: Daytona-area ACA estimate without quote confusion",
+      "subtitle": "Volusia County ACA subsidy estimate explained with current-law premium view, local Marketplace check, and official Marketplace verification.",
+      "url": "aca/aca-subsidy-estimate-in-volusia-county-daytona-area-aca-estimate-without-quote-confusion.html",
+      "canonical": "{SITE_ORIGIN}/aca/aca-subsidy-estimate-in-volusia-county-daytona-area-aca-estimate-without-quote-confusion.html",
+      "main_keyword": "Volusia County ACA subsidy estimate",
+      "expanded_keywords": [
+        "Current-law premium view",
+        "Local Marketplace check",
+        "Florida Marketplace coverage",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "County and rating area",
+      "guide_hub": "guides/county-and-rating-area-guides.html",
+      "excerpt": "Volusia County ACA subsidy estimate explained with Current-law premium view, Local Marketplace check, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-01T01:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/county-and-rating-area-guides.html",
+        "aca/aca-subsidy-estimate-in-pasco-county-commuter-household-estimate-without-quote-confusion.html",
+        "aca/what-can-change-the-osceola-county-aca-subsidy-estimate-before-enrollment.html",
+        "aca/seminole-county-aca-subsidy-estimate-suburban-marketplace-planning-for-2026-coverage.html"
+      ]
+    },
+    {
+      "id": "what-can-change-the-brevard-county-aca-subsidy-estimate-before-enrollment",
+      "type": "article",
+      "title": "What can change the Brevard County ACA subsidy estimate before enrollment",
+      "subtitle": "Brevard County ACA subsidy estimate explained with SLCSP benchmark, county income scenario, and official Marketplace verification.",
+      "url": "aca/what-can-change-the-brevard-county-aca-subsidy-estimate-before-enrollment.html",
+      "canonical": "{SITE_ORIGIN}/aca/what-can-change-the-brevard-county-aca-subsidy-estimate-before-enrollment.html",
+      "main_keyword": "Brevard County ACA subsidy estimate",
+      "expanded_keywords": [
+        "SLCSP benchmark",
+        "County income scenario",
+        "Florida Marketplace coverage",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "County and rating area",
+      "guide_hub": "guides/county-and-rating-area-guides.html",
+      "excerpt": "Brevard County ACA subsidy estimate explained with SLCSP benchmark, County income scenario, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-01T06:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/county-and-rating-area-guides.html",
+        "aca/what-can-change-the-osceola-county-aca-subsidy-estimate-before-enrollment.html",
+        "aca/seminole-county-aca-subsidy-estimate-suburban-marketplace-planning-for-2026-coverage.html",
+        "aca/how-lake-county-shoppers-should-read-an-aca-subsidy-estimate-in-2026.html"
+      ]
+    },
+    {
+      "id": "sarasota-county-aca-subsidy-estimate-retirement-age-premium-planning-for-2026-coverage",
+      "type": "article",
+      "title": "Sarasota County ACA subsidy estimate: retirement-age premium planning for 2026 coverage",
+      "subtitle": "Sarasota County ACA subsidy estimate explained with pre-Medicare ACA estimate, Gulf Coast income check, and official Marketplace verification.",
+      "url": "aca/sarasota-county-aca-subsidy-estimate-retirement-age-premium-planning-for-2026-coverage.html",
+      "canonical": "{SITE_ORIGIN}/aca/sarasota-county-aca-subsidy-estimate-retirement-age-premium-planning-for-2026-coverage.html",
+      "main_keyword": "Sarasota County ACA subsidy estimate",
+      "expanded_keywords": [
+        "Pre-Medicare ACA estimate",
+        "Gulf Coast income check",
+        "Florida Marketplace coverage",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "County and rating area",
+      "guide_hub": "guides/county-and-rating-area-guides.html",
+      "excerpt": "Sarasota County ACA subsidy estimate explained with Pre-Medicare ACA estimate, Gulf Coast income check, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-01T11:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/county-and-rating-area-guides.html",
+        "aca/seminole-county-aca-subsidy-estimate-suburban-marketplace-planning-for-2026-coverage.html",
+        "aca/how-lake-county-shoppers-should-read-an-aca-subsidy-estimate-in-2026.html",
+        "aca/st-lucie-county-marketplace-premium-guide-for-aca-subsidy-estimate-decisions.html"
+      ]
+    },
+    {
+      "id": "how-manatee-county-shoppers-should-read-an-aca-subsidy-estimate-in-2026",
+      "type": "article",
+      "title": "How Manatee County shoppers should read an ACA subsidy estimate in 2026",
+      "subtitle": "Manatee County ACA subsidy estimate explained with CSR Silver plan review, county Marketplace question, and official Marketplace verification.",
+      "url": "aca/how-manatee-county-shoppers-should-read-an-aca-subsidy-estimate-in-2026.html",
+      "canonical": "{SITE_ORIGIN}/aca/how-manatee-county-shoppers-should-read-an-aca-subsidy-estimate-in-2026.html",
+      "main_keyword": "Manatee County ACA subsidy estimate",
+      "expanded_keywords": [
+        "CSR Silver plan review",
+        "County Marketplace question",
+        "Florida Marketplace coverage",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "County and rating area",
+      "guide_hub": "guides/county-and-rating-area-guides.html",
+      "excerpt": "Manatee County ACA subsidy estimate explained with CSR Silver plan review, County Marketplace question, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-01T16:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/county-and-rating-area-guides.html",
+        "aca/how-lake-county-shoppers-should-read-an-aca-subsidy-estimate-in-2026.html",
+        "aca/st-lucie-county-marketplace-premium-guide-for-aca-subsidy-estimate-decisions.html",
+        "aca/aca-subsidy-estimate-in-alachua-county-college-town-marketplace-estimate-without-quote-confusion.html"
+      ]
+    },
+    {
+      "id": "collier-county-marketplace-premium-guide-for-aca-subsidy-estimate-decisions",
+      "type": "article",
+      "title": "Collier County Marketplace premium guide for ACA subsidy estimate decisions",
+      "subtitle": "Collier County ACA subsidy estimate explained with benchmark premium pressure, Southwest Florida planning, and official Marketplace verification.",
+      "url": "aca/collier-county-marketplace-premium-guide-for-aca-subsidy-estimate-decisions.html",
+      "canonical": "{SITE_ORIGIN}/aca/collier-county-marketplace-premium-guide-for-aca-subsidy-estimate-decisions.html",
+      "main_keyword": "Collier County ACA subsidy estimate",
+      "expanded_keywords": [
+        "Benchmark premium pressure",
+        "Southwest Florida planning",
+        "Florida Marketplace coverage",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "County and rating area",
+      "guide_hub": "guides/county-and-rating-area-guides.html",
+      "excerpt": "Collier County ACA subsidy estimate explained with Benchmark premium pressure, Southwest Florida planning, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-01T21:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/county-and-rating-area-guides.html",
+        "aca/st-lucie-county-marketplace-premium-guide-for-aca-subsidy-estimate-decisions.html",
+        "aca/aca-subsidy-estimate-in-alachua-county-college-town-marketplace-estimate-without-quote-confusion.html",
+        "aca/what-can-change-the-leon-county-aca-subsidy-estimate-before-enrollment.html"
+      ]
+    },
+    {
+      "id": "aca-subsidy-estimate-in-pasco-county-commuter-household-estimate-without-quote-confusion",
+      "type": "article",
+      "title": "ACA subsidy estimate in Pasco County: commuter household estimate without quote confusion",
+      "subtitle": "Pasco County ACA subsidy estimate explained with income threshold review, Tampa Bay county comparison, and official Marketplace verification.",
+      "url": "aca/aca-subsidy-estimate-in-pasco-county-commuter-household-estimate-without-quote-confusion.html",
+      "canonical": "{SITE_ORIGIN}/aca/aca-subsidy-estimate-in-pasco-county-commuter-household-estimate-without-quote-confusion.html",
+      "main_keyword": "Pasco County ACA subsidy estimate",
+      "expanded_keywords": [
+        "Income threshold review",
+        "Tampa Bay county comparison",
+        "Florida Marketplace coverage",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "County and rating area",
+      "guide_hub": "guides/county-and-rating-area-guides.html",
+      "excerpt": "Pasco County ACA subsidy estimate explained with Income threshold review, Tampa Bay county comparison, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-02T02:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/county-and-rating-area-guides.html",
+        "aca/aca-subsidy-estimate-in-alachua-county-college-town-marketplace-estimate-without-quote-confusion.html",
+        "aca/what-can-change-the-leon-county-aca-subsidy-estimate-before-enrollment.html",
+        "aca/escambia-county-aca-subsidy-estimate-panhandle-premium-estimate-for-2026-coverage.html"
+      ]
+    },
+    {
+      "id": "what-can-change-the-osceola-county-aca-subsidy-estimate-before-enrollment",
+      "type": "article",
+      "title": "What can change the Osceola County ACA subsidy estimate before enrollment",
+      "subtitle": "Osceola County ACA subsidy estimate explained with seasonal income planning, Central Florida household, and official Marketplace verification.",
+      "url": "aca/what-can-change-the-osceola-county-aca-subsidy-estimate-before-enrollment.html",
+      "canonical": "{SITE_ORIGIN}/aca/what-can-change-the-osceola-county-aca-subsidy-estimate-before-enrollment.html",
+      "main_keyword": "Osceola County ACA subsidy estimate",
+      "expanded_keywords": [
+        "Seasonal income planning",
+        "Central Florida household",
+        "Florida Marketplace coverage",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "County and rating area",
+      "guide_hub": "guides/county-and-rating-area-guides.html",
+      "excerpt": "Osceola County ACA subsidy estimate explained with Seasonal income planning, Central Florida household, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-02T07:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/county-and-rating-area-guides.html",
+        "aca/what-can-change-the-leon-county-aca-subsidy-estimate-before-enrollment.html",
+        "aca/escambia-county-aca-subsidy-estimate-panhandle-premium-estimate-for-2026-coverage.html",
+        "aca/how-marion-county-shoppers-should-read-an-aca-subsidy-estimate-in-2026.html"
+      ]
+    },
+    {
+      "id": "seminole-county-aca-subsidy-estimate-suburban-marketplace-planning-for-2026-coverage",
+      "type": "article",
+      "title": "Seminole County ACA subsidy estimate: suburban Marketplace planning for 2026 coverage",
+      "subtitle": "Seminole County ACA subsidy estimate explained with Silver plan benchmark, Orlando-area verification, and official Marketplace verification.",
+      "url": "aca/seminole-county-aca-subsidy-estimate-suburban-marketplace-planning-for-2026-coverage.html",
+      "canonical": "{SITE_ORIGIN}/aca/seminole-county-aca-subsidy-estimate-suburban-marketplace-planning-for-2026-coverage.html",
+      "main_keyword": "Seminole County ACA subsidy estimate",
+      "expanded_keywords": [
+        "Silver plan benchmark",
+        "Orlando-area verification",
+        "Florida Marketplace coverage",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "County and rating area",
+      "guide_hub": "guides/county-and-rating-area-guides.html",
+      "excerpt": "Seminole County ACA subsidy estimate explained with Silver plan benchmark, Orlando-area verification, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-02T12:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/county-and-rating-area-guides.html",
+        "aca/escambia-county-aca-subsidy-estimate-panhandle-premium-estimate-for-2026-coverage.html",
+        "aca/how-marion-county-shoppers-should-read-an-aca-subsidy-estimate-in-2026.html",
+        "aca/okaloosa-county-marketplace-premium-guide-for-aca-subsidy-estimate-decisions.html"
+      ]
+    },
+    {
+      "id": "how-lake-county-shoppers-should-read-an-aca-subsidy-estimate-in-2026",
+      "type": "article",
+      "title": "How Lake County shoppers should read an ACA subsidy estimate in 2026",
+      "subtitle": "Lake County ACA subsidy estimate explained with rating area review, household subsidy estimate, and official Marketplace verification.",
+      "url": "aca/how-lake-county-shoppers-should-read-an-aca-subsidy-estimate-in-2026.html",
+      "canonical": "{SITE_ORIGIN}/aca/how-lake-county-shoppers-should-read-an-aca-subsidy-estimate-in-2026.html",
+      "main_keyword": "Lake County ACA subsidy estimate",
+      "expanded_keywords": [
+        "Rating area review",
+        "Household subsidy estimate",
+        "Florida Marketplace coverage",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "County and rating area",
+      "guide_hub": "guides/county-and-rating-area-guides.html",
+      "excerpt": "Lake County ACA subsidy estimate explained with Rating area review, Household subsidy estimate, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-02T17:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/county-and-rating-area-guides.html",
+        "aca/how-marion-county-shoppers-should-read-an-aca-subsidy-estimate-in-2026.html",
+        "aca/okaloosa-county-marketplace-premium-guide-for-aca-subsidy-estimate-decisions.html",
+        "aca/aca-subsidy-estimate-in-charlotte-county-older-household-estimate-without-quote-confusion.html"
+      ]
+    },
+    {
+      "id": "st-lucie-county-marketplace-premium-guide-for-aca-subsidy-estimate-decisions",
+      "type": "article",
+      "title": "St. Lucie County Marketplace premium guide for ACA subsidy estimate decisions",
+      "subtitle": "St. Lucie County ACA subsidy estimate explained with ACA premium tax credit, county plan confirmation, and official Marketplace verification.",
+      "url": "aca/st-lucie-county-marketplace-premium-guide-for-aca-subsidy-estimate-decisions.html",
+      "canonical": "{SITE_ORIGIN}/aca/st-lucie-county-marketplace-premium-guide-for-aca-subsidy-estimate-decisions.html",
+      "main_keyword": "St. Lucie County ACA subsidy estimate",
+      "expanded_keywords": [
+        "ACA premium tax credit",
+        "County plan confirmation",
+        "Florida Marketplace coverage",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "County and rating area",
+      "guide_hub": "guides/county-and-rating-area-guides.html",
+      "excerpt": "St. Lucie County ACA subsidy estimate explained with ACA premium tax credit, County plan confirmation, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-02T22:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/county-and-rating-area-guides.html",
+        "aca/okaloosa-county-marketplace-premium-guide-for-aca-subsidy-estimate-decisions.html",
+        "aca/aca-subsidy-estimate-in-charlotte-county-older-household-estimate-without-quote-confusion.html",
+        "aca/what-can-change-the-clay-county-aca-subsidy-estimate-before-enrollment.html"
+      ]
+    },
+    {
+      "id": "aca-subsidy-estimate-in-alachua-county-college-town-marketplace-estimate-without-quote-confusion",
+      "type": "article",
+      "title": "ACA subsidy estimate in Alachua County: college-town Marketplace estimate without quote confusion",
+      "subtitle": "Alachua County ACA subsidy estimate explained with young adult coverage, income volatility, and official Marketplace verification.",
+      "url": "aca/aca-subsidy-estimate-in-alachua-county-college-town-marketplace-estimate-without-quote-confusion.html",
+      "canonical": "{SITE_ORIGIN}/aca/aca-subsidy-estimate-in-alachua-county-college-town-marketplace-estimate-without-quote-confusion.html",
+      "main_keyword": "Alachua County ACA subsidy estimate",
+      "expanded_keywords": [
+        "Young adult coverage",
+        "Income volatility",
+        "Florida Marketplace coverage",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "County and rating area",
+      "guide_hub": "guides/county-and-rating-area-guides.html",
+      "excerpt": "Alachua County ACA subsidy estimate explained with Young adult coverage, Income volatility, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-03T03:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/county-and-rating-area-guides.html",
+        "aca/aca-subsidy-estimate-in-charlotte-county-older-household-estimate-without-quote-confusion.html",
+        "aca/what-can-change-the-clay-county-aca-subsidy-estimate-before-enrollment.html",
+        "aca/broward-county-aca-subsidy-estimate-south-florida-rating-area-check-for-2026-coverage.html"
+      ]
+    },
+    {
+      "id": "what-can-change-the-leon-county-aca-subsidy-estimate-before-enrollment",
+      "type": "article",
+      "title": "What can change the Leon County ACA subsidy estimate before enrollment",
+      "subtitle": "Leon County ACA subsidy estimate explained with state-worker household, North Florida Marketplace, and official Marketplace verification.",
+      "url": "aca/what-can-change-the-leon-county-aca-subsidy-estimate-before-enrollment.html",
+      "canonical": "{SITE_ORIGIN}/aca/what-can-change-the-leon-county-aca-subsidy-estimate-before-enrollment.html",
+      "main_keyword": "Leon County ACA subsidy estimate",
+      "expanded_keywords": [
+        "State-worker household",
+        "North Florida Marketplace",
+        "Florida Marketplace coverage",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "County and rating area",
+      "guide_hub": "guides/county-and-rating-area-guides.html",
+      "excerpt": "Leon County ACA subsidy estimate explained with State-worker household, North Florida Marketplace, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-03T08:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/county-and-rating-area-guides.html",
+        "aca/what-can-change-the-clay-county-aca-subsidy-estimate-before-enrollment.html",
+        "aca/broward-county-aca-subsidy-estimate-south-florida-rating-area-check-for-2026-coverage.html",
+        "aca/how-palm-beach-county-shoppers-should-read-an-aca-subsidy-estimate-in-2026.html"
+      ]
+    },
+    {
+      "id": "escambia-county-aca-subsidy-estimate-panhandle-premium-estimate-for-2026-coverage",
+      "type": "article",
+      "title": "Escambia County ACA subsidy estimate: Panhandle premium estimate for 2026 coverage",
+      "subtitle": "Escambia County ACA subsidy estimate explained with county rating area, official Marketplace check, and official Marketplace verification.",
+      "url": "aca/escambia-county-aca-subsidy-estimate-panhandle-premium-estimate-for-2026-coverage.html",
+      "canonical": "{SITE_ORIGIN}/aca/escambia-county-aca-subsidy-estimate-panhandle-premium-estimate-for-2026-coverage.html",
+      "main_keyword": "Escambia County ACA subsidy estimate",
+      "expanded_keywords": [
+        "County rating area",
+        "Official Marketplace check",
+        "Florida Marketplace coverage",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "County and rating area",
+      "guide_hub": "guides/county-and-rating-area-guides.html",
+      "excerpt": "Escambia County ACA subsidy estimate explained with County rating area, Official Marketplace check, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-03T13:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/county-and-rating-area-guides.html",
+        "aca/broward-county-aca-subsidy-estimate-south-florida-rating-area-check-for-2026-coverage.html",
+        "aca/how-palm-beach-county-shoppers-should-read-an-aca-subsidy-estimate-in-2026.html",
+        "aca/hillsborough-county-marketplace-premium-guide-for-aca-subsidy-estimate-decisions.html"
+      ]
+    },
+    {
+      "id": "how-marion-county-shoppers-should-read-an-aca-subsidy-estimate-in-2026",
+      "type": "article",
+      "title": "How Marion County shoppers should read an ACA subsidy estimate in 2026",
+      "subtitle": "Marion County ACA subsidy estimate explained with pre-Medicare premium, county household planning, and official Marketplace verification.",
+      "url": "aca/how-marion-county-shoppers-should-read-an-aca-subsidy-estimate-in-2026.html",
+      "canonical": "{SITE_ORIGIN}/aca/how-marion-county-shoppers-should-read-an-aca-subsidy-estimate-in-2026.html",
+      "main_keyword": "Marion County ACA subsidy estimate",
+      "expanded_keywords": [
+        "Pre-Medicare premium",
+        "County household planning",
+        "Florida Marketplace coverage",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "County and rating area",
+      "guide_hub": "guides/county-and-rating-area-guides.html",
+      "excerpt": "Marion County ACA subsidy estimate explained with Pre-Medicare premium, County household planning, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-03T18:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/county-and-rating-area-guides.html",
+        "aca/how-palm-beach-county-shoppers-should-read-an-aca-subsidy-estimate-in-2026.html",
+        "aca/hillsborough-county-marketplace-premium-guide-for-aca-subsidy-estimate-decisions.html",
+        "aca/aca-subsidy-estimate-in-orange-county-orlando-area-income-scenario-without-quote-confusion.html"
+      ]
+    },
+    {
+      "id": "okaloosa-county-marketplace-premium-guide-for-aca-subsidy-estimate-decisions",
+      "type": "article",
+      "title": "Okaloosa County Marketplace premium guide for ACA subsidy estimate decisions",
+      "subtitle": "Okaloosa County ACA subsidy estimate explained with Marketplace eligibility check, Panhandle plan review, and official Marketplace verification.",
+      "url": "aca/okaloosa-county-marketplace-premium-guide-for-aca-subsidy-estimate-decisions.html",
+      "canonical": "{SITE_ORIGIN}/aca/okaloosa-county-marketplace-premium-guide-for-aca-subsidy-estimate-decisions.html",
+      "main_keyword": "Okaloosa County ACA subsidy estimate",
+      "expanded_keywords": [
+        "Marketplace eligibility check",
+        "Panhandle plan review",
+        "Florida Marketplace coverage",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "County and rating area",
+      "guide_hub": "guides/county-and-rating-area-guides.html",
+      "excerpt": "Okaloosa County ACA subsidy estimate explained with Marketplace eligibility check, Panhandle plan review, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-03T23:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/county-and-rating-area-guides.html",
+        "aca/hillsborough-county-marketplace-premium-guide-for-aca-subsidy-estimate-decisions.html",
+        "aca/aca-subsidy-estimate-in-orange-county-orlando-area-income-scenario-without-quote-confusion.html",
+        "aca/what-can-change-the-duval-county-aca-subsidy-estimate-before-enrollment.html"
+      ]
+    },
+    {
+      "id": "aca-subsidy-estimate-in-charlotte-county-older-household-estimate-without-quote-confusion",
+      "type": "article",
+      "title": "ACA subsidy estimate in Charlotte County: older household estimate without quote confusion",
+      "subtitle": "Charlotte County ACA subsidy estimate explained with age-rating premium, Gulf Coast verification, and official Marketplace verification.",
+      "url": "aca/aca-subsidy-estimate-in-charlotte-county-older-household-estimate-without-quote-confusion.html",
+      "canonical": "{SITE_ORIGIN}/aca/aca-subsidy-estimate-in-charlotte-county-older-household-estimate-without-quote-confusion.html",
+      "main_keyword": "Charlotte County ACA subsidy estimate",
+      "expanded_keywords": [
+        "Age-rating premium",
+        "Gulf Coast verification",
+        "Florida Marketplace coverage",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "County and rating area",
+      "guide_hub": "guides/county-and-rating-area-guides.html",
+      "excerpt": "Charlotte County ACA subsidy estimate explained with Age-rating premium, Gulf Coast verification, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-04T04:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/county-and-rating-area-guides.html",
+        "aca/aca-subsidy-estimate-in-orange-county-orlando-area-income-scenario-without-quote-confusion.html",
+        "aca/what-can-change-the-duval-county-aca-subsidy-estimate-before-enrollment.html",
+        "aca/pinellas-county-aca-subsidy-estimate-gulf-coast-plan-comparison-for-2026-coverage.html"
+      ]
+    },
+    {
+      "id": "what-can-change-the-clay-county-aca-subsidy-estimate-before-enrollment",
+      "type": "article",
+      "title": "What can change the Clay County ACA subsidy estimate before enrollment",
+      "subtitle": "Clay County ACA subsidy estimate explained with family income threshold, county ACA estimate, and official Marketplace verification.",
+      "url": "aca/what-can-change-the-clay-county-aca-subsidy-estimate-before-enrollment.html",
+      "canonical": "{SITE_ORIGIN}/aca/what-can-change-the-clay-county-aca-subsidy-estimate-before-enrollment.html",
+      "main_keyword": "Clay County ACA subsidy estimate",
+      "expanded_keywords": [
+        "Family income threshold",
+        "County ACA estimate",
+        "Florida Marketplace coverage",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "County and rating area",
+      "guide_hub": "guides/county-and-rating-area-guides.html",
+      "excerpt": "Clay County ACA subsidy estimate explained with Family income threshold, County ACA estimate, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-04T09:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/county-and-rating-area-guides.html",
+        "aca/what-can-change-the-duval-county-aca-subsidy-estimate-before-enrollment.html",
+        "aca/pinellas-county-aca-subsidy-estimate-gulf-coast-plan-comparison-for-2026-coverage.html",
+        "aca/how-lee-county-shoppers-should-read-an-aca-subsidy-estimate-in-2026.html"
+      ]
+    },
+    {
+      "id": "florida-aca-subsidy-estimate-after-cobra-ending-in-florida-what-to-check-first",
+      "type": "article",
+      "title": "Florida ACA subsidy estimate after COBRA ending in Florida: what to check first",
+      "subtitle": "Florida ACA subsidy estimate after COBRA ending in Florida with COBRA transition, special enrollment timing, and a clear Marketplace verification step.",
+      "url": "aca/florida-aca-subsidy-estimate-after-cobra-ending-in-florida-what-to-check-first.html",
+      "canonical": "{SITE_ORIGIN}/aca/florida-aca-subsidy-estimate-after-cobra-ending-in-florida-what-to-check-first.html",
+      "main_keyword": "Florida ACA subsidy estimate after COBRA ending in Florida",
+      "expanded_keywords": [
+        "COBRA transition",
+        "Special enrollment timing",
+        "2026 income projection",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "Life event and income change",
+      "guide_hub": "guides/life-event-and-income-change-guides.html",
+      "excerpt": "Florida ACA subsidy estimate after COBRA ending in Florida explained with COBRA transition, Special enrollment timing, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-04T14:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/life-event-and-income-change-guides.html",
+        "aca/florida-aca-subsidy-estimate-after-seasonal-tourism-income-what-to-check-first.html",
+        "aca/when-tipped-worker-income-changes-a-florida-aca-subsidy-estimate.html",
+        "aca/caregiving-leave-and-the-florida-aca-subsidy-estimate-for-2026.html"
+      ]
+    },
+    {
+      "id": "when-employer-coverage-becoming-unaffordable-changes-a-florida-aca-subsidy-estimate",
+      "type": "article",
+      "title": "When employer coverage becoming unaffordable changes a Florida ACA subsidy estimate",
+      "subtitle": "Florida ACA subsidy estimate after employer coverage becoming unaffordable with affordability test, Marketplace fallback, and a clear Marketplace verification step.",
+      "url": "aca/when-employer-coverage-becoming-unaffordable-changes-a-florida-aca-subsidy-estimate.html",
+      "canonical": "{SITE_ORIGIN}/aca/when-employer-coverage-becoming-unaffordable-changes-a-florida-aca-subsidy-estimate.html",
+      "main_keyword": "Florida ACA subsidy estimate after employer coverage becoming unaffordable",
+      "expanded_keywords": [
+        "Affordability test",
+        "Marketplace fallback",
+        "2026 income projection",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "Life event and income change",
+      "guide_hub": "guides/life-event-and-income-change-guides.html",
+      "excerpt": "Florida ACA subsidy estimate after employer coverage becoming unaffordable explained with Affordability test, Marketplace fallback, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-04T19:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/life-event-and-income-change-guides.html",
+        "aca/when-tipped-worker-income-changes-a-florida-aca-subsidy-estimate.html",
+        "aca/caregiving-leave-and-the-florida-aca-subsidy-estimate-for-2026.html",
+        "aca/how-to-update-a-florida-aca-subsidy-estimate-after-dependent-returning-home.html"
+      ]
+    },
+    {
+      "id": "moving-between-florida-counties-and-the-florida-aca-subsidy-estimate-for-2026",
+      "type": "article",
+      "title": "Moving between Florida counties and the Florida ACA subsidy estimate for 2026",
+      "subtitle": "Florida ACA subsidy estimate after moving between Florida counties with county move, rating-area update, and a clear Marketplace verification step.",
+      "url": "aca/moving-between-florida-counties-and-the-florida-aca-subsidy-estimate-for-2026.html",
+      "canonical": "{SITE_ORIGIN}/aca/moving-between-florida-counties-and-the-florida-aca-subsidy-estimate-for-2026.html",
+      "main_keyword": "Florida ACA subsidy estimate after moving between Florida counties",
+      "expanded_keywords": [
+        "County move",
+        "Rating-area update",
+        "2026 income projection",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "Life event and income change",
+      "guide_hub": "guides/life-event-and-income-change-guides.html",
+      "excerpt": "Florida ACA subsidy estimate after moving between Florida counties explained with County move, Rating-area update, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-05T00:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/life-event-and-income-change-guides.html",
+        "aca/caregiving-leave-and-the-florida-aca-subsidy-estimate-for-2026.html",
+        "aca/how-to-update-a-florida-aca-subsidy-estimate-after-dependent-returning-home.html",
+        "aca/florida-aca-subsidy-estimate-after-retiring-before-medicare-what-to-check-first.html"
+      ]
+    },
+    {
+      "id": "how-to-update-a-florida-aca-subsidy-estimate-after-having-a-baby-or-adopting-a-child",
+      "type": "article",
+      "title": "How to update a Florida ACA subsidy estimate after having a baby or adopting a child",
+      "subtitle": "Florida ACA subsidy estimate after having a baby or adopting a child with new dependent, household size change, and a clear Marketplace verification step.",
+      "url": "aca/how-to-update-a-florida-aca-subsidy-estimate-after-having-a-baby-or-adopting-a-child.html",
+      "canonical": "{SITE_ORIGIN}/aca/how-to-update-a-florida-aca-subsidy-estimate-after-having-a-baby-or-adopting-a-child.html",
+      "main_keyword": "Florida ACA subsidy estimate after having a baby or adopting a child",
+      "expanded_keywords": [
+        "New dependent",
+        "Household size change",
+        "2026 income projection",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "Life event and income change",
+      "guide_hub": "guides/life-event-and-income-change-guides.html",
+      "excerpt": "Florida ACA subsidy estimate after having a baby or adopting a child explained with New dependent, Household size change, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-05T05:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/life-event-and-income-change-guides.html",
+        "aca/how-to-update-a-florida-aca-subsidy-estimate-after-dependent-returning-home.html",
+        "aca/florida-aca-subsidy-estimate-after-retiring-before-medicare-what-to-check-first.html",
+        "aca/when-moving-to-florida-from-another-state-changes-a-florida-aca-subsidy-estimate.html"
+      ]
+    },
+    {
+      "id": "florida-aca-subsidy-estimate-after-divorce-changing-tax-household-size-what-to-check-first",
+      "type": "article",
+      "title": "Florida ACA subsidy estimate after divorce changing tax household size: what to check first",
+      "subtitle": "Florida ACA subsidy estimate after divorce changing tax household size with dependent claim, income split, and a clear Marketplace verification step.",
+      "url": "aca/florida-aca-subsidy-estimate-after-divorce-changing-tax-household-size-what-to-check-first.html",
+      "canonical": "{SITE_ORIGIN}/aca/florida-aca-subsidy-estimate-after-divorce-changing-tax-household-size-what-to-check-first.html",
+      "main_keyword": "Florida ACA subsidy estimate after divorce changing tax household size",
+      "expanded_keywords": [
+        "Dependent claim",
+        "Income split",
+        "2026 income projection",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "Life event and income change",
+      "guide_hub": "guides/life-event-and-income-change-guides.html",
+      "excerpt": "Florida ACA subsidy estimate after divorce changing tax household size explained with Dependent claim, Income split, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-05T10:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/life-event-and-income-change-guides.html",
+        "aca/florida-aca-subsidy-estimate-after-retiring-before-medicare-what-to-check-first.html",
+        "aca/when-moving-to-florida-from-another-state-changes-a-florida-aca-subsidy-estimate.html",
+        "aca/losing-medicaid-eligibility-and-the-florida-aca-subsidy-estimate-for-2026.html"
+      ]
+    },
+    {
+      "id": "when-getting-married-before-open-enrollment-changes-a-florida-aca-subsidy-estimate",
+      "type": "article",
+      "title": "When getting married before open enrollment changes a Florida ACA subsidy estimate",
+      "subtitle": "Florida ACA subsidy estimate after getting married before open enrollment with combined income, new tax household, and a clear Marketplace verification step.",
+      "url": "aca/when-getting-married-before-open-enrollment-changes-a-florida-aca-subsidy-estimate.html",
+      "canonical": "{SITE_ORIGIN}/aca/when-getting-married-before-open-enrollment-changes-a-florida-aca-subsidy-estimate.html",
+      "main_keyword": "Florida ACA subsidy estimate after getting married before open enrollment",
+      "expanded_keywords": [
+        "Combined income",
+        "New tax household",
+        "2026 income projection",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "Life event and income change",
+      "guide_hub": "guides/life-event-and-income-change-guides.html",
+      "excerpt": "Florida ACA subsidy estimate after getting married before open enrollment explained with Combined income, New tax household, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-05T15:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/life-event-and-income-change-guides.html",
+        "aca/when-moving-to-florida-from-another-state-changes-a-florida-aca-subsidy-estimate.html",
+        "aca/losing-medicaid-eligibility-and-the-florida-aca-subsidy-estimate-for-2026.html",
+        "aca/how-to-update-a-florida-aca-subsidy-estimate-after-starting-a-small-business.html"
+      ]
+    },
+    {
+      "id": "changing-jobs-midyear-and-the-florida-aca-subsidy-estimate-for-2026",
+      "type": "article",
+      "title": "Changing jobs midyear and the Florida ACA subsidy estimate for 2026",
+      "subtitle": "Florida ACA subsidy estimate after changing jobs midyear with income projection, employer coverage gap, and a clear Marketplace verification step.",
+      "url": "aca/changing-jobs-midyear-and-the-florida-aca-subsidy-estimate-for-2026.html",
+      "canonical": "{SITE_ORIGIN}/aca/changing-jobs-midyear-and-the-florida-aca-subsidy-estimate-for-2026.html",
+      "main_keyword": "Florida ACA subsidy estimate after changing jobs midyear",
+      "expanded_keywords": [
+        "Income projection",
+        "Employer coverage gap",
+        "2026 income projection",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "Life event and income change",
+      "guide_hub": "guides/life-event-and-income-change-guides.html",
+      "excerpt": "Florida ACA subsidy estimate after changing jobs midyear explained with Income projection, Employer coverage gap, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-05T20:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/life-event-and-income-change-guides.html",
+        "aca/losing-medicaid-eligibility-and-the-florida-aca-subsidy-estimate-for-2026.html",
+        "aca/how-to-update-a-florida-aca-subsidy-estimate-after-starting-a-small-business.html",
+        "aca/florida-aca-subsidy-estimate-after-cobra-ending-in-florida-what-to-check-first.html"
+      ]
+    },
+    {
+      "id": "how-to-update-a-florida-aca-subsidy-estimate-after-starting-freelance-work",
+      "type": "article",
+      "title": "How to update a Florida ACA subsidy estimate after starting freelance work",
+      "subtitle": "Florida ACA subsidy estimate after starting freelance work with self-employed income, variable monthly income, and a clear Marketplace verification step.",
+      "url": "aca/how-to-update-a-florida-aca-subsidy-estimate-after-starting-freelance-work.html",
+      "canonical": "{SITE_ORIGIN}/aca/how-to-update-a-florida-aca-subsidy-estimate-after-starting-freelance-work.html",
+      "main_keyword": "Florida ACA subsidy estimate after starting freelance work",
+      "expanded_keywords": [
+        "Self-employed income",
+        "Variable monthly income",
+        "2026 income projection",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "Life event and income change",
+      "guide_hub": "guides/life-event-and-income-change-guides.html",
+      "excerpt": "Florida ACA subsidy estimate after starting freelance work explained with Self-employed income, Variable monthly income, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-06T01:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/life-event-and-income-change-guides.html",
+        "aca/how-to-update-a-florida-aca-subsidy-estimate-after-starting-a-small-business.html",
+        "aca/florida-aca-subsidy-estimate-after-cobra-ending-in-florida-what-to-check-first.html",
+        "aca/when-employer-coverage-becoming-unaffordable-changes-a-florida-aca-subsidy-estimate.html"
+      ]
+    },
+    {
+      "id": "florida-aca-subsidy-estimate-after-hurricane-income-disruption-what-to-check-first",
+      "type": "article",
+      "title": "Florida ACA subsidy estimate after hurricane income disruption: what to check first",
+      "subtitle": "Florida ACA subsidy estimate after hurricane income disruption with temporary income drop, documentation check, and a clear Marketplace verification step.",
+      "url": "aca/florida-aca-subsidy-estimate-after-hurricane-income-disruption-what-to-check-first.html",
+      "canonical": "{SITE_ORIGIN}/aca/florida-aca-subsidy-estimate-after-hurricane-income-disruption-what-to-check-first.html",
+      "main_keyword": "Florida ACA subsidy estimate after hurricane income disruption",
+      "expanded_keywords": [
+        "Temporary income drop",
+        "Documentation check",
+        "2026 income projection",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "Life event and income change",
+      "guide_hub": "guides/life-event-and-income-change-guides.html",
+      "excerpt": "Florida ACA subsidy estimate after hurricane income disruption explained with Temporary income drop, Documentation check, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-06T06:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/life-event-and-income-change-guides.html",
+        "aca/florida-aca-subsidy-estimate-after-cobra-ending-in-florida-what-to-check-first.html",
+        "aca/when-employer-coverage-becoming-unaffordable-changes-a-florida-aca-subsidy-estimate.html",
+        "aca/moving-between-florida-counties-and-the-florida-aca-subsidy-estimate-for-2026.html"
+      ]
+    },
+    {
+      "id": "when-turning-26-in-florida-changes-a-florida-aca-subsidy-estimate",
+      "type": "article",
+      "title": "When turning 26 in Florida changes a Florida ACA subsidy estimate",
+      "subtitle": "Florida ACA subsidy estimate after turning 26 in Florida with aging off parent coverage, young adult Marketplace, and a clear Marketplace verification step.",
+      "url": "aca/when-turning-26-in-florida-changes-a-florida-aca-subsidy-estimate.html",
+      "canonical": "{SITE_ORIGIN}/aca/when-turning-26-in-florida-changes-a-florida-aca-subsidy-estimate.html",
+      "main_keyword": "Florida ACA subsidy estimate after turning 26 in Florida",
+      "expanded_keywords": [
+        "Aging off parent coverage",
+        "Young adult Marketplace",
+        "2026 income projection",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "Life event and income change",
+      "guide_hub": "guides/life-event-and-income-change-guides.html",
+      "excerpt": "Florida ACA subsidy estimate after turning 26 in Florida explained with Aging off parent coverage, Young adult Marketplace, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-06T11:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/life-event-and-income-change-guides.html",
+        "aca/when-employer-coverage-becoming-unaffordable-changes-a-florida-aca-subsidy-estimate.html",
+        "aca/moving-between-florida-counties-and-the-florida-aca-subsidy-estimate-for-2026.html",
+        "aca/how-to-update-a-florida-aca-subsidy-estimate-after-having-a-baby-or-adopting-a-child.html"
+      ]
+    },
+    {
+      "id": "spouse-moving-to-medicare-and-the-florida-aca-subsidy-estimate-for-2026",
+      "type": "article",
+      "title": "Spouse moving to Medicare and the Florida ACA subsidy estimate for 2026",
+      "subtitle": "Florida ACA subsidy estimate after spouse moving to Medicare with mixed coverage household, pre-Medicare spouse, and a clear Marketplace verification step.",
+      "url": "aca/spouse-moving-to-medicare-and-the-florida-aca-subsidy-estimate-for-2026.html",
+      "canonical": "{SITE_ORIGIN}/aca/spouse-moving-to-medicare-and-the-florida-aca-subsidy-estimate-for-2026.html",
+      "main_keyword": "Florida ACA subsidy estimate after spouse moving to Medicare",
+      "expanded_keywords": [
+        "Mixed coverage household",
+        "Pre-Medicare spouse",
+        "2026 income projection",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "Life event and income change",
+      "guide_hub": "guides/life-event-and-income-change-guides.html",
+      "excerpt": "Florida ACA subsidy estimate after spouse moving to Medicare explained with Mixed coverage household, Pre-Medicare spouse, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-06T16:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/life-event-and-income-change-guides.html",
+        "aca/moving-between-florida-counties-and-the-florida-aca-subsidy-estimate-for-2026.html",
+        "aca/how-to-update-a-florida-aca-subsidy-estimate-after-having-a-baby-or-adopting-a-child.html",
+        "aca/florida-aca-subsidy-estimate-after-divorce-changing-tax-household-size-what-to-check-first.html"
+      ]
+    },
+    {
+      "id": "how-to-update-a-florida-aca-subsidy-estimate-after-unemployment-after-layoff",
+      "type": "article",
+      "title": "How to update a Florida ACA subsidy estimate after unemployment after layoff",
+      "subtitle": "Florida ACA subsidy estimate after unemployment after layoff with loss of employer coverage, annual income estimate, and a clear Marketplace verification step.",
+      "url": "aca/how-to-update-a-florida-aca-subsidy-estimate-after-unemployment-after-layoff.html",
+      "canonical": "{SITE_ORIGIN}/aca/how-to-update-a-florida-aca-subsidy-estimate-after-unemployment-after-layoff.html",
+      "main_keyword": "Florida ACA subsidy estimate after unemployment after layoff",
+      "expanded_keywords": [
+        "Loss of employer coverage",
+        "Annual income estimate",
+        "2026 income projection",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "Life event and income change",
+      "guide_hub": "guides/life-event-and-income-change-guides.html",
+      "excerpt": "Florida ACA subsidy estimate after unemployment after layoff explained with Loss of employer coverage, Annual income estimate, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-06T21:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/life-event-and-income-change-guides.html",
+        "aca/how-to-update-a-florida-aca-subsidy-estimate-after-having-a-baby-or-adopting-a-child.html",
+        "aca/florida-aca-subsidy-estimate-after-divorce-changing-tax-household-size-what-to-check-first.html",
+        "aca/when-getting-married-before-open-enrollment-changes-a-florida-aca-subsidy-estimate.html"
+      ]
+    },
+    {
+      "id": "florida-aca-subsidy-estimate-after-seasonal-tourism-income-what-to-check-first",
+      "type": "article",
+      "title": "Florida ACA subsidy estimate after seasonal tourism income: what to check first",
+      "subtitle": "Florida ACA subsidy estimate after seasonal tourism income with variable income, monthly-to-annual estimate, and a clear Marketplace verification step.",
+      "url": "aca/florida-aca-subsidy-estimate-after-seasonal-tourism-income-what-to-check-first.html",
+      "canonical": "{SITE_ORIGIN}/aca/florida-aca-subsidy-estimate-after-seasonal-tourism-income-what-to-check-first.html",
+      "main_keyword": "Florida ACA subsidy estimate after seasonal tourism income",
+      "expanded_keywords": [
+        "Variable income",
+        "Monthly-to-annual estimate",
+        "2026 income projection",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "Life event and income change",
+      "guide_hub": "guides/life-event-and-income-change-guides.html",
+      "excerpt": "Florida ACA subsidy estimate after seasonal tourism income explained with Variable income, Monthly-to-annual estimate, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-07T02:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/life-event-and-income-change-guides.html",
+        "aca/florida-aca-subsidy-estimate-after-divorce-changing-tax-household-size-what-to-check-first.html",
+        "aca/when-getting-married-before-open-enrollment-changes-a-florida-aca-subsidy-estimate.html",
+        "aca/changing-jobs-midyear-and-the-florida-aca-subsidy-estimate-for-2026.html"
+      ]
+    },
+    {
+      "id": "when-tipped-worker-income-changes-a-florida-aca-subsidy-estimate",
+      "type": "article",
+      "title": "When tipped worker income changes a Florida ACA subsidy estimate",
+      "subtitle": "Florida ACA subsidy estimate after tipped worker income changes with reported income, premium tax credit planning, and a clear Marketplace verification step.",
+      "url": "aca/when-tipped-worker-income-changes-a-florida-aca-subsidy-estimate.html",
+      "canonical": "{SITE_ORIGIN}/aca/when-tipped-worker-income-changes-a-florida-aca-subsidy-estimate.html",
+      "main_keyword": "Florida ACA subsidy estimate after tipped worker income changes",
+      "expanded_keywords": [
+        "Reported income",
+        "Premium tax credit planning",
+        "2026 income projection",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "Life event and income change",
+      "guide_hub": "guides/life-event-and-income-change-guides.html",
+      "excerpt": "Florida ACA subsidy estimate after tipped worker income changes explained with Reported income, Premium tax credit planning, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-07T07:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/life-event-and-income-change-guides.html",
+        "aca/when-getting-married-before-open-enrollment-changes-a-florida-aca-subsidy-estimate.html",
+        "aca/changing-jobs-midyear-and-the-florida-aca-subsidy-estimate-for-2026.html",
+        "aca/how-to-update-a-florida-aca-subsidy-estimate-after-starting-freelance-work.html"
+      ]
+    },
+    {
+      "id": "caregiving-leave-and-the-florida-aca-subsidy-estimate-for-2026",
+      "type": "article",
+      "title": "Caregiving leave and the Florida ACA subsidy estimate for 2026",
+      "subtitle": "Florida ACA subsidy estimate after caregiving leave with reduced work hours, family coverage planning, and a clear Marketplace verification step.",
+      "url": "aca/caregiving-leave-and-the-florida-aca-subsidy-estimate-for-2026.html",
+      "canonical": "{SITE_ORIGIN}/aca/caregiving-leave-and-the-florida-aca-subsidy-estimate-for-2026.html",
+      "main_keyword": "Florida ACA subsidy estimate after caregiving leave",
+      "expanded_keywords": [
+        "Reduced work hours",
+        "Family coverage planning",
+        "2026 income projection",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "Life event and income change",
+      "guide_hub": "guides/life-event-and-income-change-guides.html",
+      "excerpt": "Florida ACA subsidy estimate after caregiving leave explained with Reduced work hours, Family coverage planning, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-07T12:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/life-event-and-income-change-guides.html",
+        "aca/changing-jobs-midyear-and-the-florida-aca-subsidy-estimate-for-2026.html",
+        "aca/how-to-update-a-florida-aca-subsidy-estimate-after-starting-freelance-work.html",
+        "aca/florida-aca-subsidy-estimate-after-hurricane-income-disruption-what-to-check-first.html"
+      ]
+    },
+    {
+      "id": "how-to-update-a-florida-aca-subsidy-estimate-after-dependent-returning-home",
+      "type": "article",
+      "title": "How to update a Florida ACA subsidy estimate after dependent returning home",
+      "subtitle": "Florida ACA subsidy estimate after dependent returning home with tax household review, adult child coverage, and a clear Marketplace verification step.",
+      "url": "aca/how-to-update-a-florida-aca-subsidy-estimate-after-dependent-returning-home.html",
+      "canonical": "{SITE_ORIGIN}/aca/how-to-update-a-florida-aca-subsidy-estimate-after-dependent-returning-home.html",
+      "main_keyword": "Florida ACA subsidy estimate after dependent returning home",
+      "expanded_keywords": [
+        "Tax household review",
+        "Adult child coverage",
+        "2026 income projection",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "Life event and income change",
+      "guide_hub": "guides/life-event-and-income-change-guides.html",
+      "excerpt": "Florida ACA subsidy estimate after dependent returning home explained with Tax household review, Adult child coverage, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-07T17:23:00+09:00",
+      "is_hub": true,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/life-event-and-income-change-guides.html",
+        "aca/how-to-update-a-florida-aca-subsidy-estimate-after-starting-freelance-work.html",
+        "aca/florida-aca-subsidy-estimate-after-hurricane-income-disruption-what-to-check-first.html",
+        "aca/when-turning-26-in-florida-changes-a-florida-aca-subsidy-estimate.html"
+      ]
+    },
+    {
+      "id": "florida-aca-subsidy-estimate-after-retiring-before-medicare-what-to-check-first",
+      "type": "article",
+      "title": "Florida ACA subsidy estimate after retiring before Medicare: what to check first",
+      "subtitle": "Florida ACA subsidy estimate after retiring before Medicare with early retiree income, age-rated premium, and a clear Marketplace verification step.",
+      "url": "aca/florida-aca-subsidy-estimate-after-retiring-before-medicare-what-to-check-first.html",
+      "canonical": "{SITE_ORIGIN}/aca/florida-aca-subsidy-estimate-after-retiring-before-medicare-what-to-check-first.html",
+      "main_keyword": "Florida ACA subsidy estimate after retiring before Medicare",
+      "expanded_keywords": [
+        "Early retiree income",
+        "Age-rated premium",
+        "2026 income projection",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "Life event and income change",
+      "guide_hub": "guides/life-event-and-income-change-guides.html",
+      "excerpt": "Florida ACA subsidy estimate after retiring before Medicare explained with Early retiree income, Age-rated premium, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-07T22:23:00+09:00",
+      "is_hub": true,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/life-event-and-income-change-guides.html",
+        "aca/florida-aca-subsidy-estimate-after-hurricane-income-disruption-what-to-check-first.html",
+        "aca/when-turning-26-in-florida-changes-a-florida-aca-subsidy-estimate.html",
+        "aca/spouse-moving-to-medicare-and-the-florida-aca-subsidy-estimate-for-2026.html"
+      ]
+    },
+    {
+      "id": "when-moving-to-florida-from-another-state-changes-a-florida-aca-subsidy-estimate",
+      "type": "article",
+      "title": "When moving to Florida from another state changes a Florida ACA subsidy estimate",
+      "subtitle": "Florida ACA subsidy estimate after moving to Florida from another state with new resident Marketplace, local plan confirmation, and a clear Marketplace verification step.",
+      "url": "aca/when-moving-to-florida-from-another-state-changes-a-florida-aca-subsidy-estimate.html",
+      "canonical": "{SITE_ORIGIN}/aca/when-moving-to-florida-from-another-state-changes-a-florida-aca-subsidy-estimate.html",
+      "main_keyword": "Florida ACA subsidy estimate after moving to Florida from another state",
+      "expanded_keywords": [
+        "New resident Marketplace",
+        "Local plan confirmation",
+        "2026 income projection",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "Life event and income change",
+      "guide_hub": "guides/life-event-and-income-change-guides.html",
+      "excerpt": "Florida ACA subsidy estimate after moving to Florida from another state explained with New resident Marketplace, Local plan confirmation, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-08T03:23:00+09:00",
+      "is_hub": true,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/life-event-and-income-change-guides.html",
+        "aca/when-turning-26-in-florida-changes-a-florida-aca-subsidy-estimate.html",
+        "aca/spouse-moving-to-medicare-and-the-florida-aca-subsidy-estimate-for-2026.html",
+        "aca/how-to-update-a-florida-aca-subsidy-estimate-after-unemployment-after-layoff.html"
+      ]
+    },
+    {
+      "id": "losing-medicaid-eligibility-and-the-florida-aca-subsidy-estimate-for-2026",
+      "type": "article",
+      "title": "Losing Medicaid eligibility and the Florida ACA subsidy estimate for 2026",
+      "subtitle": "Florida ACA subsidy estimate after losing Medicaid eligibility with coverage transition, Marketplace estimate, and a clear Marketplace verification step.",
+      "url": "aca/losing-medicaid-eligibility-and-the-florida-aca-subsidy-estimate-for-2026.html",
+      "canonical": "{SITE_ORIGIN}/aca/losing-medicaid-eligibility-and-the-florida-aca-subsidy-estimate-for-2026.html",
+      "main_keyword": "Florida ACA subsidy estimate after losing Medicaid eligibility",
+      "expanded_keywords": [
+        "Coverage transition",
+        "Marketplace estimate",
+        "2026 income projection",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "Life event and income change",
+      "guide_hub": "guides/life-event-and-income-change-guides.html",
+      "excerpt": "Florida ACA subsidy estimate after losing Medicaid eligibility explained with Coverage transition, Marketplace estimate, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-08T08:23:00+09:00",
+      "is_hub": true,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/life-event-and-income-change-guides.html",
+        "aca/spouse-moving-to-medicare-and-the-florida-aca-subsidy-estimate-for-2026.html",
+        "aca/how-to-update-a-florida-aca-subsidy-estimate-after-unemployment-after-layoff.html",
+        "aca/florida-aca-subsidy-estimate-after-seasonal-tourism-income-what-to-check-first.html"
       ]
     }
   ]

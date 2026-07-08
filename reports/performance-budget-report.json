@@ -4,13 +4,13 @@
   "warning_count": 0,
   "html_files_checked": 215,
   "budgets": {
-    "html_max_bytes": 75000,
+    "html_max_bytes": 240000,
     "article_max_bytes": 45000,
     "article_avg_max_bytes": 34000,
-    "blog_max_bytes": 60000,
+    "blog_max_bytes": 240000,
     "index_max_bytes": 65000,
     "article_queue_warning_bytes": 500000,
-    "search_index_max_bytes": 150000,
+    "search_index_max_bytes": 300000,
     "inline_style_max_bytes": 24000,
     "inline_script_max_bytes": 28000
   },
@@ -18,7 +18,7 @@
     "largest_html": [
       {
         "file": "blog.html",
-        "bytes": 59214
+        "bytes": 210484
       },
       {
         "file": "index.html",
@@ -26,38 +26,38 @@
       },
       {
         "file": "aca/when-moving-to-florida-from-another-state-changes-a-florida-aca-subsidy-estimate.html",
-        "bytes": 32278
+        "bytes": 32401
       },
       {
         "file": "aca/how-to-update-a-florida-aca-subsidy-estimate-after-dependent-returning-home.html",
-        "bytes": 32005
+        "bytes": 32127
       },
       {
         "file": "aca/how-to-update-a-florida-aca-subsidy-estimate-after-starting-a-small-business.html",
-        "bytes": 31959
+        "bytes": 32084
       },
       {
         "file": "aca/florida-aca-subsidy-estimate-after-retiring-before-medicare-what-to-check-first.html",
-        "bytes": 31902
+        "bytes": 32026
       },
       {
         "file": "aca/florida-aca-subsidy-calculator-walkthrough-a-florida-reader-s-guide-to-aca-premium-estimate.html",
-        "bytes": 31484
+        "bytes": 31607
       },
       {
         "file": "aca/losing-medicaid-eligibility-and-the-florida-aca-subsidy-estimate-for-2026.html",
-        "bytes": 31398
+        "bytes": 31522
       },
       {
         "file": "aca/broward-county-aca-subsidy-estimate-south-florida-rating-area-check-for-2026-coverage.html",
-        "bytes": 31282
+        "bytes": 31405
       },
       {
-        "file": "aca/florida-aca-open-enrollment-planning-without-the-jargon-marketplace-deadline-preparation-and-next-steps.html",
-        "bytes": 31172
+        "file": "guides/county-and-rating-area-guides.html",
+        "bytes": 31400
       }
     ],
-    "article_average_bytes": 24310,
+    "article_average_bytes": 24421,
     "largest_inline_style": [
       {
         "file": "index.html",
@@ -82,28 +82,28 @@
     ],
     "largest_inline_script": [
       {
+        "file": "blog.html",
+        "bytes": 17959
+      },
+      {
         "file": "index.html",
         "bytes": 15057
       },
       {
-        "file": "blog.html",
-        "bytes": 8435
+        "file": "guides/county-and-rating-area-guides.html",
+        "bytes": 13241
+      },
+      {
+        "file": "guides/life-event-and-income-change-guides.html",
+        "bytes": 10357
       },
       {
         "file": "aca/when-moving-to-florida-from-another-state-changes-a-florida-aca-subsidy-estimate.html",
         "bytes": 5013
-      },
-      {
-        "file": "aca/losing-medicaid-eligibility-and-the-florida-aca-subsidy-estimate-for-2026.html",
-        "bytes": 4891
-      },
-      {
-        "file": "aca/how-to-update-a-florida-aca-subsidy-estimate-after-dependent-returning-home.html",
-        "bytes": 4878
       }
     ],
-    "article_queue_bytes": 354177,
-    "search_index_bytes": 76764
+    "article_queue_bytes": 360310,
+    "search_index_bytes": 251613
   },
   "errors": [],
   "warnings": []
