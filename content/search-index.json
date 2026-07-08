@@ -89,7 +89,7 @@
       "canonical": "{SITE_ORIGIN}/guides/plan-selection-and-out-of-pocket-guides.html",
       "cluster": "Plan selection and out-of-pocket costs",
       "description": "Florida ACA plan selection and CSR guides",
-      "article_count": 1
+      "article_count": 2
     },
     {
       "id": "miami-single-adult-aca-subsidy-estimate-at-100-percent-fpl-what-the-2026-premium-gap-can-mean",
@@ -4077,6 +4077,34 @@
         "aca/how-dental-coverage-beside-aca-plans-changes-the-way-a-florida-aca-subsidy-estimate-should-be-read.html",
         "aca/telehealth-and-aca-plan-choice-inside-a-florida-aca-subsidy-estimate.html",
         "aca/before-choosing-urgent-care-access-in-florida-plans-read-the-florida-aca-subsidy-estimate-this-way.html"
+      ]
+    },
+    {
+      "id": "how-gold-plans-after-premium-tax-credits-changes-the-way-a-florida-aca-subsidy-estimate-should-be-read",
+      "type": "article",
+      "title": "How Gold plans after premium tax credits changes the way a Florida ACA subsidy estimate should be read",
+      "subtitle": "Florida ACA subsidy estimate for Gold plans after premium tax credits explained with Gold plan comparison, net premium tradeoff, and official plan confirmation.",
+      "url": "aca/how-gold-plans-after-premium-tax-credits-changes-the-way-a-florida-aca-subsidy-estimate-should-be-read.html",
+      "canonical": "{SITE_ORIGIN}/aca/how-gold-plans-after-premium-tax-credits-changes-the-way-a-florida-aca-subsidy-estimate-should-be-read.html",
+      "main_keyword": "Florida ACA subsidy estimate for Gold plans after premium tax credits",
+      "expanded_keywords": [
+        "Gold plan comparison",
+        "Net premium tradeoff",
+        "Premium tax credit",
+        "Plan comparison"
+      ],
+      "cluster": "Plan selection and out-of-pocket costs",
+      "guide_hub": "guides/plan-selection-and-out-of-pocket-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for Gold plans after premium tax credits explained with Gold plan comparison, Net premium tradeoff, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-08T23:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/plan-selection-and-out-of-pocket-guides.html",
+        "aca/telehealth-and-aca-plan-choice-inside-a-florida-aca-subsidy-estimate.html",
+        "aca/before-choosing-urgent-care-access-in-florida-plans-read-the-florida-aca-subsidy-estimate-this-way.html",
+        "aca/florida-aca-subsidy-estimate-for-pediatric-coverage-questions-premium-is-not-the-whole-answer.html"
       ]
     }
   ]
