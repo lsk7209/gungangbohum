@@ -79,7 +79,7 @@
       "canonical": "{SITE_ORIGIN}/guides/life-event-and-income-change-guides.html",
       "cluster": "Life event and income change",
       "description": "Florida ACA life-event subsidy estimate guides",
-      "article_count": 19
+      "article_count": 20
     },
     {
       "id": "miami-single-adult-aca-subsidy-estimate-at-100-percent-fpl-what-the-2026-premium-gap-can-mean",
@@ -4011,6 +4011,34 @@
         "aca/spouse-moving-to-medicare-and-the-florida-aca-subsidy-estimate-for-2026.html",
         "aca/how-to-update-a-florida-aca-subsidy-estimate-after-unemployment-after-layoff.html",
         "aca/florida-aca-subsidy-estimate-after-seasonal-tourism-income-what-to-check-first.html"
+      ]
+    },
+    {
+      "id": "how-to-update-a-florida-aca-subsidy-estimate-after-starting-a-small-business",
+      "type": "article",
+      "title": "How to update a Florida ACA subsidy estimate after starting a small business",
+      "subtitle": "Florida ACA subsidy estimate after starting a small business with net income estimate, self-employment deduction, and a clear Marketplace verification step.",
+      "url": "aca/how-to-update-a-florida-aca-subsidy-estimate-after-starting-a-small-business.html",
+      "canonical": "{SITE_ORIGIN}/aca/how-to-update-a-florida-aca-subsidy-estimate-after-starting-a-small-business.html",
+      "main_keyword": "Florida ACA subsidy estimate after starting a small business",
+      "expanded_keywords": [
+        "Net income estimate",
+        "Self-employment deduction",
+        "2026 income projection",
+        "HealthCare.gov confirmation"
+      ],
+      "cluster": "Life event and income change",
+      "guide_hub": "guides/life-event-and-income-change-guides.html",
+      "excerpt": "Florida ACA subsidy estimate after starting a small business explained with Net income estimate, Self-employment deduction, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-08T13:23:00+09:00",
+      "is_hub": true,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/life-event-and-income-change-guides.html",
+        "aca/how-to-update-a-florida-aca-subsidy-estimate-after-unemployment-after-layoff.html",
+        "aca/florida-aca-subsidy-estimate-after-seasonal-tourism-income-what-to-check-first.html",
+        "aca/when-tipped-worker-income-changes-a-florida-aca-subsidy-estimate.html"
       ]
     }
   ]

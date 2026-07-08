@@ -18,7 +18,7 @@ CoverClarity is an independent Florida ACA subsidy estimate and Marketplace veri
 ## Guide Hubs
 
 - [County and rating-area guides]({SITE_ORIGIN}/guides/county-and-rating-area-guides.html): Florida county and rating-area ACA subsidy estimates; 25 articles.
-- [Life event and income-change guides]({SITE_ORIGIN}/guides/life-event-and-income-change-guides.html): Florida ACA life-event subsidy estimate guides; 19 articles.
+- [Life event and income-change guides]({SITE_ORIGIN}/guides/life-event-and-income-change-guides.html): Florida ACA life-event subsidy estimate guides; 20 articles.
 
 ## Priority Hub Articles
 
@@ -51,6 +51,7 @@ CoverClarity is an independent Florida ACA subsidy estimate and Marketplace veri
 - [Florida ACA subsidy estimate after retiring before Medicare: what to check first]({SITE_ORIGIN}/aca/florida-aca-subsidy-estimate-after-retiring-before-medicare-what-to-check-first.html): Florida ACA subsidy estimate after retiring before Medicare explained with Early retiree income, Age-rated premium, estimate limits, related guide paths, and official HealthCare.gov confirmation.
 - [When moving to Florida from another state changes a Florida ACA subsidy estimate]({SITE_ORIGIN}/aca/when-moving-to-florida-from-another-state-changes-a-florida-aca-subsidy-estimate.html): Florida ACA subsidy estimate after moving to Florida from another state explained with New resident Marketplace, Local plan confirmation, estimate limits, related guide paths, and official HealthCare.gov confirmation.
 - [Losing Medicaid eligibility and the Florida ACA subsidy estimate for 2026]({SITE_ORIGIN}/aca/losing-medicaid-eligibility-and-the-florida-aca-subsidy-estimate-for-2026.html): Florida ACA subsidy estimate after losing Medicaid eligibility explained with Coverage transition, Marketplace estimate, estimate limits, related guide paths, and official HealthCare.gov confirmation.
+- [How to update a Florida ACA subsidy estimate after starting a small business]({SITE_ORIGIN}/aca/how-to-update-a-florida-aca-subsidy-estimate-after-starting-a-small-business.html): Florida ACA subsidy estimate after starting a small business explained with Net income estimate, Self-employment deduction, estimate limits, related guide paths, and official HealthCare.gov confirmation.
 
 ## Content Notes
 

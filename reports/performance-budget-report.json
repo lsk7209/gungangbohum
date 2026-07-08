@@ -18,7 +18,7 @@
     "largest_html": [
       {
         "file": "blog.html",
-        "bytes": 209015
+        "bytes": 211521
       },
       {
         "file": "index.html",
@@ -34,7 +34,7 @@
       },
       {
         "file": "aca/how-to-update-a-florida-aca-subsidy-estimate-after-starting-a-small-business.html",
-        "bytes": 31959
+        "bytes": 31957
       },
       {
         "file": "aca/florida-aca-subsidy-estimate-after-retiring-before-medicare-what-to-check-first.html",
@@ -83,7 +83,7 @@
     "largest_inline_script": [
       {
         "file": "blog.html",
-        "bytes": 17959
+        "bytes": 18003
       },
       {
         "file": "index.html",
@@ -95,15 +95,15 @@
       },
       {
         "file": "guides/life-event-and-income-change-guides.html",
-        "bytes": 10357
+        "bytes": 10804
       },
       {
         "file": "aca/when-moving-to-florida-from-another-state-changes-a-florida-aca-subsidy-estimate.html",
         "bytes": 5013
       }
     ],
-    "article_queue_bytes": 354109,
-    "search_index_bytes": 247597
+    "article_queue_bytes": 354108,
+    "search_index_bytes": 249329
   },
   "errors": [],
   "warnings": []
