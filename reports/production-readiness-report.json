@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-07-08T06:40:39.231965+00:00",
+  "generatedAt": "2026-07-08T09:40:23.705807+00:00",
   "git_snapshot": {
-    "head": "9b9e5360f13819c56949e14fd27d3b0a961cfa08",
+    "head": "c8ef43de7e922c60d1d0f2505022f997866b5b6d",
     "worktree_clean": false,
     "changed_paths": [
-      "aca/how-to-update-a-florida-aca-subsidy-estimate-after-starting-a-small-business.html",
+      "aca/florida-aca-subsidy-estimate-for-bronze-versus-silver-after-subsidies-premium-is-not-the-whole-answer.html",
       "blog.html",
       "content/article-queue.json",
       "content/search-index.json",
       "feed.xml",
-      "guides/life-event-and-income-change-guides.html",
+      "guides/plan-selection-and-out-of-pocket-guides.html",
       "llms.txt",
       "reports/article-generation-report.json",
       "reports/content-quality-report.json",
@@ -217,7 +217,7 @@
   "quality_snapshot": {
     "article_files": 200,
     "guide_files": 5,
-    "sitemap_urls": 156,
+    "sitemap_urls": 158,
     "site_origin_placeholder_count": 222,
     "site_origin_placeholder_sample": [
       "blog.html",
@@ -236,8 +236,8 @@
   },
   "article_generation_snapshot": {
     "articles": 200,
-    "publishedArticles": 145,
-    "scheduledArticles": 55,
+    "publishedArticles": 146,
+    "scheduledArticles": 54,
     "minQualityScore": 94,
     "maxQualityScore": 99,
     "codexOnlyGenerationArticles": 200,
@@ -254,7 +254,7 @@
     "html_files_checked": 215,
     "error_count": 0,
     "warning_count": 0,
-    "largest_html_bytes": 211521,
+    "largest_html_bytes": 213301,
     "article_average_bytes": 24310
   },
   "next_required_actions": [
