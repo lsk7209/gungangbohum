@@ -4605,7 +4605,7 @@
     "meta_description": "Florida ACA subsidy estimate for Silver CSR 87 plan tradeoffs: CSR income band, Deductible comparison, and official confirmation.",
     "excerpt": "Florida ACA subsidy estimate for Silver CSR 87 plan tradeoffs explained with CSR income band, Deductible comparison, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
     "publishAt": "2026-07-09T09:23:00+09:00",
-    "is_published": false,
+    "is_published": true,
     "guide_hub": "guides/plan-selection-and-out-of-pocket-guides.html",
     "sources": [
       {
