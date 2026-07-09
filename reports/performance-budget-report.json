@@ -18,7 +18,7 @@
     "largest_html": [
       {
         "file": "blog.html",
-        "bytes": 220497
+        "bytes": 222439
       },
       {
         "file": "index.html",
@@ -83,7 +83,7 @@
     "largest_inline_script": [
       {
         "file": "blog.html",
-        "bytes": 18387
+        "bytes": 18499
       },
       {
         "file": "index.html",
@@ -102,8 +102,8 @@
         "bytes": 5013
       }
     ],
-    "article_queue_bytes": 354103,
-    "search_index_bytes": 258929
+    "article_queue_bytes": 354102,
+    "search_index_bytes": 260811
   },
   "errors": [],
   "warnings": []

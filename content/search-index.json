@@ -89,7 +89,7 @@
       "canonical": "{SITE_ORIGIN}/guides/plan-selection-and-out-of-pocket-guides.html",
       "cluster": "Plan selection and out-of-pocket costs",
       "description": "Florida ACA plan selection and CSR guides",
-      "article_count": 5
+      "article_count": 6
     },
     {
       "id": "miami-single-adult-aca-subsidy-estimate-at-100-percent-fpl-what-the-2026-premium-gap-can-mean",
@@ -4189,6 +4189,34 @@
         "aca/how-mental-health-network-review-changes-the-way-a-florida-aca-subsidy-estimate-should-be-read.html",
         "aca/generic-drug-cost-comparison-inside-a-florida-aca-subsidy-estimate.html",
         "aca/before-choosing-silver-benchmark-versus-selected-plan-read-the-florida-aca-subsidy-estimate-this-way.html"
+      ]
+    },
+    {
+      "id": "how-high-deductible-plan-with-aca-subsidy-changes-the-way-a-florida-aca-subsidy-estimate-should-be-read",
+      "type": "article",
+      "title": "How high deductible plan with ACA subsidy changes the way a Florida ACA subsidy estimate should be read",
+      "subtitle": "Florida ACA subsidy estimate for high deductible plan with ACA subsidy explained with deductible risk, premium tradeoff, and official plan confirmation.",
+      "url": "aca/how-high-deductible-plan-with-aca-subsidy-changes-the-way-a-florida-aca-subsidy-estimate-should-be-read.html",
+      "canonical": "{SITE_ORIGIN}/aca/how-high-deductible-plan-with-aca-subsidy-changes-the-way-a-florida-aca-subsidy-estimate-should-be-read.html",
+      "main_keyword": "Florida ACA subsidy estimate for high deductible plan with ACA subsidy",
+      "expanded_keywords": [
+        "Deductible risk",
+        "Premium tradeoff",
+        "Premium tax credit",
+        "Plan comparison"
+      ],
+      "cluster": "Plan selection and out-of-pocket costs",
+      "guide_hub": "guides/plan-selection-and-out-of-pocket-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for high deductible plan with ACA subsidy explained with Deductible risk, Premium tradeoff, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-09T19:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/plan-selection-and-out-of-pocket-guides.html",
+        "aca/generic-drug-cost-comparison-inside-a-florida-aca-subsidy-estimate.html",
+        "aca/before-choosing-silver-benchmark-versus-selected-plan-read-the-florida-aca-subsidy-estimate-this-way.html",
+        "aca/florida-aca-subsidy-estimate-for-bronze-versus-silver-after-subsidies-premium-is-not-the-whole-answer.html"
       ]
     }
   ]
