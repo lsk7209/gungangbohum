@@ -19,7 +19,7 @@ CoverClarity is an independent Florida ACA subsidy estimate and Marketplace veri
 
 - [County and rating-area guides]({SITE_ORIGIN}/guides/county-and-rating-area-guides.html): Florida county and rating-area ACA subsidy estimates; 25 articles.
 - [Life event and income-change guides]({SITE_ORIGIN}/guides/life-event-and-income-change-guides.html): Florida ACA life-event subsidy estimate guides; 20 articles.
-- [Plan selection and out-of-pocket guides]({SITE_ORIGIN}/guides/plan-selection-and-out-of-pocket-guides.html): Florida ACA plan selection and CSR guides; 4 articles.
+- [Plan selection and out-of-pocket guides]({SITE_ORIGIN}/guides/plan-selection-and-out-of-pocket-guides.html): Florida ACA plan selection and CSR guides; 5 articles.
 
 ## Priority Hub Articles
 

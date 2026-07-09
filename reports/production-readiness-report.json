@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-07-09T04:16:21.295166+00:00",
+  "generatedAt": "2026-07-09T07:54:53.293001+00:00",
   "git_snapshot": {
-    "head": "70b26d17df530f7ed43782f5649c04269d2d5fd7",
+    "head": "6328d44036534ac534761885fa86043252cf8c12",
     "worktree_clean": false,
     "changed_paths": [
-      "aca/before-choosing-silver-csr-87-plan-tradeoffs-read-the-florida-aca-subsidy-estimate-this-way.html",
+      "aca/florida-aca-subsidy-estimate-for-silver-csr-73-plan-limits-premium-is-not-the-whole-answer.html",
       "blog.html",
       "content/article-queue.json",
       "content/search-index.json",
@@ -217,7 +217,7 @@
   "quality_snapshot": {
     "article_files": 200,
     "guide_files": 5,
-    "sitemap_urls": 161,
+    "sitemap_urls": 162,
     "site_origin_placeholder_count": 222,
     "site_origin_placeholder_sample": [
       "blog.html",
@@ -236,8 +236,8 @@
   },
   "article_generation_snapshot": {
     "articles": 200,
-    "publishedArticles": 149,
-    "scheduledArticles": 51,
+    "publishedArticles": 150,
+    "scheduledArticles": 50,
     "minQualityScore": 94,
     "maxQualityScore": 99,
     "codexOnlyGenerationArticles": 200,
@@ -254,7 +254,7 @@
     "html_files_checked": 215,
     "error_count": 0,
     "warning_count": 0,
-    "largest_html_bytes": 218643,
+    "largest_html_bytes": 220497,
     "article_average_bytes": 24309
   },
   "next_required_actions": [
