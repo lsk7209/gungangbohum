@@ -89,7 +89,7 @@
       "canonical": "{SITE_ORIGIN}/guides/plan-selection-and-out-of-pocket-guides.html",
       "cluster": "Plan selection and out-of-pocket costs",
       "description": "Florida ACA plan selection and CSR guides",
-      "article_count": 8
+      "article_count": 9
     },
     {
       "id": "miami-single-adult-aca-subsidy-estimate-at-100-percent-fpl-what-the-2026-premium-gap-can-mean",
@@ -4273,6 +4273,34 @@
         "aca/florida-aca-subsidy-estimate-for-bronze-versus-silver-after-subsidies-premium-is-not-the-whole-answer.html",
         "aca/how-gold-plans-after-premium-tax-credits-changes-the-way-a-florida-aca-subsidy-estimate-should-be-read.html",
         "aca/silver-csr-94-plan-value-inside-a-florida-aca-subsidy-estimate.html"
+      ]
+    },
+    {
+      "id": "florida-aca-subsidy-estimate-for-hospital-network-questions-premium-is-not-the-whole-answer",
+      "type": "article",
+      "title": "Florida ACA subsidy estimate for hospital network questions: premium is not the whole answer",
+      "subtitle": "Florida ACA subsidy estimate for hospital network questions explained with network fit, county plan comparison, and official plan confirmation.",
+      "url": "aca/florida-aca-subsidy-estimate-for-hospital-network-questions-premium-is-not-the-whole-answer.html",
+      "canonical": "{SITE_ORIGIN}/aca/florida-aca-subsidy-estimate-for-hospital-network-questions-premium-is-not-the-whole-answer.html",
+      "main_keyword": "Florida ACA subsidy estimate for hospital network questions",
+      "expanded_keywords": [
+        "Network fit",
+        "County plan comparison",
+        "Premium tax credit",
+        "Plan comparison"
+      ],
+      "cluster": "Plan selection and out-of-pocket costs",
+      "guide_hub": "guides/plan-selection-and-out-of-pocket-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for hospital network questions explained with Network fit, County plan comparison, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-10T10:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/plan-selection-and-out-of-pocket-guides.html",
+        "aca/how-gold-plans-after-premium-tax-credits-changes-the-way-a-florida-aca-subsidy-estimate-should-be-read.html",
+        "aca/silver-csr-94-plan-value-inside-a-florida-aca-subsidy-estimate.html",
+        "aca/before-choosing-silver-csr-87-plan-tradeoffs-read-the-florida-aca-subsidy-estimate-this-way.html"
       ]
     }
   ]

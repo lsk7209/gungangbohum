@@ -18,7 +18,7 @@
     "largest_html": [
       {
         "file": "blog.html",
-        "bytes": 225853
+        "bytes": 227655
       },
       {
         "file": "index.html",
@@ -83,7 +83,7 @@
     "largest_inline_script": [
       {
         "file": "blog.html",
-        "bytes": 18483
+        "bytes": 18557
       },
       {
         "file": "index.html",
@@ -99,11 +99,11 @@
       },
       {
         "file": "guides/plan-selection-and-out-of-pocket-guides.html",
-        "bytes": 5865
+        "bytes": 6373
       }
     ],
-    "article_queue_bytes": 354100,
-    "search_index_bytes": 264457
+    "article_queue_bytes": 354099,
+    "search_index_bytes": 266253
   },
   "errors": [],
   "warnings": []
