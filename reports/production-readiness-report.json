@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-07-10T05:10:54.643295+00:00",
+  "generatedAt": "2026-07-10T08:44:06.671070+00:00",
   "git_snapshot": {
-    "head": "68ab4cbb9ba692e75b625a2aea5c7e7716e19f23",
+    "head": "e8655bfa8600c654fbcc48d477667d90dd60a91e",
     "worktree_clean": false,
     "changed_paths": [
-      "aca/florida-aca-subsidy-estimate-for-hospital-network-questions-premium-is-not-the-whole-answer.html",
+      "aca/how-hsa-eligible-plan-and-aca-subsidy-changes-the-way-a-florida-aca-subsidy-estimate-should-be-read.html",
       "blog.html",
       "content/article-queue.json",
       "content/search-index.json",
@@ -217,7 +217,7 @@
   "quality_snapshot": {
     "article_files": 200,
     "guide_files": 5,
-    "sitemap_urls": 166,
+    "sitemap_urls": 167,
     "site_origin_placeholder_count": 222,
     "site_origin_placeholder_sample": [
       "blog.html",
@@ -236,8 +236,8 @@
   },
   "article_generation_snapshot": {
     "articles": 200,
-    "publishedArticles": 154,
-    "scheduledArticles": 46,
+    "publishedArticles": 155,
+    "scheduledArticles": 45,
     "minQualityScore": 94,
     "maxQualityScore": 99,
     "codexOnlyGenerationArticles": 200,
@@ -254,7 +254,7 @@
     "html_files_checked": 215,
     "error_count": 0,
     "warning_count": 0,
-    "largest_html_bytes": 227655,
+    "largest_html_bytes": 229540,
     "article_average_bytes": 24309
   },
   "next_required_actions": [
