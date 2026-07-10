@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-07-10T08:44:06.671070+00:00",
+  "generatedAt": "2026-07-10T12:09:29.008875+00:00",
   "git_snapshot": {
-    "head": "e8655bfa8600c654fbcc48d477667d90dd60a91e",
+    "head": "a254c64acfb54044fed075ca9a073e6ec5ccff4f",
     "worktree_clean": false,
     "changed_paths": [
-      "aca/how-hsa-eligible-plan-and-aca-subsidy-changes-the-way-a-florida-aca-subsidy-estimate-should-be-read.html",
+      "aca/family-deductible-versus-premium-inside-a-florida-aca-subsidy-estimate.html",
       "blog.html",
       "content/article-queue.json",
       "content/search-index.json",
@@ -217,7 +217,7 @@
   "quality_snapshot": {
     "article_files": 200,
     "guide_files": 5,
-    "sitemap_urls": 167,
+    "sitemap_urls": 168,
     "site_origin_placeholder_count": 222,
     "site_origin_placeholder_sample": [
       "blog.html",
@@ -236,8 +236,8 @@
   },
   "article_generation_snapshot": {
     "articles": 200,
-    "publishedArticles": 155,
-    "scheduledArticles": 45,
+    "publishedArticles": 156,
+    "scheduledArticles": 44,
     "minQualityScore": 94,
     "maxQualityScore": 99,
     "codexOnlyGenerationArticles": 200,
@@ -254,7 +254,7 @@
     "html_files_checked": 215,
     "error_count": 0,
     "warning_count": 0,
-    "largest_html_bytes": 229540,
+    "largest_html_bytes": 231080,
     "article_average_bytes": 24309
   },
   "next_required_actions": [
