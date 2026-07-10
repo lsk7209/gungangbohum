@@ -89,7 +89,7 @@
       "canonical": "{SITE_ORIGIN}/guides/plan-selection-and-out-of-pocket-guides.html",
       "cluster": "Plan selection and out-of-pocket costs",
       "description": "Florida ACA plan selection and CSR guides",
-      "article_count": 11
+      "article_count": 12
     },
     {
       "id": "miami-single-adult-aca-subsidy-estimate-at-100-percent-fpl-what-the-2026-premium-gap-can-mean",
@@ -4357,6 +4357,34 @@
         "aca/before-choosing-silver-csr-87-plan-tradeoffs-read-the-florida-aca-subsidy-estimate-this-way.html",
         "aca/florida-aca-subsidy-estimate-for-silver-csr-73-plan-limits-premium-is-not-the-whole-answer.html",
         "aca/how-high-deductible-plan-with-aca-subsidy-changes-the-way-a-florida-aca-subsidy-estimate-should-be-read.html"
+      ]
+    },
+    {
+      "id": "before-choosing-maximum-out-of-pocket-limit-read-the-florida-aca-subsidy-estimate-this-way",
+      "type": "article",
+      "title": "Before choosing maximum out-of-pocket limit, read the Florida ACA subsidy estimate this way",
+      "subtitle": "Florida ACA subsidy estimate for maximum out-of-pocket limit explained with annual cost risk, plan comparison, and official plan confirmation.",
+      "url": "aca/before-choosing-maximum-out-of-pocket-limit-read-the-florida-aca-subsidy-estimate-this-way.html",
+      "canonical": "{SITE_ORIGIN}/aca/before-choosing-maximum-out-of-pocket-limit-read-the-florida-aca-subsidy-estimate-this-way.html",
+      "main_keyword": "Florida ACA subsidy estimate for maximum out-of-pocket limit",
+      "expanded_keywords": [
+        "Annual cost risk",
+        "Plan comparison",
+        "Premium tax credit",
+        "Plan comparison"
+      ],
+      "cluster": "Plan selection and out-of-pocket costs",
+      "guide_hub": "guides/plan-selection-and-out-of-pocket-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for maximum out-of-pocket limit explained with Annual cost risk, Plan comparison, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-11T01:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/plan-selection-and-out-of-pocket-guides.html",
+        "aca/florida-aca-subsidy-estimate-for-silver-csr-73-plan-limits-premium-is-not-the-whole-answer.html",
+        "aca/how-high-deductible-plan-with-aca-subsidy-changes-the-way-a-florida-aca-subsidy-estimate-should-be-read.html",
+        "aca/prescription-heavy-plan-comparison-inside-a-florida-aca-subsidy-estimate.html"
       ]
     }
   ]
