@@ -89,7 +89,7 @@
       "canonical": "{SITE_ORIGIN}/guides/plan-selection-and-out-of-pocket-guides.html",
       "cluster": "Plan selection and out-of-pocket costs",
       "description": "Florida ACA plan selection and CSR guides",
-      "article_count": 12
+      "article_count": 13
     },
     {
       "id": "miami-single-adult-aca-subsidy-estimate-at-100-percent-fpl-what-the-2026-premium-gap-can-mean",
@@ -4385,6 +4385,34 @@
         "aca/florida-aca-subsidy-estimate-for-silver-csr-73-plan-limits-premium-is-not-the-whole-answer.html",
         "aca/how-high-deductible-plan-with-aca-subsidy-changes-the-way-a-florida-aca-subsidy-estimate-should-be-read.html",
         "aca/prescription-heavy-plan-comparison-inside-a-florida-aca-subsidy-estimate.html"
+      ]
+    },
+    {
+      "id": "florida-aca-subsidy-estimate-for-navigator-help-versus-broker-help-premium-is-not-the-whole-answer",
+      "type": "article",
+      "title": "Florida ACA subsidy estimate for navigator help versus broker help: premium is not the whole answer",
+      "subtitle": "Florida ACA subsidy estimate for navigator help versus broker help explained with enrollment assistance, conflict-free verification, and official plan confirmation.",
+      "url": "aca/florida-aca-subsidy-estimate-for-navigator-help-versus-broker-help-premium-is-not-the-whole-answer.html",
+      "canonical": "{SITE_ORIGIN}/aca/florida-aca-subsidy-estimate-for-navigator-help-versus-broker-help-premium-is-not-the-whole-answer.html",
+      "main_keyword": "Florida ACA subsidy estimate for navigator help versus broker help",
+      "expanded_keywords": [
+        "Enrollment assistance",
+        "Conflict-free verification",
+        "Premium tax credit",
+        "Plan comparison"
+      ],
+      "cluster": "Plan selection and out-of-pocket costs",
+      "guide_hub": "guides/plan-selection-and-out-of-pocket-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for navigator help versus broker help explained with Enrollment assistance, Conflict-free verification, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-11T06:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/plan-selection-and-out-of-pocket-guides.html",
+        "aca/how-high-deductible-plan-with-aca-subsidy-changes-the-way-a-florida-aca-subsidy-estimate-should-be-read.html",
+        "aca/prescription-heavy-plan-comparison-inside-a-florida-aca-subsidy-estimate.html",
+        "aca/before-choosing-a-specialist-network-read-the-florida-aca-subsidy-estimate-this-way.html"
       ]
     }
   ]
