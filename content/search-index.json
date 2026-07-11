@@ -89,7 +89,7 @@
       "canonical": "{SITE_ORIGIN}/guides/plan-selection-and-out-of-pocket-guides.html",
       "cluster": "Plan selection and out-of-pocket costs",
       "description": "Florida ACA plan selection and CSR guides",
-      "article_count": 15
+      "article_count": 16
     },
     {
       "id": "miami-single-adult-aca-subsidy-estimate-at-100-percent-fpl-what-the-2026-premium-gap-can-mean",
@@ -4469,6 +4469,34 @@
         "aca/before-choosing-a-specialist-network-read-the-florida-aca-subsidy-estimate-this-way.html",
         "aca/florida-aca-subsidy-estimate-for-hospital-network-questions-premium-is-not-the-whole-answer.html",
         "aca/how-hsa-eligible-plan-and-aca-subsidy-changes-the-way-a-florida-aca-subsidy-estimate-should-be-read.html"
+      ]
+    },
+    {
+      "id": "before-choosing-urgent-care-access-in-florida-plans-read-the-florida-aca-subsidy-estimate-this-way",
+      "type": "article",
+      "title": "Before choosing urgent care access in Florida plans, read the Florida ACA subsidy estimate this way",
+      "subtitle": "Florida ACA subsidy estimate for urgent care access in Florida plans explained with local provider check, out-of-pocket cost, and official plan confirmation.",
+      "url": "aca/before-choosing-urgent-care-access-in-florida-plans-read-the-florida-aca-subsidy-estimate-this-way.html",
+      "canonical": "{SITE_ORIGIN}/aca/before-choosing-urgent-care-access-in-florida-plans-read-the-florida-aca-subsidy-estimate-this-way.html",
+      "main_keyword": "Florida ACA subsidy estimate for urgent care access in Florida plans",
+      "expanded_keywords": [
+        "Local provider check",
+        "Out-of-pocket cost",
+        "Premium tax credit",
+        "Plan comparison"
+      ],
+      "cluster": "Plan selection and out-of-pocket costs",
+      "guide_hub": "guides/plan-selection-and-out-of-pocket-guides.html",
+      "excerpt": "Florida ACA subsidy estimate for urgent care access in Florida plans explained with Local provider check, Out-of-pocket cost, estimate limits, related guide paths, and official HealthCare.gov confirmation.",
+      "publishAt": "2026-07-11T21:23:00+09:00",
+      "is_hub": false,
+      "internal_links": [
+        "index.html#calc",
+        "methodology.html",
+        "guides/plan-selection-and-out-of-pocket-guides.html",
+        "aca/florida-aca-subsidy-estimate-for-hospital-network-questions-premium-is-not-the-whole-answer.html",
+        "aca/how-hsa-eligible-plan-and-aca-subsidy-changes-the-way-a-florida-aca-subsidy-estimate-should-be-read.html",
+        "aca/family-deductible-versus-premium-inside-a-florida-aca-subsidy-estimate.html"
       ]
     }
   ]
