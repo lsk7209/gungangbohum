@@ -1,21 +1,9 @@
 {
-  "generatedAt": "2026-07-11T03:45:55.240891+00:00",
+  "generatedAt": "2026-07-11T06:28:42.258948+00:00",
   "git_snapshot": {
-    "head": "e934663bf3006575f7b343e8570d0a21788cb729",
-    "worktree_clean": false,
-    "changed_paths": [
-      "aca/how-dental-coverage-beside-aca-plans-changes-the-way-a-florida-aca-subsidy-estimate-should-be-read.html",
-      "blog.html",
-      "content/article-queue.json",
-      "content/search-index.json",
-      "feed.xml",
-      "guides/plan-selection-and-out-of-pocket-guides.html",
-      "llms.txt",
-      "reports/article-generation-report.json",
-      "reports/content-quality-report.json",
-      "reports/performance-budget-report.json",
-      "sitemap.xml"
-    ]
+    "head": "860dd9c4eb4a8b1d071b0aabffd98e94e6d05edb",
+    "worktree_clean": true,
+    "changed_paths": []
   },
   "ready_for_production_submission": false,
   "checks": [
@@ -56,8 +44,8 @@
     },
     {
       "name": "git_worktree_clean",
-      "ok": false,
-      "detail": "worktree has uncommitted or untracked files"
+      "ok": true,
+      "detail": "worktree clean"
     },
     {
       "name": "github_remote",
@@ -135,11 +123,6 @@
       "detail": "222 public files still contain {SITE_ORIGIN}"
     },
     {
-      "name": "git_worktree_clean",
-      "ok": false,
-      "detail": "worktree has uncommitted or untracked files"
-    },
-    {
       "name": "production_contact_channel",
       "ok": false,
       "detail": "contact page still contains prelaunch contact-channel language"
@@ -192,9 +175,7 @@
       "gsc_configuration",
       "github_gsc_configuration"
     ],
-    "code_or_repository_blockers": [
-      "git_worktree_clean"
-    ]
+    "code_or_repository_blockers": []
   },
   "missing_external_inputs": [
     {
@@ -259,7 +240,6 @@
   },
   "next_required_actions": [
     "Assign an HTTPS production domain and run npm run check:production.",
-    "Commit the local work before git push.",
     "Replace the prelaunch contact notice with a production public contact channel.",
     "Set GSC_SITE_URL and GSC_SITEMAP_URL, then run npm run gsc:submit after the domain is verified in Search Console."
   ]
